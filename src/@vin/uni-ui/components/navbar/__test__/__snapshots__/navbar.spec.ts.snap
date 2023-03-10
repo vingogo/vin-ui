@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render left slot correctly 1`] = `"<view class=\\"vin-navbar__left\\"><text style=\\"color: rgb(151, 151, 151);\\" class=\\"vin-iconfont vin-icon vin-icon-left\\"></text>Custom Left</view>"`;
+
+exports[`should render left slot correctly 2`] = `
+"<view class=\\"vin-navbar__right\\">
+  <!--v-if-->Custom Right
+</view>"
+`;
+
+exports[`should render title slot correctly 1`] = `
+"<view class=\\"vin-navbar__title\\">
+  <!--v-if-->
+  <!--v-if-->
+</view>"
+`;

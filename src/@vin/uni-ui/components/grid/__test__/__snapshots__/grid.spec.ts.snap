@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should navifation correctly 1`] = `
+"<view class=\\"vin-grid vin-grid--border\\">
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+</view>"
+`;
+
+exports[`should render default slot correctly 1`] = `
+"<view class=\\"vin-grid vin-grid--border\\">
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--center\\">Default Slot</view>
+  </view>
+</view>"
+`;
+
+exports[`should render gutter correctly 1`] = `
+"<view class=\\"vin-grid\\" style=\\"padding-left: 20px;\\">
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px; margin-top: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px; margin-top: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px; margin-top: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 25%; padding-right: 20px; margin-top: 20px;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--surround vin-grid-item__content--center\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+</view>"
+`;
+
+exports[`should render square correctly 1`] = `
+"<view class=\\"vin-grid vin-grid--border\\">
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 50%; padding-top: 50%;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--center vin-grid-item__content--square\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 50%; padding-top: 50%;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--center vin-grid-item__content--square\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 50%; padding-top: 50%;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--center vin-grid-item__content--square\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+  <view class=\\"vin-grid-item\\" style=\\"flex-basis: 50%; padding-top: 50%;\\">
+    <view class=\\"vin-grid-item__content vin-grid-item__content--border vin-grid-item__content--center vin-grid-item__content--square\\"><text style=\\"font-size: 28px; width: 28px; height: 28px;\\" class=\\"vin-iconfont vin-icon vin-icon-\\"></text>
+      <view class=\\"vin-grid-item__text\\"></view>
+    </view>
+  </view>
+</view>"
+`;

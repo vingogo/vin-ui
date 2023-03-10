@@ -1,0 +1,38 @@
+.vin-input-number {
+  display: flex;
+  align-items: center;
+
+  &--disabled {
+    input {
+      color: $inputnumber-icon-void-color;
+    }
+  }
+
+  &__icon {
+    color: $inputnumber-icon-color;
+    font-size: $inputnumber-icon-size;
+    cursor: pointer;
+    &--disabled {
+      color: $inputnumber-icon-void-color;
+      cursor: not-allowed;
+    }
+  }
+
+  input,
+  &__text--readonly {
+    width: $inputnumber-input-width;
+    height: 100%;
+    margin: $inputnumber-input-margin;
+    color: $inputnumber-input-font-color;
+    font-size: $inputnumber-input-font-size;
+    text-align: center;
+    background-color: $inputnumber-input-background-color;
+    border: $inputnumber-input-border;
+    border-radius: $inputnumber-input-border-radius;
+    outline: none;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

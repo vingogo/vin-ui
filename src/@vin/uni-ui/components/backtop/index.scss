@@ -1,0 +1,20 @@
+.vin-backtop {
+  position: fixed;
+  display: none;
+  &.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: $white;
+    border: 1px solid $backtop-border-color;
+    border-radius: 50%;
+  }
+  &.show :active {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &-main {
+    transition: all 0.2s ease-in-out;
+  }
+}

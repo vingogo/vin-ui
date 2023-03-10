@@ -1,0 +1,499 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3937987 */
+  src: url('iconfont.woff2?t=1678199970613') format('woff2'),
+       url('iconfont.woff?t=1678199970613') format('woff'),
+       url('iconfont.ttf?t=1678199970613') format('truetype');
+}
+
+.vin-iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vin-icon-scan:before {
+  content: "\e674";
+}
+
+.vin-icon-play-circle-fill:before {
+  content: "\e675";
+}
+
+.vin-icon-star-n:before {
+  content: "\e676";
+}
+
+.vin-icon-share:before {
+  content: "\e677";
+}
+
+.vin-icon-triangle-down:before {
+  content: "\e678";
+}
+
+.vin-icon-arrow-down2:before {
+  content: "\e600";
+}
+
+.vin-icon-arrow-down:before {
+  content: "\e601";
+}
+
+.vin-icon-arrow-right:before {
+  content: "\e602";
+}
+
+.vin-icon-arrow-up2:before {
+  content: "\e603";
+}
+
+.vin-icon-ask:before {
+  content: "\e604";
+}
+
+.vin-icon-arrow-right2:before {
+  content: "\e605";
+}
+
+.vin-icon-add:before {
+  content: "\e606";
+}
+
+.vin-icon-arrow-up:before {
+  content: "\e607";
+}
+
+.vin-icon-check-disabled:before {
+  content: "\e608";
+}
+
+.vin-icon-cart:before {
+  content: "\e609";
+}
+
+.vin-icon-cart2:before {
+  content: "\e60a";
+}
+
+.vin-icon-addfollow:before {
+  content: "\e60b";
+}
+
+.vin-icon-Check:before {
+  content: "\e60c";
+}
+
+.vin-icon-check-normal:before {
+  content: "\e60d";
+}
+
+.vin-icon-category:before {
+  content: "\e60e";
+}
+
+.vin-icon-clock:before {
+  content: "\e60f";
+}
+
+.vin-icon-close:before {
+  content: "\e610";
+}
+
+.vin-icon-close-little:before {
+  content: "\e611";
+}
+
+.vin-icon-date:before {
+  content: "\e612";
+}
+
+.vin-icon-del2:before {
+  content: "\e613";
+}
+
+.vin-icon-checklist:before {
+  content: "\e614";
+}
+
+.vin-icon-check-checked:before {
+  content: "\e615";
+}
+
+.vin-icon-comment:before {
+  content: "\e616";
+}
+
+.vin-icon-ask2:before {
+  content: "\e617";
+}
+
+.vin-icon-download:before {
+  content: "\e618";
+}
+
+.vin-icon-dou-arrow-up:before {
+  content: "\e619";
+}
+
+.vin-icon-circle-close:before {
+  content: "\e61a";
+}
+
+.vin-icon-del:before {
+  content: "\e61b";
+}
+
+.vin-icon-heart-fill3:before {
+  content: "\e61c";
+}
+
+.vin-icon-heart1:before {
+  content: "\e61d";
+}
+
+.vin-icon-find:before {
+  content: "\e61e";
+}
+
+.vin-icon-edit:before {
+  content: "\e61f";
+}
+
+.vin-icon-horizontal-n:before {
+  content: "\e620";
+}
+
+.vin-icon-failure:before {
+  content: "\e621";
+}
+
+.vin-icon-fabulous:before {
+  content: "\e622";
+}
+
+.vin-icon-eye:before {
+  content: "\e623";
+}
+
+.vin-icon-follow:before {
+  content: "\e624";
+}
+
+.vin-icon-jdl:before {
+  content: "\e625";
+}
+
+.vin-icon-footprint:before {
+  content: "\e626";
+}
+
+.vin-icon-image-error:before {
+  content: "\e627";
+}
+
+.vin-icon-heart-fill-n:before {
+  content: "\e628";
+}
+
+.vin-icon-heart:before {
+  content: "\e629";
+}
+
+.vin-icon-location:before {
+  content: "\e62a";
+}
+
+.vin-icon-heart-fill2:before {
+  content: "\e62b";
+}
+
+.vin-icon-heart-fill1:before {
+  content: "\e62c";
+}
+
+.vin-icon-joy-smile:before {
+  content: "\e62d";
+}
+
+.vin-icon-heart-fill:before {
+  content: "\e62e";
+}
+
+.vin-icon-heart2:before {
+  content: "\e62f";
+}
+
+.vin-icon-mask-close:before {
+  content: "\e630";
+}
+
+.vin-icon-issue:before {
+  content: "\e631";
+}
+
+.vin-icon-link:before {
+  content: "\e632";
+}
+
+.vin-icon-horizontal:before {
+  content: "\e633";
+}
+
+.vin-icon-heart-n:before {
+  content: "\e634";
+}
+
+.vin-icon-more-s:before {
+  content: "\e635";
+}
+
+.vin-icon-location2:before {
+  content: "\e636";
+}
+
+.vin-icon-left:before {
+  content: "\e637";
+}
+
+.vin-icon-home:before {
+  content: "\e638";
+}
+
+.vin-icon-loading1:before {
+  content: "\e639";
+}
+
+.vin-icon-my:before {
+  content: "\e63a";
+}
+
+.vin-icon-dshop:before {
+  content: "\e63b";
+}
+
+.vin-icon-lower:before {
+  content: "\e63c";
+}
+
+.vin-icon-play-double-back:before {
+  content: "\e63d";
+}
+
+.vin-icon-minus:before {
+  content: "\e63e";
+}
+
+.vin-icon-my2:before {
+  content: "\e63f";
+}
+
+.vin-icon-rect-down:before {
+  content: "\e640";
+}
+
+.vin-icon-microphone:before {
+  content: "\e641";
+}
+
+.vin-icon-play-start:before {
+  content: "\e642";
+}
+
+.vin-icon-photograph:before {
+  content: "\e643";
+}
+
+.vin-icon-people:before {
+  content: "\e644";
+}
+
+.vin-icon-play-double-forward:before {
+  content: "\e645";
+}
+
+.vin-icon-rect-up:before {
+  content: "\e646";
+}
+
+.vin-icon-more:before {
+  content: "\e647";
+}
+
+.vin-icon-checked:before {
+  content: "\e648";
+}
+
+.vin-icon-plus:before {
+  content: "\e649";
+}
+
+.vin-icon-s-follow:before {
+  content: "\e64a";
+}
+
+.vin-icon-image:before {
+  content: "\e64b";
+}
+
+.vin-icon-refresh:before {
+  content: "\e64c";
+}
+
+.vin-icon-setting:before {
+  content: "\e64d";
+}
+
+.vin-icon-order:before {
+  content: "\e64e";
+}
+
+.vin-icon-poweroff-circle-fill:before {
+  content: "\e64f";
+}
+
+.vin-icon-down-arrow:before {
+  content: "\e650";
+}
+
+.vin-icon-loading:before {
+  content: "\e651";
+}
+
+.vin-icon-marshalling:before {
+  content: "\e652";
+}
+
+.vin-icon-service:before {
+  content: "\e653";
+}
+
+.vin-icon-search:before {
+  content: "\e654";
+}
+
+.vin-icon-rect-right:before {
+  content: "\e655";
+}
+
+.vin-icon-star-fill2:before {
+  content: "\e656";
+}
+
+.vin-icon-share-n:before {
+  content: "\e657";
+}
+
+.vin-icon-locationg3:before {
+  content: "\e658";
+}
+
+.vin-icon-share1:before {
+  content: "\e659";
+}
+
+.vin-icon-star1:before {
+  content: "\e65a";
+}
+
+.vin-icon-more-x:before {
+  content: "\e65b";
+}
+
+.vin-icon-scan2:before {
+  content: "\e65c";
+}
+
+.vin-icon-star-fill1:before {
+  content: "\e65d";
+}
+
+.vin-icon-screen-little:before {
+  content: "\e65e";
+}
+
+.vin-icon-message:before {
+  content: "\e65f";
+}
+
+.vin-icon-star2:before {
+  content: "\e660";
+}
+
+.vin-icon-shop3:before {
+  content: "\e661";
+}
+
+.vin-icon-notice:before {
+  content: "\e662";
+}
+
+.vin-icon-right:before {
+  content: "\e663";
+}
+
+.vin-icon-uploader:before {
+  content: "\e664";
+}
+
+.vin-icon-triangle-up:before {
+  content: "\e665";
+}
+
+.vin-icon-shop:before {
+  content: "\e666";
+}
+
+.vin-icon-retweet:before {
+  content: "\e667";
+}
+
+.vin-icon-star-fill:before {
+  content: "\e668";
+}
+
+.vin-icon-success:before {
+  content: "\e669";
+}
+
+.vin-icon-voice:before {
+  content: "\e66a";
+}
+
+.vin-icon-play-stop:before {
+  content: "\e66b";
+}
+
+.vin-icon-rect-left:before {
+  content: "\e66c";
+}
+
+.vin-icon-refresh2:before {
+  content: "\e66d";
+}
+
+.vin-icon-star-fill-n:before {
+  content: "\e66e";
+}
+
+.vin-icon-search2:before {
+  content: "\e66f";
+}
+
+.vin-icon-top:before {
+  content: "\e670";
+}
+
+.vin-icon-tips:before {
+  content: "\e671";
+}
+
+.vin-icon-star11:before {
+  content: "\e672";
+}
+
+.vin-icon-star:before {
+  content: "\e673";
+}
+

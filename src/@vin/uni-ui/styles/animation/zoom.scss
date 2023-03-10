@@ -1,0 +1,26 @@
+@keyframes vinZoomIn {
+  from {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes vinZoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@include make-animation(vinZoom);

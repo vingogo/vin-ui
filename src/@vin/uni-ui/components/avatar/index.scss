@@ -1,0 +1,62 @@
+.vin-avatar {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto; // 防止被压缩
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-size: 100% 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .vin-icon__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+.vin-avatar-large {
+  width: $avatar-large-width;
+  height: $avatar-large-height;
+  line-height: $avatar-large-height;
+}
+
+.vin-avatar-small {
+  width: $avatar-small-width;
+  height: $avatar-small-height;
+  line-height: $avatar-small-height;
+}
+
+.vin-avatar-normal {
+  width: $avatar-normal-width;
+  height: $avatar-normal-height;
+  line-height: $avatar-normal-height;
+}
+
+.vin-avatar-round {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.vin-avatar-square {
+  border-radius: $avatar-square;
+}

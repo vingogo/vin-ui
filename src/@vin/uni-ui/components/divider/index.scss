@@ -1,0 +1,54 @@
+.vin-divider {
+  display: flex;
+  align-items: center;
+  margin: $divider-margin;
+  color: $divider-text-color;
+  font-size: $divider-text-font-size;
+
+  &::before,
+  &::after {
+    flex: 1;
+    height: $divider-line-height;
+    border: $divider-line-height solid currentColor;
+    border-width: $divider-line-height 0 0;
+    content: '';
+  }
+
+  &.vin-divider-center,
+  &.vin-divider-left,
+  &.vin-divider-right {
+    &::before {
+      margin-right: $divider-before-margin-right;
+    }
+
+    &::after {
+      margin-left: $divider-after-margin-left;
+    }
+  }
+
+  &.vin-divider-left {
+    &::before {
+      max-width: 10%;
+    }
+  }
+
+  &.vin-divider-right {
+    &::after {
+      max-width: 10%;
+    }
+  }
+
+  &.vin-divider-dashed {
+    &::before,
+    &::after {
+      border-style: dashed;
+    }
+  }
+
+  &.vin-divider-hairline {
+    &::before,
+    &::after {
+      transform: scaleY(0.5);
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.vin-radio {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  &--reverse {
+    .vin-radio__label {
+      margin-right: $radio-label-margin-left;
+      margin-left: 0;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: $radio-button-padding;
+    color: $radio-label-font-color;
+    font-size: $radio-button-font-size;
+    background: #f6f7f9;
+    border-radius: $radio-button-border-radius;
+    &--active {
+      color: $radio-label-font-active-color;
+      background: $radio-label-button-background;
+      border: 1px solid $radio-label-button-border-color;
+    }
+    &--disabled {
+      color: $radio-label-disable-color;
+      border: none;
+    }
+  }
+
+  &__label {
+    margin-left: $radio-label-margin-left;
+    color: $radio-label-font-color;
+    font-size: $radio-label-font-size;
+    &--disabled {
+      color: $radio-label-disable-color;
+    }
+  }
+
+  &__icon {
+    color: $radio-label-font-active-color;
+    font-size: $radio-icon-font-size;
+    transition-duration: 0.3s;
+    transition-property: color, border-color, background-color;
+  }
+  &__icon--unchecked {
+    color: $radio-icon-disable-color;
+  }
+  &__icon--disable {
+    color: $help-color;
+  }
+}

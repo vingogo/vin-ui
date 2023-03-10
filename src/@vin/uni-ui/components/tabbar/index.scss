@@ -1,0 +1,27 @@
+.vin-tabbar {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 0;
+  background: $white;
+  border: 0;
+  border-top: $tabbar-border-top;
+  border-bottom: $tabbar-border-bottom;
+  box-shadow: $tabbar-box-shadow;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 888;
+  }
+
+  &-safebottom {
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}

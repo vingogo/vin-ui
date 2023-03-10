@@ -1,0 +1,10 @@
+html.dark,
+:root {
+  // brand colors
+  --c-brand: #f87d09;
+  --c-brand-light: #f87d09;
+
+  .sidebar::-webkit-scrollbar {
+    width: 3px;
+  }
+}

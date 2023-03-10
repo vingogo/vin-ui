@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic usage 1`] = `
+"<view class=\\"vin-searchbar\\">
+  <!--v-if-->
+  <view class=\\"vin-searchbar__search-input\\">
+    <!--v-if-->
+    <view class=\\"vin-searchbar__input-inner\\">
+      <form action=\\"#\\" onsubmit=\\"return false\\"><input class=\\"vin-searchbar__input-bar\\" type=\\"text\\" maxlength=\\"9999\\" placeholder=\\"请输入\\"></form>
+      <view class=\\"vin-searchbar__input-clear\\" style=\\"display: none;\\"><text style=\\"color: rgb(85, 85, 85); font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-circle-close\\"></text></view>
+    </view>
+    <!--v-if-->
+  </view>
+  <!--v-if-->
+</view>"
+`;
+
+exports[`slot test 1`] = `
+"<view class=\\"vin-searchbar\\">
+  <!--v-if-->
+  <view class=\\"vin-searchbar__search-input\\">
+    <!--v-if-->
+    <view class=\\"vin-searchbar__input-inner\\">
+      <form action=\\"#\\" onsubmit=\\"return false\\"><input class=\\"vin-searchbar__input-bar\\" type=\\"text\\" maxlength=\\"9999\\" placeholder=\\"请输入\\"></form>
+      <view class=\\"vin-searchbar__input-clear\\" style=\\"display: none;\\"><text style=\\"color: rgb(85, 85, 85); font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-circle-close\\"></text></view>
+    </view>
+    <!--v-if-->
+  </view>
+  <!--v-if-->
+</view>"
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic usage 1`] = `
+"<view class=\\"vin-checkbox\\"><text class=\\"vin-checkbox__icon vin-iconfont vin-icon vin-icon-checked\\"></text>
+  <view class=\\"vin-checkbox__label\\"></view>
+</view>"
+`;

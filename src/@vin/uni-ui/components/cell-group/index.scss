@@ -1,0 +1,43 @@
+.vin-cell-group {
+  display: block;
+
+  &__title {
+    display: inherit;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: $cell-group-title-padding;
+    color: $cell-group-title-color;
+    font-size: $cell-group-title-font-size;
+    line-height: $cell-group-title-line-height;
+  }
+
+  &__desc {
+    display: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: $cell-group-desc-padding;
+    color: $cell-group-desc-color;
+    font-size: $cell-group-desc-font-size;
+    line-height: $cell-group-desc-line-height;
+  }
+
+  &__warp {
+    display: inherit;
+    margin: 10px 0;
+    overflow: hidden;
+    background-color: $cell-group-background-color;
+    border-radius: $cell-border-radius;
+
+    ::v-deep .vin-cell {
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
+  ::v-deep .vin-cell {
+    &::after {
+      border-bottom: $cell-after-border-bottom;
+    }
+  }
+}

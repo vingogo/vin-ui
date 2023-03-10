@@ -1,0 +1,124 @@
+.vin-navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: $navbar-height;
+  margin-bottom: $navbar-margin-bottom;
+  padding: $navbar-padding;
+  overflow: hidden;
+  color: $navbar-color;
+  font-size: $navbar-title-base-font;
+  background: $navbar-background;
+  box-shadow: $navbar-box-shadow;
+  &:active::before {
+    opacity: 0.1;
+  }
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  &--safe-area-inset-top {
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+  }
+  &--clickable {
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      border: inherit;
+      border-color: $black;
+      border-radius: inherit;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      content: ' ';
+    }
+  }
+
+  .vin-iconfont {
+    .vin-icon-left {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    min-width: 53%;
+    margin: 0 auto;
+    text-align: center;
+    .title {
+      display: -webkit-box;
+      width: $navbar-title-width;
+      overflow: hidden;
+      color: $navbar-title-font-color;
+      font-weight: $navbar-title-font-weight;
+      font-size: $navbar-title-font;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+    }
+    &.icon {
+      .icon {
+        margin: $navbar-title-icon-margin;
+      }
+    }
+    .vin-icon {
+      display: inline;
+    }
+    &-desc {
+      font-size: $cell-title-desc-font;
+    }
+    .text__title {
+      display: inline-block;
+    }
+
+    .vin-tabs__titles {
+      background: $white;
+    }
+
+    .vin-tabpane {
+      display: none;
+    }
+  }
+
+  &__title ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    color: $cell-desc-color;
+    font-size: $cell-desc-font;
+    cursor: pointer;
+  }
+  &__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    color: $cell-desc-color;
+    font-size: $cell-desc-font;
+    cursor: pointer;
+    .rightIcon {
+      margin-left: 16px;
+    }
+    .leftIcon {
+      margin-left: 16px;
+    }
+  }
+}

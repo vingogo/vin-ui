@@ -1,0 +1,35 @@
+.vin-rate {
+  display: flex;
+  &-item {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &__icon {
+      color: $rate-icon-color;
+      cursor: pointer;
+
+      &::before {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+      }
+
+      &--disabled {
+        color: $rate-icon-void-color;
+      }
+      &--half {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50% !important;
+        height: auto !important;
+        overflow: hidden;
+      }
+    }
+  }
+}

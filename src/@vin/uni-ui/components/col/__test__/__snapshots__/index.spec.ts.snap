@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Col correctly and should render gutter correctly 1`] = `
+"<view class=\\"vin-row-
+        vin-row-justify-start
+        vin-row-align-flex-start
+        vin-row-flex-nowrap
+        vin-row\\">
+  <view class=\\"vin-col vin-col-gutter vin-col-8 vin-col-offset-0\\" style=\\"padding-left: 3px; padding-right: 3px;\\">8</view>
+  <view class=\\"vin-col vin-col-gutter vin-col-8 vin-col-offset-0\\" style=\\"padding-left: 3px; padding-right: 3px;\\">8</view>
+  <view class=\\"vin-col vin-col-gutter vin-col-8 vin-col-offset-0\\" style=\\"padding-left: 3px; padding-right: 3px;\\">8</view>
+</view>"
+`;

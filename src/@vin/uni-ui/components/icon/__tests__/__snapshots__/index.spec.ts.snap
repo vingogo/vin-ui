@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render icon fabulous 1`] = `"<text class=\\"vin-iconfont vin-icon vin-icon-fabulous\\"></text>"`;
+
+exports[`should render icon fabulous color 1`] = `"<text style=\\"color: red;\\" class=\\"vin-iconfont vin-icon vin-icon-fabulous\\"></text>"`;
+
+exports[`should render icon fabulous size 1`] = `"<text style=\\"font-size: 24px; width: 24px; height: 24px;\\" class=\\"vin-iconfont vin-icon vin-icon-fabulous\\"></text>"`;
+
+exports[`should render icon image type 1`] = `"<img src=\\"https://vingogo.cn/docs/images/logo.png\\" class=\\"vin-icon__img\\">"`;

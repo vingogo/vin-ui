@@ -1,0 +1,98 @@
+.vin-searchbar {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: $searchbar-width;
+  padding: $searchbar-padding;
+  background: $searchbar-background;
+  &__search-input {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    width: $searchbar-input-width;
+    height: $searchbar-input-height;
+    padding: $searchbar-input-padding;
+    background: $searchbar-input-background;
+    border-radius: $searchbar-input-border-radius;
+    box-shadow: $searchbar-input-box-shadow;
+
+    .vin-searchbar__input-inner {
+      position: relative;
+      display: flex;
+      width: 100%;
+      > taro-form-core {
+        width: 100%;
+      }
+      form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+        min-width: 214px;
+        height: 100%;
+        padding-left: 4px;
+      }
+      .vin-searchbar__input-clear {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        margin-right: 10px;
+        & .vin-searchbar__vin-icon-mask-close {
+          color: rgb(204, 204, 204);
+          &:hover {
+            color: rgb(104, 104, 104);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .vin-searchbar__iptleft-search-icon {
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+    }
+
+    .vin-searchbar__iptright-sarch-icon {
+      margin-right: 12px;
+    }
+
+    .vin-searchbar__input-bar {
+      flex: 1;
+      width: 100%;
+      height: 36px;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      background-color: transparent;
+      border-color: transparent;
+      border-radius: 16px;
+      outline: none;
+    }
+  }
+
+  &__left-search-icon {
+    margin-right: 8px;
+  }
+
+  &__search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__right-search-icon {
+    margin-left: 16px;
+    color: $searchbar-right-out-color;
+    font-size: 14px;
+  }
+}

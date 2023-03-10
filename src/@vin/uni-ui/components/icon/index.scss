@@ -1,0 +1,125 @@
+@import '../../styles/font/iconfont.css';
+
+.vin-icon {
+  position: relative;
+  display: inline-block;
+  width: $icon-width;
+  height: $icon-height;
+  line-height: $icon-line-height;
+  text-align: right;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__img {
+    width: $icon-width;
+    height: $icon-height;
+    object-fit: contain;
+  }
+  &-loading,
+  &-loading1 {
+    display: inline-block;
+    animation: rotation 1s infinite linear;
+  }
+
+  --animate-duration: 1s;
+  --animate-delay: 0s;
+
+  &-am-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  &-am-jump {
+    -webkit-animation-name: vinjumpone;
+    animation-name: vinJumpOne;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+
+    &.vin-icon-am-infinite {
+      -webkit-animation-name: vinjump;
+      animation-name: vinJump;
+    }
+  }
+
+  &-am-rotate {
+    -webkit-animation-name: rotation;
+    animation-name: rotation;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+
+    &.vin-icon-am-infinite {
+      -webkit-animation-direction: normal;
+      animation-direction: normal;
+    }
+  }
+  &-am-blink {
+    -webkit-animation-name: vinblink;
+    animation-name: vinBlink;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+  }
+  &-am-breathe {
+    -webkit-animation-name: vinbreathe;
+    animation-name: vinBreathe;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+  }
+  &-am-flash {
+    -webkit-animation-name: vinflash;
+    animation-name: vinFlash;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+  }
+  &-am-bounce {
+    -webkit-animation-name: vinbounce;
+    animation-name: vinBounce;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+
+    &.vin-icon-am-infinite {
+      -webkit-animation-direction: normal;
+      animation-direction: normal;
+    }
+  }
+
+  &-am-shake {
+    -webkit-animation-name: vinshake;
+    animation-name: vinShake;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+  }
+}

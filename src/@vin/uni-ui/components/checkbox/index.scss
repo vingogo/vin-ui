@@ -1,0 +1,33 @@
+.vin-checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+
+  &--reverse {
+    flex-direction: row-reverse;
+    .vin-checkbox__label {
+      margin-right: $checkbox-label-margin-left;
+      margin-left: 0;
+    }
+  }
+  &__label {
+    margin-left: $checkbox-label-margin-left;
+    color: $checkbox-label-color;
+    font-size: $checkbox-label-font-size;
+    &--disabled {
+      color: $checkbox-label-disable-color;
+    }
+  }
+  &__icon {
+    color: $primary-color;
+    font-size: $checkbox-icon-font-size;
+    transition-duration: 0.3s;
+    transition-property: color, border-color, background-color;
+  }
+  &__icon--unchecked {
+    color: $checkbox-icon-disable-color;
+  }
+  &__icon--disable {
+    color: $help-color;
+  }
+}

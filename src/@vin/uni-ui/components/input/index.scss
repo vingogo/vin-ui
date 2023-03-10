@@ -1,0 +1,126 @@
+input,
+textarea {
+  font: inherit;
+  .vin-placeholder {
+    // font: inherit;
+  }
+}
+textarea {
+  .vin-placeholder {
+    // padding: 0 2px;
+    // font: inherit;
+  }
+}
+.vin-input {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 25px;
+  font-size: $input-font-size;
+  line-height: 24px;
+  background: $white;
+  &.center {
+    align-items: center;
+  }
+  &.vin-input-border {
+    border-bottom: 1px solid $input-border-bottom;
+  }
+
+  .input-text,
+  &__text--readonly {
+    width: 100%;
+    padding: 0;
+    // padding-right: 35px;
+    line-height: inherit;
+    text-align: left;
+    text-decoration: none;
+    border: 0;
+    outline: 0 none;
+    resize: none;
+  }
+
+  &-label {
+    width: 80px;
+    margin-right: 6px;
+    overflow: hidden;
+    text-align: left;
+    .label-string {
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+    }
+  }
+  &-value {
+    flex: 1;
+    vertical-align: middle;
+  }
+  &-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &-disabled-mask {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+  &-error-message {
+    color: $input-required-color;
+    font-size: 12px;
+  }
+  &-word-limit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+    color: #808080;
+    font-size: 12px;
+    // line-height: var(--van-field-word-limit-line-height);
+  }
+  &-left-icon,
+  &-right-icon {
+    display: flex;
+    align-items: center;
+    font-size: 0;
+  }
+  &-clear,
+  &-right-icon {
+    margin-left: 4px;
+  }
+  &-left-icon {
+    margin-right: 4px;
+  }
+  &-clear {
+    width: 16px;
+    height: 16px;
+    color: #c8c9cc;
+    cursor: pointer;
+  }
+  .vin-button {
+    margin-left: 10px;
+  }
+  &.vin-input-required {
+    &::before {
+      position: absolute;
+      left: 14px;
+      color: $input-required-color;
+      content: '*';
+    }
+  }
+  &-disabled {
+    color: $input-disabled-color !important;
+    input:disabled {
+      color: $input-disabled-color;
+      background: none;
+      cursor: not-allowed;
+      opacity: 1;
+      -webkit-text-fill-color: $input-disabled-color;
+    }
+  }
+  &-error,
+  &-error::placeholder {
+    color: $input-required-color;
+    -webkit-text-fill-color: $input-required-color;
+  }
+}

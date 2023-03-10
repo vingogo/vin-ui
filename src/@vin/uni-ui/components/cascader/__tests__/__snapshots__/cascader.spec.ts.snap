@@ -1,0 +1,1090 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cascader change tab 1`] = `
+"<view>
+  <vin-transition show=\\"true\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"true\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">鼓楼区</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-checked=\\"false\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader change tab 2`] = `
+"<view>
+  <vin-transition show=\\"true\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"true\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">鼓楼区</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-100%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-checked=\\"false\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader change tab 3`] = `
+"<view>
+  <vin-transition show=\\"true\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"true\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">鼓楼区</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-checked=\\"false\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader modelValue 1`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-fade-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\"></view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader modelValue 2`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">鼓楼区</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader modelValue 3`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">湖南</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader modelValue 4`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader modelValue with lazy 1`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">Loading...</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view class=\\"vin-cascader-pane\\"></view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader modelValue with lazy 2`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A0</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A12</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A21</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">B0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">C0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A11</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A12</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A21</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A22</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader options 1`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">鼓楼区</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-checked=\\"false\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader options with convertConfig 1`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">广东省</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">广州市</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-100%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">广东省</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">北京</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">广州市</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader options with valueKey/textKey/childrenKey 1`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">鼓楼区</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-checked=\\"false\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select 1`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-100%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select 2`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select 3`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福建</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">福州</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">鼓楼区</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">福州</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">鼓楼区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">台江区</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select 4`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">浙江</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item disabled\\" aria-disabled=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">湖南</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">福建</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select with lazy 1`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-fade-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\"></view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view class=\\"vin-cascader-pane\\"></view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select with lazy 2`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">B0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select with lazy 3`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A0</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-100%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">A0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">B0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A11</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A12</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select with lazy 4`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A0</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A12</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">B0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">A11</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">A12</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A21</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A22</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select with lazy 5`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A0</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A12</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">A21</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-200%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">B0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" aria-checked=\\"false\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A11</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" aria-checked=\\"true\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A12</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">A21</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">A22</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select with lazy 6`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-0%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane active\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">A0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">B0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;
+
+exports[`Cascader select with lazy 7`] = `
+"<view>
+  <vin-transition show=\\"false\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\" class=\\"\\"></vin-transition>
+  <vin-transition show=\\"false\\" name=\\"popup-slide-bottom\\" custom-class=\\"[object Object]\\" custom-style=\\"[object Object]\\" duration=\\"300\\">
+    <!--v-if-->
+    <view class=\\"vin-tabs horizontal vin-cascader\\">
+      <view class=\\"vin-tabs__titles line scrollable normal\\">
+        <view class=\\"vin-tabs__titles-item\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">B0</view>
+        </view>
+        <view class=\\"vin-tabs__titles-item active\\" style=\\"margin-left: 0px; margin-right: 0px;\\">
+          <view class=\\"vin-tabs__titles-item__line\\"></view>
+          <!--v-if-->
+          <view class=\\"vin-tabs__titles-item__text\\">请选择</view>
+        </view>
+      </view>
+      <view class=\\"vin-tabs__content\\" style=\\"transform: translate3d(-100%, 0, 0); transition-duration: 300ms;\\">
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\" aria-checked=\\"false\\">
+              <view class=\\"vin-cascader-item__title\\">A0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item active\\" role=\\"menuitemradio\\" aria-checked=\\"true\\">
+              <view class=\\"vin-cascader-item__title\\">B0</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+        <view class=\\"vin-tabpane\\">
+          <view role=\\"menu\\" class=\\"vin-cascader-pane\\">
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">B11</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+            <view class=\\"vin-cascader-item\\" role=\\"menuitemradio\\">
+              <view class=\\"vin-cascader-item__title\\">B12</view><text class=\\"vin-cascader-item__icon-check vin-iconfont vin-icon vin-icon-checklist\\"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class=\\"vin-popup__close-icon vin-popup__close-icon--top-right\\"><text style=\\"font-size: 12px; width: 12px; height: 12px;\\" class=\\"vin-iconfont vin-icon vin-icon-close\\"></text></view>
+  </vin-transition>
+</view>"
+`;

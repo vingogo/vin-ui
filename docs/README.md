@@ -1,0 +1,25 @@
+---
+home: true
+heroImage: '/images/logo.png'
+lang: zh_CN
+title: Vin UI 使用文档
+description: 基于 Vue 3 的轻量、快速的多平台开发 UI 组件库
+tagline: 基于 Vue 3 的轻量、快速的多平台开发 UI 组件库
+meta:
+  - name: keywords
+    content: Vin, Vin UI, uni-app, Vite, 小程序, h5 多平台开发 UI 组件库
+actions:
+  - text: 快速开始
+    link: /components/
+    type: primary
+features:
+  - title: 小程序
+    details: Vue 3 + Vite + uni-app, 一次开发, 多平台运行
+  - title: UI 库
+    details: 基于 TypeScript 开发的高质量 UI 组件库
+footer: MIT Licensed | Copyright © 2023-present Alvin
+---
+
+# Vin
+
+Vin 项目主要针对开发中经常使用的组件库进行封装，基于 uni-app 提供多平台运行的能力，开发打包工具采用 Vite 。

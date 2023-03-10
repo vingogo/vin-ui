@@ -1,0 +1,40 @@
+.vin-textarea {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 25px;
+  font-size: $textarea-font;
+  background: $white;
+
+  &--disabled {
+    .vin-textarea__textarea,
+    .vin-textarea____limit {
+      color: $textarea-disabled-color !important;
+      cursor: not-allowed;
+    }
+  }
+  &__limit {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    color: $textarea-limit-color;
+    font-size: $textarea-font;
+  }
+  &__textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    color: $textarea-text-color;
+    font-size: $textarea-font;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    // min-height: $textarea-height;
+    outline: none;
+    resize: none;
+  }
+}

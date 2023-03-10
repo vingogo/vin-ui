@@ -1,0 +1,11 @@
+.vin-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 0 solid $grid-border-color;
+
+  &--border {
+    border-top-width: 1px;
+    border-left-width: 1px;
+  }
+}

@@ -1,0 +1,37 @@
+.vin-badge {
+  position: relative;
+  display: inline-block;
+
+  .slot-icons {
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    z-index: $badge-z-index;
+    padding: $badge-padding;
+    text-align: center;
+    background: $badge-background-color;
+    border-radius: $badge-border-radius;
+  }
+
+  .sup {
+    position: absolute;
+    padding: $badge-padding;
+    color: $badge-color;
+    font-weight: normal;
+    font-size: $badge-font-size;
+    text-align: center;
+    background: $badge-background-color;
+    border-radius: $badge-border-radius;
+  }
+
+  .vin-badge__content {
+    transform: $badge-content-transform;
+  }
+
+  .is-dot {
+    width: $badge-dot-width;
+    height: $badge-dot-height;
+    padding: $badge-dot-padding;
+    border-radius: $badge-dot-border-radius;
+  }
+}

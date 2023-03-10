@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`slots test 1`] = `"<vin-transition show=\\"true\\" custom-class=\\"vin-overlay \\" custom-style=\\"[object Object]\\" duration=\\"300\\">这里是正文</vin-transition>"`;

@@ -1,0 +1,114 @@
+.vin-noticebar-page {
+  position: relative;
+  // width: 100%;
+  display: flex;
+  align-items: center;
+  height: $noticebar-height;
+  padding: $noticebar-box-padding;
+  color: $noticebar-color;
+  font-size: $noticebar-font-size;
+  background: $noticebar-background;
+  &.wrapable {
+    height: auto;
+    padding: $noticebar-wrapable-padding;
+    .wrap {
+      height: auto;
+      .content {
+        position: relative;
+        white-space: normal;
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .withicon {
+    position: relative;
+    padding-right: 40px;
+  }
+  .left-icon {
+    min-width: $noticebar-left-icon-width;
+    height: $noticebar-left-icon-width;
+    margin: $noticebar-lefticon-margin;
+    background-size: 100% 100%;
+  }
+  .right-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $noticebar-right-icon-width;
+    margin: $noticebar-righticon-margin;
+  }
+  .wrap {
+    position: relative;
+    display: flex;
+    flex: 1;
+    height: $noticebar-line-height;
+    overflow: hidden;
+    line-height: $noticebar-line-height;
+  }
+  .content {
+    position: absolute;
+    white-space: nowrap;
+    &.vin-ellipsis {
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  // 只跑一次
+  .play {
+    animation: vin-notice-bar-play linear both running;
+  }
+  .play-infinite {
+    animation: vin-notice-bar-play-infinite linear infinite both running;
+  }
+  .play-vertical {
+    animation: vin-notice-bar-play-vertical linear infinite both running;
+  }
+}
+
+@keyframes vin-notice-bar-play {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes vin-notice-bar-play-infinite {
+  to {
+    transform: translateX(-100%);
+  }
+}
+// 垂直方向的滚动
+@keyframes vin-notice-bar-play-vertical {
+  to {
+    transform: translateY($noticebar-height);
+  }
+}
+
+// 纵向
+.vin-noticebar-vertical {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: $noticebar-height;
+  padding: $noticebar-box-padding;
+  overflow: hidden;
+  font-size: $noticebar-font-size;
+
+  .horseLamp_list {
+    display: block;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    .horseLamp_list_item {
+      display: flex;
+      align-items: center;
+      height: $noticebar-height;
+    }
+  }
+
+  .go {
+    align-self: center;
+  }
+}

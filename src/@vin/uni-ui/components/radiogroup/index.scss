@@ -1,0 +1,17 @@
+.vin-radiogroup {
+  display: inline-block;
+  .vin-radio {
+    margin-bottom: 5px;
+  }
+  &--horizontal {
+    .vin-radio {
+      display: inline-flex;
+      margin-right: 10px;
+      &--round {
+        .vin-radio__label {
+          margin: 0 6px;
+        }
+      }
+    }
+  }
+}

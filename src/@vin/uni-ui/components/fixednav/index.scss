@@ -1,0 +1,133 @@
+.vin-fixednav {
+  position: fixed;
+  right: 0;
+  z-index: $fixednav-index;
+  display: inline-block;
+  height: 50px;
+
+  &.active {
+    .vin-icon {
+      transform: rotate(180deg);
+    }
+    .vin-fixednav__list {
+      transform: translateX(0%) !important;
+    }
+    &.left {
+      .vin-icon {
+        transform: rotate(0deg) !important;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    z-index: $fixednav-index + 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 80px;
+    height: 100%;
+    padding-left: 12px;
+    background: $fixednav-btn-bg;
+    border-radius: 45px 0 0 45px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+    &-text {
+      flex-shrink: 0;
+      width: 24px;
+      color: $fixednav-bg-color;
+      font-size: 10px;
+      line-height: 13px;
+    }
+    .vin-icon {
+      margin-right: 5px;
+      transform: rotate(0deg);
+      transition: all 0.3s;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    right: 0;
+    z-index: $fixednav-index;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: $fixednav-bg-color;
+    border-radius: 25px 0 0 25px;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: all 0.5s;
+    padding: {
+      right: 80px;
+      left: 20px;
+    }
+    &-item {
+      position: relative;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      min-width: 50px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      > img,
+      > image {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+      }
+      > .span {
+        color: $fixednav-font-color;
+        font-size: 10px;
+      }
+      > .b {
+        position: absolute;
+        top: 1px;
+        right: 0;
+        min-width: 12px;
+        height: 14px;
+        padding: 0 3px;
+        color: white;
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+        background: $primary-color;
+        border-radius: 7px;
+      }
+    }
+  }
+  &.left {
+    right: auto;
+    left: 0;
+
+    .vin-fixednav__btn {
+      right: auto;
+      left: 0;
+      flex-direction: row-reverse;
+      border-radius: 0 45px 45px 0;
+      .vin-icon {
+        transform: rotate(180deg);
+      }
+    }
+    .vin-fixednav__list {
+      right: auto;
+      border-radius: 0 25px 25px 0;
+      transform: translateX(-100%);
+      padding: {
+        right: 20px;
+        left: 80px;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+/**
+ * 内置的动画模式有如下：
+ * fade：淡入
+ * zoom：缩放
+ * fade-zoom：缩放淡入
+ * fade-up：上滑淡入
+ * fade-down：下滑淡入
+ * fade-left：左滑淡入
+ * fade-right：右滑淡入
+ * slide-up：上滑进入
+ * slide-down：下滑进入
+ * slide-left：左滑进入
+ * slide-right：右滑进入
+ */
+
+$vin-zoom-scale: scale(0.95);
+
+.vin-fade-enter-active,
+.vin-fade-leave-active {
+  transition-property: opacity;
+}
+
+.vin-fade-enter,
+.vin-fade-leave-to {
+  opacity: 0;
+}
+
+.vin-fade-zoom-enter,
+.vin-fade-zoom-leave-to {
+  transform: $vin-zoom-scale;
+  opacity: 0;
+}
+
+.vin-fade-zoom-enter-active,
+.vin-fade-zoom-leave-active {
+  transition-property: transform, opacity;
+}
+
+.vin-fade-down-enter-active,
+.vin-fade-down-leave-active,
+.vin-fade-left-enter-active,
+.vin-fade-left-leave-active,
+.vin-fade-right-enter-active,
+.vin-fade-right-leave-active,
+.vin-fade-up-enter-active,
+.vin-fade-up-leave-active {
+  transition-property: opacity, transform;
+}
+
+.vin-fade-up-enter,
+.vin-fade-up-leave-to {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
+
+.vin-fade-down-enter,
+.vin-fade-down-leave-to {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
+
+.vin-fade-left-enter,
+.vin-fade-left-leave-to {
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+}
+
+.vin-fade-right-enter,
+.vin-fade-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
+}
+
+.vin-slide-down-enter-active,
+.vin-slide-down-leave-active,
+.vin-slide-left-enter-active,
+.vin-slide-left-leave-active,
+.vin-slide-right-enter-active,
+.vin-slide-right-leave-active,
+.vin-slide-up-enter-active,
+.vin-slide-up-leave-active {
+  transition-property: transform;
+}
+
+.vin-slide-up-enter,
+.vin-slide-up-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+
+.vin-slide-down-enter,
+.vin-slide-down-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+
+.vin-slide-left-enter,
+.vin-slide-left-leave-to {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.vin-slide-right-enter,
+.vin-slide-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
+
+.vin-zoom-enter-active,
+.vin-zoom-leave-active {
+  transition-property: transform;
+}
+
+.vin-zoom-enter,
+.vin-zoom-leave-to {
+  transform: $vin-zoom-scale;
+}
