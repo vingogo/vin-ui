@@ -43,7 +43,7 @@
           <vin-icon
             style="display: block"
             size="30"
-            name="https://vingogo.cn/docs/images/logo.png"
+            name="https://cdn.vingogo.cn/logo.png"
           ></vin-icon>
         </vin-progress>
       </vin-cell>

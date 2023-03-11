@@ -35,7 +35,7 @@
           <img
             class="vin-icon"
             style="width: 30px; height: 30px"
-            src="https://vingogo.cn/docs/images/logo.png"
+            src="https://cdn.vingogo.cn/logo.png"
           />
         </template>
       </vin-cell>

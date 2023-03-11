@@ -13,7 +13,7 @@ test('should render icon fabulous', async () => {
 test('should render icon image type', async () => {
   const wrapper = mount(Icon, {
     props: {
-      name: 'https://vingogo.cn/docs/images/logo.png',
+      name: 'https://cdn.vingogo.cn/logo.png',
     },
   });
 

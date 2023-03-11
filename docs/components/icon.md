@@ -24,7 +24,7 @@ app.use(Icon);
 <template>
   <vin-icon name="fabulous"></vin-icon>
   <vin-icon name="star"></vin-icon>
-  <vin-icon size="40" name="https://vingogo.cn/docs/images/logo.png"></vin-icon>
+  <vin-icon size="40" name="https://cdn.vingogo.cn/logo.png"></vin-icon>
 </template>
 ```
 

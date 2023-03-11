@@ -1,4 +1,4 @@
-# Vin
+# Vin UI
 
 Vin UI 参考 NutUI（京东风格的轻量级移动端组件库）的设计和实现，在 Taro 小程序组件库版本 NutUI-Vue 基础上实现的 uniapp 版本
 
@@ -17,4 +17,4 @@ Vin UI 参考 NutUI（京东风格的轻量级移动端组件库）的设计和�
 
 扫描下方小程序二维码，体验组件库示例：
 
-![VinUI](/docs/.vuepress/public/images/qrcode.jpg)
+![VinUI](https://cdn.vingogo.cn/qrcode.jpg)

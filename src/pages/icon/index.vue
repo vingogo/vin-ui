@@ -7,7 +7,7 @@
     </vin-cell>
     <view class="h2">{{ translate('imageLink') }}</view>
     <vin-cell>
-      <vin-icon size="40" name="https://vingogo.cn/docs/images/logo.png"> </vin-icon>
+      <vin-icon size="40" name="https://cdn.vingogo.cn/logo.png"> </vin-icon>
     </vin-cell>
     <view class="h2">{{ translate('iconColor') }}</view>
     <vin-cell>

@@ -76,11 +76,7 @@ app.use(Icon);
 <template>
   <vin-cell>
     <vin-progress percentage="60" :text-inside="true">
-      <vin-icon
-        style="display: block"
-        size="30"
-        name="https://vingogo.cn/docs/images/logo.png"
-      ></vin-icon>
+      <vin-icon style="display: block" size="30" name="https://cdn.vingogo.cn/logo.png"></vin-icon>
     </vin-progress>
   </vin-cell>
 </template>
