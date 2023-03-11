@@ -39,7 +39,7 @@ module.exports = defineUserConfig({
       },
       {
         text: 'Github',
-        link: 'https://github.com/Alvin-LM',
+        link: 'https://github.com/vingogo/vin-ui',
       },
     ],
     sidebar: {
