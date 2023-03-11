@@ -23,6 +23,7 @@ module.exports = defineUserConfig({
         s.parentNode.insertBefore(hm, s);
       })();`,
     ],
+    ['link', { rel: 'icon', href: './favicon.ico' }],
   ],
   markdown: {},
   theme: localTheme({
