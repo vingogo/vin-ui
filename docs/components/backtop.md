@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { BackTop, Icon } from '@vin/uni-ui';
+import { BackTop, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(BackTop);

@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { TextArea } from '@vin/uni-ui';
+import { TextArea } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(TextArea);

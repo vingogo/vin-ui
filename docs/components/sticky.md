@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Sticky } from '@vin/uni-ui';
+import { Sticky } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Sticky);

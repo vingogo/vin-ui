@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { InfiniteLoading, Icon } from '@vin/uni-ui';
+import { InfiniteLoading, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(InfiniteLoading).use(Icon);
@@ -111,7 +111,7 @@ app.use(InfiniteLoading).use(Icon);
 
 <script>
   import { ref, reactive, onMounted, toRefs } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup(props) {
       const refreshHasMore = ref(true);

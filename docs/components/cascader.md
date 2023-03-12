@@ -8,7 +8,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Cascader, Tabs, TabPane } from '@vin/uni-ui';
+import { Cascader, Tabs, TabPane } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Cascader).use(Tabs).use(TabPane);

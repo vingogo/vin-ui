@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { NoticeBar } from '@vin/uni-ui';
+import { NoticeBar } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(NoticeBar);

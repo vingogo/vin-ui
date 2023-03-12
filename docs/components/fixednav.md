@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { FixedNav, OverLay } from '@vin/uni-ui';
+import { FixedNav, OverLay } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(FixedNav);

@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Uploader, Icon, Progress } from '@vin/uni-ui';
+import { Uploader, Icon, Progress } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Uploader);

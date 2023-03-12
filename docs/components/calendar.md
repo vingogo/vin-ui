@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Calendar, Popup } from '@vin/uni-ui';
+import { Calendar, Popup } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Calendar);

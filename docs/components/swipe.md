@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Swipe, Cell, Button } from '@vin/uni-ui';
+import { Swipe, Cell, Button } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Swipe);

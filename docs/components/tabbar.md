@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Tabbar, TabbarItem, Icon } from '@vin/uni-ui';
+import { Tabbar, TabbarItem, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Tabbar);

@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { OverLay } from '@vin/uni-ui';
+import { OverLay } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(OverLay);

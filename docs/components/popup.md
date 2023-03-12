@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Popup, OverLay } from '@vin/uni-ui';
+import { Popup, OverLay } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Popup).use(OverLay);

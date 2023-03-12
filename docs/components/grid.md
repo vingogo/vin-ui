@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Grid, GridItem } from '@vin/uni-ui';
+import { Grid, GridItem } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Grid);

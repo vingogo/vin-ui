@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Cell, CellGroup, Icon } from '@vin/uni-ui';
+import { Cell, CellGroup, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Cell).use(CellGroup).use(Icon);
@@ -25,7 +25,7 @@ app.use(Cell).use(CellGroup).use(Icon);
 </template>
 <script>
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const switchChecked = ref(true);

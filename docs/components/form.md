@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Form, FormItem, Cell, CellGroup } from '@vin/uni-ui';
+import { Form, FormItem, Cell, CellGroup } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Form);

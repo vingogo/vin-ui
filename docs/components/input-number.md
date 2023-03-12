@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { InputNumber, Icon } from '@vin/uni-ui';
+import { InputNumber, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(InputNumber).use(Icon);

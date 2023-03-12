@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Skeleton } from '@vin/uni-ui';
+import { Skeleton } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Skeleton);

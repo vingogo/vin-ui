@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Navbar, Icon, Tabs, TabPane } from '@vin/uni-ui';
+import { Navbar, Icon, Tabs, TabPane } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Navbar);

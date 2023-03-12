@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Divider } from '@vin/uni-ui';
+import { Divider } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Divider);

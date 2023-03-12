@@ -8,7 +8,7 @@
 
 ```ts
 import { createApp } from 'vue';
-import { Radio, RadioGroup } from '@vin/uni-ui';
+import { Radio, RadioGroup } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Radio).use(RadioGroup);

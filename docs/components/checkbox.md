@@ -8,7 +8,7 @@
 
 ```ts
 import { createApp } from 'vue';
-import { Checkbox, CheckboxGroup, Icon } from '@vin/uni-ui';
+import { Checkbox, CheckboxGroup, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Checkbox).use(CheckboxGroup).use(Icon);
@@ -184,7 +184,7 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </template>
 <script lang="ts">
   import { reactive, toRefs, ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     props: {},
     setup() {

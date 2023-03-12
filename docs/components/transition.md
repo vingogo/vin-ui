@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Transition } from '@vin/uni-ui';
+import { Transition } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Transition);
@@ -47,7 +47,7 @@ app.use(Transition);
 </template>
 <script lang="ts">
   import { ref, reactive } from 'vue';
-  import { createComponent } from '@vin/uni-ui/common/create';
+  import { createComponent } from '@vingogo/uni-ui/common/create';
 
   const { createDemo } = createComponent('transition');
   export default createDemo({

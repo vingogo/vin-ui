@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Range } from '@vin/uni-ui';
+import { Range } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Range);
@@ -27,7 +27,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(40);
@@ -52,7 +52,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref([20, 80]);
@@ -77,7 +77,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(0);
@@ -102,7 +102,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(20);
@@ -127,7 +127,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(30);
@@ -152,7 +152,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(40);
@@ -177,7 +177,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(50);
@@ -209,7 +209,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(40);
@@ -253,7 +253,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(60);
@@ -290,7 +290,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value10 = ref(20);
@@ -360,7 +360,7 @@ app.use(Range);
 
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value12 = ref(20);

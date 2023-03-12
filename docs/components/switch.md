@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Switch } from '@vin/uni-ui';
+import { Switch } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Switch);

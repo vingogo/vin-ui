@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { SearchBar, Icon } from '@vin/uni-ui';
+import { SearchBar, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(SearchBar).use(Icon);
@@ -44,7 +44,7 @@ app.use(SearchBar).use(Icon);
 </template>
 <script lang="ts">
   import { toRefs, reactive } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const state = reactive({
@@ -76,7 +76,7 @@ app.use(SearchBar).use(Icon);
 </template>
 <script lang="ts">
   import { toRefs, reactive } from 'vue';
-  import { Icon } from '@vin/uni-ui';
+  import { Icon } from '@vingogo/uni-ui';
   export default {
     setup() {
       const state = reactive({
@@ -163,7 +163,7 @@ app.use(SearchBar).use(Icon);
 </template>
 <script lang="ts">
   import { toRefs, reactive } from 'vue';
-  import { Icon } from '@vin/uni-ui';
+  import { Icon } from '@vingogo/uni-ui';
   export default {
     setup() {
       const state = reactive({

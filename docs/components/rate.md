@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Rate, Icon } from '@vin/uni-ui';
+import { Rate, Icon } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Rate);
@@ -144,7 +144,7 @@ app.use(Icon);
 </template>
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(3);
@@ -165,7 +165,7 @@ app.use(Icon);
 </template>
 <script lang="ts">
   import { ref } from 'vue';
-  import { Toast } from '@vin/uni-ui';
+  import { Toast } from '@vingogo/uni-ui';
   export default {
     setup() {
       const value = ref(3);
