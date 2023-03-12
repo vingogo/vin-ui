@@ -13,6 +13,10 @@ Vin UI 参考 NutUI（京东风格的轻量级移动端组件库）的设计和�
 - 💪 支持 TypeScript
 - 🌍 支持国际化
 
+## 快速开始
+
+[快速开始](https://vingogo.cn/docs/guide/quickstart.html)
+
 ## 链接
 
 - [组件使用文档](https://vingogo.cn/docs/index.html)

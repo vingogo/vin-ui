@@ -35,8 +35,13 @@ module.exports = defineUserConfig({
         link: '/',
       },
       {
+        text: '指南',
+        link: '/guide/',
+      },
+      {
         text: '组件',
-        link: '/components/',
+        link: '/components/icon',
+        activeMatch: '/components/',
       },
       {
         text: 'Github',
@@ -44,6 +49,16 @@ module.exports = defineUserConfig({
       },
     ],
     sidebar: {
+      '/guide/': [
+        {
+          text: '介绍',
+          link: '/guide/',
+        },
+        {
+          text: '快速开始',
+          link: '/guide/quickstart.md',
+        },
+      ],
       '/components/': vinConfig.list.map((nav) => {
         return {
           text: nav.name,
