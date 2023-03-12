@@ -1,0 +1,186 @@
+{
+  "name": "@vingogo/uni-ui",
+  "list": [
+    {
+      "name": "基础组件",
+      "components": [
+        {
+          "name": "icon",
+          "desc": "图标"
+        },
+        {
+          "name": "button",
+          "desc": "按钮"
+        },
+        {
+          "name": "cell",
+          "desc": "单元格"
+        },
+        {
+          "name": "overlay",
+          "desc": "遮罩层"
+        },
+        {
+          "name": "popup",
+          "desc": "弹出层"
+        },
+        {
+          "name": "grid",
+          "desc": "宫格"
+        },
+        {
+          "name": "layout",
+          "desc": "布局"
+        },
+        {
+          "name": "transition",
+          "desc": "动画"
+        }
+      ]
+    },
+    {
+      "name": "表单组件",
+      "components": [
+        {
+          "name": "radio",
+          "desc": "单选按钮"
+        },
+        {
+          "name": "rate",
+          "desc": "评分"
+        },
+        {
+          "name": "searchbar",
+          "desc": "搜索栏"
+        },
+        {
+          "name": "switch",
+          "desc": "开关"
+        },
+        {
+          "name": "input",
+          "desc": "输入框"
+        },
+        {
+          "name": "textarea",
+          "desc": "文本域"
+        },
+        {
+          "name": "cascader",
+          "desc": "级联选择器"
+        },
+        {
+          "name": "calendar",
+          "desc": "日历"
+        },
+        {
+          "name": "form",
+          "desc": "表单"
+        },
+        {
+          "name": "checkbox",
+          "desc": "复选按钮"
+        },
+        {
+          "name": "InputNumber",
+          "desc": "数字输入框"
+        }
+      ]
+    },
+    {
+      "name": "反馈组件",
+      "components": [
+        {
+          "name": "backtop",
+          "desc": "返回顶部"
+        },
+        {
+          "name": "dialog",
+          "desc": "对话框"
+        },
+        {
+          "name": "infiniteloading",
+          "desc": "滚动加载"
+        },
+        {
+          "name": "notify",
+          "desc": "消息通知"
+        },
+        {
+          "name": "swipe",
+          "desc": "滑动手势"
+        },
+        {
+          "name": "toast",
+          "desc": "吐司"
+        }
+      ]
+    },
+    {
+      "name": "展示组件",
+      "components": [
+        {
+          "name": "avatar",
+          "desc": "头像"
+        },
+        {
+          "name": "badge",
+          "desc": "徽章"
+        },
+        {
+          "name": "divider",
+          "desc": "分割线"
+        },
+        {
+          "name": "empty",
+          "desc": "空状态"
+        },
+        {
+          "name": "progress",
+          "desc": "进度条"
+        },
+        {
+          "name": "steps",
+          "desc": "步骤条"
+        },
+        {
+          "name": "tag",
+          "desc": "标签"
+        },
+        {
+          "name": "list",
+          "desc": "列表"
+        },
+        {
+          "name": "Noticebar",
+          "desc": "公告栏"
+        },
+        {
+          "name": "skeleton",
+          "desc": "骨架屏"
+        }
+      ]
+    },
+    {
+      "name": "导航组件",
+      "components": [
+        {
+          "name": "tabbar",
+          "desc": "标签栏"
+        },
+        {
+          "name": "tabs",
+          "desc": "选项卡切换"
+        },
+        {
+          "name": "navbar",
+          "desc": "头部导航"
+        },
+        {
+          "name": "fixednav",
+          "desc": "悬浮导航"
+        }
+      ]
+    }
+  ]
+}

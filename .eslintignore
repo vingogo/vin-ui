@@ -3,3 +3,4 @@ locale
 font
 scripts
 **/__tests__/*.ts
+*.json

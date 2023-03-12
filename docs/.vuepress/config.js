@@ -4,7 +4,7 @@ const { localTheme } = require('./theme');
 const { copyCodePlugin } = require('vuepress-plugin-copy-code2');
 const { commentPlugin } = require('vuepress-plugin-comment2');
 const { mdEnhancePlugin } = require('vuepress-plugin-md-enhance');
-const vinConfig = require('../../config.json');
+const vinConfig = require('../config.json');
 
 module.exports = defineUserConfig({
   base: '/docs/',

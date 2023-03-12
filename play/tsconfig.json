@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "outDir": "./tsc/test",
+    "types": ["@dcloudio/types", "vite/client", "@types/node", "vitest/globals", "jest", "node"],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@components/": ["./components/*"]
+    }
+  },
+  "include": ["*.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["./node_modules"]
+}
