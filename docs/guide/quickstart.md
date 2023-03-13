@@ -98,13 +98,13 @@ css: {
 ## 自动导入
 
 ```
-npm install @uni-helper/vite-plugin-uni-components
+npm install unplugin-vue-components
 ```
 在 vite.config.ts 中添加配置：
 ```
 import { defineConfig } from 'vite'
 
-import Components from '@uni-helper/vite-plugin-uni-components'
+import Components from 'unplugin-vue-components'
 import { VinUIResolver } from '@vingogo/uni-ui'
 
 // https://vitejs.dev/config/

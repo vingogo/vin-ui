@@ -1,4 +1,4 @@
-import type { ComponentResolver } from '@uni-helper/vite-plugin-uni-components'
+import type { ComponentResolver } from 'unplugin-vue-components'
 
 export const VinUIResolver = (): ComponentResolver => {
   return {
