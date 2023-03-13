@@ -10,6 +10,7 @@
     "url": "git+https://github.com/vingogo/vin-ui.git",
     "directory": "packages/uni-ui"
   },
+  "main": "index.ts",
   "keywords": [
     "vue",
     "uniapp",
