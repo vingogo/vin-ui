@@ -95,6 +95,32 @@ css: {
 }
 ```
 
+## 自动导入
+
+```
+npm install unplugin-vue-components
+```
+在 vite.config.ts 中添加配置：
+```
+import { defineConfig } from 'vite'
+
+import Components from 'unplugin-vue-components'
+import { VinUIResolver } from '@vingogo/uni-ui'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  // ...
+  plugins: [
+    // ...
+    Components({
+      include: [/\.vue$/, /\.vue\?vue/],
+      dts: 'src/components.d.ts',
+      resolvers: [VinUIResolver()],
+    }),
+  ],
+})
+```
+这样你的组件会拥有类型提示
 ## 使用
 
 完成上述配置后，无需引入组件，可以直接在项目中使用，如：
