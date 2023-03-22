@@ -10,7 +10,7 @@ meta:
     content: Vin, Vin UI, uni-app, Vite, 小程序, h5 多平台开发 UI 组件库
 actions:
   - text: 快速开始
-    link: /components/
+    link: /guide/quickstart.html
     type: primary
 features:
   - title: 小程序
