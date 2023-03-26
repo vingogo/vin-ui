@@ -14,8 +14,6 @@
   "scripts": {
     "lint": "eslint --ext .ts,.js,.vue --fix .",
     "format": "prettier --write --cache --parser typescript \"**/*.[tj]s?(x)\"",
-    "deploy:ui": "yarn workspace play run build:h5 && node ./scripts/deploy.js --prefix=ui --dist=play/dist/build/h5",
-    "deploy:docs": "yarn workspace docs run docs:build && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -59,7 +57,6 @@
     "@vitest/ui": "^0.10.2",
     "@vue/test-utils": "^2.0.2",
     "@vue/vue3-jest": "^28.0.1",
-    "@vuepress/plugin-search": "^2.0.0-beta.48",
     "ali-oss": "^6.17.1",
     "babel-jest": "^26.6.3",
     "babel-plugin-import": "^1.13.5",
@@ -77,8 +74,9 @@
     "jest": "^26.6.3",
     "less": "^4.1.2",
     "minimist": "^1.2.8",
+    "postcss": "^8.4.6",
+    "postcss-preset-env": "^7.2.3",
     "prettier": "^2.6.2",
-    "puppeteer": "^16.0.0",
     "sass": "^1.52.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
@@ -93,15 +91,6 @@
     "vite-plugin-eslint": "^1.6.0",
     "vitest": "^0.10.2",
     "vue-jest": "^5.0.0-alpha.7",
-    "vue3-jest": "^27.0.0-alpha.1",
-    "vuepress": "^2.0.0-beta.48",
-    "vuepress-plugin-comment2": "^2.0.0-beta.84",
-    "vuepress-plugin-copy-code2": "^2.0.0-beta.84",
-    "vuepress-plugin-md-enhance": "^2.0.0-beta.86"
-  },
-  "workspaces": [
-    "packages/*",
-    "play",
-    "docs"
-  ]
+    "vue3-jest": "^27.0.0-alpha.1"
+  }
 }
