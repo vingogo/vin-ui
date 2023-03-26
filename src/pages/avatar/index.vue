@@ -89,7 +89,7 @@
   </view>
 </template>
 <script lang="ts">
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 
 const { createDemo } = createComponent('avatar');
 export default createDemo({

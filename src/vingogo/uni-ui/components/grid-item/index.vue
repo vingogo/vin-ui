@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { computed, CSSProperties } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { pxCheck } from '../../shared/utils/pxCheck';
 import { useInject, useRouter } from '../../shared/hooks';
 import { GRID_KEY, GridProps } from '../grid/common';

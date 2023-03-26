@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { CSSProperties, computed, toRefs } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { tagProps } from './common';
 
 const { componentName, create, useVinContext } = createComponent('tag');

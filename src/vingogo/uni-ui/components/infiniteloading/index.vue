@@ -36,7 +36,7 @@
 </template>
 <script lang="ts">
 import { toRefs, onMounted, reactive, computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import Icon from '../icon/index.vue';
 import { infiniteLoadingProps } from './common';
 

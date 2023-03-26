@@ -12,7 +12,7 @@ import {
   reactive,
   ComponentPublicInstance,
 } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { checkboxGroupProps } from './common';
 
 const { create, useVinContext } = createComponent('checkboxgroup');

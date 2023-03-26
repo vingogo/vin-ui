@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { provide, computed, readonly, watch } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { radioGroupProps } from './common';
 
 const { componentName, create, useVinContext } = createComponent('radiogroup');

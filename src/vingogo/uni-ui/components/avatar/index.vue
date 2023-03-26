@@ -30,7 +30,7 @@
 </template>
 <script lang="ts">
 import { toRefs, onMounted, computed, reactive, ref } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { avatarProps } from './common';
 import { AVATAR_KEY, AvatarGroupProps } from '../avatar-group/common';
 import { useInject } from '../../shared/hooks';

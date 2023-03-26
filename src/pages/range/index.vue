@@ -101,7 +101,7 @@
 
 <script lang="ts">
 import { toRefs, reactive } from 'vue';
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 
 const { createDemo } = createComponent('range');
 export default createDemo({

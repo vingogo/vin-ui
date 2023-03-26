@@ -34,7 +34,7 @@ import {
   getCurrentInstance,
   ComponentInternalInstance,
 } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import Icon from '../icon/index.vue';
 import { stepProps } from './common';
 

@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { CSSProperties, computed, toRefs } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { skeletonProps } from './common';
 
 const { create, componentName, useVinContext } = createComponent('skeleton');

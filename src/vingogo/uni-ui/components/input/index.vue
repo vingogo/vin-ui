@@ -95,7 +95,7 @@
 </template>
 <script lang="ts">
 import { ref, reactive, computed, onMounted, watch } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { formatNumber } from './util';
 import { inputProps } from './common';
 import type { InputFormatTrigger } from './common';

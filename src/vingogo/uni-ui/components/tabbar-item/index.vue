@@ -56,7 +56,7 @@ import {
   reactive,
   watch,
 } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import Icon from '../icon/index.vue';
 import { tabbarItemProps } from './common';
 

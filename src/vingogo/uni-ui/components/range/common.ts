@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 
 export type SliderValue = number | number[];
 

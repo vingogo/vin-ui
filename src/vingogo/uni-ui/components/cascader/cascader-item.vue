@@ -37,7 +37,7 @@
 </template>
 <script lang="ts">
 import { watch, ref, Ref, computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { convertListToOptions } from './helper';
 import { CascaderPane, CascaderOption, CascaderValue, convertConfig } from './types';
 import Tree from './tree';

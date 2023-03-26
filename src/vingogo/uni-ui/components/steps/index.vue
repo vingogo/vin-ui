@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { provide, computed, reactive, ComponentInternalInstance } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { stepsProps } from './common';
 
 const { create, componentName, useVinContext } = createComponent('steps');

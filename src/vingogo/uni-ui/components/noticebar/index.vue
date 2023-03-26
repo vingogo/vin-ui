@@ -73,7 +73,7 @@ import {
   watch,
   getCurrentInstance,
 } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { noticebarProps } from './common';
 
 const { create, useVinContext } = createComponent('noticebar');

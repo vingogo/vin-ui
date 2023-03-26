@@ -86,7 +86,7 @@
 </template>
 <script lang="ts">
 import { reactive, ref, watch, toRefs, computed, onMounted, nextTick } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import Utils from '../../shared/utils/date';
 import { calendarItemProps } from './common';
 

@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { computed, toRefs } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { navbarProps } from './common';
 
 const { componentName, create, useVinContext } = createComponent('navbar');

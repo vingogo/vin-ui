@@ -45,7 +45,7 @@
 </template>
 <script lang="ts">
 import { computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 
 import CommentHeader from './components/CmtHeader.vue';
 import CommentImages from './components/CmtImages.vue';

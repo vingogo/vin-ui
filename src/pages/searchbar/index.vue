@@ -46,7 +46,7 @@
 
 <script lang="ts">
 import { toRefs, reactive } from 'vue';
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 import Toast from '@vingogo/uni-ui/components/toast/index.vue';
 
 const { createDemo } = createComponent('searchbar');

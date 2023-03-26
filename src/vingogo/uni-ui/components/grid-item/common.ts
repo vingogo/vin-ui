@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 import type { RouterOptions } from '../../shared/hooks/useRouter';
 
 export const gridItemProps = {

@@ -62,7 +62,7 @@
 <script lang="ts">
 import icons from '@vingogo/uni-ui/styles/font/config.json';
 
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 import { useTranslate, currentLang } from '@/hooks/useTranslate';
 
 const initTranslate = () =>

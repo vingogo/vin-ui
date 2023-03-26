@@ -51,7 +51,7 @@
 
 <script lang="ts">
 import { toRefs, reactive, computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { searchbarProps } from './common';
 
 const { create, translate, useVinContext } = createComponent('searchbar');

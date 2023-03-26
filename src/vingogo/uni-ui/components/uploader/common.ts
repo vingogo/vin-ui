@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 import type { FileItem, SizeType, SourceType, AcceptType } from './type';
 
 export const uploaderProps = {

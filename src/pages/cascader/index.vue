@@ -124,7 +124,7 @@
 
 <script lang="ts">
 import { onMounted, reactive, watch } from 'vue';
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 
 const { createDemo } = createComponent('cascader');
 

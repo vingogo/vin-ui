@@ -15,7 +15,7 @@
 </template>
 <script lang="ts">
 import { computed, inject, getCurrentInstance, onMounted } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import Icon from '../icon/index.vue';
 
 import { checkboxProps } from './common';

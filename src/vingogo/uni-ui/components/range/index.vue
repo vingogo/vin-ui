@@ -89,7 +89,7 @@ import {
   getCurrentInstance,
   ComponentInternalInstance,
 } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { useTouch, useRect } from '../../shared/hooks';
 import { rangeProps } from './common';
 import type { SliderValue } from './common';

@@ -38,7 +38,7 @@
   </view>
 </template>
 <script lang="ts">
-import { createComponent } from '../../../common/create';
+import { createComponent } from '../../common/create';
 
 const { componentName, create } = createComponent('comment-header');
 

@@ -80,7 +80,7 @@
 </template>
 <script lang="ts">
 import { ref, watch, computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import CalendarItem from '../calendar-item/index.vue';
 import { calendarProps } from './common';
 

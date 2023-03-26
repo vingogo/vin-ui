@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 
 export type ButtonType = 'default' | 'primary' | 'info' | 'success' | 'warning' | 'danger';
 export type ButtonSize = 'large' | 'normal' | 'small' | 'mini';

@@ -32,7 +32,7 @@
 <script lang="ts">
 import { watch, ref, Ref, computed } from 'vue';
 import { CascaderValue, CascaderOption } from './types';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { cascaderProps } from './common';
 import CascaderItem from './cascader-item.vue';
 

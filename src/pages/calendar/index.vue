@@ -156,7 +156,7 @@
 
 <script lang="ts">
 import { reactive, toRefs } from 'vue';
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 import Utils from '@vingogo/uni-ui/shared/utils/date';
 
 const { createDemo } = createComponent('calendar');

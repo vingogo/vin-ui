@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 
 interface Events {
   eventName: 'focus' | 'blur' | 'clear' | 'change' | 'update:modelValue';

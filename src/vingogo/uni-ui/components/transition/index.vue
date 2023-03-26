@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import useTransition from './useTransition';
 
 import { transitionProps } from './common';

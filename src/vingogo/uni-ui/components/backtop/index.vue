@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { reactive, computed, toRefs } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { backtopProps } from './common';
 
 const { create, useVinContext } = createComponent('backtop');

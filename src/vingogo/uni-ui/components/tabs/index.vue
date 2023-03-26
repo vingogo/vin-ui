@@ -49,7 +49,7 @@
 </template>
 <script lang="ts">
 import { onMounted, VNode, ref, Ref, computed, onActivated, watch } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { pxCheck } from '../../shared/utils/pxCheck';
 import { useProvide } from '../../shared/hooks';
 import { TAB_KEY, tabsProps } from './common';

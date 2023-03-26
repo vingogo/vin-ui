@@ -27,7 +27,7 @@
 </template>
 <script lang="ts">
 import { computed, onMounted } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { textareaProps } from './common';
 
 const { componentName, create, translate, useVinContext } = createComponent('textarea');

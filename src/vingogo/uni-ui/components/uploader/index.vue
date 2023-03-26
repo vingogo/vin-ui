@@ -77,7 +77,7 @@
 
 <script lang="ts">
 import { computed, reactive } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { uploaderProps } from './common';
 
 import type { FileItem } from './type';

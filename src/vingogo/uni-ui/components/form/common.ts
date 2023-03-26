@@ -3,7 +3,7 @@ import { getPropByPath, isObject, isPromise } from '../../shared/utils';
 import { FormItemRule } from '../form-item/types';
 import { ErrorMessage, FormRule } from './types';
 import { useProvide } from '../../shared/hooks';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 
 const { create, componentName } = createComponent('form');
 

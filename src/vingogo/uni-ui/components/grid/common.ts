@@ -1,5 +1,5 @@
 import type { PropType, ExtractPropTypes } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 
 export const GRID_KEY = Symbol('grid');
 

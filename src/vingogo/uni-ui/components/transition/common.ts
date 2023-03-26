@@ -1,5 +1,5 @@
 import { CSSProperties, PropType } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 
 export type NameType =
   | 'fade'

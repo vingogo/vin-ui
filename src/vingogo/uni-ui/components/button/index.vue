@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { CSSProperties, toRefs, computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import Icon from '../icon/index.vue';
 import { buttonProps } from './common';
 

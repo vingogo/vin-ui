@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { computed, provide, reactive, watch } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { tabbarProps } from './common';
 
 const { create, useVinContext } = createComponent('tabbar');

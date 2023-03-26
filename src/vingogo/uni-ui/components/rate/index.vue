@@ -44,7 +44,7 @@
 </template>
 <script lang="ts">
 import { computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { pxCheck } from '../../shared/utils/pxCheck';
 import Icon from '../icon/index.vue';
 import { rateProps } from './common';

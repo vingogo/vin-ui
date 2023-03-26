@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 import config from '../../../config.json';
 
 const { createDemo } = createComponent('demo');

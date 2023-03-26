@@ -36,7 +36,7 @@
 <script lang="ts">
 import { computed, h, inject } from 'vue';
 import Icon from '../icon/index.vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { radioProps } from './common';
 
 const { componentName, create, useVinContext } = createComponent('radio');

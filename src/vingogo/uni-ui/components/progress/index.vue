@@ -54,7 +54,7 @@
 
 <script lang="ts">
 import { computed, useSlots, ref } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { progressProps } from './common';
 
 const { create, useVinContext } = createComponent('progress');

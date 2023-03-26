@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { useInject } from '../../shared/hooks';
 import { TAB_KEY } from '../tabs/common';
 import { tabpaneProps } from './common';

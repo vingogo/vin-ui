@@ -114,7 +114,7 @@
 
 <script lang="ts">
 import { reactive } from 'vue';
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 
 const { createDemo } = createComponent('input');
 export default createDemo({

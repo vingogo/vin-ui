@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { computed, ref } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { useProvide } from '../../shared/hooks';
 import { AVATAR_KEY, avatarGroupProps } from './common';
 

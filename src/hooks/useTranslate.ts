@@ -1,4 +1,4 @@
-import Locale from '@vingogo/uni-ui/locale';
+import Locale from '@vingogo/uni-ui/shared/locale';
 
 export const { currentLang } = Locale;
 export const useTranslate = (object: Record<string, any>) => {

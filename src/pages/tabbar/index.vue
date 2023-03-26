@@ -93,7 +93,7 @@
 
 <script lang="ts">
 import { ref } from 'vue';
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 import { useTranslate } from '@/hooks/useTranslate';
 
 const { createDemo, translate } = createComponent('tabbar');

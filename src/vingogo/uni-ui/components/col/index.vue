@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { computed, inject } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { colProps } from './common';
 
 const { componentName, create, useVinContext } = createComponent('col');

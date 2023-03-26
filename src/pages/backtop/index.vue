@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { createComponent } from '@vingogo/uni-ui/common/create';
+import { createComponent } from '@vingogo/uni-ui/components/common/create';
 
 const { createDemo } = createComponent('backtop');
 

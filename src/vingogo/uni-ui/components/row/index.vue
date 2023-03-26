@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { provide, computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { rowProps } from './common';
 
 const { create, useVinContext } = createComponent('row');

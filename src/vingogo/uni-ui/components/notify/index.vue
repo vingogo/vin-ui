@@ -15,7 +15,7 @@
 </template>
 <script lang="ts">
 import { computed, watch } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import Transition from '../transition/index.vue';
 import { notifyProps } from './common';
 

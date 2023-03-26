@@ -54,7 +54,7 @@
 </template>
 <script lang="ts">
 import { computed, watch, ref } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { dialogProps } from './common';
 import Popup from '../popup/index.vue';
 import Button from '../button/index.vue';

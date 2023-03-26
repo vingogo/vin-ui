@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue';
-import { commonProps } from '../../common';
+import { commonProps } from '../common';
 
 export const dividerProps = {
   ...commonProps,

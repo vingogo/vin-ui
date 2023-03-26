@@ -47,7 +47,7 @@ app.use(Transition);
 </template>
 <script lang="ts">
   import { ref, reactive } from 'vue';
-  import { createComponent } from '@vingogo/uni-ui/common/create';
+  import { createComponent } from '@vingogo/uni-ui/components/common/create';
 
   const { createDemo } = createComponent('transition');
   export default createDemo({

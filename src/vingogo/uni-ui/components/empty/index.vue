@@ -26,7 +26,7 @@
 </template>
 <script lang="ts">
 import { toRefs, computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { emptyProps, defaultStatus } from './common';
 
 const { create, translate, useVinContext } = createComponent('empty');

@@ -31,7 +31,7 @@
 </template>
 <script lang="ts">
 import { computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import overlay from '../overlay/index.vue';
 import { fixednavProps } from './common';
 

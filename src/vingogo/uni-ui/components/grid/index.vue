@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { computed } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { pxCheck } from '../../shared/utils/pxCheck';
 import { GRID_KEY, gridProps } from './common';
 import { useProvide } from '../../shared/hooks';

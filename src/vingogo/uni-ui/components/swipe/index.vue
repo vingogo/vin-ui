@@ -30,7 +30,7 @@ import {
   ComponentInternalInstance,
 } from 'vue';
 import { useTouch, useRect } from '../../shared/hooks';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { swipeProps } from './common';
 
 const { create, useVinContext } = createComponent('swipe');

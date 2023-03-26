@@ -47,7 +47,7 @@ import overlay from '../overlay/index.vue';
 import icon from '../icon/index.vue';
 
 import { popupProps } from './common';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 
 const { create, useVinContext } = createComponent('popup');
 

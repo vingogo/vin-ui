@@ -25,7 +25,7 @@
 <script lang="ts">
 import { computed, provide } from 'vue';
 import { pxCheck } from '../../shared/utils/pxCheck';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { useInject } from '../../shared/hooks';
 import { FORM_KEY } from '../form/common';
 import { formItemProps } from './common';

@@ -1,5 +1,5 @@
 import { computed } from 'vue';
-import { normalizeClass, stringifyStyle, normalizeStyle } from '../shared/utils';
+import { normalizeClass, stringifyStyle, normalizeStyle } from '../../shared/utils';
 
 const classPrefix = 'vin';
 

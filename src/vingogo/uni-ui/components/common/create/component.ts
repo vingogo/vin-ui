@@ -7,8 +7,8 @@ import {
   RenderFunction,
   Component,
 } from 'vue';
-import locale from '../../locale';
-import { getPropByPath, isFunction } from '../../shared/utils';
+import locale from '../../../shared/locale';
+import { getPropByPath, isFunction } from '../../../shared/utils';
 import { useVinContext } from '..';
 
 const classPrefix = 'vin';

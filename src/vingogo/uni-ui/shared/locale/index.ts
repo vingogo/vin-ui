@@ -1,7 +1,7 @@
 import { ref, reactive } from 'vue';
 import ZhCNLang from './lang/zh-CN';
 import EnUSLang from './lang/en-US';
-import { deepMerge } from '../shared/utils';
+import { deepMerge } from '../utils';
 // 组件默认语言设置
 
 export type Lang = Record<string, any>;

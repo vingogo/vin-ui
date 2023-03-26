@@ -22,7 +22,7 @@
 </template>
 <script lang="ts">
 import { reactive, toRefs, computed, ref, Ref, watch } from 'vue';
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
 import { listProps } from './common';
 
 const { create, useVinContext } = createComponent('list');
