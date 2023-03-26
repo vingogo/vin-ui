@@ -8,6 +8,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        // eslint-disable-next-line
         additionalData: "@import '@vingogo/uni-ui/styles/variables.scss';",
       },
     },
@@ -15,6 +16,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@vingogo': path.resolve(__dirname, './src/vingogo'),
       '@components': path.resolve(__dirname, './src/components'),
     },
   },
