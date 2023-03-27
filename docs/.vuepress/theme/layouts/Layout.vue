@@ -1,6 +1,6 @@
 <script setup>
 import { watch, ref, nextTick, onBeforeUnmount, onMounted } from 'vue'
-import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
+import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { useRouter, useRoute } from 'vue-router'
 import pathList from './../pathList.js'
 

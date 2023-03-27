@@ -1,28 +1,17 @@
 {
   "name": "docs",
   "version": "0.1.0",
-  "private": true,
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vingogo/vin-ui.git"
-  },
   "scripts": {
-    "docs:dev": "vuepress dev",
-    "docs:build": "vuepress build"
-  },
-  "dependencies": {
-    "vue": "^3.2.33"
+    "dev": "vuepress dev",
+    "build": "vuepress build"
   },
   "devDependencies": {
-    "@vuepress/plugin-search": "^2.0.0-beta.48",
+    "@vuepress/client": "2.0.0-beta.61",
+    "@vuepress/plugin-search": "2.0.0-beta.61",
+    "@vuepress/theme-default": "2.0.0-beta.61",
     "vuepress": "2.0.0-beta.61",
-    "vuepress-plugin-comment2": "^2.0.0-beta.84",
-    "vuepress-plugin-copy-code2": "^2.0.0-beta.84",
-    "vuepress-plugin-md-enhance": "^2.0.0-beta.86"
+    "vuepress-plugin-copy-code2": "2.0.0-beta.199",
+    "vuepress-plugin-md-enhance": "2.0.0-beta.199"
   }
 }

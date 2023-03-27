@@ -1,12 +1,10 @@
-const { searchPlugin } = require('@vuepress/plugin-search');
-const { defineUserConfig } = require('vuepress');
-const { localTheme } = require('./theme');
-const { copyCodePlugin } = require('vuepress-plugin-copy-code2');
-const { commentPlugin } = require('vuepress-plugin-comment2');
-const { mdEnhancePlugin } = require('vuepress-plugin-md-enhance');
-const vinConfig = require('../config.json');
+import { searchPlugin } from '@vuepress/plugin-search';
+import { defineUserConfig, defaultTheme } from 'vuepress';
+import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
+import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
+import vinConfig from '../config.json';
 
-module.exports = defineUserConfig({
+export default defineUserConfig({
   base: '/docs/',
   lang: 'zh_CN',
   title: 'Vin 使用文档',
@@ -25,10 +23,7 @@ module.exports = defineUserConfig({
     ],
     ['link', { rel: 'icon', href: './favicon.ico' }],
   ],
-  markdown: {},
-  theme: localTheme({
-    // 默认主题配置
-    logo: '/images/logo.png',
+  theme: defaultTheme({
     navbar: [
       {
         text: '首页',
@@ -87,21 +82,14 @@ module.exports = defineUserConfig({
     toggleDarkMode: '切换夜间模式',
     toggleSidebar: '切换侧边栏',
   }),
+  markdown: {},
   plugins: [
     searchPlugin(),
-    copyCodePlugin({
-      locales: {
-        '/': {
-          copy: '复制代码成功',
-          hint: '复制代码',
-        },
-      },
-    }),
+    copyCodePlugin(),
     mdEnhancePlugin({
       container: true,
       tabs: true,
       codetabs: true,
-      tasklist: true,
     }),
   ],
 });
