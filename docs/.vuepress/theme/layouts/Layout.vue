@@ -68,9 +68,6 @@ onBeforeUnmount(() => {
         <iframe :src="iframeUrl" frameborder="0" ref="iframeId"></iframe>
       </div>
     </template>
-    <template #page-bottom>
-      <CommentService :darkmode="isDarkMode" />
-    </template>
   </ParentLayout>
 </template>
 
