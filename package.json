@@ -16,7 +16,9 @@
     "build": "vin build",
     "lint": "eslint --ext .ts,.js,.vue --fix .",
     "format": "prettier --write --cache --parser typescript \"**/*.[tj]s?(x)\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs:build": "pnpm --filter docs build",
+    "build:themes": "node build/generate-themes.js"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3070420230224002",
@@ -82,7 +84,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^9.0.1",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.1.0",
     "husky": "^8.0.0",
     "jest": "^26.6.3",
     "less": "^4.1.2",
