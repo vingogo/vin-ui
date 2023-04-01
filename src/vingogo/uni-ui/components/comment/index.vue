@@ -47,10 +47,6 @@
 import { computed } from 'vue';
 import { createComponent } from '../common/create';
 
-import CommentHeader from './components/CmtHeader.vue';
-import CommentImages from './components/CmtImages.vue';
-import CommentBottom from './components/CmtBottom.vue';
-
 const { componentName, create } = createComponent('comment');
 
 export default create({
@@ -98,11 +94,6 @@ export default create({
       type: Array,
       default: ['replay', 'like', 'more'],
     },
-  },
-  components: {
-    CommentHeader,
-    CommentImages,
-    CommentBottom,
   },
   emits: ['click', 'clickImages', 'clickOperate'],
 

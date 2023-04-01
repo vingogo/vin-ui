@@ -57,15 +57,11 @@ import {
   watch,
 } from 'vue';
 import { createComponent } from '../common/create';
-import Icon from '../icon/index.vue';
 import { tabbarItemProps } from './common';
 
 const { create, useVinContext } = createComponent('tabbar-item');
 
 export default create({
-  component: {
-    [Icon.name]: Icon,
-  },
   props: tabbarItemProps,
   setup(props) {
     const { getMainClass, getMainStyle } = useVinContext(props);

@@ -43,9 +43,6 @@ import {
   reactive,
   toRefs,
 } from 'vue';
-import overlay from '../overlay/index.vue';
-import icon from '../icon/index.vue';
-
 import { popupProps } from './common';
 import { createComponent } from '../common/create';
 
@@ -54,11 +51,6 @@ const { create, useVinContext } = createComponent('popup');
 let defaultZIndex = 2000;
 
 export default create({
-  children: [overlay],
-  components: {
-    [overlay.name]: overlay,
-    [icon.name]: icon,
-  },
   props: popupProps,
   emits: [
     'click',

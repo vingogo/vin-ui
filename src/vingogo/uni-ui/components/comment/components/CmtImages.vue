@@ -52,7 +52,6 @@ export default create({
       default: () => [],
     },
   },
-  components: {},
   emits: ['click', 'clickImages'],
 
   setup(props, { emit }) {

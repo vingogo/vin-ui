@@ -36,15 +36,11 @@
 <script lang="ts">
 import { computed, watch } from 'vue';
 import { createComponent } from '../common/create';
-import Icon from '../icon/index.vue';
 import { toastProps } from './common';
 
 const { create, useVinContext } = createComponent('toast');
 
 export default create({
-  components: {
-    [Icon.name]: Icon,
-  },
   props: toastProps,
   emits: ['update:visible', 'closed'],
   setup(props, { emit }) {

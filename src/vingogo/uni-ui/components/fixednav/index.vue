@@ -32,15 +32,11 @@
 <script lang="ts">
 import { computed } from 'vue';
 import { createComponent } from '../common/create';
-import overlay from '../overlay/index.vue';
 import { fixednavProps } from './common';
 
 const { create, translate, useVinContext } = createComponent('fixednav');
 
 export default create({
-  components: {
-    [overlay.name]: overlay,
-  },
   props: fixednavProps,
   emits: ['update:visible', 'selected'],
 

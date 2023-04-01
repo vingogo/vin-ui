@@ -34,14 +34,10 @@ import { watch, ref, Ref, computed } from 'vue';
 import { CascaderValue, CascaderOption } from './types';
 import { createComponent } from '../common/create';
 import { cascaderProps } from './common';
-import CascaderItem from './cascader-item.vue';
 
 const { create } = createComponent('cascader');
 
 export default create({
-  components: {
-    'cascader-item': CascaderItem,
-  },
   props: cascaderProps,
   emits: ['update:modelValue', 'change', 'pathChange', 'update:visible'],
   setup(props, { emit }) {

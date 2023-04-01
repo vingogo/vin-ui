@@ -35,15 +35,11 @@ import {
   ComponentInternalInstance,
 } from 'vue';
 import { createComponent } from '../common/create';
-import Icon from '../icon/index.vue';
 import { stepProps } from './common';
 
 const { create, componentName, useVinContext } = createComponent('step');
 
 export default create({
-  components: {
-    [Icon.name]: Icon,
-  },
   props: stepProps,
   emits: ['click-step'],
 

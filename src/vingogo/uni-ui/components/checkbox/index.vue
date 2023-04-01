@@ -16,16 +16,12 @@
 <script lang="ts">
 import { computed, inject, getCurrentInstance, onMounted } from 'vue';
 import { createComponent } from '../common/create';
-import Icon from '../icon/index.vue';
 
 import { checkboxProps } from './common';
 
 const { create, componentName, useVinContext } = createComponent('checkbox');
 
 export default create({
-  components: {
-    [Icon.name]: Icon,
-  },
   props: checkboxProps,
   emits: ['change', 'update:modelValue'],
   setup(props, { emit }) {

@@ -46,15 +46,11 @@
 import { computed } from 'vue';
 import { createComponent } from '../common/create';
 import { pxCheck } from '../../shared/utils/pxCheck';
-import Icon from '../icon/index.vue';
 import { rateProps } from './common';
 
 const { create, useVinContext } = createComponent('rate');
 
 export default create({
-  components: {
-    [Icon.name]: Icon,
-  },
   props: rateProps,
   emits: ['update:modelValue', 'change'],
   setup(props, { emit }) {

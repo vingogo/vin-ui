@@ -57,7 +57,6 @@ export default create({
       default: () => '',
     },
   },
-  components: {},
   emits: ['handleClick'],
 
   setup(props, { emit }) {

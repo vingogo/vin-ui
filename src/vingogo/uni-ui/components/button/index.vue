@@ -18,15 +18,11 @@
 <script lang="ts">
 import { CSSProperties, toRefs, computed } from 'vue';
 import { createComponent } from '../common/create';
-import Icon from '../icon/index.vue';
 import { buttonProps } from './common';
 
 const { componentName, create, useVinContext } = createComponent('button');
 
 export default create({
-  components: {
-    [Icon.name]: Icon,
-  },
   props: buttonProps,
   emits: ['click'],
   setup(props, { emit }) {

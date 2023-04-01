@@ -37,7 +37,6 @@
 <script lang="ts">
 import { toRefs, onMounted, reactive, computed } from 'vue';
 import { createComponent } from '../common/create';
-import Icon from '../icon/index.vue';
 import { infiniteLoadingProps } from './common';
 
 const { create, translate, useVinContext } = createComponent('infiniteloading');
@@ -45,9 +44,6 @@ const { create, translate, useVinContext } = createComponent('infiniteloading');
 export default create({
   props: infiniteLoadingProps,
   emits: ['scroll-change', 'load-more', 'refresh'],
-  components: {
-    'vin-icon': Icon,
-  },
   setup(props, { emit }) {
     const { getMainClass, getMainStyle } = useVinContext(props);
 

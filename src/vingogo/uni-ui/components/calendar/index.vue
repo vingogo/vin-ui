@@ -81,15 +81,11 @@
 <script lang="ts">
 import { ref, watch, computed } from 'vue';
 import { createComponent } from '../common/create';
-import CalendarItem from '../calendar-item/index.vue';
 import { calendarProps } from './common';
 
 const { create } = createComponent('calendar');
 
 export default create({
-  components: {
-    [CalendarItem.name]: CalendarItem,
-  },
   props: calendarProps,
   emits: ['choose', 'close', 'update:visible', 'select'],
   setup(props, { emit, slots }) {

@@ -16,15 +16,11 @@
 <script lang="ts">
 import { computed, watch } from 'vue';
 import { createComponent } from '../common/create';
-import Transition from '../transition/index.vue';
 import { notifyProps } from './common';
 
 const { create, useVinContext } = createComponent('notify');
 
 export default create({
-  components: {
-    [Transition.name]: Transition,
-  },
   props: notifyProps,
   emits: ['update:visible', 'closed', 'click'],
   setup(props, { emit }) {

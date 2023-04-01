@@ -56,17 +56,11 @@
 import { computed, watch, ref } from 'vue';
 import { createComponent } from '../common/create';
 import { dialogProps } from './common';
-import Popup from '../popup/index.vue';
-import Button from '../button/index.vue';
 
 const { create, translate, useVinContext } = createComponent('dialog');
 
 export default create({
   inheritAttrs: false,
-  components: {
-    [Popup.name]: Popup,
-    [Button.name]: Button,
-  },
   props: dialogProps,
   emits: ['update', 'update:visible', 'ok', 'cancel', 'open', 'opened', 'close', 'closed'],
   setup(props, { emit }) {
