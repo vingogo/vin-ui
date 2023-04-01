@@ -16,11 +16,8 @@
     "vin-ui"
   ],
   "files": [
-    "components",
-    "shared",
-    "styles",
-    "types",
-    "resolver.ts"
+    "lib",
+    "types"
   ],
   "sideEffects": false,
   "bugs": {

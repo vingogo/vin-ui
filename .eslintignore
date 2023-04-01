@@ -2,5 +2,7 @@ dist
 locale
 font
 scripts
+build
 **/__tests__/*.ts
 *.json
+src/vingogo/uni-ui/lib
