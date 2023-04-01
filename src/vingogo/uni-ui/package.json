@@ -4,7 +4,20 @@
   "private": false,
   "license": "MIT",
   "author": "Alvin Liu",
-  "description": "@vin/uni-ui",
+  "description": "基于 Vue 3 的轻量、快速的多平台开发 UI 组件库",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "style": "lib/style.css",
+  "typings": "lib/types/components.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": [
+    "lib/components/**/style.mjs",
+    "*.scss",
+    "*.css"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vingogo/vin-ui.git",
@@ -12,18 +25,19 @@
   },
   "keywords": [
     "vue",
+    "vue3",
     "uniapp",
-    "vin-ui"
+    "vin-ui",
+    "vue3 component"
   ],
   "files": [
     "lib",
     "types"
   ],
-  "sideEffects": false,
   "bugs": {
     "url": "https://github.com/vingogo/vin-ui/issues"
   },
-  "homepage": "https://github.com/vingogo/vin-ui/tree/main/packages/uni-ui#readme",
+  "homepage": "https://github.com/vingogo/vin-ui/tree/main/src/vingogo/uni-ui#readme",
   "peerDependencies": {
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"

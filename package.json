@@ -18,7 +18,7 @@
     "format": "prettier --write --cache --parser typescript \"**/*.[tj]s?(x)\"",
     "prepare": "husky install",
     "docs:build": "pnpm --filter docs build",
-    "build:themes": "node build/generate-themes.js"
+    "build:lib": "node build/index.js"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3070420230224002",

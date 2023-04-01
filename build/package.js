@@ -107,8 +107,7 @@ const buildDisperse = () => {
 const firstUpperCase = (str) => str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
 
 const genEntryFile = () => {
-  let importStr = `import type { App } from 'vue';
-import Locale from './locale';\n`;
+  let importStr = `import Locale from './locale';\n`;
   const packages = [];
   config.list.map((item) => {
     item.components.forEach((element) => {
@@ -120,9 +119,9 @@ import Locale from './locale';\n`;
     });
   });
 
-  let installFunction = `function install(app: App) {
+  let installFunction = `function install(app) {
     const packages = [${packages.join(',')}];
-    packages.forEach((item:any) => {
+    packages.forEach((item) => {
       if (item.install) {
         app.use(item);
       } else if (item.name) {
@@ -137,7 +136,7 @@ const version = '${package.version}';
 export { install, version, Locale };
 export default { install, version, Locale};`;
 
-  outputFileSync(resolve(SRC_DIR, 'index.ts'), fileStrBuild, 'utf8');
+  outputFileSync(resolve(LIB_DIR, 'index.js'), fileStrBuild, 'utf8');
 };
 
 const buildModule = () => {
@@ -172,7 +171,7 @@ const buildPackageScript = async () => {
 
     await buildDisperse();
 
-    // await genEntryFile();
+    await genEntryFile();
 
     // await buildModule();
   } catch (e) {

@@ -5,7 +5,7 @@ const buildStyle = require('./style');
 const { SRC_DIR, LIB_DIR } = require('./const');
 
 const copySourceCode = async () => {
-  const dirs = ['locale', 'styles'];
+  const dirs = ['locale', 'styles', 'types'];
 
   return Promise.all(dirs.map((dir) => copy(resolve(SRC_DIR, dir), resolve(LIB_DIR, dir))));
 };
