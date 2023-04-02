@@ -17,6 +17,7 @@
     "lint": "eslint --ext .ts,.js,.vue --fix .",
     "format": "prettier --write --cache --parser typescript \"**/*.[tj]s?(x)\"",
     "prepare": "husky install",
+    "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build",
     "build:lib": "node build/index.js"
   },

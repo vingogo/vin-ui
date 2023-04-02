@@ -1,8 +1,8 @@
 # Vin UI
 
-Vin UI 参考 NutUI（京东风格的轻量级移动端组件库）的设计和实现，在 Taro 小程序组件库版本 NutUI-Vue 基础上实现的 uniapp 版本
+`Vin UI` 参考 [NutUI](https://nutui.jd.com/h5/vue/4x/#/zh-CN/guide/intro)（京东风格的轻量级移动端组件库）的设计和实现，在 `Taro` 小程序组件库版本 `NutUI-Vue` 基础上实现的 `uniapp` 版本
 
-针对 uniapp 的一些特性进行了修改和调整，同时增加一些新的组件，对一些组件功能也有所增强
+针对 `uniapp` 的一些特性进行了修改和调整，同时增加一些新的组件，对一些组件功能也有所增强
 
 ## 特性
 
@@ -19,11 +19,11 @@ Vin UI 参考 NutUI（京东风格的轻量级移动端组件库）的设计和�
 
 ![VinUI](https://cdn.vingogo.cn/qrcode.jpg)
 
-> Tips: 为了便于预览组件效果，本文档的右侧内嵌了 H5 版的 Vin UI 页面作为参考。在实际使用中，个别组件的表现可能与小程序上的表现有差异，请以实际效果为准。
+> Tips: 为了便于预览组件效果，本文档的右侧内嵌了 H5 版的 `VinUI` 页面作为参考。在实际使用中，个别组件的表现可能与小程序上的表现有差异，请以实际效果为准。
 
 ## 共建指南
 
-非常欢迎社区开发者为 VinUI 贡献代码，参与共建提 [PR](https://github.com/vingogo/vin-ui/pulls)。
+非常欢迎社区开发者为 `VinUI` 贡献代码，参与共建提 [PR](https://github.com/vingogo/vin-ui/pulls)。
 
 ## 开源协议
 

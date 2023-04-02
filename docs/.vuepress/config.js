@@ -53,6 +53,22 @@ export default defineUserConfig({
           text: '快速开始',
           link: '/guide/quickstart.md',
         },
+        {
+          text: '默认主题',
+          link: '/guide/official-theme.md',
+        },
+        {
+          text: '定制主题',
+          link: '/guide/theme.md',
+        },
+        {
+          text: '国际化',
+          link: '/guide/international.md',
+        },
+        {
+          text: '更新日志',
+          link: 'https://github.com/vingogo/vin-ui/releases',
+        },
       ],
       '/components/': vinConfig.list.map((nav) => {
         return {
