@@ -21,7 +21,7 @@ export default defineUserConfig({
         s.parentNode.insertBefore(hm, s);
       })();`,
     ],
-    ['link', { rel: 'icon', href: './favicon.ico' }],
+    ['link', { rel: 'icon', href: 'favicon.ico' }],
   ],
   theme: defaultTheme({
     navbar: [
