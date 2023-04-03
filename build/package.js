@@ -81,6 +81,7 @@ const buildDisperse = () => {
   return build({
     configFile: false,
     build: {
+      target: 'es2015',
       minify: true,
       lib: {
         entry: '',
