@@ -2,10 +2,11 @@ const { copy, remove } = require('fs-extra');
 const { resolve } = require('path');
 const buildPackageScript = require('./package');
 const buildStyle = require('./style');
+const buildLocale = require('./locale');
 const { SRC_DIR, LIB_DIR } = require('./const');
 
 const copySourceCode = async () => {
-  const dirs = ['locale', 'styles', 'types'];
+  const dirs = ['styles', 'types'];
 
   return Promise.all(dirs.map((dir) => copy(resolve(SRC_DIR, dir), resolve(LIB_DIR, dir))));
 };
@@ -26,6 +27,10 @@ const tasks = [
   {
     text: '构建组件',
     task: buildPackageScript,
+  },
+  {
+    text: '构建多语言包',
+    task: buildLocale,
   },
 ];
 
