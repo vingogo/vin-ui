@@ -10,8 +10,6 @@ let input = {
   input[file] = resolve(SRC_DIR, `locale/lang/${file}.ts`);
 });
 
-console.log('input', input);
-
 const buildLocale = () =>
   build({
     configFile: false,
@@ -27,7 +25,7 @@ const buildLocale = () =>
         external: ['vue', 'vue-i18n'],
         input,
         output: {
-          dir: resolve(LIB_DIR, 'locale/lang'),
+          dir: resolve(LIB_DIR, 'locale'),
           entryFileNames: '[name].js',
         },
       },

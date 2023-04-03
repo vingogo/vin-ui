@@ -14,7 +14,7 @@ VinUI 通过 `Locale` 组件实现多语言支持，使用 `Locale.use` 方法�
 import { Locale } from '@vingogo/uni-ui';
 
 // 引入英文语言包
-import enUS from '@vingogo/uni-ui/lib/locale/lang/en-US';
+import enUS from '@vingogo/uni-ui/lib/locale/en-US';
 Locale.use('en-US', enUS);
 ```
 
