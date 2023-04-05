@@ -4,6 +4,7 @@ dist/
 coverage
 lib
 src/vingogo/uni-ui/index.ts
+src/vingogo/uni-ui/uni_modules
 
 # local env files
 .env

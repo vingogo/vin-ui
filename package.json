@@ -20,6 +20,7 @@
     "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build",
     "build:lib": "node build/index.js",
+    "build:uni": "node build/uni.js",
     "deploy:ui": "npm run build:h5 && node ./scripts/deploy.js --prefix=ui --dist=dist/build/h5",
     "deploy:docs": "npm run docs:build && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist"
   },
