@@ -136,21 +136,6 @@ ${installFunction}
 const version = '${package.version}';
 export { install, version, Locale };
 
-export const VinUIResolver = () => {
-  return {
-    type: 'component',
-    resolve: (name) => {
-      if (name.match(/^(Vin[A-Z]|vin-[a-z])/)) {
-        const cName = name.slice(3).replace(/([a-z])([A-Z])/, '$1-$2').toLowerCase()
-        return {
-          name,
-          from: \`@vingogo/uni-ui/lib/components/\${cName}/index.vue\`,
-        }
-      }
-    },
-  }
-};
-
 export default { install, version, Locale};`;
 
   outputFileSync(resolve(LIB_DIR, 'index.js'), fileStrBuild, 'utf8');
@@ -182,6 +167,28 @@ const buildModule = () => {
   });
 };
 
+const buildResolver = () => {
+  return build({
+    configFile: false,
+    build: {
+      minify: true,
+      lib: {
+        entry: resolve(SRC_DIR, 'resolver/index.ts'),
+        name: 'name',
+        fileName: 'vin-ui',
+        fileName: (format) => (format === 'es' ? 'index.mjs' : 'index.js'),
+        formats: ['es', 'cjs'],
+      },
+      emptyOutDir: false,
+      rollupOptions: {
+        output: {
+          dir: resolve(LIB_DIR, 'resolver'),
+        },
+      },
+    },
+  });
+};
+
 const buildPackageScript = async () => {
   try {
     await copySFCFiles();
@@ -189,6 +196,8 @@ const buildPackageScript = async () => {
     await buildDisperse();
 
     await genEntryFile();
+
+    await buildResolver();
 
     // await buildModule();
   } catch (e) {
