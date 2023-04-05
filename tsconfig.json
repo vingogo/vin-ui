@@ -1,24 +1,17 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
+    "baseUrl": ".",
     "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es2015",
+    "module": "esnext",
+    "skipLibCheck": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "lib": ["esnext", "dom"],
-    "outDir": "./tsc/test",
-    "types": ["@dcloudio/types", "vite/client", "@types/node", "vitest/globals", "jest", "node"],
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"],
-      "@vingogo/*": ["./vingogo/*"],
-      "@components/": ["./components/*"]
-    }
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true
   },
-  "include": ["*.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["*.ts"],
   "exclude": ["./node_modules"]
 }

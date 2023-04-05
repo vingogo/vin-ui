@@ -5,7 +5,8 @@ const { extname, basename } = require('path');
 const { build } = require('vite');
 const { SRC_DIR, LIB_DIR } = require('./const');
 const config = require('../config.json');
-const package = require('../src/vingogo/uni-ui/package.json');
+
+const package = require(resolve(SRC_DIR, 'package.json'));
 
 const input = {};
 
