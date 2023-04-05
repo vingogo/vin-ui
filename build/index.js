@@ -11,7 +11,6 @@ const copySourceCode = async () => {
     { src: 'package.json', dest: resolve(LIB_DIR, '../package.json') },
     { src: 'types', dest: resolve(LIB_DIR, '../types') },
     { src: 'README.md', dest: resolve(LIB_DIR, '../README.md') },
-    { src: 'README.md', dest: resolve(LIB_DIR, '../README.md') },
   ];
 
   return Promise.all(
