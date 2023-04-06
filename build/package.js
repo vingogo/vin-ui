@@ -5,9 +5,13 @@ const { extname, basename } = require('path');
 const { build } = require('vite');
 const { SRC_DIR, LIB_DIR } = require('./const');
 const config = require('../config.json');
-const package = require('../src/vingogo/uni-ui/package.json');
+
+const package = require(resolve(SRC_DIR, 'package.json'));
 
 const input = {};
+
+// 暂不输出
+const excludeComponents = ['comment', 'CmtBottom', 'CmtHeader', 'CmtImages'];
 
 const banner = `/*!
 * ${config.name} v${package.version} ${new Date()}
@@ -31,7 +35,8 @@ const parseSFCFile = async (filePath, name) => {
 
       const outputSFCPath = resolve(
         LIB_DIR,
-        `components/${name}/${filePath.split(`/components/${name}/`)[1]}`
+        // TODO: 临时兼容特殊情况
+        `components/${filePath.split('/components/').slice(1).join('/components/')}`
       );
 
       outputFileSync(
@@ -71,7 +76,9 @@ const copySFCFiles = () => {
       folderName = filePath.match(/\/components\/(.+)\/index\.vue$/)?.[1];
     }
 
-    folderName && tasks.push(parseSFCFile(filePath, folderName));
+    folderName &&
+      !excludeComponents.includes(folderName) &&
+      tasks.push(parseSFCFile(filePath, folderName));
   });
 
   return Promise.all(tasks);
@@ -105,19 +112,25 @@ const buildDisperse = () => {
   });
 };
 
-const firstUpperCase = (str) => str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
+const firstUpperCase = (str) => `${str[0].toUpperCase()}${str.substring(1)}`;
+const camelize = (str) => str.replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
 
 const genEntryFile = () => {
-  let importStr = `import Locale from './locale';\n`;
+  let importStr = `import { Locale } from './locale';\n`;
   const packages = [];
-  config.list.map((item) => {
-    item.components.forEach((element) => {
-      let { name } = element;
-      importStr += `import ${firstUpperCase(
-        name
-      )} from './components/${name.toLowerCase()}/index.vue';\n`;
-      packages.push(firstUpperCase(name));
-    });
+
+  queryFiles(resolve(SRC_DIR, 'components'), ['.vue']).forEach((filePath) => {
+    let folderName = replaceExt(basename(filePath), '');
+
+    if (folderName === 'index') {
+      folderName = filePath.match(/\/components\/(.+)\/index\.vue$/)?.[1];
+    }
+
+    if (folderName && !excludeComponents.includes(folderName)) {
+      const componentName = firstUpperCase(camelize(folderName));
+      importStr += `import ${componentName} from './components/${folderName.toLowerCase()}/index.vue';\n`;
+      packages.push(componentName);
+    }
   });
 
   let installFunction = `function install(app) {
@@ -136,7 +149,7 @@ ${installFunction}
 const version = '${package.version}';
 export { install, version, Locale };
 
-export default { install, version, Locale};`;
+export default { install, version, Locale };`;
 
   outputFileSync(resolve(LIB_DIR, 'index.js'), fileStrBuild, 'utf8');
 };
