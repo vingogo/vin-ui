@@ -14,7 +14,7 @@
       <view class="vin-cascader__bar" v-html="title"></view>
     </template>
 
-    <cascader-item
+    <vin-cascader-item
       @change="onChange"
       @path-change="onPathChange"
       :modelValue="innerValue"

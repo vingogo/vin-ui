@@ -10,6 +10,9 @@ const package = require(resolve(SRC_DIR, 'package.json'));
 
 const input = {};
 
+// 暂不输出
+const excludeComponents = ['comment', 'CmtBottom', 'CmtHeader', 'CmtImages'];
+
 const banner = `/*!
 * ${config.name} v${package.version} ${new Date()}
 * (c) 2023 @vingogo.
@@ -32,7 +35,8 @@ const parseSFCFile = async (filePath, name) => {
 
       const outputSFCPath = resolve(
         LIB_DIR,
-        `components/${name}/${filePath.split(`/components/${name}/`)[1]}`
+        // TODO: 临时兼容特殊情况
+        `components/${filePath.split('/components/').slice(1).join('/components/')}`
       );
 
       outputFileSync(
@@ -72,7 +76,9 @@ const copySFCFiles = () => {
       folderName = filePath.match(/\/components\/(.+)\/index\.vue$/)?.[1];
     }
 
-    folderName && tasks.push(parseSFCFile(filePath, folderName));
+    folderName &&
+      !excludeComponents.includes(folderName) &&
+      tasks.push(parseSFCFile(filePath, folderName));
   });
 
   return Promise.all(tasks);
@@ -106,7 +112,7 @@ const buildDisperse = () => {
   });
 };
 
-const firstUpperCase = (str) => str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
+const firstUpperCase = (str) => `${str[0].toUpperCase()}${str.substring(1)}`;
 const camelize = (str) => str.replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
 
 const genEntryFile = () => {
@@ -120,9 +126,8 @@ const genEntryFile = () => {
       folderName = filePath.match(/\/components\/(.+)\/index\.vue$/)?.[1];
     }
 
-    if (folderName) {
-      const name = camelize(folderName);
-      const componentName = name[0].toUpperCase() + name.substring(1);
+    if (folderName && !excludeComponents.includes(folderName)) {
+      const componentName = firstUpperCase(camelize(folderName));
       importStr += `import ${componentName} from './components/${folderName.toLowerCase()}/index.vue';\n`;
       packages.push(componentName);
     }

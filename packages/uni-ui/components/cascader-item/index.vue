@@ -38,10 +38,10 @@
 <script lang="ts">
 import { watch, ref, Ref, computed } from 'vue';
 import { createComponent } from '../common/create';
-import { convertListToOptions } from './helper';
-import { CascaderPane, CascaderOption, CascaderValue, convertConfig } from './types';
-import Tree from './tree';
-import { cascaderItemProps } from './common';
+import { convertListToOptions } from '../cascader/helper';
+import { CascaderPane, CascaderOption, CascaderValue, convertConfig } from '../cascader/types';
+import Tree from '../cascader/tree';
+import { cascaderItemProps } from '../cascader/common';
 
 const { create, translate } = createComponent('cascader-item');
 
@@ -312,5 +312,5 @@ export default create({
 </script>
 
 <style lang="scss">
-@import './index.scss';
+@import '../cascader/index.scss';
 </style>
