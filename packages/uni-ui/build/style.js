@@ -1,4 +1,4 @@
-const config = require('../config.json');
+const config = require('../../../config.json');
 const { resolve } = require('path');
 const { copy, outputFileSync } = require('fs-extra');
 const { build } = require('vite');

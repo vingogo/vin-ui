@@ -4,7 +4,6 @@ const { readFile, remove, lstatSync, outputFileSync, readdirSync } = require('fs
 const { extname, basename } = require('path');
 const { build } = require('vite');
 const { SRC_DIR, LIB_DIR } = require('./const');
-const config = require('../config.json');
 
 const package = require(resolve(SRC_DIR, 'package.json'));
 
@@ -14,7 +13,7 @@ const input = {};
 const excludeComponents = ['comment', 'CmtBottom', 'CmtHeader', 'CmtImages'];
 
 const banner = `/*!
-* ${config.name} v${package.version} ${new Date()}
+* ${package.name} v${package.version} ${new Date()}
 * (c) 2023 @vingogo.
 * Released under the MIT License.
 */`;

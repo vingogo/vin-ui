@@ -6,17 +6,12 @@ const buildLocale = require('./locale');
 const { SRC_DIR, LIB_DIR } = require('./const');
 
 const copySourceCode = async () => {
-  const dirs = [
-    'styles',
-    { src: 'package.json', dest: resolve(LIB_DIR, '../package.json') },
-    { src: 'types', dest: resolve(LIB_DIR, '../types') },
-    { src: 'README.md', dest: resolve(LIB_DIR, '../README.md') },
-  ];
+  const dirs = ['styles', 'types', 'README.md', { src: 'uni.package.json', dest: 'package.json' }];
 
   return Promise.all(
     dirs.map((dir) => {
       if (typeof dir === 'object') {
-        return copy(resolve(SRC_DIR, dir.src), dir.dest);
+        return copy(resolve(SRC_DIR, dir.src), resolve(LIB_DIR, dir.dest));
       }
 
       return copy(resolve(SRC_DIR, dir), resolve(LIB_DIR, dir));
@@ -25,7 +20,7 @@ const copySourceCode = async () => {
 };
 
 const clean = async () => {
-  await Promise.all([remove(resolve(LIB_DIR, '../'))]);
+  await Promise.all([remove(LIB_DIR)]);
 };
 
 const tasks = [

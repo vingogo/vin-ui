@@ -17,12 +17,12 @@
     "prepare": "husky install",
     "dev": "npm run build:lib && pnpm --filter @vingogo/play dev",
     "build": "npm run build:lib && pnpm --filter @vingogo/play build",
-    "dev:ui": "node ./scripts/watcher.js",
+    "dev:ui": "pnpm --filter @vingogo/uni-ui dev",
     "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build",
-    "build:lib": "node build/index.js",
-    "build:uni": "node build/uni.js",
-    "deploy:ui": "npm run build:h5 && node ./scripts/deploy.js --prefix=ui --dist=dist/build/h5",
+    "build:lib": "pnpm --filter @vingogo/uni-ui build:lib",
+    "build:uni": "pnpm --filter @vingogo/uni-ui build:uni",
+    "deploy:ui": "npm run build && node ./scripts/deploy.js --prefix=ui --dist=packages/play/dist/h5",
     "deploy:docs": "npm run docs:build && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist"
   },
   "lint-staged": {

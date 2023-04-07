@@ -1,14 +1,9 @@
 const chokidar = require('chokidar');
-const { execSync } = require('child_process');
 const buildPackageScript = require('../build/package');
 const buildStyle = require('../build/style');
 const buildLocale = require('../build/locale');
 
 let waiting = false;
-
-console.log(`开始构建`);
-execSync('npm run build:lib');
-console.log(`UI包已构建完成`);
 
 const processFn = (path, action) => {
   if (!waiting) {
@@ -28,19 +23,17 @@ const processFn = (path, action) => {
 
 // vue、js
 chokidar
-  .watch(['packages/uni-ui/components/**/*.*', 'packages/uni-ui/shared/**/*.*'], {
+  .watch(['components/**/*.*', 'shared/**/*.*'], {
     ignored: '*-sfc.ts',
   })
   .on('change', (path) => processFn(path, buildPackageScript));
 
 // 样式
 chokidar
-  .watch(['packages/uni-ui/**/*.(scss|css)'], {
+  .watch(['**/*.(scss|css)'], {
     ignored: '*-sfc.ts',
   })
   .on('change', (path) => processFn(path, buildStyle));
 
 // 多语言
-chokidar
-  .watch(['packages/uni-ui/locale/**/*.(ts|js)'])
-  .on('change', (path) => processFn(path, buildLocale));
+chokidar.watch(['locale/**/*.(ts|js)']).on('change', (path) => processFn(path, buildLocale));
