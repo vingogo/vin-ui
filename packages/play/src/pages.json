@@ -241,12 +241,6 @@
       }
     },
     {
-      "path": "pages/comment/index",
-      "style": {
-        "navigationBarTitleText": "Comment"
-      }
-    },
-    {
       "path": "pages/uploader/index",
       "style": {
         "navigationBarTitleText": "Uploader"
@@ -256,7 +250,7 @@
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "VinUI",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#f87d09",
     "backgroundColor": "#F8F8F8"
   },
   "easycom": {
