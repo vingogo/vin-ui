@@ -3,18 +3,18 @@
   font-size: $cascader-font-size;
   line-height: $cascader-line-height;
 
-  ::v-deep .vin-tabpane {
+  .vin-tabpane {
     padding: 0;
   }
 
-  ::v-deep .vin-tabs__titles-item {
+  .vin-tabs__titles-item {
     flex: initial;
     min-width: auto;
     padding: $cascader-tabs-item-padding;
     white-space: nowrap;
   }
 
-  ::v-deep .vin-tabs__titles {
+  .vin-tabs__titles {
     padding: $cascader-tabs-item-padding;
     background: #fff;
   }

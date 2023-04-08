@@ -60,7 +60,7 @@ $dark-color: $white !default;
 
         img,
         image,
-        ::v-deep .vin-avatar {
+        .vin-avatar {
           width: 20px;
           height: 20px;
         }
