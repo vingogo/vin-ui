@@ -1,17 +1,43 @@
 const config = require('../../../config.json');
-const { resolve } = require('path');
-const { copy, outputFileSync } = require('fs-extra');
+const { extname, basename, resolve } = require('path');
+const { copy, lstatSync, outputFileSync, readdirSync } = require('fs-extra');
 const { build } = require('vite');
 const { SRC_DIR, LIB_DIR } = require('./const');
 
 let sassFileStr = ``;
+// 暂不输出
+const excludeComponents = ['comment', 'CmtBottom', 'CmtHeader', 'CmtImages'];
+const replaceExt = (file, ext) => file.replace(extname(file), ext);
+
+const queryFiles = (dir, exts, list = []) => {
+  const files = readdirSync(dir);
+
+  files.forEach((file) => {
+    const filePath = resolve(dir, file);
+
+    const stat = lstatSync(filePath);
+
+    if (stat.isDirectory()) {
+      list.concat(queryFiles(filePath, exts, list));
+    } else if (exts.includes(extname(file))) {
+      list.push(filePath);
+    }
+  });
+
+  return list;
+};
 
 const copyStyle = () => {
   let tasks = [];
 
-  config.list.map((item) => {
-    item.components.forEach((element) => {
-      let folderName = element.name.toLowerCase();
+  queryFiles(resolve(SRC_DIR, 'components'), ['.scss']).forEach((filePath) => {
+    let folderName = replaceExt(basename(filePath), '');
+
+    if (folderName === 'index') {
+      folderName = filePath.match(/\/components\/(.+)\/index\.scss$/)?.[1];
+    }
+
+    if (folderName && !excludeComponents.includes(folderName)) {
       tasks.push(
         copy(
           resolve(SRC_DIR, `components/${folderName}/index.scss`),
@@ -20,12 +46,12 @@ const copyStyle = () => {
           .then(() => {
             sassFileStr += `@import '../components/${folderName}.scss';\n`;
           })
-          .catch(() => {})
+          .catch((err) => {
+            console.log(err);
+          })
       );
-    });
+    }
   });
-
-  tasks.push(copy(resolve(SRC_DIR, 'styles'), resolve(LIB_DIR, 'styles')));
 
   return Promise.all(tasks);
 };
@@ -95,7 +121,7 @@ const buildStyle = async () => {
     await runBuildTasks();
     console.log('样式文件构建完成');
   } catch (err) {
-    console.error('样式文件构建失败');
+    console.error('样式文件构建失败', err);
   }
 };
 
