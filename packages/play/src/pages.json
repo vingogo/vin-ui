@@ -241,12 +241,6 @@
       }
     },
     {
-      "path": "pages/comment/index",
-      "style": {
-        "navigationBarTitleText": "Comment"
-      }
-    },
-    {
       "path": "pages/uploader/index",
       "style": {
         "navigationBarTitleText": "Uploader"
