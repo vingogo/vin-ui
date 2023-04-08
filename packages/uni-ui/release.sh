@@ -45,7 +45,15 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo
 
   # update package.json version to be used in the build
-  npm version $VERSION --message "release: $VERSION"
+  npm version $VERSION --message "chore: version $VERSION"
+
+  # no .git directory, need to execute npm tag
+  if [ ! -d ".git" ]; then
+    git tag -a v$VERSION --message "chore: version $VERSION"
+  fi
+
+  git add .
+  git commit --message "chore: version $VERSION"
 
   # build
   npm run build:lib
