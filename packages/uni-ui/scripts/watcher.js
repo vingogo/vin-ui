@@ -24,14 +24,14 @@ const processFn = (path, action) => {
 // vue、js
 chokidar
   .watch(['components/**/*.*', 'shared/**/*.*'], {
-    ignored: '*-sfc.ts',
+    ignored: '**/*-sfc.ts',
   })
   .on('change', (path) => processFn(path, buildPackageScript));
 
 // 样式
 chokidar
   .watch(['**/*.(scss|css)'], {
-    ignored: '*-sfc.ts',
+    ignored: '**/*-sfc.ts',
   })
   .on('change', (path) => processFn(path, buildStyle));
 
