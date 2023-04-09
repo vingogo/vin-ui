@@ -28,7 +28,7 @@
           @click="handleClear"
           class="vin-searchbar__input-clear"
           v-if="clearable"
-          v-show="modelValue.length > 0"
+          v-show="String(modelValue).length > 0"
         >
           <vin-icon name="circle-close" size="12" color="#555"></vin-icon>
         </view>

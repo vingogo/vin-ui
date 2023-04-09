@@ -90,6 +90,7 @@
     "vite-plugin-eslint": "^1.6.0",
     "vitest": "^0.10.2",
     "vue-jest": "^5.0.0-alpha.7",
+    "vue-tsc": "^1.2.0",
     "vue3-jest": "^27.0.0-alpha.1"
   }
 }

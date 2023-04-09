@@ -25,7 +25,7 @@ export default create({
   emits: ['update:visible', 'closed', 'click'],
   setup(props, { emit }) {
     const { getMainClass, getMainStyle } = useVinContext(props);
-    let timer: null | number = null;
+    let timer: NodeJS.Timeout | null | number | undefined = null;
 
     const mainClass = computed(() =>
       getMainClass([`vin-popup-${props.position}`, `vin-notify--${props.type}`])
@@ -42,7 +42,7 @@ export default create({
     };
     const clearTimer = () => {
       if (timer) {
-        clearTimeout(timer);
+        clearTimeout(timer as NodeJS.Timeout);
         timer = null;
       }
     };

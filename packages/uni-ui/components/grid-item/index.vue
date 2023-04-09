@@ -7,10 +7,10 @@
       <template v-else>
         <slot v-if="$slots.icon" name="icon"></slot>
         <vin-icon
-          v-else
-          :name="iconProps.name"
-          :size="iconProps.size"
-          :color="iconProps.color"
+          v-else-if="iconProps?.name"
+          :name="iconProps?.name"
+          :size="iconProps?.size"
+          :color="iconProps?.color"
         ></vin-icon>
 
         <slot v-if="$slots.text" name="text"></slot>
@@ -39,7 +39,7 @@ export default create({
 
     if (!Parent.parent) return {};
     const { index } = Parent;
-    const parent = Parent.parent.props;
+    const parent = Parent.parent.props || {};
 
     const mainClass = computed(getMainClass);
 

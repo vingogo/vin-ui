@@ -1,5 +1,12 @@
-import type { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import { commonProps } from '../common';
+
+export interface navItem {
+  id?: string;
+  icon: string;
+  text: string;
+  num: number;
+}
 
 export const fixednavProps = {
   ...commonProps,
@@ -13,7 +20,7 @@ export const fixednavProps = {
   },
   navList: {
     default: () => [],
-    type: Array,
+    type: Array as PropType<navItem[]>,
   },
   activeText: {
     default: '',

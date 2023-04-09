@@ -101,7 +101,7 @@ export default create({
       distance: 0,
       timer: null,
       keepAlive: false,
-      isCanScroll: null,
+      isCanScroll: false,
       id: Math.round(Math.random() * 100000),
     });
 

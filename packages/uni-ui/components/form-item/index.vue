@@ -24,6 +24,7 @@
 </template>
 <script lang="ts">
 import { computed, provide } from 'vue';
+import type { CSSProperties } from 'vue';
 import { pxCheck } from '../../shared/utils/pxCheck';
 import { createComponent } from '../common/create';
 import { useInject } from '../../shared/hooks';
@@ -39,7 +40,7 @@ export default create({
     const { getMainClass, getMainStyle } = useVinContext(props);
     const Parent = useInject<{ formErrorTip: Required<any> }>(FORM_KEY);
 
-    const formErrorTip = Parent.parent?.formErrorTip;
+    const formErrorTip = Parent.parent?.formErrorTip || {};
 
     provide('form', {
       props,
@@ -49,17 +50,17 @@ export default create({
       return {
         width: pxCheck(props.labelWidth),
         textAlign: props.labelAlign,
-      };
+      } as CSSProperties;
     });
     const bodyStyle = computed(() => {
       return {
         textAlign: props.bodyAlign,
-      };
+      } as CSSProperties;
     });
     const errorMessageStyle = computed(() => {
       return {
         textAlign: props.errorMessageAlign,
-      };
+      } as CSSProperties;
     });
     const mainClass = computed(() => {
       const { showErrorLine, prop } = props;

@@ -148,7 +148,6 @@ export default {
 | ok-text                | 确定按钮文案                             | String        | ”确 定“    |
 | cancel-auto-close      | 取消按钮是否默认关闭弹窗                 | Boolean       | true       |
 | text-align             | 文字对齐方向，可选值同 css 的 text-align | String        | "center"   |
-| lock-scroll            | 背景是否锁定                             | Boolean       | false      |
 | footer-direction       | 使用横纵方向 可选值 horizontal、vertical | string        | horizontal |
 | overlay-class          | 自定义遮罩类名                           | String        | -          |
 | overlay-style          | 自定义遮罩样式                           | CSSProperties | -          |

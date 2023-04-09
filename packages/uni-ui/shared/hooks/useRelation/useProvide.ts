@@ -1,4 +1,4 @@
-import { provide, markRaw, shallowReactive, getCurrentInstance } from 'vue';
+import { isVNode, provide, markRaw, shallowReactive, getCurrentInstance } from 'vue';
 import type {
   VNode,
   InjectionKey,
@@ -13,7 +13,7 @@ export function flattenVNodes(shouldTraverseChildren: VNodeNormalizedChildren, c
   const traverse = (children: VNodeNormalizedChildren) => {
     if (!Array.isArray(children)) return;
     children.forEach((child) => {
-      if (!child.__v_isVNode) return;
+      if (!isVNode(child)) return;
 
       if (childName) {
         if (child.type && (child.type as ConcreteComponent).name === childName) {

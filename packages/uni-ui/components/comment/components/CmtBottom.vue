@@ -30,6 +30,7 @@
 </template>
 <script lang="ts">
 import { ref, watch, onMounted } from 'vue';
+import type { PropType } from 'vue';
 
 import { createComponent } from '../../common/create';
 
@@ -47,7 +48,7 @@ export default create({
     },
 
     operation: {
-      type: Array,
+      type: Array as PropType<string[]>,
       default: ['replay', 'like', 'more'],
     },
   },

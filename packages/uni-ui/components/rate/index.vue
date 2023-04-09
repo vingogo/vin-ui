@@ -2,7 +2,7 @@
   <view :class="mainClass" :style="mainStyle">
     <view
       class="vin-rate-item"
-      v-for="n in count"
+      v-for="n in Number(count)"
       :key="n"
       :style="{ marginRight: pxCheck(spacing) }"
     >
@@ -20,17 +20,17 @@
         :name="n <= modelValue ? checkedIcon : uncheckedIcon"
       />
       <vin-icon
-        v-if="allowHalf && modelValue + 1 > n"
+        v-if="allowHalf && Number(modelValue) + 1 > n"
         custom-class="vin-rate-item__icon vin-rate-item__icon--half"
         @click="onClick(2, n)"
         :font-class-name="fontClassName"
         :class-prefix="classPrefix"
-        :color="n <= modelValue + 1 ? activeColor : voidColor"
+        :color="n <= Number(modelValue) + 1 ? activeColor : voidColor"
         :size="iconSize"
         :name="checkedIcon"
       />
       <vin-icon
-        v-else-if="allowHalf && modelValue + 1 < n"
+        v-else-if="allowHalf && Number(modelValue) + 1 < n"
         custom-class="vin-rate-item__icon vin-rate-item__icon--disabled vin-rate-item__icon--half"
         @click="onClick(2, n)"
         :font-class-name="fontClassName"

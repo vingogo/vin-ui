@@ -2,7 +2,6 @@
   <vin-popup
     v-model:visible="showPopup"
     :close-on-click-overlay="closeOnClickOverlay"
-    :lock-scroll="lockScroll"
     :pop-class="overlayClass"
     :custom-style="overlayStyle"
     round
@@ -15,7 +14,7 @@
         <template v-else>{{ title }}</template>
       </view>
 
-      <view class="vin-dialog__content" :style="{ textAlign }">
+      <view class="vin-dialog__content" :style="contentStyle">
         <slot v-if="$slots.default" name="default"></slot>
         <!-- eslint-disable-next-line vue/no-v-text-v-html-on-component -->
         <view v-else-if="typeof content === 'string'" v-html="content"></view>
@@ -54,6 +53,7 @@
 </template>
 <script lang="ts">
 import { computed, watch, ref } from 'vue';
+import type { CSSProperties } from 'vue';
 import { createComponent } from '../common/create';
 import { dialogProps } from './common';
 
@@ -99,6 +99,12 @@ export default create({
       emit('ok');
     };
 
+    const contentStyle = computed(() => {
+      return {
+        textAlign: props.textAlign,
+      } as CSSProperties;
+    });
+
     return {
       closed,
       mainClass,
@@ -107,6 +113,7 @@ export default create({
       onOk,
       showPopup,
       translate,
+      contentStyle,
     };
   },
 });

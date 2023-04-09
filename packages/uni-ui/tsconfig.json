@@ -4,5 +4,13 @@
     "types": ["@dcloudio/types", "vite/client", "@types/node", "vitest/globals", "jest", "node"],
     "baseUrl": "."
   },
-  "include": ["**/*"]
+  "include": ["**/*.ts", "**/*.vue"],
+  "exclude": [
+    "node_modules",
+    "uni_modules",
+    "lib",
+    "**/__test__/**/*",
+    "**/__tests__/**/*",
+    "vitest.config.ts"
+  ]
 }

@@ -357,9 +357,11 @@ export default create({
       event.preventDefault();
     };
 
-    const curValue = (idx?: number) => {
+    const curValue = (idx?: number): number => {
       const value =
-        typeof idx === 'number' ? (props.modelValue as number[])[idx] : props.modelValue;
+        Array.isArray(props.modelValue) && typeof idx === 'number'
+          ? (props.modelValue as number[])[idx]
+          : Number(props.modelValue);
       return value;
     };
     return {

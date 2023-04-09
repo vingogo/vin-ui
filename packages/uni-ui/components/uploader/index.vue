@@ -2,7 +2,7 @@
   <view :class="mainClass" :style="mainStyle">
     <view class="vin-uploader__slot" v-if="$slots.default">
       <slot></slot>
-      <template v-if="maximum - fileList.length">
+      <template v-if="Number(maximum) > fileList.length">
         <view class="vin-uploader__input" @click="onChange"></view>
       </template>
     </view>
@@ -23,18 +23,18 @@
         </view>
         <vin-icon
           v-if="isDeletable"
-          @click="onDelete(item, index)"
+          @click="() => onDelete(item, index)"
           custom-class="close"
           name="failure"
         ></vin-icon>
         <img
           class="vin-uploader__preview-img__c"
-          @click="fileItemClick(item)"
-          v-if="item.type.includes('image') && item.url"
+          @click="() => fileItemClick(item)"
+          v-if="item?.type?.includes('image') && item.url"
           :src="item.url"
         />
         <view v-else class="vin-uploader__preview-img__file">
-          <view @click="fileItemClick(item)" class="vin-uploader__preview-img__file__name">
+          <view @click="() => fileItemClick(item)" class="vin-uploader__preview-img__file__name">
             <vin-icon color="#808080" name="link"></vin-icon>&nbsp;{{ item.name }}
           </view>
         </view>
@@ -42,7 +42,7 @@
       </view>
       <view class="vin-uploader__preview-list" v-else-if="listType == 'list'">
         <view
-          @click="fileItemClick(item)"
+          @click="() => fileItemClick(item)"
           class="vin-uploader__preview-img__file__name"
           :class="[item.status]"
         >
@@ -50,7 +50,7 @@
         </view>
         <vin-icon
           custom-class="vin-uploader__preview-img__file__del"
-          @click="onDelete(item, index)"
+          @click="() => onDelete(item, index)"
           color="#808080"
           name="del"
         />
@@ -67,7 +67,7 @@
     <view
       class="vin-uploader__upload"
       :class="[listType]"
-      v-if="listType == 'picture' && !$slots.default && maximum - fileList.length"
+      v-if="listType == 'picture' && !$slots.default && Number(maximum) - fileList.length > 0"
     >
       <vin-icon :size="uploadIconSize" color="#808080" :name="uploadIcon"></vin-icon>
       <view class="vin-uploader__input" @click="onChange"></view>
@@ -136,7 +136,7 @@ export default create({
         timeout: props?.timeout,
         xhrState: props.xhrState,
         formData,
-        file: fileItem,
+        file: fileItem as any,
       };
 
       uploadOption.onStart = (option: UploadOptions) => {

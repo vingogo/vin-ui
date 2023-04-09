@@ -60,14 +60,16 @@ const formatVideo = (res: UniChooseVideoSuccess): ChooseFile[] => {
   ];
 };
 
-const formatMedia = (res: UniApp.ChooseMediaSuccessCallbackResult): ChooseFile[] => {
+const formatMedia = (
+  res: UniApp.ChooseMediaSuccessCallbackResult & { name?: string }
+): ChooseFile[] => {
   return res.tempFiles.map((item) => ({
     ...omitProps(item, ['fileType', 'thumbTempFilePath', 'tempFilePath']),
-    type: res.type,
+    type: res.type as FileType,
     url: item.tempFilePath,
     thumb: res.type === 'video' ? item.thumbTempFilePath : item.tempFilePath,
     size: item.size,
-    name: res.name || 'media',
+    name: res?.name || 'media',
   }));
 };
 
@@ -78,7 +80,7 @@ const formatFile = (res: UniChooseFileSuccessCallbackResult): ChooseFile[] => {
     size: item.size,
     name: item.name || 'file',
     // #ifdef H5
-    type: item.type,
+    type: item.type as FileType,
     // #endif
   }));
 };
@@ -140,10 +142,11 @@ export const chooseFile = ({
         break;
       default:
         // #ifdef MP-WEIXIN
-        wx.chooseMessageFile({
+        uni.chooseMessageFile({
           count: multiple ? maxCount : 1,
           type: accept,
-          success: (res: UniChooseFileSuccessCallbackResult) => resolve(formatFile(res)),
+          success: (res) =>
+            resolve(formatFile(res as unknown as UniChooseFileSuccessCallbackResult)),
           fail: reject,
         });
         // #endif

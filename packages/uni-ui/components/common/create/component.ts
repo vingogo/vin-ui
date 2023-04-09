@@ -58,7 +58,7 @@ export function createComponent(name: string) {
 
       return defineComponent(_component as any);
     } as typeof defineComponent,
-    useVinContext: (props: ExtractPropTypes<Readonly<ComponentPropsOptions>>) => {
+    useVinContext: (props: any) => {
       return useVinContext(props, { componentName });
     },
     createDemo<

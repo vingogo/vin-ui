@@ -27,7 +27,7 @@
       @scroll="mothsViewScroll"
       ref="months"
     >
-      <view class="calendar-months-panel" :style="{ heihgt: containerHeight }">
+      <view class="calendar-months-panel" :style="{ height: containerHeight }">
         <view class="viewArea" :style="{ transform: `translateY(${translateY}px)` }">
           <view class="calendar-month" v-for="(month, index) of compConthsDatas" :key="index">
             <view class="calendar-month-title">{{ month.title }}</view>
@@ -147,7 +147,7 @@ export default create({
       yearMonthTitle: '',
       defaultRange: [0, 1],
       compConthsDatas: [],
-      containerHeight: '',
+      containerHeight: '100%',
       currDate: '',
       propStartDate: '',
       propEndDate: '',
@@ -204,13 +204,13 @@ export default create({
     };
 
     // 获取当前数据
-    const getCurrDate = (day: Day, month: MonthInfo, isRange?: boolean) => {
+    const getCurrDate = (day: Day, month: MonthInfo) => {
       return `${month.curData[0]}-${month.curData[1]}-${Utils.getNumTwoBit(+day.day)}`;
     };
 
     // 获取样式
-    const getClass = (day: Day, month: MonthInfo, isRange?: boolean) => {
-      const currDate = getCurrDate(day, month, isRange);
+    const getClass = (day: Day, month: MonthInfo) => {
+      const currDate = getCurrDate(day, month);
       if (day.type === 'curr') {
         if (
           (!state.isRange && Utils.isEqual(state.currDate as string, currDate)) ||
@@ -248,8 +248,8 @@ export default create({
     };
 
     // 选中数据
-    const chooseDay = (day: Day, month: MonthInfo, isFirst: boolean, isRange?: boolean) => {
-      if (getClass(day, month, isRange) !== `${state.dayPrefix}-disabled`) {
+    const chooseDay = (day: Day, month: MonthInfo, isFirst = false) => {
+      if (getClass(day, month) !== `${state.dayPrefix}-disabled`) {
         const days = [...month.curData];
         // days = isRange ? days.splice(3) : days.splice(0, 3);
         days[2] = typeof day.day === 'number' ? Utils.getNumTwoBit(day.day) : day.day;
@@ -514,12 +514,7 @@ export default create({
           state.monthsData[state.currentIndex],
           true
         );
-        chooseDay(
-          { day: state.defaultData[5], type: 'curr' },
-          state.monthsData[lastCurrent],
-          true,
-          true
-        );
+        chooseDay({ day: state.defaultData[5], type: 'curr' }, state.monthsData[lastCurrent], true);
       } else {
         chooseDay(
           { day: state.defaultData[2], type: 'curr' },
@@ -543,7 +538,7 @@ export default create({
         uni
           .createSelectorQuery()
           .select('.vin-calendar-content')
-          .boundingClientRect((res) => {
+          .boundingClientRect((res: Record<string, any>) => {
             viewHeight.value = res.height;
           })
           .exec();
@@ -655,7 +650,7 @@ export default create({
     onMounted(() => {
       // 初始化数据
       uni.getSystemInfo({
-        success(res) {
+        success(res: any) {
           let scale = 2;
           const { screenWidth } = res;
           let toFixed = 3;

@@ -55,7 +55,7 @@ export default create({
       };
     });
 
-    const emitChange = (value: string, event?: Event) => {
+    const emitChange = (value: string, event?: CustomEvent) => {
       if (props.maxLength && value?.length > Number(props.maxLength)) {
         value = value.substring(0, Number(props.maxLength));
       }
@@ -69,19 +69,19 @@ export default create({
       }
     });
 
-    const change = (event: Event) => {
+    const change = (event: any) => {
       const { value } = event.detail;
 
       emitChange(value, event);
     };
 
-    const focus = (event: Event) => {
+    const focus = (event: any) => {
       if (props.disabled) return;
       if (props.readonly) return;
       emit('focus', event);
     };
 
-    const blur = (event: Event) => {
+    const blur = (event: any) => {
       if (props.disabled) return;
       if (props.readonly) return;
       const { value } = event.detail;

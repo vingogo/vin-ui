@@ -4,7 +4,7 @@ import { commonProps } from '../common';
 export const textareaProps = {
   ...commonProps,
   modelValue: {
-    type: [String, Number],
+    type: [String],
     default: '',
   },
   placeholder: {

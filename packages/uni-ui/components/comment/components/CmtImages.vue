@@ -5,7 +5,7 @@
       class="vin-comment-images__item vin-comment-images__item--video"
       v-for="(itV, index) in videos"
       :key="itV.id"
-      @click="showImages('video', index, index)"
+      @click="showImages('video', index)"
     >
       <image :src="itV.mainUrl" />
       <view class="vin-comment-images__play"></view>
@@ -32,10 +32,22 @@
 </template>
 <script lang="ts">
 import { ref, watch, onMounted } from 'vue';
+import type { PropType } from 'vue';
 
 import { createComponent } from '../../common/create';
 
 const { componentName, create } = createComponent('comment-images');
+
+interface VideosType {
+  id: number | string;
+  mainUrl: string;
+  videoUrl: string;
+}
+interface ImagesType {
+  smallImgUrl: string;
+  bigImgUrl: string;
+  imgUrl: string;
+}
 
 export default create({
   props: {
@@ -44,11 +56,11 @@ export default create({
       default: 'one', // one multi
     },
     videos: {
-      type: Array,
+      type: Array as PropType<VideosType[]>,
       default: () => [],
     },
     images: {
-      type: Array,
+      type: Array as PropType<ImagesType[]>,
       default: () => [],
     },
   },
@@ -57,7 +69,7 @@ export default create({
   setup(props, { emit }) {
     const isShowImage = ref(false);
     const initIndex = ref(1);
-    const totalImages = ref([]);
+    const totalImages = ref<any[]>([]);
 
     watch(
       () => [props.videos, props.images],
@@ -67,7 +79,7 @@ export default create({
             el.type = 'video';
           });
         }
-        totalImages.value = value[0].concat(value[1]);
+        totalImages.value = (value[0] as any).concat(value[1]);
       },
       { deep: true }
     );
@@ -78,13 +90,13 @@ export default create({
           el.type = 'video';
         });
       }
-      totalImages.value = props.videos.concat(props.images);
+      totalImages.value = (props.videos as any).concat(props.images);
     });
 
     const showImages = (type: string, index: string | number) => {
       const { videos, images } = props;
 
-      const i = type === 'img' ? (index as number) - videos.length : index;
+      const i = type === 'img' ? (index as number) - videos.length : Number(index);
       emit('clickImages', {
         type,
         index: i,

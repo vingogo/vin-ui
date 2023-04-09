@@ -46,7 +46,7 @@ export const inputProps = {
     default: '',
   },
   modelValue: {
-    type: [String, Number],
+    type: String,
     default: '',
   },
   type: {

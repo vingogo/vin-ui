@@ -14,7 +14,7 @@ export const listProps = {
     },
   },
   containerHeight: {
-    type: [Number],
+    type: Number,
     default: uni?.getSystemInfoSync?.()?.windowHeight || 667,
   },
 };

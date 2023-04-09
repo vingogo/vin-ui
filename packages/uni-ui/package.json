@@ -17,7 +17,8 @@
     "dev": "cross-env MODE=play node build/index.js && cross-env MODE=play node ./scripts/watcher.js",
     "build:all": "npm run build:lib && npm run build:uni",
     "build:lib": "cross-env MODE=production node build/index.js",
-    "build:uni": "cross-env MODE=UNI node build/uni.js"
+    "build:uni": "cross-env MODE=UNI node build/uni.js",
+    "type-check": "vue-tsc --noEmit"
   },
   "sideEffects": [
     "lib/components/**/style.mjs",

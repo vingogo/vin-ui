@@ -2,7 +2,7 @@
   <view
     :style="!showMax ? styles : maxStyles"
     :class="classes"
-    @click="activeAvatar(e)"
+    @click="activeAvatar"
     ref="avatarRef"
     v-if="showMax || !parent?.props?.maxCount || index <= parent?.props?.maxCount"
   >
@@ -17,14 +17,12 @@
         <slot></slot>
       </view>
     </template>
-    <template v-if="showMax">
-      <view class="text">
-        {{
-          parent?.props?.maxContent
-            ? parent?.props?.maxContent
-            : `+ ${maxIndex - parent?.props?.maxCount}`
-        }}
-      </view>
+    <template v-if="showMax && parent?.props?.maxCount">
+      {{
+        parent?.props?.maxContent
+          ? parent?.props?.maxContent
+          : `+ ${maxIndex - (Number(parent?.props?.maxCount) || 0)}`
+      }}
     </template>
   </view>
 </template>

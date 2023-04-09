@@ -11,16 +11,7 @@
       <slot></slot>
     </template>
     <template v-else>
-      <view
-        :class="['vin-toast-inner', toastClass]"
-        :style="[
-          {
-            'text-align': textAlignCenter ? 'center' : 'left',
-            'background-color': bgColor,
-          },
-          toastStyle,
-        ]"
-      >
+      <view :class="['vin-toast-inner', toastClass]" :style="toastInnerStyle">
         <view v-if="hasIcon" class="vin-toast-icon-wrapper">
           <vin-icon :size="iconSize" color="#ffffff" :name="iconName"></vin-icon>
         </view>
@@ -34,7 +25,7 @@
   </vin-transition>
 </template>
 <script lang="ts">
-import { computed, watch } from 'vue';
+import { computed, CSSProperties, watch } from 'vue';
 import { createComponent } from '../common/create';
 import { toastProps } from './common';
 
@@ -113,6 +104,14 @@ export default create({
       });
     });
 
+    const toastInnerStyle = computed(() => {
+      return {
+        'text-align': props.textAlignCenter ? 'center' : 'left',
+        'background-color': props.bgColor,
+        ...(props.toastStyle || {}),
+      } as CSSProperties;
+    });
+
     const onAfterLeave = () => {
       if (props.visible) {
         clearTimer();
@@ -127,6 +126,7 @@ export default create({
       mainClass,
       mainStyle,
       onAfterLeave,
+      toastInnerStyle,
     };
   },
 });

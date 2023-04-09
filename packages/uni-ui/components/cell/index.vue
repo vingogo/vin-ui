@@ -14,9 +14,7 @@
           {{ title }}
         </template>
       </view>
-      <view v-if="desc" class="vin-cell__value" :style="{ 'text-align': descTextAlign }">{{
-        desc
-      }}</view>
+      <view v-if="desc" class="vin-cell__value" :style="descStyle">{{ desc }}</view>
 
       <slot v-if="$slots.link" name="link"></slot>
       <vin-icon v-else-if="isLink || to" class="vin-cell__link" name="right"></vin-icon>
@@ -25,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue';
+import { computed, CSSProperties } from 'vue';
 import { createComponent } from '../common/create';
 import { pxCheck } from '../../shared/utils/pxCheck';
 import { useRouter } from '../../shared/hooks';
@@ -54,6 +52,12 @@ export default create({
       });
     });
 
+    const descStyle = computed(() => {
+      return {
+        'text-align': props.descTextAlign,
+      } as CSSProperties;
+    });
+
     const handleClick = (event: Event) => {
       if (props.replace && props.to) {
         replace(props.to);
@@ -72,6 +76,7 @@ export default create({
       handleClick,
       classes,
       baseStyle,
+      descStyle,
     };
   },
 });

@@ -31,7 +31,7 @@ export default create({
     const mainStyle = computed(getMainStyle);
 
     const relation = (child: ComponentInternalInstance) => {
-      child && state.children.push(child);
+      child && state.children.push(child as any);
     };
 
     const onEmit = (index: number) => {

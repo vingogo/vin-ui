@@ -29,7 +29,7 @@
           ref="inputRef"
           :style="stylesTextarea"
           :maxlength="maxLength"
-          :placeholder="placeholde"
+          :placeholder="placeholder"
           placeholder-class="vin-placeholder"
           :disabled="disabled"
           :readonly="readonly"
@@ -94,7 +94,7 @@
   </view>
 </template>
 <script lang="ts">
-import { ref, reactive, computed, onMounted, watch } from 'vue';
+import { ref, reactive, computed, onMounted, watch, CSSProperties } from 'vue';
 import { createComponent } from '../common/create';
 import { formatNumber } from './util';
 import { inputProps } from './common';
@@ -148,13 +148,13 @@ export default create({
     const styles = computed(() => {
       return {
         textAlign: props.inputAlign,
-      };
+      } as CSSProperties;
     });
     const stylesTextarea = computed(() => {
       return {
         textAlign: props.inputAlign,
         height: `${Number(props.rows) * 24}px`,
-      };
+      } as CSSProperties;
     });
 
     const inputType = (type: string) => {
@@ -195,20 +195,20 @@ export default create({
       }
     };
 
-    const onInput = (event: Event) => {
+    const onInput = (event: any) => {
       const { value } = event.detail;
 
       updateValue(value);
     };
 
-    const onFocus = (event: Event) => {
+    const onFocus = (event: any) => {
       const { value } = event.detail;
 
       active.value = true;
       emit('focus', value, event);
     };
 
-    const onBlur = (event: Event) => {
+    const onBlur = (event: any) => {
       setTimeout(() => {
         active.value = false;
       }, 200);

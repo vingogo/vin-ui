@@ -4,13 +4,13 @@
       <template v-if="!dot">
         <view
           class="vin-tabbar-item_icon-box_tips vin-tabbar-item_icon-box_num"
-          v-if="num && num <= 99"
+          v-if="num && Number(num) <= 99"
         >
           {{ num }}
         </view>
         <view
           class="vin-tabbar-item_icon-box_tips vin-tabbar-item_icon-box_nums"
-          v-else-if="num && num > 100"
+          v-else-if="num && Number(num) > 100"
           >{{ '99+' }}</view
         >
       </template>

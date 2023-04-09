@@ -64,7 +64,10 @@ export const toastProps = {
     type: String,
     default: 'text',
   },
-  toastStyle: Object as PropType<CSSProperties>,
+  toastStyle: {
+    type: Object as PropType<CSSProperties>,
+    default: () => ({}),
+  },
   toastClass: String,
 };
 

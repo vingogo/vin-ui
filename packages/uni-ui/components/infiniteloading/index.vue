@@ -71,7 +71,7 @@ export default create({
       };
     });
 
-    const getParentElement = (el) => {
+    const getParentElement = (el: string) => {
       return uni
         .createSelectorQuery()
         .select(props.containerId ? `#${props.containerId} #${el}` : `#${el}`);
@@ -81,7 +81,7 @@ export default create({
       const parentElement = getParentElement('scroller');
 
       parentElement
-        .boundingClientRect((rect) => {
+        .boundingClientRect((rect: Record<string, any>) => {
           state.scrollHeight = rect?.height || 0;
         })
         .exec();
@@ -100,7 +100,7 @@ export default create({
       emit('load-more', infiniteDone);
     };
 
-    const scroll = (e) => {
+    const scroll = (e: CustomEvent) => {
       // 滚动方向
       if (e.detail.scrollTop <= 0) {
         // 滚动到最顶部

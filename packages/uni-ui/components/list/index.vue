@@ -13,9 +13,9 @@
         class="vin-list-item"
         :style="{ height: height + 'px' }"
         v-for="(item, index) in visibleData"
-        :key="item"
+        :key="index"
       >
-        <slot :item="item" :index="index"></slot>
+        <slot :item="item" :index="'list-item-' + index"></slot>
       </view>
     </view>
   </scroll-view>
@@ -26,6 +26,7 @@ import { createComponent } from '../common/create';
 import { listProps } from './common';
 
 const { create, useVinContext } = createComponent('list');
+const clientHeight = uni.getSystemInfoSync().windowHeight || 667;
 
 export default create({
   props: listProps,
@@ -41,8 +42,12 @@ export default create({
       list: props.listData.slice(),
     });
 
+    const getContainerHeight = computed(() => {
+      return Math.min(props.containerHeight, clientHeight);
+    });
+
     const visibleCount = computed(() => {
-      return Math.ceil(props.containerHeight / props.height);
+      return Math.ceil(getContainerHeight.value / props.height);
     });
 
     const end = computed(() => {
