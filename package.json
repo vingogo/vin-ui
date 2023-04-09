@@ -12,6 +12,7 @@
     "url": "https://github.com/vingogo/vin-ui.git"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "lint": "eslint --ext .ts,.js,.vue --fix .",
     "format": "prettier --write --cache --parser typescript \"**/*.[tj]s?(x)\"",
     "prepare": "husky install",
