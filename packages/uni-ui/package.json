@@ -44,7 +44,7 @@
   "bugs": {
     "url": "https://github.com/vingogo/vin-ui/issues"
   },
-  "homepage": "https://github.com/vingogo/vin-ui/tree/main/src/vingogo/uni-ui#readme",
+  "homepage": "https://github.com/vingogo/vin-ui/tree/main/packages/uni-ui",
   "peerDependencies": {
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"
