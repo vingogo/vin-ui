@@ -34,6 +34,7 @@ importers:
       postcss: ^8.4.6
       postcss-preset-env: ^7.2.3
       prettier: ^2.6.2
+      rimraf: ^4.4.1
       sass: ^1.52.1
       stylelint: ^13.13.1
       stylelint-config-prettier: ^8.0.2
@@ -82,6 +83,7 @@ importers:
       postcss: 8.4.21
       postcss-preset-env: 7.8.3_postcss@8.4.21
       prettier: 2.8.7
+      rimraf: 4.4.1
       sass: 1.60.0
       stylelint: 13.13.1
       stylelint-config-prettier: 8.0.2_stylelint@13.13.1
@@ -12962,6 +12964,14 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rimraf/4.4.1:
+    resolution: {integrity: sha512-Gk8NlF062+T9CqNGn6h4tls3k6T1+/nXdOcSZVikNVtlRdYpA7wRJJMoXmuvOnLW844rPjdQ7JgXCYM6PPC/og==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      glob: 9.3.4
     dev: true
 
   /robust-predicates/3.0.1:

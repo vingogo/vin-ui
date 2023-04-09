@@ -18,6 +18,7 @@
     "build:all": "npm run build:lib && npm run build:uni",
     "build:lib": "cross-env MODE=production node build/index.js",
     "build:uni": "cross-env MODE=UNI node build/uni.js",
+    "dts": "rimraf types && vue-tsc --declaration --emitDeclarationOnly",
     "type-check": "vue-tsc --noEmit"
   },
   "sideEffects": [

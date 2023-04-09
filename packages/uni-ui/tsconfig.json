@@ -2,6 +2,9 @@
   "extends": "../../tsconfig",
   "compilerOptions": {
     "types": ["@dcloudio/types", "vite/client", "@types/node", "vitest/globals", "jest", "node"],
+    "declaration": true,
+    "declarationDir": "./types",
+    "emitDeclarationOnly": true,
     "baseUrl": "."
   },
   "include": ["**/*.ts", "**/*.vue"],
@@ -11,6 +14,7 @@
     "lib",
     "**/__test__/**/*",
     "**/__tests__/**/*",
+    "**/*/common.ts",
     "vitest.config.ts"
   ]
 }

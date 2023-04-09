@@ -3,10 +3,11 @@ const { resolve } = require('path');
 const buildPackageScript = require('./package');
 const buildStyle = require('./style');
 const buildLocale = require('./locale');
+const buildTypes = require('./types');
 const { SRC_DIR, LIB_DIR } = require('./const');
 
 const copySourceCode = async () => {
-  const dirs = ['styles', 'types', 'README.md', { src: 'uni.package.json', dest: 'package.json' }];
+  const dirs = ['styles', 'README.md', { src: 'uni.package.json', dest: 'package.json' }];
 
   return Promise.all(
     dirs.map((dir) => {
@@ -56,6 +57,10 @@ const tasks = [
   {
     text: '构建多语言包',
     task: buildLocale,
+  },
+  {
+    text: '构建类型提示文件',
+    task: buildTypes,
   },
   {
     text: '生成入口文件',
