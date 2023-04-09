@@ -8,7 +8,7 @@
   "main": "lib/index.js",
   "module": "lib/index.js",
   "style": "lib/style.css",
-  "typings": "lib/types/components.d.ts",
+  "typings": "lib/types/index.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -39,8 +39,7 @@
     "vue3 component"
   ],
   "files": [
-    "lib",
-    "types"
+    "lib"
   ],
   "bugs": {
     "url": "https://github.com/vingogo/vin-ui/issues"
