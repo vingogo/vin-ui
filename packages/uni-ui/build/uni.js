@@ -1,4 +1,4 @@
-const { copy, remove } = require('fs-extra');
+const { copy, remove, outputFileSync } = require('fs-extra');
 const { resolve } = require('path');
 const buildPackageScript = require('./package');
 const buildStyle = require('./style');
@@ -23,6 +23,23 @@ const clean = async () => {
   await Promise.all([remove(LIB_DIR)]);
 };
 
+// uni-app 插件发布需要 components 下有同名文件
+const genEnterFile = async () => {
+  return outputFileSync(
+    resolve(LIB_DIR, 'components/vin-ui/vin-ui.vue'),
+    `
+<template>
+  <view></view>
+</template>
+
+<script>
+export default {};
+</script>
+`,
+    'utf8'
+  );
+};
+
 const tasks = [
   {
     text: '复制源代码',
@@ -39,6 +56,10 @@ const tasks = [
   {
     text: '构建多语言包',
     task: buildLocale,
+  },
+  {
+    text: '生成入口文件',
+    task: genEnterFile,
   },
 ];
 
