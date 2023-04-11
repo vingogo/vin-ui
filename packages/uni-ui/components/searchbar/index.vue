@@ -81,38 +81,35 @@ export default create({
       };
     });
 
-    const valueChange = (event: Event) => {
-      const input = event.target as HTMLInputElement;
-      let val = input.value;
+    const valueChange = (event: any) => {
+      let { value } = event.detail;
 
-      if (props.maxLength && val.length > Number(props.maxLength)) {
-        val = val.slice(0, Number(props.maxLength));
+      if (props.maxLength && value.length > Number(props.maxLength)) {
+        value = value.slice(0, Number(props.maxLength));
       }
-      emit('update:modelValue', val, event);
-      emit('change', val, event);
+      emit('update:modelValue', value, event);
+      emit('change', value, event);
     };
 
-    const valueFocus = (event: Event) => {
-      const input = event.target as HTMLInputElement;
-      const { value } = input;
+    const valueFocus = (event: any) => {
+      const { value } = event.detail;
       state.active = true;
       emit('focus', value, event);
     };
 
-    const valueBlur = (event: Event) => {
+    const valueBlur = (event: any) => {
       setTimeout(() => {
         state.active = false;
       }, 0);
 
-      const input = event.target as HTMLInputElement;
-      let { value } = input;
+      let { value } = event.detail;
       if (props.maxLength && value.length > Number(props.maxLength)) {
         value = value.slice(0, Number(props.maxLength));
       }
       emit('blur', value, event);
     };
 
-    const handleClear = (event: Event) => {
+    const handleClear = (event: any) => {
       emit('update:modelValue', '', event);
       emit('change', '', event);
       emit('clear', '');
