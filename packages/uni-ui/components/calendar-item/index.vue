@@ -85,7 +85,16 @@
   </view>
 </template>
 <script lang="ts">
-import { reactive, ref, watch, toRefs, computed, onMounted, nextTick } from 'vue';
+import {
+  reactive,
+  ref,
+  watch,
+  toRefs,
+  computed,
+  onMounted,
+  nextTick,
+  getCurrentInstance,
+} from 'vue';
 import { createComponent } from '../common/create';
 import Utils from '../../shared/utils/date';
 import { calendarItemProps } from './common';
@@ -137,6 +146,7 @@ export default create({
   emits: ['choose', 'update', 'close', 'select'],
 
   setup(props, { emit, slots }) {
+    const instance = getCurrentInstance();
     const weeks = ref(translate('weekdays'));
     // element refs
     const scalePx = ref(2);
@@ -533,17 +543,19 @@ export default create({
       if (months?.value) {
         viewHeight.value = months.value.clientHeight;
       }
-      // #ifdef H5
-      nextTick(() => {
-        uni
-          .createSelectorQuery()
-          .select('.vin-calendar-content')
-          .boundingClientRect((res: Record<string, any>) => {
-            viewHeight.value = res.height;
-          })
-          .exec();
-      });
+
+      const query = uni
+        .createSelectorQuery()
+        // #ifndef MP-ALIPAY
+        .in(instance);
       // #endif
+
+      query
+        .select('.vin-calendar-content')
+        .boundingClientRect((res: Record<string, any>) => {
+          viewHeight.value = res.height;
+        })
+        .exec();
     };
     const setDefaultRange = (monthsNum: number, current: number) => {
       let rangeArr: any[] = [];
