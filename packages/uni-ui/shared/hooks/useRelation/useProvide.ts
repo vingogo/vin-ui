@@ -1,4 +1,4 @@
-import { isVNode, provide, markRaw, shallowReactive, getCurrentInstance } from 'vue';
+import { provide, markRaw, shallowReactive, getCurrentInstance } from 'vue';
 import type {
   VNode,
   InjectionKey,
@@ -6,6 +6,11 @@ import type {
   VNodeNormalizedChildren,
   ComponentInternalInstance,
 } from 'vue';
+
+// TODO: uniapp 不支持 vue 直接导出的 isVNode
+export function isVNode(value: any): value is VNode {
+  return value ? value.__v_isVNode === true : false;
+}
 
 export function flattenVNodes(shouldTraverseChildren: VNodeNormalizedChildren, childName?: string) {
   const result: VNode[] = [];
