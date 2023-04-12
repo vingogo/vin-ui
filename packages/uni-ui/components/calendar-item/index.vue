@@ -41,9 +41,14 @@
                   >
                     <!-- 日期显示slot -->
                     <view class="calendar-day">
+                      <!-- #ifdef MP-WEIXIN -->
+                      {{ day.type === 'curr' ? day.day : '' }}
+                      <!-- #endif -->
+                      <!-- #ifndef MP-WEIXIN -->
                       <slot name="day" :date="day.type === 'curr' ? day : ''">
                         {{ day.type === 'curr' ? day.day : '' }}
                       </slot>
+                      <!-- #endif -->
                     </view>
                     <view class="calendar-curr-tips calendar-curr-tips-top" v-if="topInfo">
                       <slot name="topInfo" :date="day.type === 'curr' ? day : ''"> </slot>
