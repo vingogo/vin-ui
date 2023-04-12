@@ -94,8 +94,6 @@
         v-model:visible="isVisible5"
         :default-value="date5"
         type="range"
-        :start-date="`2021-12-22`"
-        :end-date="`2022-12-31`"
         @close="closeSwitch('isVisible5')"
         @choose="setChooseValue5"
       >
@@ -156,7 +154,7 @@
 
 <script lang="ts">
 import { reactive, toRefs } from 'vue';
-// import Utils from '@vingogo/uni-ui/shared/utils/date';
+import Utils from '@/utils/date';
 import { createComponent } from '@/utils/create';
 
 const { createDemo } = createComponent('calendar');
@@ -236,8 +234,7 @@ export default createDemo({
       state.date6 = [...[param[0][3], param[1][3]]];
     };
     const clickBtn = (param: string) => {
-      const date = [];
-      // const date = [Utils.date2Str(new Date()), Utils.getDay(6)];
+      const date = [Utils.date2Str(new Date()), Utils.getDay(6)];
       state.date5 = date;
     };
     const clickBtn1 = (param: string) => {
@@ -246,8 +243,7 @@ export default createDemo({
       let month: any = date.getMonth() + 1;
       month = month < 10 ? `0${month}` : `${month}`;
       const yearMonth = `${year}-${month}`;
-      const currMonthDays = '01';
-      // const currMonthDays = Utils.getMonthDays(`${year}`, `${month}`);
+      const currMonthDays = Utils.getMonthDays(`${year}`, `${month}`);
       state.date5 = [`${yearMonth}-01`, `${yearMonth}-${currMonthDays}`];
     };
     return {
