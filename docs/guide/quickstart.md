@@ -2,42 +2,13 @@
 
 使用 `Vin UI` 前，请确保你已经对小程序开发、`uniapp` 有一定了解。
 
-## vin-cli
-
 如果是新项目，推荐使用 [vin-cli](https://github.com/vingogo/vin-cli), `vin-cli`将为您提供`uniapp cli`开发方式的最佳实践。
-
-```bash
-# 通过 npm
-npm i @vingogo/vin-cli -g
-```
-
-您也可以使用 `yarn` 或 `pnpm` 进行安装：
-
-```bash
-# 通过 yarn
-yarn global add @vingogo/vin-cli
-
-# 通过 pnpm
-pnpm add @vingogo/vin-cli -g
-```
-
-创建一个开发模板：
-
-```bash
-vin template
-```
-
-启动项目开发模式：
-
-```bash
-npm run dev
-```
 
 ## 安装
 
-`Vin UI` 遵循 `uniapp` 的安装方式，在已有项目中集成，可通过如下步骤完成:
+`Vin UI` 遵循 `uniapp` 的安装方式，为您提供了 npm 包和 uni_modules 包的方式安装组件。
 
-### npm 安装
+### 方式一：npm 安装
 
 在项目根目录执行如下命令即可：
 
@@ -61,7 +32,7 @@ yarn add @vingogo/uni-ui
 pnpm add @vingogo/uni-ui
 ```
 
-### HbuilderX 方式（不推荐）
+### 方式二：uniapp 插件市场下载
 
 如果您是使用 `HBuilderX` 开发的用户，您可以在 `uniapp` 插件市场通过 `uni_modules` 的形式进行安装。
 
@@ -69,13 +40,36 @@ pnpm add @vingogo/uni-ui
 
 下载地址：[https://ext.dcloud.net.cn/plugin?id=11187](https://ext.dcloud.net.cn/plugin?id=11187)
 
-> 不推荐该方式安装，项目主要使用 cli 的方式开发、测试，后续步骤也主要按 cli 方式；HbuilderX 挺好用，下次一定学
+### 方式三：通过下载代码
 
-## 配置
+通过 [Github](https://github.com/vingogo/vin-ui)/[Gitee](https://gitee.com/vingogo/vin-ui) 下载 VinUI 的代码，然后将打包后的代码拷贝到自己的项目中，下面以 Github 仓库、pnpm 安装依赖为例：
+
+1. 克隆仓库代码：
+
+```bash
+git clone https://github.com/vingogo/vin-ui.git
+```
+
+2. 安装依赖：
+
+```bash
+pnpm i
+```
+
+3. 在 `src/uni_modules/vin-ui` 目录对 VinUI 的代码做符合业务的个性化调整
+4. 构建代码, 将把原有的 TS 文件生成编译后的 JS 文件，并转成 ES5
+
+```bash
+pnpm build:uni
+```
+
+拷贝 `dist/uni_modules` 下生成的文件
+
+## 使用方式
 
 在进行配置之前，请确保您已经根据安装中的步骤对 `Vin UI` 进行了 `npm` 安装。
 
-### 配置 easycom
+### 1. easycom
 
 [easycom](https://uniapp.dcloud.net.cn/collocation/pages.html#easycom) 可以方便的引入组件，建议开启
 
@@ -85,6 +79,7 @@ pnpm add @vingogo/uni-ui
 // pages.json
 {
   "easycom": {
+    // 此处根据实际文件位置进行修改，如下为通过 npm 包安装的方式配置
     "^vin-(.*)": "@vingogo/uni-ui/lib/components/$1/index.vue"
   },
   // 此为本身已有的内容
@@ -94,7 +89,7 @@ pnpm add @vingogo/uni-ui
 }
 ```
 
-### 样式引入
+### 2. 样式引入
 
 在项目入口文件 `main.ts` 或者 `main.js` 文件中添加如下代码：
 
@@ -102,7 +97,7 @@ pnpm add @vingogo/uni-ui
 import '@vingogo/uni-ui/lib/style.css';
 ```
 
-## 组件使用
+### 3. 在项目中使用
 
 完成上述配置后，无需引入组件，可以直接在项目中使用，如：
 

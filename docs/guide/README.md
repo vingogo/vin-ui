@@ -34,14 +34,6 @@
   </a>
 </p>
 
-<p align="center">
-   <img src="https://cdn.vingogo.cn/vinui-qrcode.png" width="236" alt="网页端二维码" title="网页端" />
-  &nbsp;
-  <img src="https://cdn.vingogo.cn/qrcode.jpg" width="236" alt="微信二维码" title="请用微信扫码">
-  &nbsp;
-   <img src="https://cdn.vingogo.cn/alipay-qrcode.jpg" width="236" alt="支付宝二维码" title="请用支付宝扫码">
-</p>
-
 ---
 
 `VinUI` 参考 [NutUI](https://github.com/jdf2e/nutui)（京东风格的轻量级移动端组件库）的设计和实现，在 `Taro` 小程序组件库版本 `NutUI-Vue` 基础上实现的 `uniapp` 版本
@@ -83,6 +75,7 @@
 
 ## 链接
 
-- [组件使用文档](https://vingogo.cn/docs/index.html)
+- [组件使用文档](https://vingogo.cn/docs/components/icon.html)
 - [Github](https://github.com/vingogo/vin-ui)
 - [Gitee](https://gitee.com/vingogo/vin-ui)
+- [uniapp 市场插件](https://ext.dcloud.net.cn/plugin?id=11187)

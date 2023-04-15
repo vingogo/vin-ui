@@ -21,6 +21,8 @@ npm i sass sass-loader -D
 
 修改 vite 或者 webpack 配置文件。如下示例:
 
+> 注意不同安装方式 variables.scss 文件的路径可能会有不同，请注意修改，下面文件路径以 npm 包路径为例
+
 #### vite 配置示例
 
 在 `vite.config.js` 或者 `vite.config.ts` 中添加配置：

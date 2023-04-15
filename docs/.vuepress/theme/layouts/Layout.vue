@@ -1,67 +1,69 @@
 <script setup>
-import { watch, ref, nextTick, onBeforeUnmount, onMounted } from 'vue'
-import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
-import { useRouter, useRoute } from 'vue-router'
-import pathList from './../pathList.js'
+import { watch, ref, nextTick, onBeforeUnmount, onMounted } from 'vue';
+import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue';
+import { useRouter, useRoute } from 'vue-router';
+import pathList from './../pathList.js';
 
-const isDarkMode = ref(false)
-const route = useRoute()
-const iframeId = ref()
-const iframeBaseUrl = import.meta.env.MODE === 'development' ? 'http://localhost:3001#' : '/ui/index.html#'
-const iframeUrl = ref(iframeBaseUrl)
+const isDarkMode = ref(false);
+const route = useRoute();
+const iframeId = ref();
+const iframeBaseUrl =
+  import.meta.env.MODE === 'development' ? 'http://localhost:3001#' : '/ui/index.html#';
+const iframeUrl = ref(iframeBaseUrl);
 const hasIframe = ref(false);
 
 // 根据父 path 拿到 子 path
 function parentPathToChildrenPath(parentPath) {
-  const cur = pathList.find(x => x.parentPath === parentPath)
-  return cur ? cur.childrenPath : ''
+  const cur = pathList.find((x) => x.parentPath === parentPath);
+  return cur ? cur.childrenPath : '';
 }
 
 // 首次设置 iframe 的链接
-iframeUrl.value = `${iframeBaseUrl}${parentPathToChildrenPath(route.path)}`
+iframeUrl.value = `${iframeBaseUrl}${parentPathToChildrenPath(route.path)}`;
 
-let oldPath = route.path
+let oldPath = route.path;
 watch(
   route,
   async (val) => {
-    await nextTick()
+    await nextTick();
 
-    hasIframe.value = val.path.startsWith('/components/')
+    hasIframe.value = val.path.startsWith('/components/');
 
     if (val.path !== oldPath) {
-      oldPath = val.path
-      const childrenPath = parentPathToChildrenPath(val.path)
+      oldPath = val.path;
+      const childrenPath = parentPathToChildrenPath(val.path);
       if (childrenPath) {
-        iframeId.value && iframeId.value.contentWindow.location.replace(`${iframeBaseUrl}${childrenPath}`)
+        iframeId.value &&
+          iframeId.value.contentWindow.location.replace(`${iframeBaseUrl}${childrenPath}`);
       }
     }
   },
   {
     deep: true,
-    immediate: true
+    immediate: true,
   }
-)
+);
 
-let observer
+let observer;
 onMounted(() => {
-  const html = document.querySelector("html")
-  isDarkMode.value = html.classList.contains("dark")
+  const html = document.querySelector('html');
+  isDarkMode.value = html.classList.contains('dark');
   // watch theme change
   observer = new MutationObserver(() => {
-    isDarkMode.value = html.classList.contains("dark")
-  })
+    isDarkMode.value = html.classList.contains('dark');
+  });
   observer.observe(html, {
-    attributeFilter: ["class"],
+    attributeFilter: ['class'],
     attributes: true,
-  })
-})
+  });
+});
 onBeforeUnmount(() => {
-  observer.disconnect()
-})
+  observer.disconnect();
+});
 </script>
 
 <template>
-  <ParentLayout>
+  <ParentLayout :class="hasIframe ? 'isPreview' : ''">
     <!-- 因为page每次都重新渲染，所以pc端放在 navbar-after ，但移动端为了放置位置，所以放在 page-content-bottom -->
     <template #navbar-after>
       <div v-if="hasIframe" class="docs-box">
@@ -91,8 +93,12 @@ onBeforeUnmount(() => {
 }
 .page {
   position: relative;
+}
+
+.isPreview .page {
   padding-right: 450px;
 }
+
 .back-to-top {
   z-index: 100;
 }
@@ -103,14 +109,11 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 1600px) {
-  .page {
+  .isPreview .page {
     padding-right: 380px;
   }
-  .docs-box {
+  .isPreview .docs-box {
     right: 20px;
-  }
-  .back-to-top {
-    right: 385px;
   }
 }
 

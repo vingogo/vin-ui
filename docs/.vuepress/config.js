@@ -7,8 +7,8 @@ import vinConfig from '../config.json';
 export default defineUserConfig({
   base: '/docs/',
   lang: 'zh_CN',
-  title: 'Vin 使用文档',
-  description: 'Vin 使用文档',
+  title: 'Vin UI 使用文档',
+  description: 'Vin UI 使用文档',
   head: [
     [
       'script',
@@ -42,6 +42,10 @@ export default defineUserConfig({
         text: 'Github',
         link: 'https://github.com/vingogo/vin-ui',
       },
+      {
+        text: 'Gitee',
+        link: 'https://gitee.com/vingogo/vin-ui',
+      },
     ],
     sidebar: {
       '/guide/': [
@@ -68,6 +72,10 @@ export default defineUserConfig({
         {
           text: '更新日志',
           link: 'https://github.com/vingogo/vin-ui/releases',
+        },
+        {
+          text: '关于',
+          link: '/guide/about.md',
         },
       ],
       '/components/': vinConfig.list.map((nav) => {
