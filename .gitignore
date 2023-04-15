@@ -3,6 +3,7 @@ node_modules/
 dist/
 coverage
 lib
+dts
 
 # local env files
 .env
@@ -24,6 +25,9 @@ yarn-error.log*
 *.sln
 *.sw*
 .hbuilderx
+**/*-sfc.ts
+docs/.vuepress/.cache
+docs/.vuepress/.temp
 
 unpackage/
 wxcomponents

@@ -1,0 +1,262 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/badge/index",
+      "style": {
+        "navigationBarTitleText": "Badge"
+      }
+    },
+    {
+      "path": "pages/avatar/index",
+      "style": {
+        "navigationBarTitleText": "Avatar"
+      }
+    },
+    {
+      "path": "pages/button/index",
+      "style": {
+        "navigationBarTitleText": "Button"
+      }
+    },
+    {
+      "path": "pages/icon/index",
+      "style": {
+        "navigationBarTitleText": "Icon"
+      }
+    },
+    {
+      "path": "pages/cell/index",
+      "style": {
+        "navigationBarTitleText": "Cell"
+      }
+    },
+    {
+      "path": "pages/radio/index",
+      "style": {
+        "navigationBarTitleText": "Radio"
+      }
+    },
+    {
+      "path": "pages/rate/index",
+      "style": {
+        "navigationBarTitleText": "Rate"
+      }
+    },
+    {
+      "path": "pages/searchbar/index",
+      "style": {
+        "navigationBarTitleText": "SearchBar"
+      }
+    },
+    {
+      "path": "pages/switch/index",
+      "style": {
+        "navigationBarTitleText": "Switch"
+      }
+    },
+    {
+      "path": "pages/tag/index",
+      "style": {
+        "navigationBarTitleText": "Tag"
+      }
+    },
+    {
+      "path": "pages/progress/index",
+      "style": {
+        "navigationBarTitleText": "Progress"
+      }
+    },
+    {
+      "path": "pages/divider/index",
+      "style": {
+        "navigationBarTitleText": "Divider"
+      }
+    },
+    {
+      "path": "pages/tabbar/index",
+      "style": {
+        "navigationBarTitleText": "Tabbar"
+      }
+    },
+    {
+      "path": "pages/input/index",
+      "style": {
+        "navigationBarTitleText": "Input"
+      }
+    },
+    {
+      "path": "pages/textarea/index",
+      "style": {
+        "navigationBarTitleText": "Textarea"
+      }
+    },
+    {
+      "path": "pages/empty/index",
+      "style": {
+        "navigationBarTitleText": "Empty"
+      }
+    },
+    {
+      "path": "pages/steps/index",
+      "style": {
+        "navigationBarTitleText": "Steps"
+      }
+    },
+    {
+      "path": "pages/tabs/index",
+      "style": {
+        "navigationBarTitleText": "Tabs"
+      }
+    },
+    {
+      "path": "pages/grid/index",
+      "style": {
+        "navigationBarTitleText": "Grid"
+      }
+    },
+    {
+      "path": "pages/layout/index",
+      "style": {
+        "navigationBarTitleText": "Layout"
+      }
+    },
+    {
+      "path": "pages/overlay/index",
+      "style": {
+        "navigationBarTitleText": "Overlay"
+      }
+    },
+    {
+      "path": "pages/popup/index",
+      "style": {
+        "navigationBarTitleText": "Popup"
+      }
+    },
+    {
+      "path": "pages/transition/index",
+      "style": {
+        "navigationBarTitleText": "Transition"
+      }
+    },
+    {
+      "path": "pages/checkbox/index",
+      "style": {
+        "navigationBarTitleText": "Checkbox"
+      }
+    },
+    {
+      "path": "pages/form/index",
+      "style": {
+        "navigationBarTitleText": "Form"
+      }
+    },
+    {
+      "path": "pages/inputnumber/index",
+      "style": {
+        "navigationBarTitleText": "InputNumber"
+      }
+    },
+    {
+      "path": "pages/dialog/index",
+      "style": {
+        "navigationBarTitleText": "Dialog"
+      }
+    },
+    {
+      "path": "pages/notify/index",
+      "style": {
+        "navigationBarTitleText": "Notify"
+      }
+    },
+    {
+      "path": "pages/toast/index",
+      "style": {
+        "navigationBarTitleText": "Toast"
+      }
+    },
+    {
+      "path": "pages/noticebar/index",
+      "style": {
+        "navigationBarTitleText": "NoticeBar"
+      }
+    },
+    {
+      "path": "pages/navbar/index",
+      "style": {
+        "navigationBarTitleText": "Navbar"
+      }
+    },
+    {
+      "path": "pages/fixednav/index",
+      "style": {
+        "navigationBarTitleText": "FixedNav"
+      }
+    },
+    {
+      "path": "pages/cascader/index",
+      "style": {
+        "navigationBarTitleText": "Cascader"
+      }
+    },
+    {
+      "path": "pages/calendar/index",
+      "style": {
+        "navigationBarTitleText": "Calendar"
+      }
+    },
+    {
+      "path": "pages/backtop/index",
+      "style": {
+        "navigationBarTitleText": "Backtop"
+      }
+    },
+    {
+      "path": "pages/infiniteloading/index",
+      "style": {
+        "navigationBarTitleText": "Infiniteloading"
+      }
+    },
+    {
+      "path": "pages/list/index",
+      "style": {
+        "navigationBarTitleText": "List"
+      }
+    },
+    {
+      "path": "pages/swipe/index",
+      "style": {
+        "navigationBarTitleText": "Swipe"
+      }
+    },
+    {
+      "path": "pages/skeleton/index",
+      "style": {
+        "navigationBarTitleText": "Skeleton"
+      }
+    },
+    {
+      "path": "pages/uploader/index",
+      "style": {
+        "navigationBarTitleText": "Uploader"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "VinUI",
+    "navigationBarBackgroundColor": "#f87d09",
+    "backgroundColor": "#F8F8F8"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^vin-(.*)": "@vingogo/uni-ui/components/$1/index.vue"
+    }
+  }
+}

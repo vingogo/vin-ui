@@ -1,0 +1,17 @@
+.vin-avatar-group {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto; // 防止被压缩
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+
+  .vin-avatar,
+  ::v-deep .vin-avatar {
+    border: 1px solid #fff;
+
+    &:not(:first-of-type) {
+      margin-left: -8px;
+    }
+  }
+}
