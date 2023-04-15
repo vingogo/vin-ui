@@ -48,7 +48,133 @@ VinUI 参考 [NutUI](https://github.com/jdf2e/nutui)（京东风格的轻量级�
 
 针对 uniapp 的一些特性进行了修改和调整，同时增加一些新的组件，对一些组件功能也有所增强
 
-## 特性
+## 快速开始
+
+可参考项目文档：[快速开始](https://vingogo.cn/docs/guide/quickstart.html)
+
+### 安装
+
+VinUI 提供了 npm 包和 uni_modules 包的方式安装组件。
+
+#### 方式一：npm 安装运行
+
+```bash
+# Using npm
+npm install @vingogo/uni-ui
+
+# Using yarn
+yarn add @vingogo/uni-ui
+
+# Using pnpm
+pnpm add @vingogo/uni-ui
+```
+
+#### 方式二：uniapp 插件市场下载
+
+uniapp 市场插件地址：[https://ext.dcloud.net.cn/plugin?id=11187](https://ext.dcloud.net.cn/plugin?id=11187)
+
+#### 方式三：通过下载代码
+
+通过 [Github](https://github.com/vingogo/vin-ui) 下载 VinUI 的代码，然后将打包后的代码拷贝到自己的项目中：
+
+1. 克隆仓库代码：
+
+```bash
+git clone https://github.com/vingogo/vin-ui.git
+```
+
+2. 安装依赖：
+
+```bash
+pnpm i
+```
+
+3. 在 `src/uni_modules/vin-ui` 目录对 VinUI 的代码做符合业务的个性化调整
+4. 构建代码, 将把原有的 TS 文件生成编译后的 JS 文件，并转成 ES5
+
+```bash
+pnpm build:uni
+```
+
+在 `dist/uni_modules` 下生成供拷贝的文件
+
+### 使用方式
+
+1. 在 `pages.json` 中添加 easycom 配置：
+
+```json
+{
+  "easycom": {
+    // 此处根据实际文件位置进行修改，如下为通过 npm 包安装的方式配置
+    "^vin-(.*)": "@vingogo/uni-ui/lib/components/$1/index.vue"
+  },
+  // 此为本身已有的内容
+  "pages": [
+    // ......
+  ]
+}
+```
+
+2. 引入样式
+
+在项目入口文件 main.ts 或者 main.js 文件中添加如下代码：
+
+```js
+import '@vingogo/uni-ui/lib/style.css';
+```
+
+3. 在项目中使用：
+
+```vue
+<vin-button type="primary">button</vin-button>
+```
+
+## 关于项目
+
+在结合 pnpm/yarn workspace + uniapp 使用上发现 uniapp 对软链接的支持不是很好，将原有 workspace 改成现有形式，主要目录如下：
+
+- docs: 文档相关
+- src: 代码主要内容，用于发发布 h5 和小程序
+- src/uni_modules: 放置 VinUI 核心代码，该目录下的代码用于发布 npm 包（@vingogo/uni-ui）和 uniapp 市场插件
+
+### 项目运行
+
+项目推荐使用 pnpm 的方式安装运行，启动方式：
+
+1. 安装依赖
+
+```bash
+pnpm i
+```
+
+2. 运行 h5 或者小程序
+
+```bash
+pnpm dev
+```
+
+3. 根据交互式命令行选项选择要运行的环境
+4. 在浏览器或者指定小程序端运行 dist/dev 文件夹下代码
+
+### VinUI 组件构建
+
+- 构建 npm 版本代码：
+
+```bash
+pnpm build:lib
+```
+
+执行完上面命令将在 `dist/lib` 下生成用于发布 npm 的代码
+
+- 构建 uni_modules 版本代码：
+
+```bash
+pnpm build:uni
+```
+
+执行完上面命令将在 `dist/uni_modules` 下生成用于发布 uniapp 市场的代码
+
+## VinUI 特性
 
 - 🚀 30+ 高质量组件，覆盖移动端主流场景
 - 💪 支持一套代码同时开发 H5+多端小程序
@@ -58,47 +184,6 @@ VinUI 参考 [NutUI](https://github.com/jdf2e/nutui)（京东风格的轻量级�
 - 💪 支持 TypeScript
 - 🌍 支持国际化
 - 🍭 支持组件级别定制主题
-
-## 快速开始
-
-启动项目 demo:
-
-```bash
-pnpm run dev:play
-```
-
-启动 demo 后同步修改编译组件:
-
-```bash
-pnpm run dev:ui
-```
-
-开发文档：
-
-```bash
-pnpm run docs:dev
-```
-
-[快速开始](https://vingogo.cn/docs/guide/quickstart.html)
-
-## 关于项目
-
-项目采用 pnpm workspace 的 monorepo 结构，使各个子项目彼此独立，子项目如下：
-
-- docs：文档项目
-- packages/play: demo 项目，用于发布 h5 和小程序
-- packages/uni-ui: VinUI 组件的核心代码项目，用于发布 npm 包（@vingogo/uni-ui）和 uniapp 市场插件
-
-采用该结构的好处是彼此独立，互不侵入，方便项目后续拓展。
-
-**目前在结合 pnpm/yarn workspace + uniapp 使用上发现的问题是，对软链接支持似乎有问题，h5 端和小程序端经常出现编译报错的情况**
-
-临时处理方案是：
-
-- 开发阶段，监听组件（uni-ui）项目的修改，实时构建输出到 play 项目 src/@vingogo 文件夹
-- play 项目引用构建后的 @vingogo 文件夹文件内容
-
-监听文件修改并实时构建输出实现的较为简漏，会频繁读、写、删除、创建文件，待优化。如未找到软链接引用后各端能正常使用的方法的话，可能会放弃 pnpm workspace 的结构
 
 ## 链接
 
