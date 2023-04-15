@@ -7,7 +7,7 @@ const packDirMap = {
 
 const destMap = {
   UNI: resolve(__dirname, `../../dist/uni_modules`),
-  NPM: resolve(__dirname, `../../dist/lib`),
+  NPM: resolve(__dirname, `../../dist/npm/lib`),
 };
 
 exports.TYPES_DIR = resolve(__dirname, `../../dts/types`);

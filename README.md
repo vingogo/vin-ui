@@ -164,7 +164,7 @@ pnpm dev
 pnpm build:lib
 ```
 
-执行完上面命令将在 `dist/lib` 下生成用于发布 npm 的代码
+执行完上面命令将在 `dist/npm` 下生成用于发布 npm 的代码
 
 - 构建 uni_modules 版本代码：
 
