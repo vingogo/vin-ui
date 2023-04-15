@@ -17,7 +17,6 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@vingogo/uni-ui': path.resolve(__dirname, './src/uni_modules/vin-ui'),
-      '@components': path.resolve(__dirname, './src/components'),
     },
   },
 });
