@@ -17,7 +17,7 @@
     "prepare": "husky install",
     "dev": "vin dev",
     "dev:docs": "vuepress dev docs",
-    "build": "npm run build:all",
+    "build": "vin build",
     "build:all": "npm run build:lib && npm run build:uni && npm run build:docs",
     "build:lib": "npm run dts && cross-env MODE=NPM node ./scripts/build/index.js",
     "build:uni": "npm run dts && cross-env MODE=UNI node ./scripts/build/uni.js",
@@ -25,7 +25,7 @@
     "dts": "rimraf dts && vue-tsc --declaration --emitDeclarationOnly -p ./tsconfig.declaration.json",
     "type-check": "vue-tsc --noEmit",
     "deploy:ui": "npm run build && node ./scripts/deploy.js --prefix=ui --dist=dist/h5",
-    "deploy:docs": "npm run docs:build && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist",
+    "deploy:docs": "npm run build:docs && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist",
     "release": "sh release.sh"
   },
   "lint-staged": {
