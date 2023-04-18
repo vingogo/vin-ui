@@ -245,6 +245,9 @@
       "style": {
         "navigationBarTitleText": "Uploader"
       }
+    },
+    {
+      "path": "pages/extends/background"
     }
   ],
   "globalStyle": {
