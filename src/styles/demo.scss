@@ -5,7 +5,7 @@
   padding: 15px 17px 15px;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #f7f8fa;
+  background: $help-color;
 
   > .h2 {
     margin-top: 30px;
@@ -23,7 +23,7 @@
 }
 
 .bg-w {
-  background-color: #fff;
+  background-color: $white;
 }
 
 .demo-title {
@@ -32,11 +32,11 @@
   font-weight: bold;
 
   &::before {
-    content: ' ';
     width: 5px;
     margin-right: 10px;
+    background-color: $primary-color;
     border-radius: 4px;
-    background-color: #0081f7;
+    content: ' ';
   }
 
   &.heading-2 {
@@ -52,15 +52,15 @@
 }
 
 .code {
-  display: inline-block;
-  padding: 0 5px;
-  border-radius: 3px;
-  line-height: 1.6;
-  vertical-align: baseline;
-  font-family: Monaco, Menlo, Consolas, 'Courier New';
-  font-size: 90%;
   position: relative;
   z-index: 1;
-  color: #0081ff;
-  background-color: #fff;
+  display: inline-block;
+  padding: 0 5px;
+  color: $primary-color;
+  font-size: 90%;
+  font-family: Monaco, Menlo, Consolas, 'Courier New';
+  line-height: 1.6;
+  vertical-align: baseline;
+  background-color: $white;
+  border-radius: 3px;
 }

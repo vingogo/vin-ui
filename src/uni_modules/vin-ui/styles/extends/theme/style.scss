@@ -2,9 +2,15 @@
 @import './dark'; //深蓝主题
 // 多主题
 .theme-light {
+  position: relative;
+  z-index: 1;
+
   @include theme-light;
 }
 .theme-dark {
+  position: relative;
+  z-index: 1;
+
   @include theme-dark;
 }
 .theme-auto {
@@ -18,15 +24,15 @@
 
 @each $value in ('', '-1', '-2', '-3', '-4') {
   .ui-BG#{$value} {
-    background-color: var(--ui-BG#{$value}) !important;
     color: var(--ui-TC);
+    background-color: var(--ui-BG#{$value}) !important;
   }
   .ui-TC#{$value} {
     color: var(--ui-TC#{$value}) !important;
   }
   .ui-BG-Main#{$value} {
-    background-color: var(--ui-BG-Main#{$value}) !important;
     color: var(--ui-BG-Main-TC) !important;
+    background-color: var(--ui-BG-Main#{$value}) !important;
   }
   .ui-TC-Main#{$value} {
     color: var(--ui-BG-Main#{$value}) !important;

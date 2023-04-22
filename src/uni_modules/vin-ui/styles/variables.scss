@@ -1,18 +1,37 @@
 // 颜色
-$gray-1: #f7f8fa !default;
-$gray-2: #f2f3f5 !default;
-$gray-3: #ebedf0 !default;
-$gray-4: #dcdee0 !default;
-$gray-5: #c8c9cc !default;
-$gray-6: #969799 !default;
-$gray-7: #646566 !default;
-$gray-8: #323233 !default;
-$red: #ee0a24 !default;
-$blue: #1989fa !default;
-$orange: #ff976a !default;
+$gray-f: #f8f9fa !default;
+$gray-e: #eee !default;
+$gray-d: #ddd !default;
+$gray-c: #ccc !default;
+$gray-b: #bbb !default;
+$gray-a: #aaa !default;
+
+$white: #fff !default;
+$dark-9: #999 !default;
+$dark-8: #888 !default;
+$dark-7: #777 !default;
+$dark-6: #666 !default;
+$dark-5: #555 !default;
+$dark-4: #444 !default;
+$dark-3: #333 !default;
+$dark-2: #222 !default;
+$dark-1: #111 !default;
+$black: #000 !default;
+
+$red: #e54d42 !default;
+$blue: #0081ff !default;
+$orange: #f37b1d !default;
 $orange-dark: #ed6a0c !default;
 $orange-light: #fffbe8 !default;
-$green: #07c160 !default;
+$green: #3eb93b !default;
+$yellow: #fbbd08 !default;
+$pink: #e03997 !default;
+$mauve: #b745cb !default;
+$purple: #8044de !default;
+$cyan: #37c0fe !default;
+$olive: #8dc63f !default;
+$grey: #8799a3 !default;
+$brown: #a5673f !default;
 
 // Font
 $font-size-0: 10px !default;
@@ -56,7 +75,7 @@ $padding-lg: $padding-base * 6;
 $padding-xl: $padding-base * 8;
 
 // Border
-$border-color: $gray-3;
+$border-color: $gray-d;
 $border-width-base: 1px;
 $border-radius-sm: 2px;
 $border-radius-md: 4px;
@@ -99,11 +118,10 @@ $dark-color-gray: $text-color !default;
 $dark-calendar-choose-color: rgba(227, 227, 227, 0.2) !default;
 
 // Component Colors
-// $text-color: $gray-8;
-$active-color: $gray-2;
+$active-color: $gray-e;
 $active-opacity: 0.7;
 $disabled-opacity: 0.5;
-$background-color: $gray-1;
+$background-color: $gray-f;
 $background-color-light: #fafafa;
 $text-link-color: #576b95;
 

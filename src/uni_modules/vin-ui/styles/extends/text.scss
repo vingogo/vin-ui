@@ -37,9 +37,9 @@
     }
   }
   &-cut {
-    text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   @at-root [class*='text-linecut'] {
     display: -webkit-box;
@@ -53,17 +53,27 @@
       -webkit-line-clamp: #{$i};
     }
   }
+
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
   &-justify {
     text-align: justify;
   }
   &-justify-line {
-    text-align: justify;
-    line-height: 0.5em;
     margin-top: 0.5em;
+    line-height: 0.5em;
+    text-align: justify;
     &::after {
-      content: '.';
       display: inline-block;
       width: 100%;
+      content: '.';
     }
   }
 
@@ -97,13 +107,13 @@
     color: inherit !important;
   }
   &-price::before {
-    content: '¥';
-    font-size: 80%;
     margin-right: 4rpx;
+    font-size: 80%;
+    content: '¥';
   }
   &-hide {
-    font: 0/0 a;
     color: transparent;
+    font: 0/0 a;
     text-shadow: none;
     background-color: transparent;
     border: 0;

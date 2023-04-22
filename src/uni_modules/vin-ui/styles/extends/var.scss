@@ -1,17 +1,4 @@
 //颜色
-$yellow: #fbbd08;
-$orange: #f37b1d;
-$red: #e54d42;
-$pink: #e03997;
-$mauve: #b745cb;
-$purple: #8044de;
-$blue: #0081ff;
-$cyan: #37c0fe;
-$green: #3eb93b;
-$olive: #8dc63f;
-$grey: #8799a3;
-$brown: #a5673f;
-
 $colors: ();
 $colors: map-merge(
   (
@@ -33,24 +20,6 @@ $colors: map-merge(
 );
 
 //灰度
-$white: #fff;
-$gray-f: #f8f9fa;
-$gray-e: #eee;
-$gray-d: #ddd;
-$gray-c: #ccc;
-$gray-b: #bbb;
-$gray-a: #aaa;
-$dark-9: #999;
-$dark-8: #888;
-$dark-7: #777;
-$dark-6: #666;
-$dark-5: #555;
-$dark-4: #444;
-$dark-3: #333;
-$dark-2: #222;
-$dark-1: #111;
-$black: #000;
-
 $grays: ();
 $grays: map-merge(
   (

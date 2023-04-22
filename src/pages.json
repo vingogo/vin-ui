@@ -248,6 +248,12 @@
     },
     {
       "path": "pages/extends/background"
+    },
+    {
+      "path": "pages/extends/shadow"
+    },
+    {
+      "path": "pages/extends/text"
     }
   ],
   "globalStyle": {

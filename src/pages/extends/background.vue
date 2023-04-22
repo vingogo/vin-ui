@@ -1,5 +1,5 @@
 <template>
-  <view class="demo ui-container font-1 theme-light">
+  <view class="demo font-1 theme-light">
     <!-- 简介 -->
     <view class="demo-title heading-2">简介</view>
     <view class="paragraph">
@@ -39,7 +39,6 @@
         <view :class="`bg-${item.name}-thin`" class="card-item">
           <view class="text-xl card-item__desc">{{ item.desc }}</view>
           <view class="text-sm card-item__value">
-            <!-- <text class="text-ABC">#{{ item.value }}</text> -->
             <text>.bg-{{ item.name }}-thin</text>
           </view>
         </view>
@@ -47,7 +46,6 @@
     </view>
 
     <!-- 渐变背景色 -->
-    <!-- <view class="demo-title heading-2">渐变背景色</view> -->
     <view class="demo-title heading-2">过渡渐变色</view>
     <view class="paragraph">
       <text class="code">.bg-{color}-{color}</text>
@@ -65,7 +63,6 @@
         <view :class="`bg-${item.name}-gradient`" class="card-item">
           <view class="text-xl card-item__desc">{{ item.desc }}</view>
           <view class="text-sm card-item__value">
-            <!-- <text class="text-ABC">#{{ item.value }}</text> -->
             <text>.bg-{{ item.name }}-gradient</text>
           </view>
         </view>
@@ -83,7 +80,6 @@
         <view :class="`bg-${item.name}-light`" class="card-item">
           <view class="text-xl card-item__desc">{{ item.desc }}</view>
           <view class="text-sm card-item__value">
-            <!-- <text class="text-ABC">#{{ item.value }}</text> -->
             <text>.bg-{{ item.name }}-light</text>
           </view>
         </view>
@@ -91,7 +87,6 @@
     </view>
 
     <!-- 灰度背景色 -->
-    <!-- <view class="demo-title heading-2">灰度背景色</view> -->
     <view class="demo-title heading-2">浅色灰度值</view>
 
     <view class="paragraph">
@@ -127,11 +122,8 @@
 
 <script>
 export default {
-  data() {
+  setup() {
     return {
-      demo: true,
-      loading: true,
-      isShow: false,
       color: [
         { name: 'yellow', value: 'fbbd08', desc: '明黄' },
         { name: 'orange', value: 'f37b1d', desc: '橘橙' },
@@ -146,13 +138,6 @@ export default {
         { name: 'grey', value: '8799a3', desc: '玄灰' },
         { name: 'brown', value: 'a5673f', desc: '棕褐' },
       ],
-      themeColor: [
-        { name: 'a', value: '0081ff' },
-        { name: 'b', value: '2ca5f9' },
-        { name: 'c', value: '2ccbf9' },
-        { name: 'd', value: 'b2d4fe' },
-      ],
-      level: ['page', 'box', 'menu'],
       gray: [
         { name: 'white', value: 'ffffff' },
         { name: 'gray-f', value: 'f8f9fa' },
@@ -175,17 +160,6 @@ export default {
         { name: 'black', value: '000000' },
       ],
     };
-  },
-  onReady() {
-    // this.loading = false;
-  },
-  methods: {
-    setColor(color) {
-      // this.curColor = color;
-    },
-    copy(text) {
-      // this.$util.copyText(unescape(text.replace(/&#x/g, '%u').replace(/;/g, '')));
-    },
   },
 };
 </script>
