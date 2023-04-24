@@ -38,7 +38,11 @@ export default create({
       });
     });
 
-    const mainStyle = computed(getMainStyle);
+    const mainStyle = computed(() =>
+      getMainStyle({
+        zIndex: props.zIndex,
+      })
+    );
 
     const handleLeft = () => {
       emit('on-click-back');

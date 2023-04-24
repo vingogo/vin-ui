@@ -254,13 +254,17 @@
     },
     {
       "path": "pages/extends/text"
+    },
+    {
+      "path": "pages/extends/home"
     }
   ],
   "globalStyle": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "VinUI",
     "navigationBarBackgroundColor": "#f87d09",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
   },
   "easycom": {
     "autoscan": true,

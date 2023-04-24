@@ -15,6 +15,15 @@ export const navbarProps = {
     type: Boolean,
     default: false,
   },
+  // 生成一个等高的占位元素
+  placeholder: {
+    type: Boolean,
+    default: true,
+  },
+  zIndex: {
+    type: [Number, String],
+    default: 10,
+  },
 };
 
 export type NavbarProps = ExtractPropTypes<typeof navbarProps>;

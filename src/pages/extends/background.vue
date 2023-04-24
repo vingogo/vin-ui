@@ -1,127 +1,134 @@
 <template>
-  <view class="demo font-1 theme-light">
-    <!-- 简介 -->
-    <view class="demo-title heading-2">简介</view>
-    <view class="paragraph">
-      容器的背景表现, class 控制。一些组件包含了通用属性
-      <text class="code">bg</text>
-      也是用的这些类。
-    </view>
+  <PageLayout title="背景">
+    <view class="demo font-1 theme-light">
+      <!-- 简介 -->
+      <view class="demo-title heading-2">简介</view>
+      <view class="paragraph">
+        容器的背景表现, class 控制。一些组件包含了通用属性
+        <text class="code">bg</text>
+        也是用的这些类。
+      </view>
 
-    <!-- 基础背景色 -->
-    <view class="demo-title heading-2">基础背景色</view>
-    <view class="paragraph">
-      <text class="code">.bg-{color}</text>
-      基础的背景颜色。
-    </view>
+      <!-- 基础背景色 -->
+      <view class="demo-title heading-2">基础背景色</view>
+      <view class="paragraph">
+        <text class="code">.bg-{color}</text>
+        基础的背景颜色。
+      </view>
 
-    <view class="card-box bg-white">
-      <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
-        <view :class="'bg-' + item.name" class="card-item">
-          <view class="text-xl card-item__desc">{{ item.desc }}</view>
-          <view class="text-sm card-item__value">
-            <text class="text-ABC">#{{ item.value }}</text>
-            <text>.bg-{{ item.name }}</text>
+      <view class="card-box bg-white">
+        <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
+          <view :class="'bg-' + item.name" class="card-item">
+            <view class="text-xl card-item__desc">{{ item.desc }}</view>
+            <view class="text-sm card-item__value">
+              <text class="text-ABC">#{{ item.value }}</text>
+              <text>.bg-{{ item.name }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 淡色背景 -->
+      <view class="demo-title heading-2">淡色背景</view>
+      <view class="paragraph">
+        <text class="code">.bg-{color}-thin</text>
+        更浅的颜色。为适应暗色主题,注意有透明度！
+      </view>
+
+      <view class="card-box">
+        <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
+          <view :class="`bg-${item.name}-thin`" class="card-item">
+            <view class="text-xl card-item__desc">{{ item.desc }}</view>
+            <view class="text-sm card-item__value">
+              <text>.bg-{{ item.name }}-thin</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 渐变背景色 -->
+      <view class="demo-title heading-2">过渡渐变色</view>
+      <view class="paragraph">
+        <text class="code">.bg-{color}-{color}</text>
+        支持所有基础色到基础色的渐变。
+      </view>
+
+      <view class="demo-title heading-2">特殊的渐变背景色</view>
+      <view class="paragraph">
+        <text class="code">.bg-{color}-gradient</text>
+        精心调整的色值，更加自然的过渡色。
+      </view>
+
+      <view class="card-box">
+        <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
+          <view :class="`bg-${item.name}-gradient`" class="card-item">
+            <view class="text-xl card-item__desc">{{ item.desc }}</view>
+            <view class="text-sm card-item__value">
+              <text>.bg-{{ item.name }}-gradient</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="paragraph">
+        <view class="demo-title heading-2">高亮色</view>
+        <text class="code">.bg-{color}-light</text>
+        带有一定色彩的高亮背景。在深浅主题下保持一致。
+      </view>
+
+      <view class="card-box">
+        <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
+          <view :class="`bg-${item.name}-light`" class="card-item">
+            <view class="text-xl card-item__desc">{{ item.desc }}</view>
+            <view class="text-sm card-item__value">
+              <text>.bg-{{ item.name }}-light</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 灰度背景色 -->
+      <view class="demo-title heading-2">浅色灰度值</view>
+
+      <view class="paragraph">
+        <text class="code">.bg-{gray}</text>
+        <text class="code">#aaaaaa</text>~<text class="code">#ffffff</text>
+        的浅色灰度值
+      </view>
+
+      <view class="card-box">
+        <view class="card-item__wrapper" v-for="(item, index) in gray" :key="index">
+          <view :class="`bg-${item.name}`" class="card-item">
+            {{ item.name }}
+          </view>
+        </view>
+      </view>
+
+      <view class="demo-title heading-2">深色灰度值</view>
+      <view class="paragraph">
+        <text class="code">.bg-{dark}</text>
+        <text class="code">#999999</text>~<text class="code">#000000</text>
+        的深色灰度值
+      </view>
+
+      <view class="card-box">
+        <view class="card-item__wrapper" v-for="(item, index) in dark" :key="index">
+          <view :class="`bg-${item.name}`" class="card-item">
+            {{ item.name }}
           </view>
         </view>
       </view>
     </view>
-
-    <!-- 淡色背景 -->
-    <view class="demo-title heading-2">淡色背景</view>
-    <view class="paragraph">
-      <text class="code">.bg-{color}-thin</text>
-      更浅的颜色。为适应暗色主题,注意有透明度！
-    </view>
-
-    <view class="card-box">
-      <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
-        <view :class="`bg-${item.name}-thin`" class="card-item">
-          <view class="text-xl card-item__desc">{{ item.desc }}</view>
-          <view class="text-sm card-item__value">
-            <text>.bg-{{ item.name }}-thin</text>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <!-- 渐变背景色 -->
-    <view class="demo-title heading-2">过渡渐变色</view>
-    <view class="paragraph">
-      <text class="code">.bg-{color}-{color}</text>
-      支持所有基础色到基础色的渐变。
-    </view>
-
-    <view class="demo-title heading-2">特殊的渐变背景色</view>
-    <view class="paragraph">
-      <text class="code">.bg-{color}-gradient</text>
-      精心调整的色值，更加自然的过渡色。
-    </view>
-
-    <view class="card-box">
-      <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
-        <view :class="`bg-${item.name}-gradient`" class="card-item">
-          <view class="text-xl card-item__desc">{{ item.desc }}</view>
-          <view class="text-sm card-item__value">
-            <text>.bg-{{ item.name }}-gradient</text>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <view class="paragraph">
-      <view class="demo-title heading-2">高亮色</view>
-      <text class="code">.bg-{color}-light</text>
-      带有一定色彩的高亮背景。在深浅主题下保持一致。
-    </view>
-
-    <view class="card-box">
-      <view class="card-item__wrapper" v-for="(item, index) in color" :key="index">
-        <view :class="`bg-${item.name}-light`" class="card-item">
-          <view class="text-xl card-item__desc">{{ item.desc }}</view>
-          <view class="text-sm card-item__value">
-            <text>.bg-{{ item.name }}-light</text>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <!-- 灰度背景色 -->
-    <view class="demo-title heading-2">浅色灰度值</view>
-
-    <view class="paragraph">
-      <text class="code">.bg-{gray}</text>
-      <text class="code">#aaaaaa</text>~<text class="code">#ffffff</text>
-      的浅色灰度值
-    </view>
-
-    <view class="card-box">
-      <view class="card-item__wrapper" v-for="(item, index) in gray" :key="index">
-        <view :class="`bg-${item.name}`" class="card-item">
-          {{ item.name }}
-        </view>
-      </view>
-    </view>
-
-    <view class="demo-title heading-2">深色灰度值</view>
-    <view class="paragraph">
-      <text class="code">.bg-{dark}</text>
-      <text class="code">#999999</text>~<text class="code">#000000</text>
-      的深色灰度值
-    </view>
-
-    <view class="card-box">
-      <view class="card-item__wrapper" v-for="(item, index) in dark" :key="index">
-        <view :class="`bg-${item.name}`" class="card-item">
-          {{ item.name }}
-        </view>
-      </view>
-    </view>
-  </view>
+  </PageLayout>
 </template>
 
 <script>
+import PageLayout from '@/components/page-layout';
+
 export default {
+  components: {
+    PageLayout,
+  },
   setup() {
     return {
       color: [
