@@ -1,5 +1,5 @@
 <template>
-  <view class="page-layout">
+  <view :class="['page-layout', 'demo', 'font-1', 'theme-light', customClass]">
     <vin-navbar custom-class="navbar" :z-index="2" fixed @on-click-back="goBack" :title="title">
       <template #left>
         <view>返回</view>
@@ -14,6 +14,7 @@
 export default {
   props: {
     title: String,
+    customClass: String,
   },
   setup() {
     const goBack = () => {

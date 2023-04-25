@@ -1,79 +1,96 @@
 <template>
-  <view class="demo-home">
+  <view class="demo home demo-home">
     <view class="demo-home__header">
-      <image class="demo-home__logo" src="@/static/logo.png" mode="aspectFit" />
-
-      <view class="demo-home__info">
-        <text class="demo-home__title">Vin UI</text>
-        <text class="demo-home__slogan">轻量、快速的多平台开发UI组件库</text>
-      </view>
+      <text class="demo-home__title">Vin UI</text>
+      <text class="demo-home__slogan">轻量、快速的多平台开发UI组件库</text>
     </view>
 
-    <view class="demo-home-nav" v-for="group in packages" :key="group.name">
-      <view class="demo-home-nav__title">{{ group.name }}</view>
-      <navigator
-        v-for="comp in group.components"
-        :key="comp.name"
-        :url="`/pages/${comp.name.toLowerCase()}/index`"
-        class="demo-home-nav__block"
-      >
-        {{ `${comp.name}  ${comp.desc}` }}
-
-        <vin-icon name="arrow-right" custom-class="demo-home-nav__icon"></vin-icon>
-      </navigator>
+    <view class="container">
+      <block v-for="(nav, navindex) in nav" :key="navindex">
+        <view class="demo-title heading-2">{{ nav.title }}</view>
+        <view class="cols-2">
+          <view class="item" v-for="(item, index) in nav.subnav" :key="index">
+            <Card :data="item"></Card>
+          </view>
+        </view>
+      </block>
     </view>
   </view>
 </template>
 
-<script lang="ts">
-import { createComponent } from '@/utils/create';
+<script>
+import Card from '@/components/card.vue';
 import config from '../../../config.json';
 
-const { createDemo } = createComponent('demo');
-
-export default createDemo({
+export default {
+  components: {
+    Card,
+  },
   setup() {
-    const goDemo = (path: string) => {
-      uni.navigateTo({
-        url: `/pages/${path.toLowerCase()}/index`,
-      });
-    };
-
     return {
-      goDemo,
-      packages: config.list,
+      nav: [
+        {
+          title: '拓展样式',
+          subnav: [
+            {
+              path: '/pages/demo/text',
+              name: 'text',
+              title: '文本',
+            },
+            {
+              path: '/pages/demo/background',
+              name: 'background',
+              title: '背景',
+            },
+            {
+              path: '/pages/demo/shadow',
+              name: 'shadow',
+              title: '阴影',
+            },
+            {
+              path: '/pages/demo/border',
+              name: 'border',
+              title: '边框',
+            },
+          ],
+        },
+        ...config.list.map((item) => {
+          return {
+            title: item.name,
+            subnav: item.components.map((comp) => {
+              return {
+                path: `/pages/demo/${comp.name.toLocaleLowerCase()}`,
+                name: comp.name,
+                title: comp.desc,
+              };
+            }),
+          };
+        }),
+      ],
     };
   },
-});
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $desc-text-color: #909ca4;
 
 .demo-home {
   min-height: 10vh;
   padding: 30px 20px 20px;
-  background: #fff;
+  color: #fff;
+  background-color: #fff;
+  background-image: url('https://cdn.vingogo.cn/ui-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 
   &__header {
     display: flex;
     align-items: center;
-    padding-bottom: 10px;
-    font-size: 32px;
-  }
-
-  &__info {
-    display: flex;
     flex-direction: column;
-    flex: 1;
-    margin-left: 16px;
-  }
-
-  &__logo {
-    display: inline-block;
-    width: 96px;
-    height: 96px;
-    vertical-align: middle;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 25px;
   }
 
   &__title {
@@ -82,44 +99,33 @@ $desc-text-color: #909ca4;
     font-weight: bold;
   }
 
-  &__slogan,
-  &__desc {
-    color: $desc-text-color;
+  &__slogan {
+    margin-top: 10px;
     font-size: 14px;
   }
+}
 
-  &__desc {
-    margin: 20px 0;
+.container {
+  margin-top: 30px;
+}
+
+.home {
+  padding: 15px 5px 15px;
+
+  .demo-title {
+    padding-left: 10px;
+    padding-right: 10px;
   }
+}
 
-  &-nav {
-    &__title {
-      margin: 24px 0 8px 16px;
-      color: $desc-text-color;
-      font-size: 14px;
-    }
+.cols-2 {
+  display: flex;
+  flex-wrap: wrap;
 
-    &__block {
-      position: relative;
-      display: flex;
-      margin: 0 0 12px;
-      padding-left: 20px;
-      color: #323233;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 40px;
-      background-color: #f7f8fa;
-      border-radius: 20px;
-    }
-
-    &__icon {
-      position: absolute !important;
-      top: 50%;
-      right: 16px;
-      width: 16px !important;
-      height: 16px !important;
-      margin-top: -8px;
-    }
+  .item {
+    box-sizing: border-box;
+    width: calc(100% / 2);
+    padding: 10px;
   }
 }
 </style>
