@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { toRef } from 'vue';
+import { computed } from 'vue';
 
 const getColor = () => {
   const colorArr = [
@@ -47,11 +47,11 @@ export default {
       },
     },
   },
-  setup(props) {
+  setup() {
+    const colorname = computed(getColor);
+
     return {
-      ...toRef(props),
-      colorname: getColor(),
-      color: [],
+      colorname,
     };
   },
 };

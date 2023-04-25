@@ -4,136 +4,136 @@
       "path": "pages/index/index"
     },
     {
-      "path": "pages/demo/badge"
+      "path": "pages/components/badge"
     },
     {
-      "path": "pages/demo/avatar"
+      "path": "pages/components/avatar"
     },
     {
-      "path": "pages/demo/button"
+      "path": "pages/components/button"
     },
     {
-      "path": "pages/demo/icon"
+      "path": "pages/components/icon"
     },
     {
-      "path": "pages/demo/cell"
+      "path": "pages/components/cell"
     },
     {
-      "path": "pages/demo/radio"
+      "path": "pages/components/radio"
     },
     {
-      "path": "pages/demo/rate"
+      "path": "pages/components/rate"
     },
     {
-      "path": "pages/demo/searchbar"
+      "path": "pages/components/searchbar"
     },
     {
-      "path": "pages/demo/switch"
+      "path": "pages/components/switch"
     },
     {
-      "path": "pages/demo/tag"
+      "path": "pages/components/tag"
     },
     {
-      "path": "pages/demo/progress"
+      "path": "pages/components/progress"
     },
     {
-      "path": "pages/demo/divider"
+      "path": "pages/components/divider"
     },
     {
-      "path": "pages/demo/tabbar"
+      "path": "pages/components/tabbar"
     },
     {
-      "path": "pages/demo/input"
+      "path": "pages/components/input"
     },
     {
-      "path": "pages/demo/textarea"
+      "path": "pages/components/textarea"
     },
     {
-      "path": "pages/demo/empty"
+      "path": "pages/components/empty"
     },
     {
-      "path": "pages/demo/steps"
+      "path": "pages/components/steps"
     },
     {
-      "path": "pages/demo/tabs"
+      "path": "pages/components/tabs"
     },
     {
-      "path": "pages/demo/grid"
+      "path": "pages/components/grid"
     },
     {
-      "path": "pages/demo/layout"
+      "path": "pages/components/layout"
     },
     {
-      "path": "pages/demo/overlay"
+      "path": "pages/components/overlay"
     },
     {
-      "path": "pages/demo/popup"
+      "path": "pages/components/popup"
     },
     {
-      "path": "pages/demo/transition"
+      "path": "pages/components/transition"
     },
     {
-      "path": "pages/demo/checkbox"
+      "path": "pages/components/checkbox"
     },
     {
-      "path": "pages/demo/form"
+      "path": "pages/components/form"
     },
     {
-      "path": "pages/demo/inputnumber"
+      "path": "pages/components/inputnumber"
     },
     {
-      "path": "pages/demo/dialog"
+      "path": "pages/components/dialog"
     },
     {
-      "path": "pages/demo/notify"
+      "path": "pages/components/notify"
     },
     {
-      "path": "pages/demo/toast"
+      "path": "pages/components/toast"
     },
     {
-      "path": "pages/demo/noticebar"
+      "path": "pages/components/noticebar"
     },
     {
-      "path": "pages/demo/navbar"
+      "path": "pages/components/navbar"
     },
     {
-      "path": "pages/demo/fixednav"
+      "path": "pages/components/fixednav"
     },
     {
-      "path": "pages/demo/cascader"
+      "path": "pages/components/cascader"
     },
     {
-      "path": "pages/demo/calendar"
+      "path": "pages/components/calendar"
     },
     {
-      "path": "pages/demo/backtop"
+      "path": "pages/components/backtop"
     },
     {
-      "path": "pages/demo/infiniteloading"
+      "path": "pages/components/infiniteloading"
     },
     {
-      "path": "pages/demo/list"
+      "path": "pages/components/list"
     },
     {
-      "path": "pages/demo/swipe"
+      "path": "pages/components/swipe"
     },
     {
-      "path": "pages/demo/skeleton"
+      "path": "pages/components/skeleton"
     },
     {
-      "path": "pages/demo/uploader"
+      "path": "pages/components/uploader"
     },
     {
-      "path": "pages/demo/text"
+      "path": "pages/components/text"
     },
     {
-      "path": "pages/demo/shadow"
+      "path": "pages/components/shadow"
     },
     {
-      "path": "pages/demo/background"
+      "path": "pages/components/background"
     },
     {
-      "path": "pages/demo/border"
+      "path": "pages/components/border"
     }
   ],
   "globalStyle": {
@@ -147,7 +147,7 @@
     "autoscan": true,
     "custom": {
       "^vin-(.*)": "@vingogo/uni-ui/components/$1/index.vue",
-      "^demo-(.*)": "@/components/$1.vue"
+      "^app-(.*)": "@/components/$1.vue"
     }
   }
 }

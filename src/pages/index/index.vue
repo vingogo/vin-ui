@@ -10,7 +10,7 @@
         <view class="demo-title heading-2">{{ nav.title }}</view>
         <view class="cols-2">
           <view class="item" v-for="(item, index) in nav.subnav" :key="index">
-            <Card :data="item"></Card>
+            <app-card :data="item"></app-card>
           </view>
         </view>
       </block>
@@ -19,13 +19,9 @@
 </template>
 
 <script>
-import Card from '@/components/card.vue';
 import config from '../../../config.json';
 
 export default {
-  components: {
-    Card,
-  },
   setup() {
     return {
       nav: [
@@ -33,22 +29,22 @@ export default {
           title: '拓展样式',
           subnav: [
             {
-              path: '/pages/demo/text',
+              path: '/pages/components/text',
               name: 'text',
               title: '文本',
             },
             {
-              path: '/pages/demo/background',
+              path: '/pages/components/background',
               name: 'background',
               title: '背景',
             },
             {
-              path: '/pages/demo/shadow',
+              path: '/pages/components/shadow',
               name: 'shadow',
               title: '阴影',
             },
             {
-              path: '/pages/demo/border',
+              path: '/pages/components/border',
               name: 'border',
               title: '边框',
             },
@@ -59,7 +55,7 @@ export default {
             title: item.name,
             subnav: item.components.map((comp) => {
               return {
-                path: `/pages/demo/${comp.name.toLocaleLowerCase()}`,
+                path: `/pages/components/${comp.name.toLocaleLowerCase()}`,
                 name: comp.name,
                 title: comp.desc,
               };
