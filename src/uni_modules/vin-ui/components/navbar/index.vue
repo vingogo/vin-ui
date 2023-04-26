@@ -38,11 +38,20 @@ export default create({
       });
     });
 
-    const mainStyle = computed(() =>
-      getMainStyle({
+    const mainStyle = computed(() => {
+      const statusBarHeight = uni.getSystemInfoSync().statusBarHeight;
+      const style = safeAreaInsetTop.value
+        ? {
+            height: `calc(var(--vin-navbar-height) + ${statusBarHeight}px)`,
+            paddingTop: `${statusBarHeight}px`,
+          }
+        : {};
+
+      return getMainStyle({
         zIndex: props.zIndex,
-      })
-    );
+        ...style,
+      });
+    });
 
     const handleLeft = () => {
       emit('on-click-back');

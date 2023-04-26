@@ -776,7 +776,7 @@ $table-tr-even-bg-color: #f3f3f3 !default;
 $table-tr-odd-bg-color: $white !default;
 
 // navbar
-$navbar-height: 46px !default;
+$navbar-height: var(--vin-navbar-height, 46px) !default;
 $navbar-margin-bottom: 20px !default;
 $navbar-padding: 13px 16px !default;
 $navbar-background: $white !default;
