@@ -1,11 +1,11 @@
 <template>
   <app-page-layout title="文本">
     <!-- 简介 -->
-    <view class="demo-title heading-2">简介</view>
+    <view class="h2">简介</view>
     <view class="paragraph">文本字体样式,Class控制。适用于任何组件元素。</view>
 
     <!-- 尺寸 -->
-    <view class="demo-title heading-2">尺寸</view>
+    <view class="h2">尺寸</view>
     <view class="paragraph">
       添加包含尺寸的Class来控制文字大小。
       <text class="code">.text-{size}</text>
@@ -19,7 +19,7 @@
     </view>
 
     <!-- 截断 -->
-    <view class="demo-title heading-2">截断</view>
+    <view class="h2">截断</view>
     <view class="paragraph">
       添加
       <text class="code">.text-cut</text>
@@ -40,7 +40,7 @@
     </view>
 
     <!-- 对齐 -->
-    <view class="demo-title heading-2">对齐</view>
+    <view class="h2">对齐</view>
     <view class="paragraph">
       添加
       <text class="code">.text-{ align }</text>

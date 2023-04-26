@@ -1,7 +1,7 @@
 <template>
   <app-page-layout title="背景">
     <!-- 简介 -->
-    <view class="demo-title heading-2">简介</view>
+    <view class="h2">简介</view>
     <view class="paragraph">
       容器的背景表现, class 控制。一些组件包含了通用属性
       <text class="code">bg</text>
@@ -9,7 +9,7 @@
     </view>
 
     <!-- 基础背景色 -->
-    <view class="demo-title heading-2">基础背景色</view>
+    <view class="h2">基础背景色</view>
     <view class="paragraph">
       <text class="code">.bg-{color}</text>
       基础的背景颜色。
@@ -28,7 +28,7 @@
     </view>
 
     <!-- 淡色背景 -->
-    <view class="demo-title heading-2">淡色背景</view>
+    <view class="h2">淡色背景</view>
     <view class="paragraph">
       <text class="code">.bg-{color}-thin</text>
       更浅的颜色。为适应暗色主题,注意有透明度！
@@ -46,13 +46,13 @@
     </view>
 
     <!-- 渐变背景色 -->
-    <view class="demo-title heading-2">过渡渐变色</view>
+    <view class="h2">过渡渐变色</view>
     <view class="paragraph">
       <text class="code">.bg-{color}-{color}</text>
       支持所有基础色到基础色的渐变。
     </view>
 
-    <view class="demo-title heading-2">特殊的渐变背景色</view>
+    <view class="h2">特殊的渐变背景色</view>
     <view class="paragraph">
       <text class="code">.bg-{color}-gradient</text>
       精心调整的色值，更加自然的过渡色。
@@ -70,7 +70,7 @@
     </view>
 
     <view class="paragraph">
-      <view class="demo-title heading-2">高亮色</view>
+      <view class="h2">高亮色</view>
       <text class="code">.bg-{color}-light</text>
       带有一定色彩的高亮背景。在深浅主题下保持一致。
     </view>
@@ -87,7 +87,7 @@
     </view>
 
     <!-- 灰度背景色 -->
-    <view class="demo-title heading-2">浅色灰度值</view>
+    <view class="h2">浅色灰度值</view>
 
     <view class="paragraph">
       <text class="code">.bg-{gray}</text>
@@ -103,7 +103,7 @@
       </view>
     </view>
 
-    <view class="demo-title heading-2">深色灰度值</view>
+    <view class="h2">深色灰度值</view>
     <view class="paragraph">
       <text class="code">.bg-{dark}</text>
       <text class="code">#999999</text>~<text class="code">#000000</text>

@@ -3,25 +3,25 @@
  ==================== */
 
 .shadow {
-  box-shadow: var(--ui-Shadow);
+  box-shadow: var(--vin-shadow);
   &-sm {
-    box-shadow: var(--ui-Shadow-sm);
+    box-shadow: var(--vin-shadow-sm);
   }
   &-lg {
-    box-shadow: var(--ui-Shadow-lg);
+    box-shadow: var(--vin-shadow-lg);
   }
   &-inset {
-    box-shadow: var(--ui-Shadow-inset);
+    box-shadow: var(--vin-shadow-inset);
   }
   @each $color, $value in $colors {
     @at-root .shadow-#{$color} {
-      box-shadow: 0 0.5em 1em rgba($value, var(--ui-Shadow-opacity));
+      box-shadow: 0 0.5em 1em rgba($value, var(--vin-shadow-opacity));
     }
     &-sm.shadow-#{$color} {
-      box-shadow: 0 0.125em 0.25em rgba($value, var(--ui-Shadow-opacity));
+      box-shadow: 0 0.125em 0.25em rgba($value, var(--vin-shadow-opacity));
     }
     &-lg.shadow-#{$color} {
-      box-shadow: 0 1em 3em rgba($value, var(--ui-Shadow-opacity-lg));
+      box-shadow: 0 1em 3em rgba($value, var(--vin-shadow-opacity-lg));
     }
   }
 
@@ -31,20 +31,20 @@
   &-warp::before,
   &-warp::after {
     position: absolute;
-    content: '';
-    bottom: -10rpx;
-    left: 20rpx;
-    width: calc(50% - #{40rpx});
-    height: 30rpx;
+    bottom: -5px;
+    left: 10px;
+    z-index: -1;
+    width: calc(50% - #{20px});
+    height: 15px;
+    background-color: rgba(0, 0, 0, var(--vin-shadow-opacity));
     transform: skew(0deg, -6deg);
     transform-origin: 50% 50%;
-    background-color: rgba(0, 0, 0, var(--ui-Shadow-opacity));
-    filter: blur(20rpx);
-    z-index: -1;
     opacity: 0.5;
+    filter: blur(10px);
+    content: '';
   }
   &-warp::after {
-    right: 20rpx;
+    right: 10px;
     left: auto;
     transform: skew(0deg, 6deg);
   }
@@ -52,39 +52,39 @@
     position: relative;
   }
   &-blur::before {
-    content: '';
-    display: block;
-    background: inherit;
-    filter: blur(20rpx);
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0.5em;
     left: 0.5em;
     z-index: -1;
-    opacity: var(--ui-Shadow-opacity-lg);
-    transform-origin: 0 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: inherit;
     border-radius: inherit;
     transform: scale(1, 1);
+    transform-origin: 0 0;
+    opacity: var(--vin-shadow-opacity-lg);
+    filter: blur(10px);
+    content: '';
   }
 }
 .drop-shadow {
-  filter: drop-shadow(0 0 30rpx rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
   &-sm {
-    filter: drop-shadow(0 4rpx 4rpx rgba(0, 0, 0, 0.06));
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
   }
   &-lg {
-    filter: drop-shadow(0 30rpx 60rpx rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
   }
   @each $color, $value in $colors {
     @at-root .drop-shadow-#{$color} {
-      filter: drop-shadow(0 15rpx 15rpx rgba(darken($value, 10%), 0.3));
+      filter: drop-shadow(0 7px 7px rgba(darken($value, 10%), 0.3));
     }
     &-sm.drop-shadow-#{$color} {
-      filter: drop-shadow(0 4rpx 4rpx rgba(darken($value, 10%), 0.3));
+      filter: drop-shadow(0 2px 2px rgba(darken($value, 10%), 0.3));
     }
     &-lg.drop-shadow-#{$color} {
-      filter: drop-shadow(0 50rpx 100rpx rgba(darken($value, 10%), 0.2));
+      filter: drop-shadow(0 25px 50px rgba(darken($value, 10%), 0.2));
     }
   }
 }

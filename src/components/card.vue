@@ -74,12 +74,12 @@ export default {
   .doc-title {
     position: relative;
     display: inline-block;
-    padding-bottom: 20rpx;
-    font-size: 34rpx;
+    padding-bottom: 10px;
+    font-size: 17px;
     &::after {
       content: '';
       position: absolute;
-      width: calc(100% + 20rpx);
+      width: calc(100% + 10px);
       height: 2px;
       background-color: currentColor;
       left: 0;
@@ -89,7 +89,7 @@ export default {
   .doc-name {
     position: relative;
     display: block;
-    padding-top: 20rpx;
+    padding-top: 10px;
     &::after {
       content: '';
       position: absolute;
@@ -118,58 +118,58 @@ export default {
     transition: all 0.6s cubic-bezier(0.08, 0.82, 0.17, 1);
     opacity: 0.3;
     &.doc-dot1 {
-      width: 400rpx;
-      height: 400rpx;
+      width: 200px;
+      height: 200px;
       left: 0;
       top: auto;
       right: auto;
-      bottom: -300rpx;
+      bottom: -150px;
       filter: hue-rotate(30deg) brightness(160%);
     }
     &.doc-dot2 {
       left: -40px;
       top: auto;
       right: auto;
-      bottom: -20rpx;
-      width: 300rpx;
-      height: 300rpx;
+      bottom: -10px;
+      width: 150px;
+      height: 150px;
       filter: brightness(80%);
     }
     &.doc-dot3 {
-      top: -120rpx;
-      right: -120rpx;
+      top: -60px;
+      right: -60px;
       opacity: 0.6;
-      width: 240rpx;
-      height: 240rpx;
+      width: 120px;
+      height: 120px;
       filter: brightness(120%);
     }
   }
   .doc-bg {
     position: absolute;
     z-index: 0;
-    width: calc(100% - 40rpx);
-    height: 30rpx;
-    bottom: -15rpx;
+    width: calc(100% - 20px);
+    height: 15px;
+    bottom: -7px;
     left: 0;
     right: 0;
     margin: auto;
-    border-radius: 10rpx;
+    border-radius: 5px;
     // filter: blur(10px);
     opacity: 0.2;
   }
 
   &:hover {
     .doc-dot1 {
-      transform: translateX(-100rpx) translatey(-360rpx);
+      transform: translateX(-50px) translatey(-180px);
       filter: hue-rotate(-30deg) brightness(80%);
     }
     .doc-dot2 {
-      transform: translateX(300rpx) translatey(0px);
+      transform: translateX(150px) translatey(0px);
       filter: brightness(120%);
     }
     .doc-dot3 {
       filter: brightness(80%);
-      transform: translateX(-300rpx) translatey(240rpx);
+      transform: translateX(-150px) translatey(120px);
     }
   }
 }

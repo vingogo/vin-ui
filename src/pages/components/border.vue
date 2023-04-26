@@ -1,7 +1,7 @@
 <template>
   <app-page-layout title="边框">
     <view class="demo-container" v-for="(config, index) in borderConfigs" :key="index">
-      <view class="demo-title heading-2">{{ config.title }}</view>
+      <view class="h2">{{ config.title }}</view>
       <view class="paragraph">
         <text class="code" v-for="code in config.codes" :key="code">{{ code }}</text>
       </view>

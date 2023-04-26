@@ -6,35 +6,35 @@
 .font-0 {
   font-size: 12px;
 
-  --textSize: -2px;
+  --vin-text-size: -2px;
 }
 .font-1 {
   font-size: 14px;
 
   /* prettier-ignore */
-  --textSize: 0;
+  --vin-text-size: 0;
 }
 .font-2 {
   font-size: 16px;
 
-  --textSize: 2px;
+  --vin-text-size: 2px;
 }
 .font-3 {
   font-size: 18px;
 
-  --textSize: 4px;
+  --vin-text-size: 4px;
 }
 .font-4 {
-  font-size: 40rpx;
+  font-size: 20px;
 
-  --textSize: 12rpx;
+  --vin-text-size: 6px;
 }
 
 .text {
   @each $class, $value in $fontsize {
     &-#{$class},
     &-#{math.div($value, 2)} {
-      font-size: calc(#{$value}px + var(--textSize)) !important;
+      font-size: calc(#{$value}px + var(--vin-text-size)) !important;
     }
   }
   &-cut {
@@ -108,7 +108,7 @@
     color: inherit !important;
   }
   &-price::before {
-    margin-right: 4rpx;
+    margin-right: 2px;
     font-size: 80%;
     content: '¥';
   }

@@ -1,5 +1,5 @@
 <template>
-  <view class="demo home demo-home">
+  <view class="demo demo-home">
     <view class="demo-home__header">
       <text class="demo-home__title">Vin UI</text>
       <text class="demo-home__slogan">轻量、快速的多平台开发UI组件库</text>
@@ -7,7 +7,7 @@
 
     <view class="container">
       <block v-for="(nav, navindex) in nav" :key="navindex">
-        <view class="demo-title heading-2">{{ nav.title }}</view>
+        <view class="h2">{{ nav.title }}</view>
         <view class="cols-2">
           <view class="item" v-for="(item, index) in nav.subnav" :key="index">
             <app-card :data="item"></app-card>
@@ -73,7 +73,7 @@ $desc-text-color: #909ca4;
 
 .demo-home {
   min-height: 10vh;
-  padding: 30px 20px 20px;
+  padding: 15px 5px 15px;
   color: #fff;
   background-color: #fff;
   background-image: url('https://cdn.vingogo.cn/ui-bg.png');
@@ -103,15 +103,6 @@ $desc-text-color: #909ca4;
 
 .container {
   margin-top: 30px;
-}
-
-.home {
-  padding: 15px 5px 15px;
-
-  .demo-title {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
 
 .cols-2 {

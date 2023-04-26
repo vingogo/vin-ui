@@ -1,10 +1,10 @@
 @mixin bg-square {
   background: {
+    position: 0 0, 20px 20px;
     color: #fff;
     image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%),
       linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%);
-    size: 40rpx 40rpx;
-    position: 0 0, 20rpx 20rpx;
+    size: 40px 40px;
   }
 }
 
@@ -25,25 +25,6 @@
   justify-content: center;
 }
 
-@mixin arrow {
-  content: '';
-  height: 0;
-  width: 0;
-  position: absolute;
-}
-@mixin arrow-top {
-  @include arrow;
-  // border-color: transparent transparent $ui-BG;
-  border-style: none solid solid;
-  border-width: 0 20rpx 20rpx;
-}
-
-@mixin arrow-right {
-  @include arrow;
-  // border-color: transparent  $ui-BG transparent;
-  border-style: solid solid solid none;
-  border-width: 20rpx 20rpx 20rpx 0;
-}
 @mixin position-center {
   position: absolute !important;
   top: 0;
@@ -54,7 +35,7 @@
 }
 
 @mixin blur {
+  color: var(--vin-text-color);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  color: var(--ui-TC);
 }

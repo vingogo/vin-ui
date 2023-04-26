@@ -9,21 +9,21 @@
     [class*='dashed'] {
     position: relative;
     &.dline {
-      --ui-Border: var(--ui-BG-3);
+      --vin-border: var(--vin-bg-3);
     }
     &::after {
-      content: ' ';
-      width: 200%;
-      height: 200%;
       position: absolute;
-      z-index: 0;
       top: 0;
       left: 0;
+      z-index: 0;
+      box-sizing: border-box;
+      width: 200%;
+      height: 200%;
+      border-radius: inherit;
       transform: scale(0.5);
       transform-origin: 0 0;
+      content: ' ';
       pointer-events: none;
-      box-sizing: border-box;
-      border-radius: inherit;
     }
     &.radius::after {
       border-radius: calc(#{$radius} * 2);
@@ -33,23 +33,23 @@
     }
   }
   &::after {
-    border: 1px solid var(--ui-Border);
+    border: 1px solid var(--vin-border);
   }
   &s::after {
-    border: 4rpx solid var(--ui-Border);
+    border: 2px solid var(--vin-border);
   }
   &ss::after {
-    border: 8rpx solid var(--ui-Border);
+    border: 4px solid var(--vin-border);
   }
   @each $value in (top, right, bottom, left) {
     &-#{$value}::after {
-      border-#{$value}: 1px solid var(--ui-Border);
+      border-#{$value}: 1px solid var(--vin-border);
     }
     &s-#{$value}::after {
-      border-#{$value}: 4rpx solid var(--ui-Border);
+      border-#{$value}: 2px solid var(--vin-border);
     }
     &ss-#{$value}::after {
-      border-#{$value}: 8rpx solid var(--ui-Border);
+      border-#{$value}: 4px solid var(--vin-border);
     }
   }
 }
@@ -57,17 +57,17 @@
 /* -- 虚线 -- */
 .dashed {
   &::after {
-    border: 4rpx dashed var(--ui-Border);
+    border: 2px dashed var(--vin-border);
   }
   &s::after {
-    border: 6rpx dashed var(--ui-Border);
+    border: 3px dashed var(--vin-border);
   }
   @each $value in (top, right, bottom, left) {
     &-#{$value}::after {
-      border-#{$value}: 4rpx dashed var(--ui-Border);
+      border-#{$value}: 2px dashed var(--vin-border);
     }
     &s-#{$value}::after {
-      border-#{$value}: 6rpx dashed var(--ui-Border);
+      border-#{$value}: 3px dashed var(--vin-border);
     }
   }
 }
@@ -89,24 +89,24 @@
   overflow: hidden;
   &::after,
   &::before {
-    border-style: dashed;
-    border-color: var(--ui-Border);
-    animation: shineafter 1s infinite linear;
     width: calc(200% + 40px);
     height: 200%;
+    border-color: var(--vin-border);
+    border-style: dashed;
     border-width: 2px 0;
+    animation: shineafter 1s infinite linear;
   }
   &::before {
-    content: ' ';
     position: absolute;
-    transform: scale(0.5);
-    transform-origin: 0 0;
-    pointer-events: none;
     box-sizing: border-box;
-    animation: shinebefore 1s infinite linear;
     width: 200%;
     height: calc(200% + 40px);
     border-width: 0 2px;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    animation: shinebefore 1s infinite linear;
+    content: ' ';
+    pointer-events: none;
   }
 }
 .dasheds-shine {

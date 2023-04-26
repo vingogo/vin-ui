@@ -1,10 +1,10 @@
 <template>
   <app-page-layout title="阴影">
     <!-- 简介 -->
-    <view class="demo-title heading-2">简介</view>
+    <view class="h2">简介</view>
     <view class="paragraph">可通过设置类名来控制阴影</view>
 
-    <view class="demo-title heading-2">阴影尺寸</view>
+    <view class="h2">阴影尺寸</view>
     <view class="paragraph">
       <text class="code">.shadow-{size}</text>
     </view>
@@ -16,7 +16,7 @@
       <view class="item bg-white shadow-inset">inset</view>
     </view>
 
-    <view class="demo-title heading-2">有色阴影</view>
+    <view class="h2">有色阴影</view>
     <view class="paragraph">
       <text class="code">.shadow-{color}</text>
     </view>
@@ -28,14 +28,14 @@
       <view class="item bg-red shadow-red">red</view>
     </view>
 
-    <view class="demo-title heading-2">根据背景模糊的阴影</view>
+    <view class="h2">根据背景模糊的阴影</view>
     <view class="paragraph">
       <text class="code">.shadow-blur</text>
     </view>
 
     <view class="item bg-red-gradient shadow-blur">shadow-blur</view>
 
-    <view class="demo-title heading-2">翘边阴影</view>
+    <view class="h2">翘边阴影</view>
     <view class="paragraph">
       <text class="code">.shadow-warp</text>
     </view>
