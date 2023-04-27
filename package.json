@@ -24,7 +24,7 @@
     "build:docs": "vuepress build docs",
     "dts": "rimraf dts && vue-tsc --declaration --emitDeclarationOnly -p ./tsconfig.declaration.json",
     "type-check": "vue-tsc --noEmit",
-    "deploy:ui": "npm run build && node ./scripts/deploy.js --prefix=ui --dist=dist/h5",
+    "deploy:ui": "npm run build && node ./scripts/deploy.js --prefix=ui --dist=dist/build/h5",
     "deploy:docs": "npm run build:docs && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist",
     "release": "sh release.sh"
   },

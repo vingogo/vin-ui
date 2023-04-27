@@ -8,7 +8,7 @@ const isDarkMode = ref(false);
 const route = useRoute();
 const iframeId = ref();
 const iframeBaseUrl =
-  import.meta.env.MODE === 'development' ? 'http://localhost:3001#' : '/ui/index.html#';
+  import.meta.env.MODE === 'development' ? 'http://localhost:3000/ui/#' : '/ui/index.html#';
 const iframeUrl = ref(iframeBaseUrl);
 const hasIframe = ref(false);
 

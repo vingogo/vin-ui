@@ -5,7 +5,7 @@ export default config.list.reduce((prev, next) => {
     next.components.map(({ name }) => {
       return {
         parentPath: `/components/${name.replace(/\B([A-Z])/g, '-$1').toLocaleLowerCase()}.html`,
-        childrenPath: `pages/${name.toLowerCase().replace('-', '')}/index`,
+        childrenPath: `pages/components/${name.toLowerCase().replace('-', '')}`,
       };
     })
   );
