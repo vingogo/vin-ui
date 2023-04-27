@@ -29,7 +29,7 @@ export default {
   },
   setup() {
     const paddingTop = computed(
-      () => `calc(${uni.getSystemInfoSync().statusBarHeight}px + var(--vin-navbar-height))`
+      () => `calc(${uni.getSystemInfoSync().statusBarHeight}px + var(--vin-navbar-height, 46px))`
     );
 
     const goBack = () => {

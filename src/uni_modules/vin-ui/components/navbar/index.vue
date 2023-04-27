@@ -40,12 +40,13 @@ export default create({
 
     const mainStyle = computed(() => {
       const statusBarHeight = uni.getSystemInfoSync().statusBarHeight;
-      const style = safeAreaInsetTop.value
-        ? {
-            height: `calc(var(--vin-navbar-height) + ${statusBarHeight}px)`,
-            paddingTop: `${statusBarHeight}px`,
-          }
-        : {};
+      const style =
+        safeAreaInsetTop.value && statusBarHeight
+          ? {
+              height: `calc(var(--vin-navbar-height, 46px) + ${statusBarHeight}px)`,
+              paddingTop: `${statusBarHeight}px`,
+            }
+          : {};
 
       return getMainStyle({
         zIndex: props.zIndex,
