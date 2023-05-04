@@ -124,6 +124,9 @@
       "path": "pages/components/uploader"
     },
     {
+      "path": "pages/components/swiper"
+    },
+    {
       "path": "pages/components/text"
     },
     {
