@@ -1,5 +1,5 @@
 <template>
-  <view class="demo">
+  <app-page-layout title="轮播">
     <view class="h2">{{ translate('basic') }}</view>
     <view class="demo-box">
       <vin-swiper
@@ -100,7 +100,7 @@
         </vin-swiper-item>
       </vin-swiper>
     </view>
-  </view>
+  </app-page-layout>
 </template>
 
 <script lang="ts">
