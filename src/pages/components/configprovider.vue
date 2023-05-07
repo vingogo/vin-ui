@@ -1,5 +1,5 @@
 <template>
-  <div class="demo">
+  <app-page-layout title="全局配置">
     <view class="h2">{{ translate('basic') }}</view>
     <vin-config-provider :theme="theme">
       <vin-cell :title="translate('title1')">
@@ -55,7 +55,7 @@
         </vin-form-item>
       </vin-form>
     </vin-config-provider>
-  </div>
+  </app-page-layout>
 </template>
 <script lang="ts">
 import { reactive, ref } from 'vue';
