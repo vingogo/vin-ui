@@ -1,0 +1,319 @@
+.vin-theme-dark {
+  .vin-backtop {
+    &.show {
+      color: $dark-color;
+      background: $dark-background;
+    }
+  }
+
+  .vin-badge {
+    &.show {
+      color: $dark-color;
+      background: $dark-background;
+    }
+  }
+
+  .vin-calendar {
+    color: $dark-color;
+    background: $dark-background;
+    .vin-calendar__header {
+      color: $dark-color;
+      background: $dark-background;
+    }
+    .vin-calendar__content {
+      .vin-calendar__panel {
+        .vin-calendar__days {
+          .calendar-month-day {
+            &-choose {
+              color: $calendar-choose-font-color;
+              background-color: $dark-calendar-choose-color;
+            }
+          }
+        }
+      }
+    }
+    .vin-calendar__footer {
+      color: $dark-color;
+      background: $dark-background2;
+    }
+  }
+
+  .vin-cascader {
+    &__bar {
+      color: $dark-color;
+      background: $dark-background2;
+    }
+    &-item {
+      color: $dark-color-gray;
+    }
+
+    .vin-tabs__titles {
+      background: $dark-background3 !important;
+    }
+  }
+
+  .vin-cell {
+    color: $dark-color;
+    background: $dark-background2;
+    box-shadow: none;
+  }
+
+  .vin-checkbox {
+    &__label {
+      color: $dark-color;
+      &--disabled {
+        color: $checkbox-label-disable-color;
+      }
+    }
+    &__button {
+      color: $dark-color;
+      background: $dark-background;
+      &--disabled {
+        color: $checkbox-label-disable-color;
+        border: 1px solid $checkbox-label-disable-color;
+      }
+    }
+  }
+
+  .vin-comment {
+    &-header {
+      &__user {
+        &-name {
+          color: $dark-color;
+        }
+
+        &-default {
+          &-name {
+            color: $dark-color;
+          }
+        }
+      }
+    }
+    &__follow {
+      &-title {
+        color: $dark-color;
+      }
+    }
+    &-bottom {
+      &__cpx {
+        color: $dark-color;
+
+        &-item {
+          span {
+            color: $dark-color;
+          }
+        }
+      }
+    }
+
+    .vin-comment-shop {
+      border-top: 1px solid $dark-color;
+    }
+  }
+
+  .vin-dialog {
+    &__header {
+      color: $dark-color3;
+    }
+  }
+
+  .vin-empty {
+    background: $dark-background;
+  }
+
+  .vin-form-item {
+    &__body {
+      &__slots {
+        .vin-input-text {
+          color: $dark-color;
+        }
+      }
+    }
+  }
+
+  .vin-grid-item {
+    &__content {
+      color: $dark-color;
+      background: $dark-background;
+    }
+    &__text {
+      color: $dark-color;
+    }
+  }
+
+  .vin-infinite-loading {
+    .vin-infinite__bottom {
+      color: $dark-color;
+
+      .bottom-text {
+        color: $dark-color;
+      }
+    }
+  }
+
+  .vin-input {
+    background: $dark-background;
+    &__label {
+      color: $dark-color;
+    }
+    .input-text,
+    &__text--readonly {
+      color: $dark-color;
+    }
+  }
+
+  .vin-input-number {
+    &__icon {
+      color: $dark-color;
+      &--disabled {
+        color: $dark-color-gray;
+      }
+    }
+    input,
+    &__text--readonly {
+      color: $dark-color;
+      background-color: $dark-background;
+      border: 1px solid $dark-color-gray;
+    }
+    &--disabled {
+      input {
+        color: $dark-color-gray;
+      }
+    }
+  }
+
+  .vin-navbar {
+    color: $dark-color;
+    background: $dark-background;
+    .title {
+      color: $dark-color;
+    }
+  }
+
+  .vin-noticebar {
+    &__page {
+      color: $dark-color;
+      background: $dark-background2;
+    }
+
+    &__vertical {
+      .vin-noticebar__vertical-item {
+        color: $dark-color;
+      }
+    }
+  }
+
+  .vin-popup {
+    background: $dark-background2;
+    &__close-icon {
+      color: $dark-color;
+    }
+  }
+
+  .vin-radio {
+    &__label {
+      color: $dark-color;
+      &--disabled {
+        color: $radio-label-disable-color;
+      }
+    }
+    &__button {
+      color: $dark-color;
+      background: $dark-background;
+      &--disabled {
+        color: $radio-label-disable-color;
+        border: 1px solid $radio-label-disable-color;
+      }
+    }
+  }
+
+  .vin-range-container {
+    background: $dark-background2;
+    .vin-range-min,
+    .vin-range-max {
+      color: $dark-color-gray;
+    }
+    .vin-range {
+      &-mark-text {
+        color: $dark-color-gray;
+      }
+      &-button {
+        .number {
+          color: $dark-color;
+        }
+      }
+    }
+  }
+
+  .vin-searchbar {
+    background: $dark-background;
+    &__search-label {
+      color: $dark-color;
+    }
+    .vin-searchbar__input-clear {
+      & .vin-searchbar__vin-icon-mask-close {
+        color: $dark-color;
+        &:hover {
+          color: $dark-color;
+          cursor: pointer;
+        }
+      }
+    }
+    &__right-search-icon,
+    &__left-search-icon {
+      color: $dark-color;
+    }
+  }
+
+  .vin-tabbar {
+    background: $dark-background;
+  }
+
+  .vin-tabbar-item {
+    &__icon--unactive {
+      color: $dark-color-gray;
+    }
+  }
+
+  .vin-tab-pane {
+    background: $dark-background2;
+  }
+
+  .vin-tabs {
+    &__titles {
+      background: $dark-background3;
+      &-item {
+        color: $dark-color-gray;
+        &.active {
+          color: $dark-color;
+        }
+      }
+    }
+    &.vertical {
+      .vin-tabs__titles {
+        &-item {
+          &.active {
+            background-color: $dark-background2;
+          }
+        }
+      }
+    }
+  }
+
+  .vin-textarea {
+    background: $dark-background;
+    &__textarea {
+      color: $dark-color;
+    }
+  }
+
+  .vin-uploader {
+    &__preview-list {
+      color: $dark-color;
+      background: $dark-background2;
+    }
+    .close {
+      color: $dark-color !important;
+    }
+  }
+}

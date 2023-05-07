@@ -135,3 +135,26 @@ const hyphenateRE = /\B([A-Z])/g;
 export const hyphenate = cacheStringFunction((str: string) =>
   str.replace(hyphenateRE, '-$1').toLowerCase()
 );
+
+export const kebabCase = (str: string): string => {
+  return str
+    .replace(str.charAt(0), str.charAt(0).toLocaleLowerCase())
+    .replace(/([a-z])([A-Z])/g, (_, p1, p2) => `${p1}-${p2.toLowerCase()}`);
+};
+
+export const colorHexToRgb = (hex: string) => {
+  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
+    hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b)
+  );
+
+  /* eslint-disable */
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
+  /* eslint-enable */
+};

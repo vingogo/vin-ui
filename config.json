@@ -17,6 +17,10 @@
           "desc": "单元格"
         },
         {
+          "name": "ConfigProvider",
+          "desc": "全局配置"
+        },
+        {
           "name": "overlay",
           "desc": "遮罩层"
         },

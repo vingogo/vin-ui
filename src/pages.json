@@ -137,6 +137,9 @@
     },
     {
       "path": "pages/components/border"
+    },
+    {
+      "path": "pages/components/configprovider"
     }
   ],
   "globalStyle": {
