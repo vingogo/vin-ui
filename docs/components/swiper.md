@@ -8,11 +8,10 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Swiper, SwiperItem } from '@vingogo/uni-ui';
+import { Swiper } from '@vingogo/uni-ui';
 
 const app = createApp();
 app.use(Swiper);
-app.use(SwiperItem);
 ```
 
 ### 基础用法
@@ -22,28 +21,19 @@ app.use(SwiperItem);
 `pagination-visible` 是否显示分页指示器
 `pagination-color` 指示器颜色自定义
 
-:::demo
-
 ```html
 <template>
   <vin-swiper
+    custom-class="custom-swiper"
+    :list="list"
     :init-page="page"
     :pagination-visible="true"
     pagination-color="#426543"
     auto-play="3000"
   >
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/welcomenutui.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/fristfabu.jpg" alt="" />
-    </vin-swiper-item>
+    <template v-slot:default="{ data }">
+      <image :src="data" alt="" />
+    </template>
   </vin-swiper>
 </template>
 <script lang="ts">
@@ -52,39 +42,42 @@ app.use(SwiperItem);
     setup() {
       const state = reactive({
         page: 2,
+        list: [
+          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
+          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
+          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
+          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+        ],
       });
       return { ...toRefs(state) };
     },
   };
 </script>
 <style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
+  .custom-swiper {
+    image {
       width: 100%;
-      height: 100%;
+      height: 150px;
     }
   }
 </style>
 ```
 
-:::
-
 ### 异步加载
-
-:::demo
 
 ```html
 <template>
   <vin-swiper
+    custom-class="custom-swiper"
+    :list="list"
     :init-page="page"
     :pagination-visible="true"
-    pagination-color="#426543"
-    auto-play="3000"
+    pagination-active-color="#f87d09"
+    auto-play="2000"
   >
-    <vin-swiper-item v-for="item in list" :key="item">
-      <img :src="item" alt="" />
-    </vin-swiper-item>
+    <template v-slot:default="{ data }">
+      <image :src="data" alt="" />
+    </template>
   </vin-swiper>
 </template>
 <script lang="ts">
@@ -110,35 +103,32 @@ app.use(SwiperItem);
   };
 </script>
 <style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
+  .custom-swiper {
+    image {
       width: 100%;
-      height: 100%;
+      height: 150px;
     }
   }
 </style>
 ```
 
-:::
-
 ### 动态加载
 
 支持动态增加/删除图片
 
-:::demo
-
 ```html
 <template>
   <vin-swiper
+    custom-class="custom-swiper"
+    :list="list"
     :init-page="page"
     :pagination-visible="true"
-    pagination-color="#426543"
-    auto-play="3000"
+    pagination-active-color="#f87d09"
+    auto-play="2000"
   >
-    <vin-swiper-item v-for="item in list" :key="item">
-      <img :src="item" alt="" />
-    </vin-swiper-item>
+    <template v-slot:default="{ data }">
+      <image :src="data" alt="" />
+    </template>
   </vin-swiper>
 </template>
 <script lang="ts">
@@ -164,39 +154,31 @@ app.use(SwiperItem);
   };
 </script>
 <style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
+  .custom-swiper {
+    image {
       width: 100%;
-      height: 100%;
+      height: 150px;
     }
   }
 </style>
 ```
 
-:::
-
 ### 自定义大小
 
 `width` 自定义轮播大小
 
-:::demo
-
 ```html
 <template>
-  <vin-swiper :init-page="page2" :loop="false" width="300">
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/welcomenutui.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/fristfabu.jpg" alt="" />
-    </vin-swiper-item>
+  <vin-swiper
+    custom-class="custom-swiper"
+    :list="list"
+    :init-page="page2"
+    :loop="false"
+    width="300"
+  >
+    <template v-slot:default="{ data }">
+      <image :src="data" alt="" />
+    </template>
   </vin-swiper>
 </template>
 <script lang="ts">
@@ -205,45 +187,43 @@ app.use(SwiperItem);
     setup() {
       const state = reactive({
         page2: 2,
+        list: [
+          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
+          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
+          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
+          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+        ],
       });
       return { ...toRefs(state) };
     },
   };
 </script>
 <style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
+  .custom-swiper {
+    image {
       width: 100%;
-      height: 100%;
+      height: 150px;
     }
   }
 </style>
 ```
 
-:::
-
 ### 自定义分页指示器
 
 `v-slot:page` 表示自定义指示器
 
-:::demo
-
 ```html
 <template>
-  <vin-swiper :init-page="page3" :loop="true" @change="change">
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/welcomenutui.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/fristfabu.jpg" alt="" />
-    </vin-swiper-item>
+  <vin-swiper
+    custom-class="custom-swiper"
+    :list="list"
+    :init-page="page3"
+    :loop="true"
+    @change="change"
+  >
+    <template v-slot:default="{ data }">
+      <image :src="data" alt="" />
+    </template>
     <template v-slot:page>
       <div class="page">{{ current }}/4</div>
     </template>
@@ -256,6 +236,12 @@ app.use(SwiperItem);
       const state = reactive({
         page3: 0,
         current: 1,
+        list: [
+          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
+          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
+          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
+          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+        ],
       });
       const change = (index: number) => {
         state.current = index + 1;
@@ -265,11 +251,10 @@ app.use(SwiperItem);
   };
 </script>
 <style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
+  .custom-swiper {
+    image {
       width: 100%;
-      height: 100%;
+      height: 150px;
     }
   }
   .page {
@@ -287,29 +272,31 @@ app.use(SwiperItem);
 </style>
 ```
 
-:::
-
 ### 手动切换
 
 可通过 `API`(`prev`,`next`)进行手动切换
 
-:::demo
-
 ```html
 <template>
   <view class="demo-box">
-    <vin-swiper :init-page="page" :loop="true" ref="swiper">
-      <vin-swiper-item v-for="item in list" :key="item">
-        <img :src="item" alt="" />
-      </vin-swiper-item>
+    <vin-swiper
+      custom-class="custom-swiper"
+      :list="list"
+      :init-page="page"
+      :loop="true"
+      ref="swiper"
+    >
+      <template v-slot:default="{ data }">
+        <image :src="data" alt="" />
+      </template>
     </vin-swiper>
-    <view class="vin-swiper-btns" style="width: 100%;">
-      <span class="vin-swiper-btns__left" @click="handlePrev">
+    <view class="vin-swiper-btns">
+      <view class="vin-swiper-btns__left" @click="handlePrev">
         <vin-icon name="left"></vin-icon>
-      </span>
-      <span class="vin-swiper-btns__left" @click="handleNext">
+      </view>
+      <view class="vin-swiper-btns__left" @click="handleNext">
         <vin-icon name="right"></vin-icon>
-      </span>
+      </view>
     </view>
   </view>
 </template>
@@ -342,11 +329,10 @@ app.use(SwiperItem);
   .demo-box {
     position: relative;
   }
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
+  .custom-swiper {
+    image {
       width: 100%;
-      height: 100%;
+      height: 150px;
     }
   }
   .vin-swiper-btns {
@@ -368,37 +354,25 @@ app.use(SwiperItem);
 </style>
 ```
 
-:::
-
 ### 垂直方向
 
 `direction` 自定义轮播方向
 
-:::demo
-
 ```html
 <template>
   <vin-swiper
+    custom-class="custom-swiper"
+    :list="list"
     :init-page="page4"
     :loop="true"
     auto-play="3000"
     direction="vertical"
     height="150"
     :pagination-visible="true"
-    style="height: 150px"
   >
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/welcomenutui.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/fristfabu.jpg" alt="" />
-    </vin-swiper-item>
+    <template v-slot:default="{ data }">
+      <image :src="data" alt="" />
+    </template>
   </vin-swiper>
 </template>
 <script lang="ts">
@@ -407,142 +381,26 @@ app.use(SwiperItem);
     setup() {
       const state = reactive({
         page4: 0,
+        list: [
+          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
+          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
+          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
+          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+        ],
       });
       return { ...toRefs(state) };
     },
   };
 </script>
 <style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
+  .custom-swiper {
+    image {
       width: 100%;
-      height: 100%;
-    }
-    ::v-deep(.vin-swiper-pagination-vertical) {
-      i {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        &.active {
-          height: 18px;
-          border-radius: 5px;
-        }
-      }
+      height: 150px;
     }
   }
 </style>
 ```
-
-:::
-
-### 水平居中展示
-
-`is-center` 代表可居中，同时必须传 `width`
-
-:::demo
-
-```html
-<template>
-  <vin-swiper
-    :init-page="page"
-    :loop="false"
-    width="280"
-    height="150"
-    :is-center="true"
-    style="height: 150px"
-  >
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/welcomenutui.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/fristfabu.jpg" alt="" />
-    </vin-swiper-item>
-  </vin-swiper>
-</template>
-<script lang="ts">
-  import { reactive, toRefs } from 'vue';
-  export default {
-    setup() {
-      const state = reactive({
-        page: 0,
-      });
-      return { ...toRefs(state) };
-    },
-  };
-</script>
-<style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 150px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-</style>
-```
-
-:::
-
-### 垂直居中展示
-
-`is-center` 代表可居中，同时必须传 `height`
-
-:::demo
-
-```html
-<template>
-  <vin-swiper
-    :init-page="page"
-    :loop="false"
-    direction="vertical"
-    height="220"
-    :is-center="true"
-    style="height: 300px"
-  >
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/welcomenutui.jpg" alt="" />
-    </vin-swiper-item>
-    <vin-swiper-item>
-      <img src="https://storage.360buyimg.com/jdc-article/fristfabu.jpg" alt="" />
-    </vin-swiper-item>
-  </vin-swiper>
-</template>
-<script lang="ts">
-  import { reactive, toRefs } from 'vue';
-  export default {
-    setup() {
-      const state = reactive({
-        page: 0,
-      });
-      return { ...toRefs(state) };
-    },
-  };
-</script>
-<style lang="scss" scoped>
-  .vin-swiper-item {
-    line-height: 300px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-</style>
-```
-
-:::
 
 ## API
 
@@ -550,6 +408,7 @@ app.use(SwiperItem);
 
 | 参数                    | 说明                                                                                                                                  | 类型           | 默认值               |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------------- |
+| list                    | 用于轮播图 item 的数据                                                                                                                | Array          | -                    |
 | width                   | 轮播卡片的宽度                                                                                                                        | Number、String | `auto`               |
 | height                  | 轮播卡片的高度                                                                                                                        | String、Number | `auto`               |
 | direction               | 轮播方向,可选值`horizontal`,`vertical`                                                                                                | String         | 'horizontal'         |

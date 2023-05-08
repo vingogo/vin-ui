@@ -11,10 +11,13 @@
       :vertical="isVertical"
       :disable-touch="!touchable"
       :indicator-dots="paginationVisible"
-      :indicator-active-color="paginationColor"
+      :indicator-color="paginationColor"
+      :indicator-active-color="paginationActiveColor"
       @change="onChange"
     >
-      <slot />
+      <swiper-item v-for="item in list" :key="item" class="vin-swiper-item">
+        <slot :data="item" />
+      </swiper-item>
     </swiper>
 
     <slot name="page" />
@@ -24,11 +27,11 @@
 <script lang="ts">
 import { computed, watch, ref } from 'vue';
 import { createComponent } from '../common/create';
-import { swiperProps, SWIPER_KEY } from './common';
-import { useProvide, useExpose } from '../../shared/hooks';
+import { swiperProps } from './common';
+import { useExpose } from '../../shared/hooks';
 import { pxCheck } from '../../shared/utils/pxCheck';
 
-const { create, componentName, useVinContext } = createComponent('swiper');
+const { create, useVinContext } = createComponent('swiper');
 
 export default create({
   props: swiperProps,
@@ -36,8 +39,6 @@ export default create({
 
   setup(props, { emit }) {
     const { getMainClass, getMainStyle } = useVinContext(props);
-
-    const { internalChildren } = useProvide(SWIPER_KEY, `${componentName}-item`)({ props });
     const current = ref(0);
 
     const mainClass = computed(getMainClass);
@@ -49,10 +50,10 @@ export default create({
       });
     });
 
-    const childCount = computed(() => internalChildren.length);
+    const itemCount = computed(() => props.list.length);
 
     const isAutoPlay = computed(() => {
-      return props.autoPlay > 0 && childCount.value > 1;
+      return props.autoPlay > 0 && itemCount.value > 1;
     });
 
     const interval = computed(() => {

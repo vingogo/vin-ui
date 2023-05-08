@@ -144,6 +144,10 @@
           "desc": "步骤条"
         },
         {
+          "name": "swiper",
+          "desc": "轮播"
+        },
+        {
           "name": "tag",
           "desc": "标签"
         },

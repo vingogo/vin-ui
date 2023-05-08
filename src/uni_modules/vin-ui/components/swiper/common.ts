@@ -3,6 +3,10 @@ import { commonProps } from '../common';
 
 export const swiperProps = {
   ...commonProps,
+  list: {
+    type: Array,
+    default: () => [],
+  },
   width: {
     type: [Number, String],
     default: '100%',

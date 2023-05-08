@@ -3,56 +3,60 @@
     <view class="h2">{{ translate('basic') }}</view>
     <view class="demo-box">
       <vin-swiper
+        :list="list"
         :init-page="page"
+        :height="160"
         :pagination-visible="true"
-        pagination-active-color="#426543"
+        pagination-active-color="#f87d09"
         auto-play="2000"
       >
-        <vin-swiper-item v-for="item in list" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
       </vin-swiper>
     </view>
     <view class="h2">{{ translate('asyc') }}</view>
     <view class="demo-box">
       <vin-swiper
+        :list="list1"
         :init-page="page"
         :pagination-visible="true"
-        pagination-active-color="#426543"
+        pagination-active-color="#f87d09"
         auto-play="2000"
       >
-        <vin-swiper-item v-for="item in list1" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
       </vin-swiper>
     </view>
     <view class="h2">{{ translate('dynamicDel') }}</view>
     <view class="demo-box">
       <vin-swiper
+        :list="list2"
         :init-page="page"
         :pagination-visible="true"
-        pagination-active-color="#426543"
+        pagination-active-color="#f87d09"
         auto-play="2000"
       >
-        <vin-swiper-item v-for="item in list2" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
       </vin-swiper>
     </view>
     <view class="h2">{{ translate('size') }}</view>
     <view class="demo-box">
-      <vin-swiper :init-page="page2" :loop="false" width="300">
-        <vin-swiper-item v-for="item in list" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+      <vin-swiper :list="list" :init-page="page2" :loop="false" width="300">
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
       </vin-swiper>
     </view>
     <view class="h2">{{ translate('indicator') }}</view>
     <view class="demo-box">
-      <vin-swiper :init-page="page3" :loop="true" @change="change">
-        <vin-swiper-item v-for="item in list" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+      <vin-swiper :list="list" :init-page="page3" :loop="true" @change="change">
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
         <template v-slot:page>
           <div class="page">{{ current }}/4</div>
         </template>
@@ -60,10 +64,10 @@
     </view>
     <view class="h2">{{ translate('indicator1') }}</view>
     <view class="demo-box">
-      <vin-swiper :init-page="page" :loop="true" @change="change1" auto-play="2000">
-        <vin-swiper-item v-for="item in list1" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+      <vin-swiper :list="list1" :init-page="page" :loop="true" @change="change1" auto-play="2000">
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
         <template v-slot:page>
           <div class="page">{{ current1 }}/4</div>
         </template>
@@ -71,23 +75,24 @@
     </view>
     <view class="h2">{{ translate('btns') }}</view>
     <view class="demo-box">
-      <vin-swiper :init-page="page" :loop="true" ref="swiper">
-        <vin-swiper-item v-for="item in list" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+      <vin-swiper :list="list" :init-page="page" :loop="true" ref="swiper">
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
       </vin-swiper>
       <view class="vin-swiper-btns">
-        <span class="vin-swiper-btns__left" @click="handlePrev">
+        <view class="vin-swiper-btns__left" @click="handlePrev">
           <vin-icon name="left"></vin-icon>
-        </span>
-        <span class="vin-swiper-btns__left" @click="handleNext">
+        </view>
+        <view class="vin-swiper-btns__left" @click="handleNext">
           <vin-icon name="right"></vin-icon>
-        </span>
+        </view>
       </view>
     </view>
     <view class="h2">{{ translate('vertical') }}</view>
     <view class="demo-box">
       <vin-swiper
+        :list="list"
         :init-page="page4"
         :loop="true"
         auto-play="3000"
@@ -95,9 +100,9 @@
         height="150"
         :pagination-visible="true"
       >
-        <vin-swiper-item v-for="item in list" :key="item">
-          <img :src="item" alt="" />
-        </vin-swiper-item>
+        <template v-slot:default="{ data }">
+          <image :src="data" alt="" />
+        </template>
       </vin-swiper>
     </view>
   </app-page-layout>
@@ -197,33 +202,13 @@ export default createDemo({
 <style lang="scss" scoped>
 .demo-box {
   position: relative;
-  .vin-swiper-item {
+
+  img,
+  image {
+    width: 100%;
     height: 150px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
-  &.vertical-center {
-    .vin-swiper-item {
-      height: 300px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  ::v-deep(.vin-swiper-pagination-vertical) {
-    i {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      &.active {
-        height: 18px;
-        border-radius: 5px;
-      }
-    }
-  }
+
   .page {
     position: absolute;
     bottom: 0;
@@ -244,7 +229,8 @@ export default createDemo({
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    span {
+
+    &__left {
       display: flex;
       align-items: center;
       justify-content: center;
