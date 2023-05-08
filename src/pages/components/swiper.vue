@@ -5,7 +5,6 @@
       <vin-swiper
         :list="list"
         :init-page="page"
-        :height="160"
         :pagination-visible="true"
         pagination-active-color="#f87d09"
         auto-play="2000"
