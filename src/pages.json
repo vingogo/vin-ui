@@ -2,146 +2,160 @@
   "pages": [
     {
       "path": "pages/index/index"
-    },
-    {
-      "path": "pages/components/badge"
-    },
-    {
-      "path": "pages/components/avatar"
-    },
-    {
-      "path": "pages/components/button"
-    },
-    {
-      "path": "pages/components/icon"
-    },
-    {
-      "path": "pages/components/cell"
-    },
-    {
-      "path": "pages/components/radio"
-    },
-    {
-      "path": "pages/components/rate"
-    },
-    {
-      "path": "pages/components/searchbar"
-    },
-    {
-      "path": "pages/components/switch"
-    },
-    {
-      "path": "pages/components/tag"
-    },
-    {
-      "path": "pages/components/progress"
-    },
-    {
-      "path": "pages/components/divider"
-    },
-    {
-      "path": "pages/components/tabbar"
-    },
-    {
-      "path": "pages/components/input"
-    },
-    {
-      "path": "pages/components/textarea"
-    },
-    {
-      "path": "pages/components/empty"
-    },
-    {
-      "path": "pages/components/steps"
-    },
-    {
-      "path": "pages/components/tabs"
-    },
-    {
-      "path": "pages/components/grid"
-    },
-    {
-      "path": "pages/components/layout"
-    },
-    {
-      "path": "pages/components/overlay"
-    },
-    {
-      "path": "pages/components/popup"
-    },
-    {
-      "path": "pages/components/transition"
-    },
-    {
-      "path": "pages/components/checkbox"
-    },
-    {
-      "path": "pages/components/form"
-    },
-    {
-      "path": "pages/components/inputnumber"
-    },
-    {
-      "path": "pages/components/dialog"
-    },
-    {
-      "path": "pages/components/notify"
-    },
-    {
-      "path": "pages/components/toast"
-    },
-    {
-      "path": "pages/components/noticebar"
-    },
-    {
-      "path": "pages/components/navbar"
-    },
-    {
-      "path": "pages/components/fixednav"
-    },
-    {
-      "path": "pages/components/cascader"
-    },
-    {
-      "path": "pages/components/calendar"
-    },
-    {
-      "path": "pages/components/backtop"
-    },
-    {
-      "path": "pages/components/infiniteloading"
-    },
-    {
-      "path": "pages/components/list"
-    },
-    {
-      "path": "pages/components/swipe"
-    },
-    {
-      "path": "pages/components/skeleton"
-    },
-    {
-      "path": "pages/components/uploader"
-    },
-    {
-      "path": "pages/components/swiper"
-    },
-    {
-      "path": "pages/components/text"
-    },
-    {
-      "path": "pages/components/shadow"
-    },
-    {
-      "path": "pages/components/background"
-    },
-    {
-      "path": "pages/components/border"
-    },
-    {
-      "path": "pages/components/configprovider"
     }
   ],
+  "subPackages": [
+    {
+      "root": "pages/components/",
+      "name": "components",
+      "pages": [
+        {
+          "path": "badge"
+        },
+        {
+          "path": "avatar"
+        },
+        {
+          "path": "button"
+        },
+        {
+          "path": "icon"
+        },
+        {
+          "path": "cell"
+        },
+        {
+          "path": "radio"
+        },
+        {
+          "path": "rate"
+        },
+        {
+          "path": "searchbar"
+        },
+        {
+          "path": "switch"
+        },
+        {
+          "path": "tag"
+        },
+        {
+          "path": "progress"
+        },
+        {
+          "path": "divider"
+        },
+        {
+          "path": "tabbar"
+        },
+        {
+          "path": "input"
+        },
+        {
+          "path": "textarea"
+        },
+        {
+          "path": "empty"
+        },
+        {
+          "path": "steps"
+        },
+        {
+          "path": "tabs"
+        },
+        {
+          "path": "grid"
+        },
+        {
+          "path": "layout"
+        },
+        {
+          "path": "overlay"
+        },
+        {
+          "path": "popup"
+        },
+        {
+          "path": "transition"
+        },
+        {
+          "path": "checkbox"
+        },
+        {
+          "path": "form"
+        },
+        {
+          "path": "inputnumber"
+        },
+        {
+          "path": "dialog"
+        },
+        {
+          "path": "notify"
+        },
+        {
+          "path": "toast"
+        },
+        {
+          "path": "noticebar"
+        },
+        {
+          "path": "navbar"
+        },
+        {
+          "path": "fixednav"
+        },
+        {
+          "path": "cascader"
+        },
+        {
+          "path": "calendar"
+        },
+        {
+          "path": "backtop"
+        },
+        {
+          "path": "infiniteloading"
+        },
+        {
+          "path": "list"
+        },
+        {
+          "path": "swipe"
+        },
+        {
+          "path": "skeleton"
+        },
+        {
+          "path": "uploader"
+        },
+        {
+          "path": "swiper"
+        },
+        {
+          "path": "text"
+        },
+        {
+          "path": "shadow"
+        },
+        {
+          "path": "background"
+        },
+        {
+          "path": "border"
+        },
+        {
+          "path": "configprovider"
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["components"]
+    }
+  },
   "globalStyle": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "VinUI",
