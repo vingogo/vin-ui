@@ -392,7 +392,7 @@ $backtop-border-color: var(--vin-backtop-border-color, #e0e0e0) !default;
 // calendar
 $calendar-primary-color: var(--vin-calendar-primary-color, $primary-color) !default;
 $calendar-choose-color: var(--vin-calendar-choose-color, $primary-color) !default;
-$calendar-choose-font-color: var(--vin-calendar-choose-font-color, $primary-color) !default;
+$calendar-choose-font-color: var(--vin-calendar-choose-font-color, $white) !default;
 $calendar-base-color: var(--vin-calendar-base-color, #333) !default;
 $calendar-disable-color: var(--vin-calendar-disable-color, #d1d0d0) !default;
 $calendar-base-font: var(--vin-calendar-base-font, $font-size-3) !default;
