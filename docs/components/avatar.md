@@ -23,15 +23,15 @@ app.use(Icon);
 <template>
   <vin-avatar
     size="large"
-    icon="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
+    icon="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin"
   ></vin-avatar>
   <vin-avatar
     size="normal"
-    icon="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
+    icon="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin"
   ></vin-avatar>
   <vin-avatar
     size="small"
-    icon="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
+    icon="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin"
   ></vin-avatar>
 </template>
 ```
@@ -53,10 +53,7 @@ app.use(Icon);
 
 ```html
 <template>
-  <vin-avatar
-    url="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
-  >
-  </vin-avatar>
+  <vin-avatar url="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin"> </vin-avatar>
   <vin-avatar icon="my"></vin-avatar>
   <vin-avatar>N</vin-avatar>
 </template>
@@ -91,18 +88,12 @@ Icon 和字符型可以自定义图标颜色及背景色
 ```html
 <template>
   <vin-avatar-group span="-4">
-    <vin-avatar
-      url="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png"
-    >
-    </vin-avatar>
+    <vin-avatar url="https://via.placeholder.com/80x80/37c0fe/fff?text=Vin"> </vin-avatar>
     <vin-avatar icon="my"></vin-avatar>
     <vin-avatar color="rgb(245, 106, 0)" bg-color="rgb(253, 227, 207)">U</vin-avatar>
   </vin-avatar-group>
   <vin-avatar-group max-count="3" max-color="#fff" max-bgColor="#498ff2">
-    <vin-avatar
-      url="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png"
-    >
-    </vin-avatar>
+    <vin-avatar url="https://via.placeholder.com/80x80/37c0fe/fff?text=Vin"> </vin-avatar>
     <vin-avatar icon="my"></vin-avatar>
     <vin-avatar color="rgb(245, 106, 0)" bg-color="rgb(253, 227, 207)">U</vin-avatar>
     <vin-avatar icon="my"></vin-avatar>
@@ -115,10 +106,7 @@ Icon 和字符型可以自定义图标颜色及背景色
 ```html
 <template>
   <vin-avatar-group max-count="3" zIndex="right" max-content="...">
-    <vin-avatar
-      url="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png"
-    >
-    </vin-avatar>
+    <vin-avatar url="https://via.placeholder.com/80x80/37c0fe/fff?text=Vin"> </vin-avatar>
     <vin-avatar icon="my"></vin-avatar>
     <vin-avatar color="rgb(245, 106, 0)" bg-color="rgb(253, 227, 207)">U</vin-avatar>
     <vin-avatar icon="my"></vin-avatar>

@@ -27,10 +27,10 @@ test('should render width and height', async () => {
         page: 1,
         height: '500',
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 
@@ -65,10 +65,10 @@ test('should render initpage', async () => {
         page: 2,
         width: 375,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 
@@ -104,10 +104,10 @@ test('should render direction', async () => {
         height: 300,
         direction: 'vertical',
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 
@@ -144,10 +144,10 @@ test('should render pagination', async () => {
         paginationVisible: true,
         paginationColor: 'red',
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 
@@ -187,10 +187,10 @@ test('should render loop and auto-play', async () => {
         autoPlay: 100,
         width: 375,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 
@@ -248,10 +248,10 @@ test('should not allow to drag when loop is false', async () => {
         width: 375,
         loop: false,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 
@@ -287,10 +287,10 @@ test('should swiper to prev swiper after calling prev method', async () => {
         page: 3,
         autoPlay: 0,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 
@@ -328,10 +328,10 @@ test('should swiper to swiper after calling to method', async () => {
         page: 3,
         autoPlay: 0,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
 

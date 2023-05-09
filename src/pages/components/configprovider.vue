@@ -129,14 +129,14 @@ export default createDemo({
       defaultFileList: [
         {
           name: 'file 1.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'success',
           message: translate('success'),
           type: 'image',
         },
         {
           name: 'file 2.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'uploading',
           message: translate('uploading'),
           type: 'image',

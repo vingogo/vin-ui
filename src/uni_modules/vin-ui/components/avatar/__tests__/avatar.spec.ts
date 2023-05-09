@@ -69,19 +69,17 @@ test('icon props', () => {
 test('url props', () => {
   const wrapper = mount(Avatar, {
     props: {
-      url: 'https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png',
+      url: 'https://via.placeholder.com/60x60/fbbd08/fff?text=Vin',
     },
   });
   const img: any = wrapper.find('img');
-  expect(img.attributes().src).toBe(
-    'https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png'
-  );
+  expect(img.attributes().src).toBe('https://via.placeholder.com/60x60/fbbd08/fff?text=Vin');
 });
 
 test('alt props', () => {
   const wrapper = mount(Avatar, {
     props: {
-      url: 'https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png',
+      url: 'https://via.placeholder.com/60x60/fbbd08/fff?text=Vin',
       alt: '我是alt',
     },
   });
@@ -96,14 +94,3 @@ test('should emit active-avatarror event', () => {
   avatar.trigger('click');
   expect(wrapper.emitted('click')).toHaveLength(1);
 });
-
-// test('should emit onError event', () => {
-//   const wrapper = mount(Avatar, {
-//     props: {
-//       url: 'https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/413809774888998',
-//     }
-//   });
-//   const avatar: any = wrapper.find('.vin-avatar');
-//   avatar.trigger('click');
-//   expect(wrapper.emitted('error')).toHaveLength(1);
-// });

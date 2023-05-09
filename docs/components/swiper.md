@@ -43,10 +43,10 @@ app.use(Swiper);
       const state = reactive({
         page: 2,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
       return { ...toRefs(state) };
@@ -91,10 +91,10 @@ app.use(Swiper);
       onMounted(() => {
         setTimeout(() => {
           state.list = [
-            'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-            'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-            'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-            'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+            'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+            'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+            'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+            'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
           ];
         }, 3000);
       });
@@ -138,10 +138,10 @@ app.use(Swiper);
       const state = reactive({
         page: 2,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
       onMounted(() => {
@@ -188,10 +188,10 @@ app.use(Swiper);
       const state = reactive({
         page2: 2,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
       return { ...toRefs(state) };
@@ -237,10 +237,10 @@ app.use(Swiper);
         page3: 0,
         current: 1,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
       const change = (index: number) => {
@@ -308,10 +308,10 @@ app.use(Swiper);
       const state = reactive({
         page: 2,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
       const handlePrev = () => {
@@ -382,10 +382,10 @@ app.use(Swiper);
       const state = reactive({
         page4: 0,
         list: [
-          'https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg',
-          'https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg',
-          'https://storage.360buyimg.com/jdc-article/welcomenutui.jpg',
-          'https://storage.360buyimg.com/jdc-article/fristfabu.jpg',
+          'https://via.placeholder.com/375x150/8799a3/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/8dc63f/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/fbbd08/fff?text=Hello+Vin+UI',
+          'https://via.placeholder.com/375x150/a5673f/fff?text=Hello+Vin+UI',
         ],
       });
       return { ...toRefs(state) };
