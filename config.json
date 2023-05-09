@@ -88,6 +88,10 @@
         {
           "name": "InputNumber",
           "desc": "数字输入框"
+        },
+        {
+          "name": "uploader",
+          "desc": "上传"
         }
       ]
     },

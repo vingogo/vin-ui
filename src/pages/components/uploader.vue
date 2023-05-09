@@ -1,5 +1,5 @@
 <template>
-  <view class="demo bg-w">
+  <app-page-layout custom-class="bg-w" title="上传">
     <view class="h2">{{ translate('basic') }}</view>
     <vin-uploader :url="uploadUrl"></vin-uploader>
     <view class="h2">{{ translate('title1') }}</view>
@@ -57,7 +57,7 @@
     }}</vin-button>
     <view class="h2">{{ translate('title12') }}</view>
     <vin-uploader disabled></vin-uploader>
-  </view>
+  </app-page-layout>
 </template>
 
 <script lang="ts">
@@ -112,21 +112,21 @@ export default createDemo({
     const defaultFileList = computed(() => [
       {
         name: 'file 1.png',
-        url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+        url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
         status: 'success',
         message: translate('success'),
         type: 'image',
       },
       {
         name: 'file 2.png',
-        url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+        url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
         status: 'error',
         message: translate('error'),
         type: 'image',
       },
       {
         name: 'file 3.png',
-        url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+        url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
         status: 'uploading',
         message: translate('uploading'),
         type: 'image',
