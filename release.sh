@@ -44,6 +44,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "* * * * * * * Releasing $VERSION * * * * * * *"
   echo
 
+  cd packs/npm
+
   # update package.json version to be used in the build
   npm version $VERSION --message "chore: release v$VERSION"
 
