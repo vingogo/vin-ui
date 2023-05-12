@@ -57,6 +57,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   git add .
   git commit --message "chore: release v$VERSION"
 
+  cd ../../
+
   # build
   npm run build:lib
 
