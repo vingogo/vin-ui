@@ -17,6 +17,10 @@
           "desc": "单元格"
         },
         {
+          "name": "ConfigProvider",
+          "desc": "全局配置"
+        },
+        {
           "name": "overlay",
           "desc": "遮罩层"
         },
@@ -84,6 +88,10 @@
         {
           "name": "InputNumber",
           "desc": "数字输入框"
+        },
+        {
+          "name": "uploader",
+          "desc": "上传"
         }
       ]
     },
@@ -142,6 +150,10 @@
         {
           "name": "steps",
           "desc": "步骤条"
+        },
+        {
+          "name": "swiper",
+          "desc": "轮播"
         },
         {
           "name": "tag",

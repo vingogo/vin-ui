@@ -84,6 +84,10 @@
         {
           "name": "InputNumber",
           "desc": "数字输入框"
+        },
+        {
+          "name": "uploader",
+          "desc": "上传"
         }
       ]
     },
@@ -142,6 +146,10 @@
         {
           "name": "steps",
           "desc": "步骤条"
+        },
+        {
+          "name": "swiper",
+          "desc": "轮播"
         },
         {
           "name": "tag",

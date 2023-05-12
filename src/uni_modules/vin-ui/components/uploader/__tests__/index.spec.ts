@@ -59,21 +59,21 @@ test('should render base uploader other props', async () => {
       'file-list': [
         {
           name: '文件1.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'success',
           message: '上传成功',
           type: 'image',
         },
         {
           name: '文件2.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'error',
           message: '上传失败',
           type: 'image',
         },
         {
           name: '文件3.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'uploading',
           message: '上传中...',
           type: 'image',
@@ -100,7 +100,7 @@ test('should render base uploader other props', async () => {
   toast2.trigger('click');
   expect(wrapper.emitted('file-item-click')).toBeTruthy();
   expect(toast2.attributes().src).toBe(
-    'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif'
+    'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI'
   );
   const toast3 = wrapper.find('.vin-icon-fabulous');
   expect(toast3.exists()).toBe(true);
@@ -116,21 +116,21 @@ test('should render base uploader list', async () => {
       'file-list': [
         {
           name: '文件1.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'success',
           message: '上传成功',
           type: 'image',
         },
         {
           name: '文件2.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'error',
           message: '上传失败',
           type: 'image',
         },
         {
           name: '文件3.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'uploading',
           message: '上传中...',
           type: 'image',
@@ -158,10 +158,10 @@ test('render preview image', async () => {
     props: {
       modelValue: [
         {
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
         },
         {
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
         },
         { file: mockFile },
       ],
@@ -177,7 +177,7 @@ test('before-delete prop return false', () => {
       fileList: [
         {
           name: '文件1.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'success',
           message: '上传成功',
           type: 'image',
@@ -196,7 +196,7 @@ test('before-delete prop return true', () => {
       fileList: [
         {
           name: '文件1.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'success',
           message: '上传成功',
           type: 'image',
@@ -216,7 +216,7 @@ test('before-delete prop resolved', async () => {
       fileList: [
         {
           name: '文件1.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'success',
           message: '上传成功',
           type: 'image',
@@ -238,7 +238,7 @@ test('before-delete prop rejected', async () => {
       fileList: [
         {
           name: '文件1.png',
-          url: 'https://m.360buyimg.com/babel/jfs/t1/164410/22/25162/93384/616eac6cE6c711350/0cac53c1b82e1b05.gif',
+          url: 'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
           status: 'success',
           message: '上传成功',
           type: 'image',

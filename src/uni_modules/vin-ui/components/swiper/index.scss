@@ -1,0 +1,18 @@
+.vin-swiper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  box-sizing: content-box;
+  overflow: hidden;
+  cursor: grab;
+  transition-property: transform;
+  user-select: none;
+
+  &__wrapper {
+    position: relative;
+  }
+}
+
+.vin-swiper-item {
+  height: 100%;
+}

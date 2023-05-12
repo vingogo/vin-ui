@@ -2,20 +2,11 @@
   <app-page-layout title="头像">
     <view class="h2">支持三种尺寸：small、normal、large</view>
     <vin-cell>
-      <vin-avatar
-        size="large"
-        url="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
-      >
+      <vin-avatar size="large" url="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin">
       </vin-avatar>
-      <vin-avatar
-        size="normal"
-        url="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
-      >
+      <vin-avatar size="normal" url="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin">
       </vin-avatar>
-      <vin-avatar
-        size="small"
-        url="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
-      >
+      <vin-avatar size="small" url="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin">
       </vin-avatar>
     </vin-cell>
     <view class="h2">支持两种形状：square、round</view>
@@ -25,10 +16,7 @@
     </vin-cell>
     <view class="h2">支持三种类型：图片、Icon 以及字符</view>
     <vin-cell>
-      <vin-avatar
-        url="https://img12.360buyimg.com/imagetools/jfs/t1/143702/31/16654/116794/5fc6f541Edebf8a57/4138097748889987.png"
-      >
-      </vin-avatar>
+      <vin-avatar url="https://via.placeholder.com/60x60/fbbd08/fff?text=Vin"> </vin-avatar>
       <vin-avatar icon="my"></vin-avatar>
       <vin-avatar>N</vin-avatar>
     </vin-cell>
@@ -49,10 +37,7 @@
     <view class="h2">头像组合展现</view>
     <vin-cell>
       <vin-avatar-group span="-4">
-        <vin-avatar
-          url="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png"
-        >
-        </vin-avatar>
+        <vin-avatar url="https://via.placeholder.com/80x80/37c0fe/fff?text=Vin"> </vin-avatar>
         <vin-avatar icon="my"></vin-avatar>
         <vin-avatar color="rgb(245, 106, 0)" bg-color="rgb(253, 227, 207)">U</vin-avatar>
       </vin-avatar-group>
@@ -60,10 +45,7 @@
 
     <vin-cell>
       <vin-avatar-group max-count="3" max-color="#fff" max-bgColor="#498ff2">
-        <vin-avatar
-          url="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png"
-        >
-        </vin-avatar>
+        <vin-avatar url="https://via.placeholder.com/80x80/37c0fe/fff?text=Vin"> </vin-avatar>
         <vin-avatar icon="my"></vin-avatar>
         <vin-avatar color="rgb(245, 106, 0)" bg-color="rgb(253, 227, 207)">U</vin-avatar>
         <vin-avatar icon="my"></vin-avatar>
@@ -72,10 +54,7 @@
     <view class="h2">组合头像可控制层级方向</view>
     <vin-cell>
       <vin-avatar-group max-count="3" zIndex="right" max-content="...">
-        <vin-avatar
-          url="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png"
-        >
-        </vin-avatar>
+        <vin-avatar url="https://via.placeholder.com/80x80/37c0fe/fff?text=Vin"> </vin-avatar>
         <vin-avatar icon="my"></vin-avatar>
         <vin-avatar color="rgb(245, 106, 0)" bg-color="rgb(253, 227, 207)">U</vin-avatar>
         <vin-avatar icon="my"></vin-avatar>

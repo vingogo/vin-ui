@@ -1,0 +1,204 @@
+# ConfigProvider 全局配置
+
+### 介绍
+
+用于全局配置 VinUI 组件，提供暗黑模式，动态主题。
+
+### 安装
+
+```javascript
+import { createApp } from 'vue';
+import { ConfigProvider } from '@vingogo/uni-ui';
+
+const app = createApp();
+app.use(ConfigProvider);
+```
+
+### 深色模式
+
+将 ConfigProvider 组件的 `theme` 属性设置为 `dark`，可以开启深色模式。
+
+深色模式会全局生效，使页面上的所有 VinUI 组件变为深色风格。
+
+:::demo
+
+```html
+<template>
+  <vin-config-provider :theme="theme">
+    <vin-cell title="切换暗黑">
+      <template v-slot:link>
+        <vin-switch v-model="switchChecked" @change="switchChange" />
+      </template>
+    </vin-cell>
+    <vin-cell title="我是标题" sub-title="副标题描述" desc="描述文字"></vin-cell>
+  </vin-config-provider>
+</template>
+<script lang="ts">
+  import { ref } from 'vue';
+  export default {
+    setup() {
+      const switchChecked = ref(false);
+      const theme = ref('');
+      const switchChange = (v: boolean) => {
+        theme.value = v ? 'dark' : '';
+      };
+
+      return { switchChecked, switchChange, theme };
+    },
+  };
+</script>
+```
+
+:::
+
+### 主题定制
+
+`VinUI` 组件可以通过 [CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+来组织样式，通过覆盖这些 `CSS` 变量，可以实现定制主题、动态切换主题等功能。
+
+#### 示例
+
+这些变量的默认值被定义在 `page` 节点上，如果要转 `H5`，默认值被定义在 `:root` 节点上
+
+```css
+page,
+:root {
+  --vin-primary-color: #fa2c19;
+  --vin-primary-color-end: #fa6419;
+}
+```
+
+#### 通过 CSS 覆盖
+
+你可以直接在代码中覆盖这些 `CSS` 变量，`Button` 组件的样式会随之发生改变：
+
+```css
+/* 添加这段样式后，Primary Button 会变成绿色 */
+page,
+:root {
+  --vin-button-primary-background-color: green;
+}
+```
+
+#### 通过 ConfigProvider 覆盖
+
+`ConfigProvider` 组件提供了覆盖 `CSS` 变量的能力，你需要在根节点包裹一个 `ConfigProvider` 组件，并通过 `theme-vars` 属性来配置一些主题变量
+:::demo
+
+```html
+<template>
+  <vin-config-provider :theme-vars="themeVars">
+    <vin-form>
+      <vin-form-item label="滑块">
+        <vin-range hidden-tag v-model="range"></vin-range>
+      </vin-form-item>
+    </vin-form>
+  </vin-config-provider>
+</template>
+<script lang="ts">
+  import { ref, reactive } from 'vue';
+  export default {
+    setup() {
+      const range = ref(30);
+      const themeVars = reactive({
+        primaryColor: '#008000',
+        primaryColorEnd: '#008000',
+      });
+      // 当然，你也可以选择使用组件变量去替换，如果同时设置了基础变量和组件变量，组件变量会覆盖基础变量。
+      //  const themeVars = {
+      //   rangeBgColor: 'rgba(25,137,250,0.15)',
+      //   rangeBarBgColor: '#0289fa',
+      //   rangeBarBtnBorder: '1px solid #0289fa'
+      // };
+
+      return { range, themeVars };
+    },
+  };
+</script>
+```
+
+:::
+
+### 主题变量
+
+#### 基础变量
+
+`VinUI` 中的 `CSS` 变量分为 **基础变量** 和 **组件变量**。组件变量会继承基础变量，因此在修改基础变量后，会影响所有相关的组件。
+
+#### 修改变量
+
+- 基础变量中的主色调需要您使用十六进制色值来进行覆盖，请勿使用类似于 `red`,`green` 来进行覆盖
+- 基础变量和组件变量都能通过 `:root，page 选择器`和 `ConfigProvider 组件`，推荐您使用 `ConfigProvider 组件` 来修改主色调，因为部分组件的变量激活色的渐变色使用的是 `rgba`，使用 `:root，page 选择器` 修改主色调会有部分组件变量不生效：
+
+```scss
+// 如果您仍旧选择使用:root 选择器来进行修改主色调，您还需要修改以下变量色  primaryColor为设置的主色调
+--vin-tabs-horizontal-tab-line-color: linear-gradient(
+  180deg,
+  primaryColor 0%,
+  rgba(primaryColor, 0.15) 100%
+);
+--vin-tabs-vertical-tab-line-color: linear-gradient(
+  180deg,
+  primaryColor 0%,
+  rgba(primaryColor, 0.15) 100%
+);
+```
+
+#### 变量列表
+
+下面是所有的基础变量：
+
+```less
+// 主色调
+--vin-primary-color: #fa2c19;
+--vin-primary-color-end: #fa6419;
+// 辅助色
+--vin-help-color: #f5f5f5;
+// 标题常规文字
+--vin-title-color: #1a1a1a;
+// 副标题
+--vin-title-color2: #666666;
+// 次内容
+--vin-text-color: #808080;
+// 特殊禁用色
+--vin-disable-color: #cccccc;
+--vin-white: #fff;
+--vin-black: #000;
+--vin-required-color: #fa2c19;
+// 暗黑模式下颜色
+--vin-dark-background: #131313;
+--vin-dark-background2: #1b1b1b;
+--vin-vin-dark-background3: #141414;
+--vin-vin-dark-background4: #323233;
+--vin-dark-background5: #646566;
+--vin-dark-background6: #380e08;
+--vin-dark-background7: #707070;
+--vin-dark-color: var(--vin-white);
+--vin-dark-color2: #f2270c;
+--vin-dark-color3: rgba(232, 230, 227, 0.8);
+--vin-dark-color-gray: var(--vin-text-color);
+--vin-dark-calendar-choose-color: rgba(227, 227, 227, 0.2);
+// 字体
+--vin-font-family: PingFang SC, Microsoft YaHei, Helvetica, Hiragino Sans GB, SimSun, sans-serif;
+
+// Font
+--vin-font-size-0: 10px;
+--vin-font-size-1: 12px;
+--vin-font-size-2: 14px;
+--vin-font-size-3: 16px;
+--vin-font-size-4: 18px;
+--vin-font-weight-bold: 400;
+--vin-font-size-small: var(--vin-font-size-1);
+--vin-font-size-base: var(--vin-font-size-2);
+--vin-font-size-large: var(--vin-font-size-3);
+--vin-line-height-base: 1.5;
+```
+
+## API
+
+### Props
+
+| 参数       | 说明                                             | 类型   | 默认值 |
+| ---------- | ------------------------------------------------ | ------ | ------ |
+| theme      | 主题风格，设置为 `dark` 来开启深色模式，全局生效 | string | -      |
+| theme-vars | 自定义主题变量                                   | object | -      |
