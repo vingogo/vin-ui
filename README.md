@@ -90,7 +90,7 @@ pnpm i
 ```
 
 3. 在 `src/uni_modules/vin-ui` 目录对 VinUI 的代码做符合业务的个性化调整
-4. 构建代码, 将把原有的 TS 文件生成编译后的 JS 文件，并转成 ES5
+4. 构建代码, 将把原有的 TS 文件生成编译后的 JS 文件，并转成 ES2015
 
 ```bash
 pnpm build:uni
