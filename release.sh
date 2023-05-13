@@ -44,6 +44,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "* * * * * * * Releasing $VERSION * * * * * * *"
   echo
 
+  npm version $VERSION
+
   cd packs/npm
 
   # update package.json version to be used in the build
@@ -65,6 +67,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # push
   git push origin refs/tags/v$VERSION
   git push
+
+  cd ./dist/npm
   
   # publish
   npm publish --access public
