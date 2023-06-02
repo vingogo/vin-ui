@@ -24,6 +24,8 @@ import { reactive, toRefs, onMounted } from 'vue';
 import { createComponent } from '@/utils/create';
 import { useTranslate } from '@/hooks/useTranslate';
 
+import { category } from '@/mock/category';
+
 const { createDemo, translate } = createComponent('category');
 
 const initTranslate = () =>
@@ -52,25 +54,16 @@ export default createDemo({
       categoryChild2: [{}],
     });
 
-    onMounted(() => {
-      setTimeout(() => {
-        getData();
-      }, 500);
-    });
+    onMounted(() => getData());
 
     const getData = () => {
-      fetch('//storage.360buyimg.com/nutui/3x/categoryData.js')
-        .then((response) => response.json())
-        .then((res) => {
-          const { categoryInfo, categoryChild, customCategory } = res;
-          data.categoryInfo1 = categoryInfo;
-          data.category = categoryInfo.category;
-          data.categoryChild1 = categoryChild;
-          data.customCategory = customCategory;
-          data.categoryInfo2 = categoryInfo;
-          data.categoryChild2 = categoryChild;
-        })
-        .catch((err) => console.log('Oh, error', err));
+      const { categoryInfo, categoryChild, customCategory } = category;
+      data.categoryInfo1 = categoryInfo;
+      data.category = categoryInfo.category;
+      data.categoryChild1 = categoryChild;
+      data.customCategory = customCategory;
+      data.categoryInfo2 = categoryInfo;
+      data.categoryChild2 = categoryChild;
     };
 
     const change = (index: any) => {

@@ -46,7 +46,8 @@
         <span>{{ translate('question') }}</span>
       </template>
       <template #origin>
-        <img
+        <image
+          mode="heightFix"
           class="tag"
           src="https://img11.360buyimg.com/jdphoto/s58x28_jfs/t9451/359/415622649/15318/b0943e5d/59a78495N3bd2a9f8.png"
           alt=""
