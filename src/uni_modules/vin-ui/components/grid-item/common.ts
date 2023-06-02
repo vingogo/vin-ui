@@ -16,6 +16,12 @@ export const gridItemProps = {
   iconColor: {
     type: String,
   },
+  iconClassPrefix: {
+    type: String,
+  },
+  iconFontClassName: {
+    type: String,
+  },
   to: {
     type: [String, Object] as PropType<string | RouterOptions>,
   },

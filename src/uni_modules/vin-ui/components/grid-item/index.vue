@@ -11,6 +11,8 @@
           :name="iconProps?.name"
           :size="iconProps?.size"
           :color="iconProps?.color"
+          :class-prefix="iconProps?.classPrefix"
+          :font-class-name="iconProps?.fontClassName"
         ></vin-icon>
 
         <slot v-if="$slots.text" name="text"></slot>
@@ -81,6 +83,8 @@ export default create({
         name: props.icon,
         size: props.iconSize || parent.iconSize,
         color: props.iconColor || parent.iconColor,
+        classPrefix: props.iconClassPrefix,
+        fontClassName: props.iconFontClassName,
       };
     });
 
