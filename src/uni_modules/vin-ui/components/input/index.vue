@@ -54,9 +54,11 @@
           :value="modelValue"
           :formatTrigger="formatTrigger"
           :autofocus="autofocus"
+          :adjustPosition="adjustPosition"
           @input="onInput"
           @focus="onFocus"
           @blur="onBlur"
+          @confirm="onConfirm"
         />
         <vin-icon
           custom-class="vin-input-clear"
@@ -111,10 +113,10 @@ export default create({
     'blur',
     'focus',
     'clear',
-    'keypress',
     'click-input',
     'click-left-icon',
     'click-right-icon',
+    'confirm',
   ],
 
   setup(props, { emit, slots }) {
@@ -201,6 +203,12 @@ export default create({
       updateValue(value);
     };
 
+    const onConfirm = (event: any) => {
+      const { value } = event.detail;
+
+      emit('confirm', value, event);
+    };
+
     const onFocus = (event: any) => {
       const { value } = event.detail;
 
@@ -265,6 +273,7 @@ export default create({
       onInput,
       onFocus,
       onBlur,
+      onConfirm,
       clear,
       onClickInput,
       onClickLeftIcon,

@@ -400,6 +400,7 @@ app.use(Icon);
 | error-message-align | 底部错误提示文案对齐方式，可选值 `left`、`center`、`right`                                  | String                    | -            |
 | formatter           | 输入内容格式化函数                                                                          | `(val: string) => string` | -            |
 | format-trigger      | 格式化函数触发的时机，可选值为 `onChange`、`onBlur`                                         | String                    | -            |
+| adjust-position     | 键盘弹起时，是否自动上推页面                                                                | Boolean                   | `true`       |
 
 ### Event
 
@@ -410,6 +411,7 @@ app.use(Icon);
 | blur               | 输入框失焦时触发     | val ,event |
 | clear              | 点击清除按钮时触发   | val ,event |
 | click              | 点击组件时触发       | val ,event |
+| confirm            | 点击完成按钮时触发   | val ,event |
 | click-input        | 点击输入区域时触发   | val ,event |
 | click-left-icon    | 点击左侧图标时触发   | val ,event |
 | click-right-icon   | 点击右侧图标时触发   | val ,event |

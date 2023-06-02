@@ -1,8 +1,8 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 import { commonProps } from '../common';
 
-interface Events {
-  eventName: 'focus' | 'blur' | 'clear' | 'change' | 'update:modelValue';
+export interface Events {
+  eventName: 'focus' | 'blur' | 'clear' | 'change' | 'confirm' | 'update:modelValue';
   params: (string | number | Event)[];
 }
 export type InputAlignType = 'left' | 'center' | 'right'; // text-align
@@ -168,6 +168,10 @@ export const inputProps = {
   formatTrigger: {
     type: String as PropType<InputFormatTrigger>,
     default: 'onChange',
+  },
+  adjustPosition: {
+    type: Boolean,
+    default: true,
   },
 };
 
