@@ -1,5 +1,5 @@
 <template>
-  <view class="demo demo-home">
+  <view class="demo demo-home" :style="{ paddingTop: `calc(40px + ${statusBarHeight}px)` }">
     <vin-searchbar v-model="searchValue">
       <template v-slot:leftin>
         <vin-icon size="14" name="search2"></vin-icon>
@@ -104,6 +104,8 @@ export default createDemo({
       activeCategory: ALL,
     });
 
+    const statusBarHeight = uni.getSystemInfoSync().statusBarHeight;
+
     const filterCategories = (val: string) => {
       if (ALL === val) {
         state.nav = nav;
@@ -123,6 +125,7 @@ export default createDemo({
 
     return {
       ...toRefs(state),
+      statusBarHeight,
       onClickCategory,
     };
   },
@@ -138,7 +141,7 @@ $desc-text-color: #909ca4;
   --vin-searchbar-input-background: #fff;
 
   min-height: 10vh;
-  padding: 65px 5px 15px;
+  padding: 85px 5px 15px;
   color: $desc-text-color;
   background-image: url('https://cdn.vingogo.cn/ui-bg.png');
   background-repeat: no-repeat;
