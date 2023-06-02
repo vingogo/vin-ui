@@ -44,8 +44,8 @@
     border: $tag-border-width solid transparent;
 
     &.vin-tag--plain {
-      color: $tag-danger-background-color;
-      border: $tag-border-width solid $tag-danger-background-color;
+      color: $tag-danger-background-color-plain;
+      border: $tag-border-width solid $tag-danger-background-color-plain;
     }
   }
 
