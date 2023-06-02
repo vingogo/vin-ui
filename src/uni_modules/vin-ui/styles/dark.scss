@@ -316,4 +316,33 @@
       color: $dark-color !important;
     }
   }
+
+  .vin-category {
+    &__cateList {
+      background: $dark-background2;
+    }
+
+    &__cateListLeft {
+      background: $dark-background4;
+    }
+    &__cateListItem {
+      color: $dark-color-gray;
+    }
+    &__cateListItemChecked {
+      color: $dark-color;
+      background: $dark-background2;
+      &::before {
+        background: $category-list-item-checked-img-bg-color;
+      }
+    }
+  }
+
+  .vin-category-pane {
+    &__childTitle {
+      color: $white;
+    }
+    &__cateListRight {
+      background: $dark-background2;
+    }
+  }
 }

@@ -200,6 +200,10 @@
         {
           "name": "card",
           "desc": "商品卡片"
+        },
+        {
+          "name": "category",
+          "desc": "商品分类"
         }
       ]
     }

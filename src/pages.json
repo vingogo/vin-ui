@@ -152,6 +152,9 @@
         },
         {
           "path": "price"
+        },
+        {
+          "path": "category"
         }
       ]
     }
