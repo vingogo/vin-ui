@@ -121,7 +121,11 @@
 </template>
 
 <script lang="ts">
-export default {
+import { createComponent } from '@/utils/create';
+
+const { createDemo } = createComponent('background');
+
+export default createDemo({
   setup() {
     return {
       color: [
@@ -161,7 +165,7 @@ export default {
       ],
     };
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>

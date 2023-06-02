@@ -32,8 +32,10 @@
 
 <script lang="ts">
 import { reactive, toRefs, watch } from 'vue';
-import { createPage } from '@/utils/create';
+import { createComponent } from '@/utils/create';
 import config from '../../../config.json';
+
+const { createDemo } = createComponent('home');
 
 const ALL = 'all';
 
@@ -93,7 +95,7 @@ const categories = [
   })
 );
 
-export default createPage({
+export default createDemo({
   setup() {
     const state = reactive({
       searchValue: '',

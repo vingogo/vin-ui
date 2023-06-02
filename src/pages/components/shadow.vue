@@ -44,6 +44,14 @@
   </app-page-layout>
 </template>
 
+<script>
+import { createComponent } from '@/utils/create';
+
+const { createDemo } = createComponent('shadow');
+
+export default createDemo({});
+</script>
+
 <style lang="scss" scoped>
 .cols-2 {
   display: flex;

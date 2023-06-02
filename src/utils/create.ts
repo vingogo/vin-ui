@@ -36,7 +36,7 @@ export function createComponent(name: string) {
     createDemo<
       PropsOptions extends Readonly<ComponentPropsOptions>,
       Props extends Readonly<ExtractPropTypes<PropsOptions>>
-    >(_component: {
+    >(component: {
       name?: string;
       baseName?: string;
       props?: PropsOptions;
@@ -48,58 +48,41 @@ export function createComponent(name: string) {
       emits?: string[];
       [optionKey: string]: any;
     }) {
-      _component.options = {
-        // #ifdef MP-WEIXIN
-        // 将自定义节点设置成虚拟的，更加接近Vue组件的表现，能更好的使用flex属性
-        // virtualHost: true,
-        // #endif
-        styleIsolation: 'shared',
-      };
+      const entryPath = '/pages/index/index';
 
-      _component.baseName = name;
-
-      _component.name = `demo-${name}`;
-
-      return defineComponent(_component as any);
-    },
-  };
-}
-
-export function createPage<
-  PropsOptions extends Readonly<ComponentPropsOptions>,
-  Props extends Readonly<ExtractPropTypes<PropsOptions>>
->(options: {
-  name?: string;
-  props?: PropsOptions;
-  components?: Record<string, Component>;
-  setup?: (props: Props, setupContext: SetupContext) => RenderFunction | Record<string, any> | any;
-  [optionKey: string]: any;
-}) {
-  const entryPath = '/pages/index/index';
-
-  return {
-    onShareAppMessage: () => {
       return {
-        title: '基于 Vue 3 的轻量、快速的多平台开发 UI 组件库',
-        path: entryPath,
-        success: (res: any) => {
-          // 转发成功
-          console.log('转发成功', res);
+        options: {
+          styleIsolation: 'shared',
         },
-        fail: (error: any) => {
-          // 转发失败
-          console.log('转发失败', error);
+
+        baseName: name,
+
+        name: `demo-${name}`,
+
+        onShareAppMessage: () => {
+          return {
+            title: '基于 Vue 3 的轻量、快速的多平台开发 UI 组件库',
+            path: entryPath,
+            success: (res: any) => {
+              // 转发成功
+              console.log('转发成功', res);
+            },
+            fail: (error: any) => {
+              // 转发失败
+              console.log('转发失败', error);
+            },
+          };
         },
+
+        onShareTimeline: () => {
+          return {
+            title: '基于 Vue 3 的轻量、快速的多平台开发 UI 组件库',
+            path: entryPath,
+          };
+        },
+
+        ...component,
       };
     },
-
-    onShareTimeline: () => {
-      return {
-        title: '基于 Vue 3 的轻量、快速的多平台开发 UI 组件库',
-        path: entryPath,
-      };
-    },
-
-    ...options,
   };
 }

@@ -17,7 +17,7 @@
 <script lang="ts">
 import { createComponent } from '@/utils/create';
 
-const { createDemo } = createComponent('tag');
+const { createDemo } = createComponent('border');
 
 const borderConfigs = [
   {

@@ -97,6 +97,14 @@
   </app-page-layout>
 </template>
 
+<script>
+import { createComponent } from '@/utils/create';
+
+const { createDemo } = createComponent('badge');
+
+export default createDemo({});
+</script>
+
 <style lang="scss">
 .vin-badge {
   margin-right: 40px;
