@@ -148,6 +148,9 @@
           "path": "configprovider"
         },
         {
+          "path": "card"
+        },
+        {
           "path": "price"
         }
       ]

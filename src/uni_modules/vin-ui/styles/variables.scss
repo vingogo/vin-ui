@@ -766,6 +766,14 @@ $comment-header-time-color: var(--vin-comment-header-time-color, rgba(153, 153, 
 $comment-bottom-label-color: var(--vin-comment-bottom-label-color, rgba(153, 153, 153, 1)) !default;
 $comment-shop-color: var(--vin-comment-shop-color, $primary-color) !default;
 
+// card
+$card-font-size-0: var(--vin-card-font-size-0, $font-size-0) !default;
+$card-font-size-1: var(--vin-card-font-size-1, $font-size-1) !default;
+$card-font-size-2: var(--vin-card-font-size-2, $font-size-2) !default;
+$card-font-size-3: var(--vin-card-font-size-3, $font-size-3) !default;
+$card-left-border-radius: var(--vin-card-left-border-radius, 0) !default;
+$card-left-background-color: var(--vin-card-left-background-color, inherit) !default;
+
 // price
 $price-color: var(--vin-price-color, $primary-color) !default;
 

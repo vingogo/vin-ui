@@ -1,0 +1,108 @@
+.vin-theme-dark {
+  .vin-card {
+    .vin-card__right {
+      color: $dark-color;
+    }
+  }
+}
+
+.vin-card {
+  display: flex;
+  width: 100%;
+
+  .vin-card__left {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    background-color: $card-left-background-color;
+    border-radius: $card-left-border-radius;
+
+    > image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .vin-card__right {
+    flex: 1;
+    padding: 0 10px 8px;
+
+    .vin-card__right__title {
+      display: -webkit-box;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 1.5;
+      word-break: break-all;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    .vin-card__right__price {
+      display: flex;
+      align-items: center;
+      height: 18px;
+      margin-top: 9px;
+      line-height: 18px;
+
+      .vin-price {
+        .vin-price--symbol-large {
+          font-size: 12px;
+        }
+
+        .vin-price--large {
+          font-size: 18px;
+        }
+
+        .vin-price--decimal-large {
+          font-size: 12px;
+        }
+      }
+
+      .vin-card__right__price__origin {
+        &.vin-price {
+          margin-left: 2px;
+          color: #d2a448;
+
+          .vin-price--symbol-large {
+            font-size: 12px;
+          }
+
+          .vin-price--large {
+            font-size: 12px;
+          }
+
+          .vin-price--decimal-large {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .vin-card__right__other {
+      display: flex;
+      align-items: center;
+      padding: 5px 0 2px;
+      .vin-tag {
+        margin-right: 5px;
+        padding: 0 2px;
+        font-size: $card-font-size-0;
+        border: none;
+      }
+    }
+
+    .vin-card__right__shop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4px;
+
+      .vin-card__right__shop__name {
+        color: #999;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
