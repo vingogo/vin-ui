@@ -1,4 +1,4 @@
-import config from '../../config.json';
+import config from '../../../config.json';
 
 export default config.list.reduce((prev, next) => {
   return prev.concat(

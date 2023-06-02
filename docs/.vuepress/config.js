@@ -2,7 +2,7 @@ import { searchPlugin } from '@vuepress/plugin-search';
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
-import vinConfig from '../config.json';
+import vinConfig from '../../config.json';
 
 export default defineUserConfig({
   base: '/docs/',
