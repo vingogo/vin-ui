@@ -1,5 +1,5 @@
 <template>
-  <app-page-layout title="商品分类">
+  <app-page-layout title="商品分类" custom-class="full">
     <view class="h2">{{ translate('title1') }}</view>
     <vin-category :category="category" @change="change">
       <vin-category-pane :categoryChild="categoryChild1" @onChange="onChange"> </vin-category-pane>
