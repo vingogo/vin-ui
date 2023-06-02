@@ -1,13 +1,13 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 import { commonProps } from '../common';
 
-interface VideosType {
+export interface VideosType {
   id: number | string;
   mainUrl: string;
   videoUrl: string;
 }
 
-interface ImagesType {
+export interface ImagesType {
   smallImgUrl: string;
   bigImgUrl: string;
   imgUrl: string;
