@@ -1,5 +1,4 @@
 import {
-  App,
   defineComponent,
   ComponentPropsOptions,
   ExtractPropTypes,
@@ -63,5 +62,44 @@ export function createComponent(name: string) {
 
       return defineComponent(_component as any);
     },
+  };
+}
+
+export function createPage<
+  PropsOptions extends Readonly<ComponentPropsOptions>,
+  Props extends Readonly<ExtractPropTypes<PropsOptions>>
+>(options: {
+  name?: string;
+  props?: PropsOptions;
+  components?: Record<string, Component>;
+  setup?: (props: Props, setupContext: SetupContext) => RenderFunction | Record<string, any> | any;
+  [optionKey: string]: any;
+}) {
+  const entryPath = '/pages/index/index';
+
+  return {
+    onShareAppMessage: () => {
+      return {
+        title: '基于 Vue 3 的轻量、快速的多平台开发 UI 组件库',
+        path: entryPath,
+        success: (res: any) => {
+          // 转发成功
+          console.log('转发成功', res);
+        },
+        fail: (error: any) => {
+          // 转发失败
+          console.log('转发失败', error);
+        },
+      };
+    },
+
+    onShareTimeline: () => {
+      return {
+        title: '基于 Vue 3 的轻量、快速的多平台开发 UI 组件库',
+        path: entryPath,
+      };
+    },
+
+    ...options,
   };
 }

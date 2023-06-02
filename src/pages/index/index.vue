@@ -1,9 +1,21 @@
 <template>
   <view class="demo demo-home">
-    <view class="demo-home__header">
-      <text class="demo-home__title">Vin UI</text>
-      <text class="demo-home__slogan">轻量、快速的多平台开发UI组件库</text>
-    </view>
+    <vin-searchbar v-model="searchValue">
+      <template v-slot:leftin>
+        <vin-icon size="14" name="search2"></vin-icon>
+      </template>
+    </vin-searchbar>
+
+    <scroll-view class="tag-list" scroll-x="true" show-scrollbar="false" :scroll-left="0">
+      <vin-tag
+        v-for="(tag, index) in tags"
+        type="primary"
+        :custom-class="['category-tag', { active: tag.category === activeCategory }]"
+        :key="index"
+        @click="onClickCategory(tag.category)"
+        >{{ tag.categoryName }}</vin-tag
+      >
+    </scroll-view>
 
     <view class="container">
       <block v-for="(nav, navindex) in nav" :key="navindex">
@@ -18,91 +30,148 @@
   </view>
 </template>
 
-<script>
+<script lang="ts">
+import { reactive, toRefs, watch } from 'vue';
+import { createPage } from '@/utils/create';
 import config from '../../../config.json';
 
-export default {
-  setup() {
+const ALL = 'all';
+
+const nav = [
+  {
+    title: '拓展样式',
+    type: 'extend-style',
+    subnav: [
+      {
+        path: '/pages/components/text',
+        name: 'text',
+        title: '文本',
+      },
+      {
+        path: '/pages/components/background',
+        name: 'background',
+        title: '背景',
+      },
+      {
+        path: '/pages/components/shadow',
+        name: 'shadow',
+        title: '阴影',
+      },
+      {
+        path: '/pages/components/border',
+        name: 'border',
+        title: '边框',
+      },
+    ],
+  },
+  ...config.list.map((item) => {
     return {
-      nav: [
-        {
-          title: '拓展样式',
-          subnav: [
-            {
-              path: '/pages/components/text',
-              name: 'text',
-              title: '文本',
-            },
-            {
-              path: '/pages/components/background',
-              name: 'background',
-              title: '背景',
-            },
-            {
-              path: '/pages/components/shadow',
-              name: 'shadow',
-              title: '阴影',
-            },
-            {
-              path: '/pages/components/border',
-              name: 'border',
-              title: '边框',
-            },
-          ],
-        },
-        ...config.list.map((item) => {
-          return {
-            title: item.name,
-            subnav: item.components.map((comp) => {
-              return {
-                path: `/pages/components/${comp.name.toLocaleLowerCase()}`,
-                name: comp.name,
-                title: comp.desc,
-              };
-            }),
-          };
-        }),
-      ],
+      title: item.name,
+      type: item.type,
+      subnav: item.components.map((comp) => {
+        return {
+          path: `/pages/components/${comp.name.toLocaleLowerCase()}`,
+          name: comp.name,
+          title: comp.desc,
+        };
+      }),
+    };
+  }),
+];
+
+const categories = [
+  {
+    category: ALL,
+    categoryName: '全部',
+  },
+].concat(
+  nav.map((item) => {
+    return {
+      category: item.type,
+      categoryName: item.title,
+    };
+  })
+);
+
+export default createPage({
+  setup() {
+    const state = reactive({
+      searchValue: '',
+      nav,
+      tags: categories,
+      activeCategory: ALL,
+    });
+
+    const filterCategories = (val: string) => {
+      if (ALL === val) {
+        state.nav = nav;
+        return;
+      }
+
+      state.nav = nav.filter((item) => item.type === val || item.title.includes(val));
+    };
+
+    watch(() => state.searchValue, filterCategories);
+
+    const onClickCategory = (category: string) => {
+      state.activeCategory = category;
+
+      filterCategories(category);
+    };
+
+    return {
+      ...toRefs(state),
+      onClickCategory,
     };
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
 $desc-text-color: #909ca4;
 
 .demo-home {
+  --vin-searchbar-padding: 9px 10px;
+  --vin-searchbar-background: transparent;
+  --vin-searchbar-input-background: #fff;
+
   min-height: 10vh;
-  padding: 15px 5px 15px;
-  color: #fff;
-  background-color: #fff;
+  padding: 65px 5px 15px;
+  color: $desc-text-color;
   background-image: url('https://cdn.vingogo.cn/ui-bg.png');
   background-repeat: no-repeat;
   background-size: contain;
 
-  &__header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 32px;
-    text-align: center;
-    margin-top: 25px;
+  .h2 {
+    padding: 0 10px !important;
   }
 
-  &__title {
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-  }
+  .tag-list {
+    box-sizing: border-box;
+    white-space: nowrap;
+    width: 100%;
+    padding: 5px 10px;
 
-  &__slogan {
-    margin-top: 10px;
-    font-size: 14px;
+    :deep .category-tag {
+      padding: 4px 12px;
+      border-radius: 14px;
+      background: #fff;
+      color: #f87d09;
+
+      &.active {
+        background: #f87d09;
+        color: #fff;
+      }
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
   }
 }
 
 .container {
-  margin-top: 30px;
+  margin-top: -15px;
 }
 
 .cols-2 {

@@ -3,6 +3,7 @@
   "list": [
     {
       "name": "基础组件",
+      "type": "basic",
       "components": [
         {
           "name": "icon",
@@ -44,6 +45,7 @@
     },
     {
       "name": "表单组件",
+      "type": "form",
       "components": [
         {
           "name": "radio",
@@ -97,6 +99,7 @@
     },
     {
       "name": "反馈组件",
+      "type": "feedback",
       "components": [
         {
           "name": "backtop",
@@ -126,6 +129,7 @@
     },
     {
       "name": "展示组件",
+      "type": "display",
       "components": [
         {
           "name": "avatar",
@@ -179,6 +183,7 @@
     },
     {
       "name": "导航组件",
+      "type": "navgation",
       "components": [
         {
           "name": "tabbar",
@@ -200,6 +205,7 @@
     },
     {
       "name": "业务组件",
+      "type": "business",
       "components": [
         {
           "name": "card",
