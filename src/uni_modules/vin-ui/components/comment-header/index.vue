@@ -38,25 +38,13 @@
   </view>
 </template>
 <script lang="ts">
-import { createComponent } from '../../common/create';
+import { createComponent } from '../common/create';
+import { commonHeaderProps } from './common';
 
-const { componentName, create } = createComponent('comment-header');
+const { create } = createComponent('comment-header');
 
 export default create({
-  props: {
-    type: {
-      type: String,
-      default: 'default', // default，complex
-    },
-    info: {
-      type: Object,
-      default: () => ({}),
-    },
-    labels: {
-      type: Function,
-      default: () => '',
-    },
-  },
+  props: commonHeaderProps,
   emits: ['handleClick'],
 
   setup(props, { emit }) {
@@ -69,5 +57,5 @@ export default create({
 });
 </script>
 <style lang="scss">
-@import '../index.scss';
+@import '../comment/index.scss';
 </style>

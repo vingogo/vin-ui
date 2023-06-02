@@ -3,7 +3,6 @@ import { nextTick, toRefs, reactive } from 'vue';
 import VinIcon from '../../icon/index.vue';
 import VinRate from '../../rate/index.vue';
 import Comment from '../index.vue';
-// import { Sku as SkuData, Goods } from '../data';
 import CommentData from '../comment_data.json';
 
 beforeAll(() => {

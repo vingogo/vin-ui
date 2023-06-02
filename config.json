@@ -208,6 +208,10 @@
         {
           "name": "category",
           "desc": "商品分类"
+        },
+        {
+          "name": "comment",
+          "desc": "商品评论"
         }
       ]
     }

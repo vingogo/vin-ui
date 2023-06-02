@@ -2,11 +2,11 @@
 <template>
   <view :class="classes" v-if="info && Object.keys(info)">
     <!-- 根据展示信息的多少，分为3种展示风格：simple，base，complex -->
-    <comment-header :type="headerType" :info="info" :labels="labels" @handleClick="handleClick">
+    <vin-comment-header :type="headerType" :info="info" :labels="labels" @handleClick="handleClick">
       <template #labels>
         <slot name="comment-labels"></slot>
       </template>
-    </comment-header>
+    </vin-comment-header>
 
     <slot name="feature"></slot>
 
@@ -17,12 +17,12 @@
       v-html="info.content?.replace(/\n/g, '<br>')"
     ></view>
 
-    <comment-images
+    <vin-comment-images
       :images="images"
       :videos="videos"
       :type="imagesRows"
       @clickImages="clickImages"
-    ></comment-images>
+    ></vin-comment-images>
 
     <view class="vin-comment__follow" v-if="follow && follow.days > 0" @click="handleClick">
       <view class="vin-comment__follow-title">购买{{ follow.days }}天后追评</view>
@@ -32,13 +32,13 @@
       /></view>
     </view>
 
-    <comment-bottom
+    <vin-comment-bottom
       :type="headerType"
       :info="info"
       :operation="operation"
       @clickOperate="clickOperate"
       @handleClick="handleClick"
-    ></comment-bottom>
+    ></vin-comment-bottom>
 
     <slot name="cmt-shop-reply"></slot>
   </view>
@@ -51,6 +51,11 @@ const { componentName, create } = createComponent('comment');
 
 export default create({
   props: {
+    customClass: {
+      type: String,
+      default: '',
+    },
+
     headerType: {
       type: String,
       default: 'default', // 头部展示风格 default，complex
@@ -100,9 +105,12 @@ export default create({
   setup(props, { emit }) {
     const classes = computed(() => {
       const prefixCls = componentName;
-      return {
-        [prefixCls]: true,
-      };
+      return [
+        {
+          [prefixCls]: true,
+        },
+        props.customClass,
+      ];
     });
 
     const conEllipsis = computed(() => {

@@ -32,38 +32,13 @@
 </template>
 <script lang="ts">
 import { ref, watch, onMounted } from 'vue';
-import type { PropType } from 'vue';
+import { commonImagesProps } from './common';
+import { createComponent } from '../common/create';
 
-import { createComponent } from '../../common/create';
-
-const { componentName, create } = createComponent('comment-images');
-
-interface VideosType {
-  id: number | string;
-  mainUrl: string;
-  videoUrl: string;
-}
-interface ImagesType {
-  smallImgUrl: string;
-  bigImgUrl: string;
-  imgUrl: string;
-}
+const { create } = createComponent('comment-images');
 
 export default create({
-  props: {
-    type: {
-      type: String,
-      default: 'one', // one multi
-    },
-    videos: {
-      type: Array as PropType<VideosType[]>,
-      default: () => [],
-    },
-    images: {
-      type: Array as PropType<ImagesType[]>,
-      default: () => [],
-    },
-  },
+  props: commonImagesProps,
   emits: ['click', 'clickImages'],
 
   setup(props, { emit }) {
@@ -109,5 +84,5 @@ export default create({
 });
 </script>
 <style lang="scss">
-@import '../index.scss';
+@import '../comment/index.scss';
 </style>

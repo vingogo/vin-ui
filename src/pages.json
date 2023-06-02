@@ -155,6 +155,9 @@
         },
         {
           "path": "category"
+        },
+        {
+          "path": "comment"
         }
       ]
     }

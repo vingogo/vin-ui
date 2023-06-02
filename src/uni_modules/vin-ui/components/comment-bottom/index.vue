@@ -29,29 +29,14 @@
   </view>
 </template>
 <script lang="ts">
-import { ref, watch, onMounted } from 'vue';
-import type { PropType } from 'vue';
+import { ref, onMounted } from 'vue';
+import { commonBottomProps } from './common';
+import { createComponent } from '../common/create';
 
-import { createComponent } from '../../common/create';
-
-const { componentName, create, translate } = createComponent('comment-bottom');
+const { create, translate } = createComponent('comment-bottom');
 
 export default create({
-  props: {
-    type: {
-      type: String,
-      default: 'base', // simple，base，complex
-    },
-    info: {
-      type: Object,
-      default: () => ({}),
-    },
-
-    operation: {
-      type: Array as PropType<string[]>,
-      default: ['replay', 'like', 'more'],
-    },
-  },
+  props: commonBottomProps,
   emits: ['clickOperate', 'handleClick'],
 
   setup(props, { emit }) {
@@ -88,5 +73,5 @@ export default create({
 });
 </script>
 <style lang="scss">
-@import '../index.scss';
+@import '../comment/index.scss';
 </style>

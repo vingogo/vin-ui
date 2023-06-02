@@ -4,27 +4,13 @@
 
 用于进行评论列表的展示。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Comment, Icon, Rate } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Comment);
-app.use(Icon);
-app.use(Rate);
-```
-
 ### 评论图片单行展示
 
 默认情况下，单个商品的评论的图片是按照单行滑动进行展示的。
 
-:::demo
-
 ```html
 <template>
-<vin-comment
+  <vin-comment
     :images="cmt.images"
     :videos="cmt.videos"
     :info="cmt.info"
@@ -39,146 +25,134 @@ app.use(Rate);
         src="https://img11.360buyimg.com/imagetools/jfs/t1/211858/17/4258/12101/618e6f78Ed0edcadc/e83a673555edf59f.jpg"
       />
     </template>
-</vin-comment>
+  </vin-comment>
 </template>
 <script>
-import { reactive, ref,onMounted } from 'vue';
-export default {
-  setup() {
-    let cmt = ref({});
-    const labels = () => {
-      return '<vin-icon name="fabulous" color="#fa2c19"></vin-icon>';
-    };
-    onMounted(()=>{
-      fetch('//storage.360buyimg.com/nutui/3x/comment_data.json')
-        .then((response) => response.json())
-        .then((res) => {
-          cmt.value = res.Comment;
-        })
-        .catch((err) => console.log('Oh, error', err));
-    })
-    const handleclick = (info: any) => {
-      console.log('进行跳转', info);
-    };
-    const clickImages = (imgs)=>{
-      console.log('进行图片展示',imgs)
-    }
-    return {
-      cmt,
-      labels,
-      handleclick,
-      clickImages
-    };
-  }
-}
-
+  import { reactive, ref, onMounted } from 'vue';
+  export default {
+    setup() {
+      let cmt = ref({});
+      const labels = () => {
+        return '<vin-icon name="fabulous" color="#fa2c19"></vin-icon>';
+      };
+      onMounted(() => {
+        fetch('//storage.360buyimg.com/nutui/3x/comment_data.json')
+          .then((response) => response.json())
+          .then((res) => {
+            cmt.value = res.Comment;
+          })
+          .catch((err) => console.log('Oh, error', err));
+      });
+      const handleclick = (info: any) => {
+        console.log('进行跳转', info);
+      };
+      const clickImages = (imgs) => {
+        console.log('进行图片展示', imgs);
+      };
+      return {
+        cmt,
+        labels,
+        handleclick,
+        clickImages,
+      };
+    },
+  };
+</script>
 ```
-
-:::
 
 ### 评论图片多行展示
 
 通过 headerType 的值可以设置图片多行展示。
 
-:::demo
-
 ```html
 <template>
-<vin-comment
-  headerType="complex"
-  imagesRows="multi"
-  :images="cmt.images"
-  :videos="cmt.videos"
-  :info="cmt.info"
-  ellipsis="6"
-  @clickImages="clickImages"
->
-  <template #comment-labels>
-    <img
-      class="vin-comment-header__labels--item"
-      src="https://storage.360buyimg.com/imgtools/78925d9440-f9e874d0-e93d-11eb-8e5c-0da9e18a13b1.png"
-      style="height: 12px"
-    />
-  </template>
+  <vin-comment
+    headerType="complex"
+    imagesRows="multi"
+    :images="cmt.images"
+    :videos="cmt.videos"
+    :info="cmt.info"
+    ellipsis="6"
+    @clickImages="clickImages"
+  >
+    <template #comment-labels>
+      <img
+        class="vin-comment-header__labels--item"
+        src="https://storage.360buyimg.com/imgtools/78925d9440-f9e874d0-e93d-11eb-8e5c-0da9e18a13b1.png"
+        style="height: 12px"
+      />
+    </template>
 
-  <template #comment-shop-reply>
-    <view class="vin-comment-shop">
-      <span>京东美妆国际：</span
-      >尊敬的客户您好，非常抱歉给您带来不愉快的购物体验，关于过敏，什么成分都不存在个别性和普遍性。
-    </view>
-  </template>
-</vin-comment>
-
+    <template #comment-shop-reply>
+      <view class="vin-comment-shop">
+        <span>京东美妆国际：</span
+        >尊敬的客户您好，非常抱歉给您带来不愉快的购物体验，关于过敏，什么成分都不存在个别性和普遍性。
+      </view>
+    </template>
+  </vin-comment>
 </template>
 <script>
-import { reactive, ref,onMounted } from 'vue';
-export default {
-  setup() {
-    let cmt = ref({});
-    onMounted(()=>{
-      fetch('//storage.360buyimg.com/nutui/3x/comment_data.json')
-        .then((response) => response.json())
-        .then((res) => {
-          cmt.value = res.Comment;
-        })
-        .catch((err) => console.log('Oh, error', err));
-    })
-    const clickImages = (imgs)=>{
-      console.log('进行图片展示',imgs)
-    }
-    return {
-      cmt,
-      clickImages
-    };
-  }
-}
-
+  import { reactive, ref, onMounted } from 'vue';
+  export default {
+    setup() {
+      let cmt = ref({});
+      onMounted(() => {
+        fetch('//storage.360buyimg.com/nutui/3x/comment_data.json')
+          .then((response) => response.json())
+          .then((res) => {
+            cmt.value = res.Comment;
+          })
+          .catch((err) => console.log('Oh, error', err));
+      });
+      const clickImages = (imgs) => {
+        console.log('进行图片展示', imgs);
+      };
+      return {
+        cmt,
+        clickImages,
+      };
+    },
+  };
+</script>
 ```
-
-:::
 
 ### 追评展示
 
-:::demo
-
 ```html
 <template>
-<vin-comment
-  imagesRows="multi"
-  :images="cmt.images"
-  :videos="cmt.videos"
-  :info="cmt.info"
-  :follow="cmt.follow"
-  @clickImages="clickImages"
-></vin-comment>
-
+  <vin-comment
+    imagesRows="multi"
+    :images="cmt.images"
+    :videos="cmt.videos"
+    :info="cmt.info"
+    :follow="cmt.follow"
+    @clickImages="clickImages"
+  ></vin-comment>
 </template>
 <script>
-import { reactive, ref,onMounted } from 'vue';
-export default {
-  setup() {
-    let cmt = ref({});
-    onMounted(()=>{
-      fetch('//storage.360buyimg.com/nutui/3x/comment_data.json')
-        .then((response) => response.json())
-        .then((res) => {
-          cmt.value = res.Comment;
-        })
-        .catch((err) => console.log('Oh, error', err));
-    })
-    const clickImages = (imgs)=>{
-      console.log('进行图片展示',imgs)
-    }
-    return {
-      cmt,
-      clickImages
-    };
-  }
-}
-
+  import { reactive, ref, onMounted } from 'vue';
+  export default {
+    setup() {
+      let cmt = ref({});
+      onMounted(() => {
+        fetch('//storage.360buyimg.com/nutui/3x/comment_data.json')
+          .then((response) => response.json())
+          .then((res) => {
+            cmt.value = res.Comment;
+          })
+          .catch((err) => console.log('Oh, error', err));
+      });
+      const clickImages = (imgs) => {
+        console.log('进行图片展示', imgs);
+      };
+      return {
+        cmt,
+        clickImages,
+      };
+    },
+  };
+</script>
 ```
-
-:::
 
 ## API
 
@@ -255,3 +229,16 @@ const info = [
   },
 ];
 ```
+
+## 主题定制
+
+### 样式变量
+
+组件提供了下列 CSS 变量，可用于自定义样式，使用方法请参考 [ConfigProvider 组件](./configprovider)。
+
+| 名称                                 | 默认值                     |
+| ------------------------------------ | -------------------------- |
+| --vin-comment-header-user-name-color | _rgba(51, 51, 51, 1)_      |
+| --vin-comment-header-time-color      | _rgba(153, 153, 153, 1)_   |
+| --vin-comment-bottom-label-color     | _rgba(153, 153, 153, 1)_   |
+| --vin-comment-shop-color             | _var(--vin-primary-color)_ |
