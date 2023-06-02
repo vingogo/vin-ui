@@ -4,18 +4,6 @@
 
 滑动输入条，用于在给定的范围内选择一个值。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Range } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Range);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

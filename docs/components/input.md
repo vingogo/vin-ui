@@ -4,19 +4,6 @@
 
 单行输入框
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Input, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Input);
-app.use(Icon);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

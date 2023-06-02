@@ -4,17 +4,6 @@
 
 常用于平级区域大块内容的的收纳和展现，支持内嵌标签形式和渲染循环数据形式
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Tabs, TabPane } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Tabs);
-app.use(TabPane);
-```
-
 ### 基础用法
 
 ```html

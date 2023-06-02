@@ -4,16 +4,6 @@
 
 通过点击按钮控制数字增减。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { InputNumber, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(InputNumber).use(Icon);
-```
-
 ### 基础用法
 
 初始化一个默认值

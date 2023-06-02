@@ -4,16 +4,6 @@
 
 空状态时的占位提示
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Empty } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Empty);
-```
-
 ### 基础用法
 
 ```html

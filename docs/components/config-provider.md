@@ -4,23 +4,11 @@
 
 用于全局配置 VinUI 组件，提供暗黑模式，动态主题。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { ConfigProvider } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(ConfigProvider);
-```
-
 ### 深色模式
 
 将 ConfigProvider 组件的 `theme` 属性设置为 `dark`，可以开启深色模式。
 
 深色模式会全局生效，使页面上的所有 VinUI 组件变为深色风格。
-
-:::demo
 
 ```html
 <template>
@@ -48,8 +36,6 @@ app.use(ConfigProvider);
   };
 </script>
 ```
-
-:::
 
 ### 主题定制
 
@@ -82,8 +68,7 @@ page,
 
 #### 通过 ConfigProvider 覆盖
 
-`ConfigProvider` 组件提供了覆盖 `CSS` 变量的能力，你需要在根节点包裹一个 `ConfigProvider` 组件，并通过 `theme-vars` 属性来配置一些主题变量
-:::demo
+`ConfigProvider` 组件提供了覆盖 `CSS` 变量的能力，你需要在根节点包裹一个 `ConfigProvider` 组件，并通过 `theme-vars` 属性来配置一些主题变
 
 ```html
 <template>
@@ -116,8 +101,6 @@ page,
   };
 </script>
 ```
-
-:::
 
 ### 主题变量
 

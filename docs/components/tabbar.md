@@ -4,17 +4,6 @@
 
 底部导航常用场景
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Tabbar, TabbarItem, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Tabbar);
-app.use(TabbarItem);
-```
-
 ### 基础用法
 
 如果需要在现有 Icon 的基础上使用更多图标，请参考 icon 组件自定义图标引入。

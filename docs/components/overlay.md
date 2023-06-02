@@ -4,18 +4,6 @@
 
 创建一个遮罩层，通常用于阻止用户进行其他操作
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { OverLay } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(OverLay);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

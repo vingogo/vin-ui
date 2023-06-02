@@ -4,17 +4,6 @@
 
 展示操作或任务的当前进度，比如上传文件。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Progress, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Progress);
-app.use(Icon);
-```
-
 ### 基础用法
 
 ```html

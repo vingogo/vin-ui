@@ -4,19 +4,6 @@
 
 提供导航功能。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Navbar, Icon, Tabs, TabPane } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Navbar);
-app.use(Icon);
-app.use(Tabs);
-app.use(TabPane);
-```
-
 ### 基本用法
 
 ```html

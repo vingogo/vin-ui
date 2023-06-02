@@ -4,18 +4,6 @@
 
 用于将本地的图片或文件上传至服务器。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Uploader, Icon, Progress } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Uploader);
-app.use(Icon);
-app.use(Progress);
-```
-
 ### 基本用法
 
 ```html

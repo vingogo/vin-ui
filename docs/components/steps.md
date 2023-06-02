@@ -4,18 +4,6 @@
 
 拆分展示某项流程的步骤，引导用户按流程完成任务或向用户展示当前状态。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Steps, Step } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Steps).use(Step);
-```
-
-## 代码演示
-
 ### 基本用法
 
 ```html

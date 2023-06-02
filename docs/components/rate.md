@@ -4,19 +4,6 @@
 
 用于快速的评级操作，或对评价进行展示。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Rate, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Rate);
-app.use(Icon);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

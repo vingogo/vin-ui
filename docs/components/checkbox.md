@@ -4,17 +4,7 @@
 
 多选按钮用于选择。
 
-### 安装
-
-```ts
-import { createApp } from 'vue';
-import { Checkbox, CheckboxGroup, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Checkbox).use(CheckboxGroup).use(Icon);
-```
-
-## 基本用法
+### 基本用法
 
 ```html
 <template>
@@ -45,7 +35,7 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </style>
 ```
 
-## 禁用状态
+### 禁用状态
 
 ```html
 <template>
@@ -67,7 +57,7 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </script>
 ```
 
-## 自定义尺寸
+### 自定义尺寸
 
 ```html
 <template>
@@ -89,7 +79,7 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </script>
 ```
 
-## 自定义图标
+### 自定义图标
 
 这里建议同时设置 `icon-name` 和 `icon-active-name` 属性
 
@@ -113,7 +103,7 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </script>
 ```
 
-## change 事件
+### change 事件
 
 值发生变化时，将触发 `change` 事件
 
@@ -138,7 +128,7 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </script>
 ```
 
-## checkboxGroup 使用
+### checkboxGroup 使用
 
 ```html
 <template>
@@ -168,7 +158,7 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </script>
 ```
 
-## checkboxGroup 全选/取消
+### checkboxGroup 全选/取消
 
 ```html
 <template>
@@ -211,7 +201,9 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 </script>
 ```
 
-## Checkbox
+## API
+
+### Checkbox Prop
 
 | 字段                 | 说明                                                                             | 类型           | 默认值           |
 | -------------------- | -------------------------------------------------------------------------------- | -------------- | ---------------- |
@@ -225,20 +217,20 @@ app.use(Checkbox).use(CheckboxGroup).use(Icon);
 | icon-font-class-name | 自定义 icon 字体基础类名                                                         | String         | `vin-iconfont`   |
 | label                | 复选框的文本内容                                                                 | String         | -                |
 
-## CheckboxGroup
+### CheckboxGroup Prop
 
 | 字段     | 说明                                  | 类型    | 默认值  |
 | -------- | ------------------------------------- | ------- | ------- |
 | v-model  | 当前选中项的标识符，和 `label` 相对应 | Array   | -       |
 | disabled | 是否禁用选择,将用于其下的全部复选框   | Boolean | `false` |
 
-## Checkbox Event
+### Checkbox Event
 
 | 字段   | 说明         | 回调参数                                                    |
 | ------ | ------------ | ----------------------------------------------------------- |
 | change | 值变化时触发 | (state, label),`state`代表当前状态，`label`表示当前选中的值 |
 
-## CheckboxGroup Event
+### CheckboxGroup Event
 
 | 字段   | 说明         | 回调参数                                        |
 | ------ | ------------ | ----------------------------------------------- |

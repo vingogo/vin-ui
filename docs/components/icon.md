@@ -4,18 +4,6 @@
 
 基于 IconFont 字体的图标集，可以通过 Icon 组件使用。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Icon);
-```
-
-## 代码演示
-
 ### 基础用法
 
 `Icon` 的 `name` 属性支持传入图标名称或图片链接。

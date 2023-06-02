@@ -4,18 +4,6 @@
 
 文本框内输入或编辑文字，支持限制输入数量。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { TextArea } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(TextArea);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

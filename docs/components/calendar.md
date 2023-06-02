@@ -4,19 +4,6 @@
 
 日历，可平铺/弹窗展示
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Calendar, Popup } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Calendar);
-app.use(Popup);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

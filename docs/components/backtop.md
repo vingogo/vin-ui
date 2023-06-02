@@ -4,19 +4,6 @@
 
 提供较长的页面快捷返回顶部功能。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { BackTop, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(BackTop);
-app.use(Icon);
-```
-
-### 代码实例
-
 ### 基本用法
 
 ```html

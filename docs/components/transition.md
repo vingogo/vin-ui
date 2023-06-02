@@ -4,18 +4,6 @@
 
 用于界面切换的过渡动画
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Transition } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Transition);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

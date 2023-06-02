@@ -4,20 +4,6 @@
 
 常用于单元格左右滑删除等手势操作
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Swipe, Cell, Button } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Swipe);
-app.use(Cell);
-app.use(Button);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

@@ -4,17 +4,6 @@
 
 悬浮收起体验交互，用于快捷导航
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { FixedNav, OverLay } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(FixedNav);
-app.use(OverLay);
-```
-
 ### 基础用法
 
 ```html

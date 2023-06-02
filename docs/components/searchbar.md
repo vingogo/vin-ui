@@ -4,16 +4,6 @@
 
 搜索栏
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { SearchBar, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(SearchBar).use(Icon);
-```
-
 ### 基础用法
 
 ```html

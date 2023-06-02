@@ -4,17 +4,6 @@
 
 用于分隔成等宽区块进行页面导航。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Grid, GridItem } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Grid);
-app.use(GridItem);
-```
-
 ### 基础用法
 
 ```html

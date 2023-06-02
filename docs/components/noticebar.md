@@ -4,16 +4,6 @@
 
 用于循环播放展示一组消息通知。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { NoticeBar } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(NoticeBar);
-```
-
 ### 基本用法
 
 ```html

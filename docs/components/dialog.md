@@ -4,16 +4,6 @@
 
 模态对话框，在浮层中显示，引导用户进行相关操作，常用于消息提示、消息确认，或在当前页面内完成特定的交互操作。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Dialog, Popup, OverLay } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Dialog).use(Popup).use(OverLay);
-```
-
 ## 使用方式
 
 ```html

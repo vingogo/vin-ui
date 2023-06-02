@@ -4,18 +4,6 @@
 
 用于标记和分类的标签。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Tag } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Tag);
-```
-
-### 代码实例
-
 ### 基础用法
 
 ```html

@@ -4,17 +4,6 @@
 
 用来代表用户或事物，支持图片、图标或字符展示。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Avatar, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Avatar);
-app.use(Icon);
-```
-
 ### 基本用法
 
 支持三种尺寸：small、normal、large

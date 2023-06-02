@@ -4,18 +4,6 @@
 
 按钮用于触发一个操作，如提交表单。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Button } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Button);
-```
-
-## 代码演示
-
 ### 按钮类型
 
 按钮支持 `default`、`primary`、`info`、`warning`、`danger`、`success` 六种类型，默认为 `default`。

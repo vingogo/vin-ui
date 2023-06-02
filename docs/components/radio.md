@@ -4,16 +4,6 @@
 
 用于在一组备选项中进行单选
 
-### 安装
-
-```ts
-import { createApp } from 'vue';
-import { Radio, RadioGroup } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Radio).use(RadioGroup);
-```
-
 ## 基本用法
 
 通过 **v-model** 绑定值当前选项的 **label** 。并且必须 **vin-radiogroup** 和 **vin-radio** 相结合进行使用

@@ -4,18 +4,6 @@
 
 用来打开或关闭选项。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Switch } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Switch);
-```
-
-## 代码演示
-
 ### 基础用法
 
 ```html

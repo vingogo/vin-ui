@@ -4,18 +4,6 @@
 
 出现在图标或文字右上角的红色圆点、数字或者文字，表示有新内容或者待处理的信息。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Badge } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Badge);
-```
-
-### 代码实例
-
 ### 基本用法
 
 ```html

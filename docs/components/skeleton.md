@@ -4,18 +4,6 @@
 
 在页面上待加载区域填充灰色的占位图，本质上是界面加载过程中的过渡效果。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Skeleton } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Skeleton);
-```
-
-### 代码实例
-
 ### 基础用法
 
 ```html

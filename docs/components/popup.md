@@ -4,18 +4,6 @@
 
 弹出层容器，用于展示弹窗、信息提示等内容，支持多个弹出层叠加展示
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Popup, OverLay } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Popup).use(OverLay);
-```
-
-## 代码演示
-
 ### 基础用法
 
 `visible` 控制显示/隐藏

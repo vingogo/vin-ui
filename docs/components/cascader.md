@@ -4,16 +4,6 @@
 
 级联选择器，用于多层级数据的选择，典型场景为省市区选择。
 
-### 安装
-
-```js
-import { createApp } from 'vue';
-import { Cascader, Tabs, TabPane } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Cascader).use(Tabs).use(TabPane);
-```
-
 ### 基础用法
 
 传入`options`列表。

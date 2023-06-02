@@ -4,16 +4,6 @@
 
 列表项，可组成列表。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Cell, CellGroup, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Cell).use(CellGroup).use(Icon);
-```
-
 ### 基本用法
 
 ```html

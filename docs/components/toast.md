@@ -4,16 +4,6 @@
 
 用于轻提示。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Toast } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Toast);
-```
-
 ### 基本用法
 
 ```html

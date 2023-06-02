@@ -4,16 +4,6 @@
 
 常用于一组图片或卡片轮播。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Swiper } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Swiper);
-```
-
 ### 基础用法
 
 `auto-play` 自动轮播的时长

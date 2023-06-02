@@ -4,19 +4,7 @@
 
 列表滚动到底部自动加载更多数据。
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { InfiniteLoading, Icon } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(InfiniteLoading).use(Icon);
-```
-
 ### 基础用法
-
-:::demo
 
 ```html
 <template>
@@ -82,11 +70,7 @@ app.use(InfiniteLoading).use(Icon);
 </style>
 ```
 
-:::
-
 ### 下拉刷新
-
-:::demo
 
 ```html
 <template>
@@ -167,11 +151,7 @@ app.use(InfiniteLoading).use(Icon);
 </style>
 ```
 
-:::
-
 ### 自定义加载文案
-
-:::demo
 
 ```html
 <template>
@@ -238,8 +218,6 @@ app.use(InfiniteLoading).use(Icon);
   }
 </style>
 ```
-
-:::
 
 ## API
 

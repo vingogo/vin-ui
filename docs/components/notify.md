@@ -4,16 +4,6 @@
 
 在页面顶部展示消息提示
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Notify } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Notify);
-```
-
 ## 使用示例
 
 ```html

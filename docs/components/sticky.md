@@ -4,16 +4,6 @@
 
 效果同 `css` 中的 `position: sticky`,对低端浏览器可使用其做兼容
 
-### 安装
-
-```javascript
-import { createApp } from 'vue';
-import { Sticky } from '@vingogo/uni-ui';
-
-const app = createApp();
-app.use(Sticky);
-```
-
 ### 基础用法
 
 ```html
