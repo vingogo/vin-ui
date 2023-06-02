@@ -28,16 +28,14 @@
     background-color: $cell-group-background-color;
     border-radius: $cell-border-radius;
 
-    .vin-cell,
-    ::v-deep .vin-cell {
+    :deep(.vin-cell) {
       margin: 0;
       border-radius: 0;
       box-shadow: none;
     }
   }
 
-  .vin-cell,
-  ::v-deep .vin-cell {
+  :deep(.vin-cell) {
     &::after {
       border-bottom: $cell-after-border-bottom;
     }
