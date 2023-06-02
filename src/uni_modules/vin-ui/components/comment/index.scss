@@ -1,42 +1,5 @@
 $dark-color: $white !default;
 
-.vin-theme-dark {
-  .vin-comment {
-    &-header {
-      &__user {
-        &-name {
-          color: $dark-color;
-        }
-
-        &-default {
-          &-name {
-            color: $dark-color;
-          }
-        }
-      }
-    }
-    &__follow {
-      &-title {
-        color: $dark-color;
-      }
-    }
-    &-bottom {
-      &__cpx {
-        color: $dark-color;
-
-        &-item {
-          span {
-            color: $dark-color;
-          }
-        }
-      }
-    }
-
-    .vin-comment-shop {
-      border-top: 1px solid $dark-color;
-    }
-  }
-}
 .vin-comment {
   width: 100%;
   font-size: 12px;
