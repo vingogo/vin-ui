@@ -10,7 +10,7 @@ const package = require(resolve(PACK_DIR, 'package.json'));
 const input = {};
 
 // 暂不输出
-const excludeComponents = ['comment', 'CmtBottom', 'CmtHeader', 'CmtImages'];
+const excludeComponents = [];
 
 const banner = `/*!
 * ${package.name} v${package.version} ${new Date()}

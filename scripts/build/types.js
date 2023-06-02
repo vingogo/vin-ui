@@ -4,8 +4,7 @@ const { LIB_DIR, PACK_DIR, TYPES_DIR } = require('./const');
 
 const package = require(resolve(PACK_DIR, 'package.json'));
 
-// TODO: 暂不输出, 待处理
-const excludeComponents = ['comment', 'CmtBottom.vue.d', 'CmtHeader.vue.d', 'CmtImages.vue.d'];
+const excludeComponents = [];
 
 const preContent = `
 declare type Install<T> = T & {

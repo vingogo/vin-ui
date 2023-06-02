@@ -5,7 +5,7 @@ const { SRC_DIR, LIB_DIR } = require('./const');
 
 let sassFileStr = ``;
 // 暂不输出
-const excludeComponents = ['comment', 'CmtBottom', 'CmtHeader', 'CmtImages'];
+const excludeComponents = [];
 const replaceExt = (file, ext) => file.replace(extname(file), ext);
 
 const queryFiles = (dir, exts, list = []) => {
