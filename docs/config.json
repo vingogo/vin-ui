@@ -164,6 +164,10 @@
           "desc": "公告栏"
         },
         {
+          "name": "price",
+          "desc": "价格"
+        },
+        {
           "name": "skeleton",
           "desc": "骨架屏"
         }

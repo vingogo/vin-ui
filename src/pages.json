@@ -146,6 +146,9 @@
         },
         {
           "path": "configprovider"
+        },
+        {
+          "path": "price"
         }
       ]
     }

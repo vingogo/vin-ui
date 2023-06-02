@@ -574,6 +574,7 @@ $tag-danger-background-color: var(
     rgba(242, 77, 12, 1) 100%
   )
 ) !default;
+$tag-danger-background-color-plain: var(--vin-tag-danger-background-color-plain, #df3526) !default;
 $tag-warning-background-color: var(--vin-tag-warning-background-color, #f3812e) !default;
 $tag-default-color: var(--vin-tag-default-color, #fff) !default;
 $tag-border-width: var(--vin-tag-border-width, 1px) !default;
@@ -764,6 +765,9 @@ $comment-header-user-name-color: var(
 $comment-header-time-color: var(--vin-comment-header-time-color, rgba(153, 153, 153, 1)) !default;
 $comment-bottom-label-color: var(--vin-comment-bottom-label-color, rgba(153, 153, 153, 1)) !default;
 $comment-shop-color: var(--vin-comment-shop-color, $primary-color) !default;
+
+// price
+$price-color: var(--vin-price-color, $primary-color) !default;
 
 @import './mixins/index';
 @import './animation/index';
