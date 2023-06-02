@@ -249,8 +249,6 @@ app.use(InfiniteLoading).use(Icon);
 | --------------- | --------------------------------------------------- | ------- | ------------------------ |
 | has-more        | 是否还有更多数据                                    | Boolean | `true`                   |
 | threshold       | 滚动条与底部距离小于 threshold 时触发 loadMore 事件 | Number  | `200`                    |
-| use-window      | 将滚动侦听器添加到 window 否则侦听组件的父节点      | Boolean | `true`                   |
-| use-capture     | 是否使用捕获模式 true 捕获 false 冒泡               | Boolean | `false`                  |
 | container-id    | 在 useWindow 属性为 false 的时候，自定义设置节点 ID | String  | `''`                     |
 | load-more-text  | “没有更多数”据展示文案                              | String  | `'哎呀，这里是底部了啦'` |
 | is-open-refresh | 是否开启下拉刷新                                    | Boolean | `false`                  |

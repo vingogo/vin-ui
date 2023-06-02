@@ -35,17 +35,9 @@ export const infiniteLoadingProps = {
     type: String,
     default: '',
   },
-  useWindow: {
-    type: Boolean,
-    default: true,
-  },
   containerId: {
     type: String,
     default: '',
-  },
-  useCapture: {
-    type: Boolean,
-    default: false,
   },
   isOpenRefresh: {
     type: Boolean,
