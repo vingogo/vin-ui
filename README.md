@@ -191,3 +191,9 @@ pnpm build:uni
 - [Github](https://github.com/vingogo/vin-ui)
 - [Gitee](https://gitee.com/vingogo/vin-ui)
 - [uniapp 市场插件](https://ext.dcloud.net.cn/plugin?id=11187)
+
+## 联系
+
+有关 VinUI 的问题，欢迎添加微信交流，加微信请备注：VinUI
+
+![wechat](https://cdn.vingogo.cn/wechat.jpg)
