@@ -26,7 +26,8 @@
     "type-check": "vue-tsc --noEmit",
     "deploy:ui": "npm run build && node ./scripts/deploy.js --prefix=ui --dist=dist/build/h5",
     "deploy:docs": "npm run build:docs && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist",
-    "release": "sh release.sh"
+    "ci:version": "changeset version && pnpm install --frozen-lockfile false",
+    "ci:publish": "pnpm build && changeset publish"
   },
   "lint-staged": {
     "*.md": "prettier --write",
@@ -66,6 +67,8 @@
     "vue": "^3.2.33"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@dcloudio/types": "^3.2.11",
