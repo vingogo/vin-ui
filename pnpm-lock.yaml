@@ -81,6 +81,9 @@ importers:
       '@vingogo/eslint-config-vue':
         specifier: ^0.2.0
         version: registry.npmjs.org/@vingogo/eslint-config-vue@0.2.0(eslint@8.36.0)(prettier@2.8.7)(typescript@4.9.5)
+      '@vingogo/prettier-config':
+        specifier: ^0.1.1
+        version: registry.npmjs.org/@vingogo/prettier-config@0.1.1(prettier@2.8.7)
       '@vingogo/stylelint-config':
         specifier: ^0.1.0
         version: registry.npmjs.org/@vingogo/stylelint-config@0.1.0(prettier@2.8.7)(stylelint@13.13.1)
@@ -15718,6 +15721,17 @@ packages:
       - prettier
       - supports-color
       - typescript
+    dev: true
+
+  registry.npmjs.org/@vingogo/prettier-config@0.1.1(prettier@2.8.7):
+    resolution: {integrity: sha512-MC/rt1fFwSW91+kK7XSnIUIkjwRX3sy6iJ3J8sLwmiRM/fZMNUNvzp3cDVgjIQf9BJjOWQUFGvtFpNyhuLSn0Q==, registry: https://registry.npmmirror.com/, tarball: https://registry.npmjs.org/@vingogo/prettier-config/-/prettier-config-0.1.1.tgz}
+    id: registry.npmjs.org/@vingogo/prettier-config/0.1.1
+    name: '@vingogo/prettier-config'
+    version: 0.1.1
+    peerDependencies:
+      prettier: ^2.6.2
+    dependencies:
+      prettier: 2.8.7
     dev: true
 
   registry.npmjs.org/@vingogo/stylelint-config@0.1.0(prettier@2.8.7)(stylelint@13.13.1):

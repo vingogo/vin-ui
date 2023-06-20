@@ -80,6 +80,7 @@
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
     "@vingogo/eslint-config-vue": "^0.2.0",
+    "@vingogo/prettier-config": "^0.1.1",
     "@vingogo/stylelint-config": "^0.1.0",
     "@vingogo/vin-cli": "^0.3.1",
     "@vitejs/plugin-vue": "^3.0.1",
