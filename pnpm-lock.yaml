@@ -81,6 +81,9 @@ importers:
       '@vingogo/eslint-config-vue':
         specifier: ^0.2.0
         version: registry.npmjs.org/@vingogo/eslint-config-vue@0.2.0(eslint@8.36.0)(prettier@2.8.7)(typescript@4.9.5)
+      '@vingogo/stylelint-config':
+        specifier: ^0.1.0
+        version: registry.npmjs.org/@vingogo/stylelint-config@0.1.0(prettier@2.8.7)(stylelint@13.13.1)
       '@vingogo/vin-cli':
         specifier: ^0.3.1
         version: 0.3.1(@types/node@17.0.45)(eslint@8.36.0)(postcss@8.4.21)(typescript@4.9.5)(vue@3.2.47)
@@ -150,24 +153,6 @@ importers:
       stylelint:
         specifier: ^13.13.1
         version: 13.13.1
-      stylelint-config-prettier:
-        specifier: ^8.0.2
-        version: 8.0.2(stylelint@13.13.1)
-      stylelint-config-rational-order:
-        specifier: ^0.1.2
-        version: 0.1.2
-      stylelint-config-standard:
-        specifier: ^22.0.0
-        version: 22.0.0(stylelint@13.13.1)
-      stylelint-declaration-block-no-ignored-properties:
-        specifier: ^2.3.0
-        version: 2.7.0(stylelint@13.13.1)
-      stylelint-order:
-        specifier: ^4.1.0
-        version: 4.1.0(stylelint@13.13.1)
-      stylelint-prettier:
-        specifier: ^1.2.0
-        version: 1.2.0(prettier@2.8.7)(stylelint@13.13.1)
       ts-jest:
         specifier: ^26.5.5
         version: 26.5.6(jest@26.6.3)(typescript@4.9.5)
@@ -4150,7 +4135,7 @@ packages:
     resolution: {integrity: sha512-GpTIuDpb9u4zIO165fUy9+fXcULdD8HFRNli04GehoMVbeNq7D6OBnqSmg3lxZnC+UvgUhEWKxdKiwYUkGltIw==}
     deprecated: This is a stub types definition. vfile-message provides its own type definitions, so you do not need this installed.
     dependencies:
-      vfile-message: 3.1.4
+      vfile-message: 2.0.4
     dev: true
 
   /@types/vfile@3.0.2:
@@ -13593,12 +13578,12 @@ packages:
       stylelint: 13.13.1
     dev: true
 
-  /stylelint-prettier@1.2.0(prettier@2.8.7)(stylelint@13.13.1):
-    resolution: {integrity: sha512-/MYz6W2CNgKHblPzPtk7cybu8H5dGG3c2GevL64RButERj1uJg4SdBIIat1hMfDOmN6QQpldc6tCc//ZAWh9WQ==}
-    engines: {node: '>=6'}
+  /stylelint-prettier@3.0.0(prettier@2.8.7)(stylelint@13.13.1):
+    resolution: {integrity: sha512-kIks1xw6np0zElokMT2kP6ar3S4MBoj6vUtPJuND1pFELMpZxVS/0uHPR4HDAVn0WAD3I5oF0IA3qBFxBpMkLg==}
+    engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
-      prettier: '>= 0.11.0'
-      stylelint: '>= 9.2.1'
+      prettier: '>=2.0.0'
+      stylelint: '>=14.0.0'
     dependencies:
       prettier: 2.8.7
       prettier-linter-helpers: 1.0.0
@@ -14281,12 +14266,6 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /unist-util-stringify-position@3.0.3:
-    resolution: {integrity: sha512-k5GzIBZ/QatR8N5X2y+drfpWG8IDBzdnVj6OInRNWm1oXrzydiaAT2OQiA8DPRRZyAKb9b6I2a6PxYklZD0gKg==}
-    dependencies:
-      '@types/unist': 2.0.6
-    dev: true
-
   /unist-util-visit-parents@2.1.2:
     resolution: {integrity: sha512-DyN5vD4NE3aSeB+PXYNKxzGsfocxp6asDc2XXE3b0ekO2BaRUpBicbbUygfSvYfUz1IkmjFR1YF7dPklraMZ2g==}
     dependencies:
@@ -14484,13 +14463,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.6
       unist-util-stringify-position: 2.0.3
-    dev: true
-
-  /vfile-message@3.1.4:
-    resolution: {integrity: sha512-fa0Z6P8HUrQN4BZaX05SIVXic+7kE3b05PWAtPuYP9QLHsLKYR7/AlLW3NtOrpXRLeawpDLMsVkmk5DG0NXgWw==}
-    dependencies:
-      '@types/unist': 2.0.6
-      unist-util-stringify-position: 3.0.3
     dev: true
 
   /vfile@3.0.1:
@@ -15746,4 +15718,24 @@ packages:
       - prettier
       - supports-color
       - typescript
+    dev: true
+
+  registry.npmjs.org/@vingogo/stylelint-config@0.1.0(prettier@2.8.7)(stylelint@13.13.1):
+    resolution: {integrity: sha512-rg69XN+7LDfgonKPpYC5fBRUwVYzaVLDu3KZO6z9ZP/TaZpCnELQEUmVPGXl7dilEN5qvNDFIfXdGxcB7wv6+w==, registry: https://registry.npmmirror.com/, tarball: https://registry.npmjs.org/@vingogo/stylelint-config/-/stylelint-config-0.1.0.tgz}
+    id: registry.npmjs.org/@vingogo/stylelint-config/0.1.0
+    name: '@vingogo/stylelint-config'
+    version: 0.1.0
+    peerDependencies:
+      stylelint: '>=13.13.1'
+    dependencies:
+      stylelint: 13.13.1
+      stylelint-config-prettier: 8.0.2(stylelint@13.13.1)
+      stylelint-config-rational-order: 0.1.2
+      stylelint-config-standard: 22.0.0(stylelint@13.13.1)
+      stylelint-declaration-block-no-ignored-properties: 2.7.0(stylelint@13.13.1)
+      stylelint-order: 4.1.0(stylelint@13.13.1)
+      stylelint-prettier: 3.0.0(prettier@2.8.7)(stylelint@13.13.1)
+    transitivePeerDependencies:
+      - prettier
+      - supports-color
     dev: true
