@@ -9,37 +9,37 @@ importers:
   .:
     dependencies:
       '@dcloudio/uni-app':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(@dcloudio/types@3.2.11)(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-app-plus':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vite@4.1.4)(vue@3.2.47)
       '@dcloudio/uni-components':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002
       '@dcloudio/uni-h5':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-mp-alipay':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-mp-baidu':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-mp-kuaishou':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-mp-lark':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-mp-qq':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-mp-toutiao':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-mp-weixin':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       vue:
         specifier: ^3.2.33
@@ -61,13 +61,13 @@ importers:
         specifier: ^3.2.11
         version: 3.2.11
       '@dcloudio/uni-automator':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(jest@26.6.3)(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-cli-shared':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/vite-plugin-uni':
-        specifier: 3.0.0-alpha-3070420230224002
+        specifier: ^3.0.0-3080420230531001
         version: 3.0.0-alpha-3070420230224002(postcss@8.4.21)(vite@4.1.4)(vue@3.2.47)
       '@types/node':
         specifier: ^17.0.31
