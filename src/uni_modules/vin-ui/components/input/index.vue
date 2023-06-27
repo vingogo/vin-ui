@@ -80,7 +80,7 @@
         <view v-if="readonly" class="vin-input-disabled-mask"></view>
       </view>
       <view v-if="showWordLimit && maxLength" class="vin-input-word-limit">
-        <span class="vin-input-word-num">{{ modelValue ? modelValue.length : 0 }}</span
+        <text class="vin-input-word-num">{{ modelValue ? modelValue.length : 0 }}</text
         >/{{ maxLength }}
       </view>
       <view
@@ -255,7 +255,7 @@ export default create({
       () => {
         updateValue(getModelValue());
         resetValidation();
-      }
+      },
     );
 
     onMounted(() => {

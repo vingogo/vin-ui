@@ -51,7 +51,7 @@ $dark-color: $white !default;
 
           @include oneline-ellipsis();
 
-          > span {
+          > .text {
             margin-right: 8px;
           }
         }
@@ -232,7 +232,7 @@ $dark-color: $white !default;
       // align-items: center;
       font-size: 14px;
 
-      i {
+      .text {
         position: absolute;
         top: 13%;
         left: 0;
@@ -275,7 +275,7 @@ $dark-color: $white !default;
         align-items: center;
         margin-right: 18px;
 
-        span {
+        .text {
           margin-right: 5px;
           color: $black;
         }
@@ -353,7 +353,7 @@ $dark-color: $white !default;
     padding-top: 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     @include moreline-ellipsis(6);
-    span {
+    .text {
       color: $comment-shop-color;
     }
   }

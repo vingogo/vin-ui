@@ -25,7 +25,7 @@
           }"
           v-if="showText && textInside && !slotDefault"
         >
-          <span :style="textStyle">{{ percentage }}{{ isShowPercentage ? '%' : '' }}</span>
+          <text :style="textStyle">{{ percentage }}{{ isShowPercentage ? '%' : '' }}</text>
         </view>
         <view
           ref="insideText"
@@ -43,7 +43,7 @@
     </view>
     <view class="vin-progress-text" :style="{ lineHeight: height }" v-if="showText && !textInside">
       <template v-if="status == 'text' || status == 'active'">
-        <span :style="textStyle">{{ percentage }}{{ isShowPercentage ? '%' : '' }} </span>
+        <text :style="textStyle">{{ percentage }}{{ isShowPercentage ? '%' : '' }} </text>
       </template>
       <template v-else-if="status == 'icon'">
         <vin-icon size="16px" :name="iconName" :color="iconColor"></vin-icon>

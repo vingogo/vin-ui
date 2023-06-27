@@ -23,7 +23,7 @@
           class="vin-comment-images__mask"
           v-if="type == 'multi' && totalImages.length > 9 && videos.length + index > 7"
         >
-          <span>共 {{ totalImages.length }} 张</span>
+          <text>共 {{ totalImages.length }} 张</text>
           <vin-icon name="right" size="12"></vin-icon>
         </view>
       </view>
@@ -56,7 +56,7 @@ export default create({
         }
         totalImages.value = (value[0] as any).concat(value[1]);
       },
-      { deep: true }
+      { deep: true },
     );
 
     onMounted(() => {

@@ -196,4 +196,4 @@ pnpm build:uni
 
 有关 VinUI 的问题，欢迎添加微信交流，加微信请备注：VinUI
 
-![wechat](https://cdn.vingogo.cn/wechat.jpg)
+<img width="150" src="https://cdn.vingogo.cn/wechat.jpg" alt="wechat" title="wechat" />
