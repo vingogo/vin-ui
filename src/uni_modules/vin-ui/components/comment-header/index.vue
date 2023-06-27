@@ -8,7 +8,7 @@
 
         <view :class="[`vin-comment-header__user-${type}`]" v-if="type == 'default'">
           <view :class="[`vin-comment-header__user-${type}-name`]">
-            <span>{{ info.nickName }}</span>
+            <text class="text">{{ info.nickName }}</text>
             <slot name="labels"></slot>
           </view>
 
@@ -24,7 +24,7 @@
         </view>
 
         <view :class="[`vin-comment-header__user-${type}`]" v-else>
-          <span :class="[`vin-comment-header__user-${type}-name`]">{{ info.nickName }}</span>
+          <text :class="[`vin-comment-header__user-${type}-name`]">{{ info.nickName }}</text>
           <slot name="labels"></slot>
         </view>
       </view>
@@ -32,7 +32,7 @@
     </view>
     <view :class="[`vin-comment-header__${type}-score`]" v-if="type == 'complex'">
       <vin-rate v-model="info.score" icon-size="12" spacing="3" readonly />
-      <i :class="[`vin-comment-header__${type}-score-i`]"></i>
+      <text :class="[`vin-comment-header__${type}-score-i`]"></text>
       <view :class="[`vin-comment-header__${type}-score-size`]">{{ info.size }}</view>
     </view>
   </view>

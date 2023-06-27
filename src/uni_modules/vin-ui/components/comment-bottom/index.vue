@@ -1,7 +1,7 @@
 <template>
   <view class="vin-comment-bottom">
     <view @click="handleClick" class="vin-comment-bottom__lable">
-      <span v-if="type != 'complex'">{{ info.size }}</span></view
+      <text v-if="type != 'complex'">{{ info.size }}</text></view
     >
 
     <view class="vin-comment-bottom__cpx">
@@ -11,7 +11,7 @@
           @click="operate(name)"
         >
           <template v-if="name != 'more'">
-            <span>{{ info[name] }}</span>
+            <text class="text">{{ info[name] }}</text>
             <vin-icon :name="name == 'like' ? 'fabulous' : 'comment'"></vin-icon>
           </template>
           <template v-if="name == 'more'">

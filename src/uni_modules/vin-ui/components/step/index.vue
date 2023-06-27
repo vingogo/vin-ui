@@ -14,11 +14,11 @@
     </view>
     <view class="vin-step-main">
       <view class="vin-step-title">
-        <span v-if="!$slots.title">{{ title }}</span>
+        <text v-if="!$slots.title">{{ title }}</text>
         <slot name="title"></slot>
       </view>
       <view class="vin-step-content" v-if="content || $slots.content">
-        <span v-if="!$slots.content" v-html="content"></span>
+        <text v-if="!$slots.content" v-html="content"></text>
         <slot name="content"></slot>
       </view>
     </view>

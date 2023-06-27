@@ -3,15 +3,15 @@
     <view class="min" v-if="!hiddenRange">{{ +min }}</view>
     <view ref="root" :id="rootId" :style="wrapperStyle" :class="mainClass" @click.stop="onClick">
       <view class="vin-range-mark" v-if="marksList.length > 0">
-        <span
+        <text
           v-for="marks in marksList"
           :key="marks"
           :class="markClassName(marks)"
           :style="marksStyle(marks)"
         >
           {{ marks }}
-          <span class="vin-range-tick" :style="tickStyle(marks)"></span>
-        </span>
+          <text class="vin-range-tick" :style="tickStyle(marks)"></text>
+        </text>
       </view>
       <view class="vin-range-bar" :style="barStyle">
         <template v-if="range">
