@@ -45,14 +45,6 @@
       "prettier --parser css --write"
     ]
   },
-  "engines": {
-    "node": ">=16.14.0"
-  },
-  "browserslist": [
-    "last 3 versions",
-    "Android >= 4.1",
-    "ios >= 8"
-  ],
   "dependencies": {
     "@dcloudio/uni-app": "^3.0.0-3080420230531001",
     "@dcloudio/uni-app-plus": "^3.0.0-3080420230531001",
@@ -82,7 +74,7 @@
     "@vingogo/eslint-config-vue": "^0.2.0",
     "@vingogo/prettier-config": "^0.1.1",
     "@vingogo/stylelint-config": "^0.1.0",
-    "@vingogo/vin-cli": "^0.3.1",
+    "@vingogo/vin-cli": "^0.6.0",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vue/test-utils": "^2.0.2",
     "@vue/vue3-jest": "^28.0.1",
