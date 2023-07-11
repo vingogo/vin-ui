@@ -158,6 +158,9 @@
         },
         {
           "path": "comment"
+        },
+        {
+          "path": "actionsheet"
         }
       ]
     }

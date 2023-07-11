@@ -351,4 +351,19 @@
       background: $dark-background2;
     }
   }
+
+  .vin-action-sheet {
+    .vin-action-sheet__cancel {
+      border-top: 1px solid $dark-background2;
+    }
+    .vin-action-sheet__title {
+      border-bottom: 1px solid $dark-background2;
+    }
+    .vin-action-sheet__cancel,
+    .vin-action-sheet__item,
+    .vin-action-sheet__title {
+      color: $dark-color;
+      background: $dark-background;
+    }
+  }
 }

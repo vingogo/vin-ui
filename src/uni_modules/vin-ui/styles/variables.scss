@@ -796,6 +796,15 @@ $category-pane-gray-color: var(--vin-category-pane-gray-color, #666) !default;
 $category-pane-border-color: var(--vin-category-pane-border-color, rgb(153, 153, 153)) !default;
 $category-pane-title-color: var(--vin-category-pane-title-color, rgba(51, 51, 51, 1)) !default;
 
+// actionsheet
+$actionsheet-light-color: #f6f6f6 !default;
+$actionsheet-item-border-bottom: none !default;
+$actionsheet-item-font-size: $font-size-2 !default;
+$actionsheet-item-subdesc-font-size: $font-size-1 !default;
+$actionsheet-item-cancel-border-top: 1px solid $actionsheet-light-color !default;
+$actionsheet-item-line-height: 24px !default;
+$actionsheet-item-font-color: $title-color !default;
+
 @import './mixins/index';
 @import './animation/index';
 @import './dark';

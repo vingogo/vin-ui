@@ -92,7 +92,7 @@ const categories = [
       category: item.type,
       categoryName: item.title,
     };
-  })
+  }),
 );
 
 export default createDemo({

@@ -102,6 +102,10 @@
       "type": "feedback",
       "components": [
         {
+          "name": "ActionSheet",
+          "desc": "动作面板"
+        },
+        {
           "name": "backtop",
           "desc": "返回顶部"
         },

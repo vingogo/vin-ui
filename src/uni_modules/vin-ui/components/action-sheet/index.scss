@@ -1,0 +1,57 @@
+.vin-action-sheet {
+  display: block;
+  .vin-action-sheet__title {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    color: $title-color;
+    font-size: $font-size-base;
+    text-align: center;
+    background-color: $white;
+    border-bottom: 1px solid $actionsheet-light-color;
+  }
+  .vin-action-sheet__menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .vin-action-sheet__cancel,
+  .vin-action-sheet__item {
+    display: block;
+    padding: 10px;
+    color: $actionsheet-item-font-color;
+    font-size: $actionsheet-item-font-size;
+    line-height: $actionsheet-item-line-height;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: $actionsheet-item-border-bottom;
+    cursor: pointer;
+  }
+
+  .vin-action-sheet__desc {
+    color: #999;
+    font-size: $actionsheet-item-font-size;
+    cursor: default;
+  }
+
+  .vin-action-sheet__subdesc {
+    display: block;
+    color: #999;
+    font-size: $actionsheet-item-subdesc-font-size;
+  }
+
+  .vin-action-sheet__item--disabled {
+    color: #e1e1e1 !important;
+    cursor: not-allowed;
+  }
+  .vin-action-sheet__item--loading {
+    cursor: default;
+  }
+
+  .vin-action-sheet__cancel {
+    margin-top: 5px;
+    border-top: $actionsheet-item-cancel-border-top;
+  }
+}
