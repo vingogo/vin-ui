@@ -28,7 +28,7 @@ export function createComponent(name: string) {
     },
     create: function <
       PropsOptions extends Readonly<ComponentPropsOptions>,
-      Props extends Readonly<ExtractPropTypes<PropsOptions>>
+      Props extends Readonly<ExtractPropTypes<PropsOptions>>,
     >(_component: {
       name?: string;
       baseName?: string;
@@ -37,7 +37,7 @@ export function createComponent(name: string) {
       components?: Record<string, Component>;
       setup?: (
         props: Props,
-        setupContext: SetupContext
+        setupContext: SetupContext,
       ) => RenderFunction | Record<string, any> | any;
       emits?: string[];
       [optionKey: string]: any;
@@ -63,7 +63,7 @@ export function createComponent(name: string) {
     },
     createDemo<
       PropsOptions extends Readonly<ComponentPropsOptions>,
-      Props extends Readonly<ExtractPropTypes<PropsOptions>>
+      Props extends Readonly<ExtractPropTypes<PropsOptions>>,
     >(_component: {
       name?: string;
       baseName?: string;
@@ -71,7 +71,7 @@ export function createComponent(name: string) {
       components?: Record<string, Component>;
       setup?: (
         props: Props,
-        setupContext: SetupContext
+        setupContext: SetupContext,
       ) => RenderFunction | Record<string, any> | any;
       emits?: string[];
       [optionKey: string]: any;

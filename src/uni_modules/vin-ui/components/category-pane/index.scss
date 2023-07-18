@@ -9,7 +9,7 @@
     color: $category-pane-title-color;
     font-weight: 500;
     font-size: 13px;
-    font-family: PingFangSC;
+    font-family: PingFangSC, -apple-system-font, Helvetica Neue, sans-serif;
   }
 
   &__childItemList {
@@ -38,7 +38,7 @@
     color: $category-pane-gray-color;
     font-weight: normal;
     font-size: 12px;
-    font-family: PingFangSC;
+    font-family: PingFangSC, -apple-system-font, Helvetica Neue, sans-serif;
     border: 1px solid $category-pane-border-color;
     border-radius: 5px;
 
@@ -56,7 +56,7 @@
     color: $category-pane-gray-color;
     font-weight: normal;
     font-size: 12px;
-    font-family: PingFangSC;
+    font-family: PingFangSC, -apple-system-font, Helvetica Neue, sans-serif;
     text-align: center;
   }
 

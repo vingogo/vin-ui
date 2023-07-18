@@ -47,7 +47,7 @@ class Tree {
 
     while (currentNodes && currentNodes.length) {
       const foundNode: CascaderOption | void = currentNodes.find(
-        (node) => node.value === value[node.level as number]
+        (node) => node.value === value[node.level as number],
       );
 
       if (!foundNode) {

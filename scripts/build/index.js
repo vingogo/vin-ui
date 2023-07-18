@@ -23,7 +23,7 @@ const copySourceCode = async () => {
       }
 
       return copy(resolve(SRC_DIR, dir), resolve(LIB_DIR, dir));
-    })
+    }),
   );
 };
 

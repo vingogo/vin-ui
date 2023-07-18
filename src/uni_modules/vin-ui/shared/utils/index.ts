@@ -133,7 +133,7 @@ const cacheStringFunction = <T extends (str: string) => string>(fn: T): T => {
 
 const hyphenateRE = /\B([A-Z])/g;
 export const hyphenate = cacheStringFunction((str: string) =>
-  str.replace(hyphenateRE, '-$1').toLowerCase()
+  str.replace(hyphenateRE, '-$1').toLowerCase(),
 );
 
 export const kebabCase = (str: string): string => {
@@ -145,7 +145,7 @@ export const kebabCase = (str: string): string => {
 export const colorHexToRgb = (hex: string) => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
-    hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b)
+    hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b),
   );
 
   /* eslint-disable */

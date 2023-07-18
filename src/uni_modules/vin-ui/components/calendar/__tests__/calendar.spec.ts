@@ -83,7 +83,7 @@ test('should render slot correctly', async () => {
   });
   await nextTick();
   expect(wrapper.find('.calendar-top-slot').html()).toContain(
-    '<view class="d_div"> 最近七天</view>'
+    '<view class="d_div"> 最近七天</view>',
   );
   expect(wrapper.find('.viewArea').html()).toMatchSnapshot();
 });

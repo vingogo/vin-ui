@@ -25,7 +25,7 @@ export function trigger(
   eventName: string,
   x = 0,
   y = 0,
-  options: any = {}
+  options: any = {},
 ) {
   const el = 'element' in wrapper ? wrapper.element : wrapper;
   const touchList = options.touchList || [getTouch(el, x, y)];

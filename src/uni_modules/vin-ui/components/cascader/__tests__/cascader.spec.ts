@@ -262,7 +262,7 @@ describe('Tree', () => {
         value: 'name',
         text: 'name',
         children: 'items',
-      }
+      },
     );
     expect(tree.nodes).toMatchObject([
       {

@@ -47,7 +47,7 @@ export function flattenVNodes(shouldTraverseChildren: VNodeNormalizedChildren, c
 export function sortChildren(
   parent: ComponentInternalInstance,
   internalChildren: ComponentInternalInstance[],
-  childName?: string
+  childName?: string,
 ) {
   const vnodes = flattenVNodes(parent && parent.subTree && parent.subTree.children, childName);
   internalChildren.sort((a, b) => {

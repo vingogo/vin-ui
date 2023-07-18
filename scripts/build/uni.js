@@ -23,7 +23,7 @@ const copySourceCode = async () => {
       }
 
       return copy(resolve(SRC_DIR, dir), resolve(LIB_DIR, dir));
-    })
+    }),
   );
 };
 
@@ -44,7 +44,7 @@ const genEnterFile = async () => {
 export default {};
 </script>
 `,
-    'utf8'
+    'utf8',
   );
 };
 

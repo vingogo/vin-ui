@@ -61,7 +61,7 @@ const formatVideo = (res: UniChooseVideoSuccess): ChooseFile[] => {
 };
 
 const formatMedia = (
-  res: UniApp.ChooseMediaSuccessCallbackResult & { name?: string }
+  res: UniApp.ChooseMediaSuccessCallbackResult & { name?: string },
 ): ChooseFile[] => {
   return res.tempFiles.map((item) => ({
     ...omitProps(item, ['fileType', 'thumbTempFilePath', 'tempFilePath']),

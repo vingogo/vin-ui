@@ -18,7 +18,7 @@
     color: $category-list-item-color;
     font-weight: normal;
     font-size: 13px;
-    font-family: PingFangSC;
+    font-family: PingFangSC, -apple-system-font, Helvetica Neue, sans-serif;
     transition: all 0.3s;
   }
   &__cateListItemChecked {

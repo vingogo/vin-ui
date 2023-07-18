@@ -100,7 +100,7 @@ test('should render base uploader other props', async () => {
   toast2.trigger('click');
   expect(wrapper.emitted('file-item-click')).toBeTruthy();
   expect(toast2.attributes().src).toBe(
-    'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI'
+    'https://via.placeholder.com/120x120/f87d09/fff?text=Vin+UI',
   );
   const toast3 = wrapper.find('.vin-icon-fabulous');
   expect(toast3.exists()).toBe(true);

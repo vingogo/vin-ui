@@ -3,7 +3,7 @@ import { CascaderOption, CascaderConfig, convertConfig } from './types';
 export const formatTree = (
   tree: CascaderOption[],
   parent: CascaderOption | null,
-  config: CascaderConfig
+  config: CascaderConfig,
 ): CascaderOption[] =>
   tree.map((node: CascaderOption) => {
     const {
@@ -54,7 +54,7 @@ const defaultConvertConfig = {
 };
 export const convertListToOptions = (
   list: CascaderOption[],
-  options: convertConfig
+  options: convertConfig,
 ): CascaderOption[] => {
   const mergedOptions = {
     ...defaultConvertConfig,

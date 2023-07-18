@@ -18,7 +18,7 @@ const useTransition = (
     beforeLeave: () => void;
     leave: () => void;
     afterLeave: () => void;
-  }
+  },
 ) => {
   const isShow = ref(false);
   const classes = ref('');
@@ -32,7 +32,7 @@ const useTransition = (
       leaveClass: props.leaveClass,
       leaveActiveClass: props.leaveActiveClass,
       leaveToClass: props.leaveToClass,
-    })
+    }),
   );
 
   // 进入动画

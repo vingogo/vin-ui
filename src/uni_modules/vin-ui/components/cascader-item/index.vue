@@ -80,7 +80,7 @@ export default create({
       if (configs.value.convertConfig) {
         options = convertListToOptions(
           options as CascaderOption[],
-          configs.value.convertConfig as convertConfig
+          configs.value.convertConfig as convertConfig,
         );
       }
 
@@ -285,7 +285,7 @@ export default create({
       {
         deep: true,
         immediate: true,
-      }
+      },
     );
     watch(
       () => props.modelValue,
@@ -294,7 +294,7 @@ export default create({
           innerValue.value = value as CascaderValue;
           syncValue();
         }
-      }
+      },
     );
     watch(
       () => props.visible,
@@ -303,7 +303,7 @@ export default create({
         if (val && Array.isArray(innerValue.value) && innerValue.value.length > 0) {
           syncValue();
         }
-      }
+      },
     );
 
     return { panes, initLoading, tabsCursor, ...methods };

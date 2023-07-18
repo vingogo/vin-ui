@@ -98,7 +98,7 @@ export const getClassNames = (
     leaveClass,
     leaveActiveClass,
     leaveToClass,
-  }: IClassNameProps
+  }: IClassNameProps,
 ): IClassNames => {
   const defaultClassNames = getDefaultClassNames(name);
 

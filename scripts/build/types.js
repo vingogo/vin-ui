@@ -71,7 +71,7 @@ declare module 'vue' {
 }`;
       let changeContent = content.replace(
         regex,
-        `${preContent}${start} Install<${inputs[1]}>${end}${remain}`
+        `${preContent}${start} Install<${inputs[1]}>${end}${remain}`,
       );
       outputFileSync(filePath, changeContent);
 

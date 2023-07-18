@@ -22,7 +22,7 @@ export const Component = create({
     const formErrorTip = computed(() => reactive<any>({}));
     const { internalChildren } = useProvide(
       FORM_KEY,
-      `${componentName}-item`
+      `${componentName}-item`,
     )({ props, formErrorTip });
 
     const clearErrorTips = (value = props.modelValue) => {
@@ -40,7 +40,7 @@ export const Component = create({
       (value: any) => {
         clearErrorTips(value);
       },
-      { immediate: true }
+      { immediate: true },
     );
 
     const findFormItem = (vnodes: VNode[]) => {

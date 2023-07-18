@@ -35,14 +35,14 @@ const parseSFCFile = async (filePath, name) => {
       const outputSFCPath = resolve(
         LIB_DIR,
         // TODO: 临时兼容特殊情况
-        `components/${filePath.split('/components/').slice(1).join('/components/')}`
+        `components/${filePath.split('/components/').slice(1).join('/components/')}`,
       );
 
       outputFileSync(
         outputSFCPath,
         `
         <template>${template?.content}</template>\n<script>import s from './index.js';export default s;</script>
-      `.trim()
+      `.trim(),
       );
     }
   }

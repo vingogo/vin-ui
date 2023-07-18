@@ -11,7 +11,7 @@
 .font-1 {
   font-size: 14px;
 
-  /* stylelint-disable-line */
+  /* stylelint-disable-next-line */
   --vin-text-size: 0px;
 }
 .font-2 {
@@ -114,7 +114,6 @@
   }
   &-hide {
     color: transparent;
-    font: 0/0 a;
     text-shadow: none;
     background-color: transparent;
     border: 0;

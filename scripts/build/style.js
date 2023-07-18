@@ -40,14 +40,14 @@ const copyStyle = () => {
       tasks.push(
         copy(
           resolve(SRC_DIR, `components/${folderName}/index.scss`),
-          resolve(LIB_DIR, `styles/components/${folderName}.scss`)
+          resolve(LIB_DIR, `styles/components/${folderName}.scss`),
         )
           .then(() => {
             sassFileStr += `@import '../components/${folderName}.scss';\n`;
           })
           .catch((err) => {
             console.log(err);
-          })
+          }),
       );
     }
   });
@@ -62,7 +62,7 @@ const genThemes = () => {
     return outputFileSync(
       resolve(LIB_DIR, `styles/themes/${item.file}`),
       `${item.sourcePath}\n${sassFileStr}`,
-      'utf8'
+      'utf8',
     );
   });
 

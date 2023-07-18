@@ -9,5 +9,15 @@
     "**/*.ts",
     "**/*.md"
   ],
-  "defaultSeverity": "warning"
+  "defaultSeverity": "warning",
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "deep"
+        ]
+      }
+    ]
+  }
 }

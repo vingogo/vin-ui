@@ -7,6 +7,6 @@ export default config.list.reduce((prev, next) => {
         parentPath: `/components/${name.replace(/\B([A-Z])/g, '-$1').toLocaleLowerCase()}.html`,
         childrenPath: `pages/components/${name.toLowerCase().replace('-', '')}`,
       };
-    })
+    }),
   );
 }, []);

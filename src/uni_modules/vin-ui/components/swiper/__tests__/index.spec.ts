@@ -81,7 +81,7 @@ test('should render initpage', async () => {
   const swiperItem = wrapper.findAll('.vin-swiper-inner')[0].element as HTMLElement;
 
   expect(swiperItem.style.transform).toEqual(
-    `translateX(-${wrapper.vm.width * wrapper.vm.page}px)`
+    `translateX(-${wrapper.vm.width * wrapper.vm.page}px)`,
   );
 });
 
@@ -121,7 +121,7 @@ test('should render direction', async () => {
   const swiperItem = wrapper.findAll('.vin-swiper-inner')[0].element as HTMLElement;
 
   expect(swiperItem.style.transform).toEqual(
-    `translateY(-${wrapper.vm.height * wrapper.vm.page}px)`
+    `translateY(-${wrapper.vm.height * wrapper.vm.page}px)`,
   );
 });
 
