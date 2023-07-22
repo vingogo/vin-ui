@@ -1,5 +1,11 @@
 # vingogo
 
+## 0.7.0
+
+### Minor Changes
+
+- [`a4df60f`](https://github.com/vingogo/vin-ui/commit/a4df60fa4f8786df4226e76d0f3c35377f86ccd6) Thanks [@Alvin-LM](https://github.com/Alvin-LM)! - feat: change unplugin resolver
+
 ## 0.6.0
 
 ### Minor Changes
