@@ -1,4 +1,4 @@
-const { copy, remove } = require('fs-extra');
+const { copy, remove, writeFileSync } = require('fs-extra');
 const { resolve } = require('path');
 const buildPackageScript = require('./package');
 const buildStyle = require('./style');
@@ -33,7 +33,12 @@ const copySourceCode = async () => {
 
       return copy(resolve(SRC_DIR, dir), resolve(LIB_DIR, dir));
     }),
-  );
+  ).then(() => {
+    const version = require('../../package.json').version;
+    const destPackageJson = require(resolve(LIB_DIR, '../package.json'));
+    destPackageJson.version = version;
+    writeFileSync(resolve(LIB_DIR, '../package.json'), JSON.stringify(destPackageJson, null, 2));
+  });
 };
 
 const clean = async () => {

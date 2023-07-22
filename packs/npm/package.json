@@ -1,6 +1,5 @@
 {
   "name": "@vingogo/uni-ui",
-  "version": "0.5.1",
   "private": false,
   "license": "MIT",
   "author": "Alvin Liu",
@@ -12,14 +11,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "scripts": {
-    "dev": "npm run dts && cross-env MODE=play node build/index.js && cross-env MODE=play node ./scripts/watcher.js",
-    "build:all": "npm run build:lib && npm run build:uni",
-    "build:lib": "npm run dts && cross-env MODE=production node build/index.js",
-    "build:uni": "npm run dts && cross-env MODE=UNI node build/uni.js",
-    "dts": "rimraf types && vue-tsc --declaration --emitDeclarationOnly",
-    "type-check": "vue-tsc --noEmit"
   },
   "sideEffects": [
     "lib/components/**/style.mjs",
