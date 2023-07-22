@@ -74,7 +74,7 @@
                     </view>
                     <view
                       :class="{
-                        'calendar-curr-tips-top': rangeTip(day, month),
+                        'calendar-curr-tips-top': rangeTip(),
                         'calendar-day-tip': true,
                       }"
                     >

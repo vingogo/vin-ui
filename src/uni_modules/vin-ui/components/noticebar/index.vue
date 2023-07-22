@@ -296,8 +296,8 @@ export default create({
 
     watch(
       () => props.text,
-      (value) => {
-        initScrollWrap(value);
+      () => {
+        initScrollWrap();
       },
     );
 
@@ -314,7 +314,7 @@ export default create({
           props.complexAm ? startRoll() : startRollEasy();
         }, props.standTime);
       } else {
-        initScrollWrap(props.text);
+        initScrollWrap();
       }
     });
 

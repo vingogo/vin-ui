@@ -37,8 +37,8 @@ export const Component = create({
 
     watch(
       () => props.modelValue,
-      (value: any) => {
-        clearErrorTips(value);
+      () => {
+        clearErrorTips();
       },
       { immediate: true },
     );
