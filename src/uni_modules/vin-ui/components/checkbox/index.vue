@@ -66,7 +66,7 @@ export default create({
       emit('change', value, label);
     };
 
-    const handleClick = (e: MouseEvent | TouchEvent) => {
+    const handleClick = () => {
       if (pDisabled.value) return;
       emitChange(!checked.value, props.label);
       if (hasParent.value) {

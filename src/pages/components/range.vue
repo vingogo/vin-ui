@@ -96,7 +96,7 @@
         ></vin-range>
       </view>
     </vin-cell>
-  </view>
+  </app-page-layout>
 </template>
 
 <script lang="ts">
@@ -133,7 +133,10 @@ export default createDemo({
       },
     });
 
-    const onChange = (value: number) => uni.showToast({ title: `当前值：${value}` });
+    const onChange = (value: number) =>
+      uni.showToast({
+        title: `当前值：${value}`,
+      });
     return {
       ...toRefs(state),
       onChange,

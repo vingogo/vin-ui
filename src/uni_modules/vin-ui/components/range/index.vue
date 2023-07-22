@@ -208,7 +208,7 @@ export default create({
       };
     };
     const marksStyle = (mark: any) => {
-      const { max, min, vertical } = props;
+      const { min, vertical } = props;
       let style: any = {
         left: `${((mark - Number(min)) / scope.value) * 100}%`,
       };
@@ -237,8 +237,8 @@ export default create({
     };
     const format = (value: number) => {
       const { min, max, step } = props;
-      value = Math.max(+min, Math.min(value, +max));
-      return Math.round(value / +step) * +step;
+      const finalValue = Math.max(+min, Math.min(value, +max));
+      return Math.round(finalValue / +step) * +step;
     };
 
     const isSameValue = (newValue: SliderValue, oldValue: SliderValue) =>
@@ -252,18 +252,14 @@ export default create({
     };
 
     const updateValue = (value: SliderValue, end?: boolean) => {
-      if (isRange(value)) {
-        value = handleOverlap(value).map(format);
-      } else {
-        value = format(value);
+      const finalValue = isRange(value) ? handleOverlap(value).map(format) : format(value);
+
+      if (!isSameValue(finalValue, props.modelValue)) {
+        emit('update:modelValue', finalValue);
       }
 
-      if (!isSameValue(value, props.modelValue)) {
-        emit('update:modelValue', value);
-      }
-
-      if (end && !isSameValue(value, startValue)) {
-        emit('change', value);
+      if (end && !isSameValue(finalValue, startValue)) {
+        emit('change', finalValue);
       }
     };
 

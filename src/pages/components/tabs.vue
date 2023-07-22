@@ -72,7 +72,9 @@
           <view
             class="vin-tabs__titles-item"
             @click="state.tab7value = item.paneKey"
-            :class="{ active: state.tab7value === item.paneKey }"
+            :class="{
+              active: state.tab7value === item.paneKey,
+            }"
             :key="item.paneKey"
             v-for="item in state.list6"
           >

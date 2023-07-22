@@ -22,7 +22,9 @@ const replaceExt = (file, ext) => file.replace(extname(file), ext);
 
 const parseSFCFile = async (filePath, name) => {
   const sources = await readFile(filePath, 'utf-8');
-  const { descriptor } = parseSFC(sources, { sourceMap: false });
+  const { descriptor } = parseSFC(sources, {
+    sourceMap: false,
+  });
   const { script, scriptSetup, template } = descriptor;
 
   if (script || scriptSetup) {

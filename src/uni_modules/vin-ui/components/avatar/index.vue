@@ -41,7 +41,9 @@ export default create({
   setup(props, { emit, slots }) {
     const { size, shape, bgColor, color, icon } = toRefs(props);
     const { getMainClass, getMainStyle } = useVinContext(props);
-    const { parent, index } = useInject<{ props: Required<AvatarGroupProps> }>(AVATAR_KEY);
+    const { parent, index } = useInject<{
+      props: Required<AvatarGroupProps>;
+    }>(AVATAR_KEY);
     const sizeValue = ['large', 'normal', 'small'];
 
     const avatarRef = ref(null);

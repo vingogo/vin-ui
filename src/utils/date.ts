@@ -36,8 +36,9 @@ const Utils = {
    * @return {Number}
    */
   getMonthDays(year: string, month: string): number {
+    let value = month;
     if (/^0/.test(month)) {
-      month = month.split('')[1];
+      value = month.split('')[1];
     }
     return (
       [
@@ -55,7 +56,7 @@ const Utils = {
         30,
         31,
       ] as number[]
-    )[month as any];
+    )[value as any];
   },
 
   /**
@@ -63,16 +64,14 @@ const Utils = {
    * @return {string}
    */
   getNumTwoBit(n: number): string {
-    n = Number(n);
-    return (n > 9 ? '' : '0') + n;
+    return (Number(n) > 9 ? '' : '0') + Number(n);
   },
 
   /**
    * 日期对象转成字符串
    * @return {string}
    */
-  date2Str(date: Date, split?: string): string {
-    split = split || '-';
+  date2Str(date: Date, split = '-'): string {
     const y = date.getFullYear();
     const m = this.getNumTwoBit(date.getMonth() + 1);
     const d = this.getNumTwoBit(date.getDate());
@@ -84,8 +83,7 @@ const Utils = {
    * @param {Number} 0返回今天的日期、1返回明天的日期，2返回后天得日期，依次类推
    * @return {string} '2014-12-31'
    */
-  getDay(i: number): string {
-    i = i || 0;
+  getDay(i = 0): string {
     let date = new Date();
     const diff = i * (1000 * 60 * 60 * 24);
     date = new Date(date.getTime() + diff);

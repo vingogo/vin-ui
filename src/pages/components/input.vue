@@ -140,9 +140,7 @@ export default createDemo({
       align2: '',
       event: '',
     });
-    setTimeout(function () {
-      // state.val1 = '异步数据';
-    }, 2000);
+
     const change = (value: string | number) => {
       console.log('change: ', value);
     };

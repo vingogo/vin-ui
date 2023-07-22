@@ -46,9 +46,12 @@ import { createComponent } from '@/utils/create';
 const { createDemo } = createComponent('backtop');
 
 export default createDemo({
-  setup(props, { emit }) {
+  setup() {
     const handleClick = () => {
-      console.log('触发返回顶部');
+      uni.showToast({
+        title: '触发返回顶部',
+        icon: 'none',
+      });
     };
 
     return {

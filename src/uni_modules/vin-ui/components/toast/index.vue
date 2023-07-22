@@ -67,7 +67,7 @@ export default create({
         if (val) {
           show();
         }
-      }
+      },
     );
 
     const hasIcon = computed(() => {
@@ -92,7 +92,9 @@ export default create({
         { 'vin-toast-center': props.center },
         { 'vin-toast-has-icon': hasIcon.value },
         { 'vin-toast-cover': props.cover },
-        { 'vin-toast-loading': props.type === 'loading' },
+        {
+          'vin-toast-loading': props.type === 'loading',
+        },
         `vin-toast-${props.size}`,
       ]);
     });

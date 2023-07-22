@@ -67,6 +67,7 @@ export const convertListToOptions = (
   let map: any = {};
 
   list.forEach((node: CascaderOption) => {
+    // eslint-disable-next-line no-param-reassign
     node = { ...node };
     const { [idKey]: id, [pidKey]: pid } = node;
     // eslint-disable-next-line no-multi-assign
@@ -78,6 +79,7 @@ export const convertListToOptions = (
 
     children.push(node);
 
+    // eslint-disable-next-line no-param-reassign
     node.children = map[id] || (map[id] = []);
   });
 

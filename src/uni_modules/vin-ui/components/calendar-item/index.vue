@@ -7,7 +7,12 @@
     }"
   >
     <!-- header -->
-    <view class="vin-calendar-header" :class="{ 'vin-calendar-header-tile': !poppable }">
+    <view
+      class="vin-calendar-header"
+      :class="{
+        'vin-calendar-header-tile': !poppable,
+      }"
+    >
       <view class="calendar-title" v-if="showTitle">{{ title || translate('title') }}</view>
       <view class="calendar-top-slot" v-if="showTopBtn">
         <slot name="btn"> </slot>
@@ -28,7 +33,12 @@
       ref="months"
     >
       <view class="calendar-months-panel" :style="{ height: containerHeight }">
-        <view class="viewArea" :style="{ transform: `translateY(${translateY}px)` }">
+        <view
+          class="viewArea"
+          :style="{
+            transform: `translateY(${translateY}px)`,
+          }"
+        >
           <view class="calendar-month" v-for="(month, index) of compConthsDatas" :key="index">
             <view class="calendar-month-title">{{ month.title }}</view>
             <view class="calendar-month-con">
@@ -90,16 +100,7 @@
   </view>
 </template>
 <script lang="ts">
-import {
-  reactive,
-  ref,
-  watch,
-  toRefs,
-  computed,
-  onMounted,
-  nextTick,
-  getCurrentInstance,
-} from 'vue';
+import { reactive, ref, watch, toRefs, computed, onMounted, getCurrentInstance } from 'vue';
 import { createComponent } from '../common/create';
 import Utils from '../../shared/utils/date';
 import { calendarItemProps } from './common';
@@ -192,9 +193,6 @@ export default create({
       monthsNum: 0,
     });
 
-    const compConthsData = computed(() => {
-      return state.monthsData.slice(state.defaultRange[0], state.defaultRange[1]);
-    });
     const showTopBtn = computed(() => {
       return slots.btn;
     });
@@ -322,7 +320,8 @@ export default create({
     };
 
     // 获取日期状态
-    const getDaysStatus = (days: number, type: string, dateInfo: any) => {
+    const getDaysStatus = (value: number, type: string, dateInfo: any) => {
+      let days = value;
       // 修复：当某个月的1号是周日时，月份下方会空出来一行
       const { year, month } = dateInfo;
       if (type === 'prev' && days >= 7) {
@@ -339,13 +338,14 @@ export default create({
     };
     // 获取上一个月的最后一周天数，填充当月空白
     const getPreDaysStatus = (
-      days: number,
+      value: number,
       type: string,
       dateInfo: any,
-      preCurrMonthDays: number
+      preCurrMonthDays: number,
     ) => {
       // 修复：当某个月的1号是周日时，月份下方会空出来一行
       const { year, month } = dateInfo;
+      let days = value;
       if (type === 'prev' && days >= 7) {
         days -= 7;
       }
@@ -386,7 +386,7 @@ export default create({
             preMonthDays,
             'prev',
             { month: preMonth, year: preYear },
-            preCurrMonthDays
+            preCurrMonthDays,
           ) as Day[]),
           ...(getDaysStatus(currMonthDays, 'curr', title) as Day[]),
         ],
@@ -420,9 +420,9 @@ export default create({
           !Utils.compareDate(
             `${state.endData[0]}-${state.endData[1]}-${Utils.getMonthDays(
               state.endData[0],
-              state.endData[1]
+              state.endData[1],
             )}`,
-            `${curData[0]}-${curData[1]}-${curData[2]}`
+            `${curData[0]}-${curData[1]}-${curData[2]}`,
           )
         ) {
           state.monthsData.push(monthInfo);
@@ -434,7 +434,7 @@ export default create({
           !state.startData ||
           !Utils.compareDate(
             `${curData[0]}-${curData[1]}-${curData[2]}`,
-            `${state.startData[0]}-${state.startData[1]}-01`
+            `${state.startData[0]}-${state.startData[1]}-01`,
           )
         ) {
           state.monthsData.unshift(monthInfo);
@@ -525,16 +525,29 @@ export default create({
       // 设置当前选中日期
       if (state.isRange) {
         chooseDay(
-          { day: state.defaultData[2], type: 'curr' },
+          {
+            day: state.defaultData[2],
+            type: 'curr',
+          },
           state.monthsData[state.currentIndex],
-          true
+          true,
         );
-        chooseDay({ day: state.defaultData[5], type: 'curr' }, state.monthsData[lastCurrent], true);
+        chooseDay(
+          {
+            day: state.defaultData[5],
+            type: 'curr',
+          },
+          state.monthsData[lastCurrent],
+          true,
+        );
       } else {
         chooseDay(
-          { day: state.defaultData[2], type: 'curr' },
+          {
+            day: state.defaultData[2],
+            type: 'curr',
+          },
           state.monthsData[state.currentIndex],
-          true
+          true,
         );
       }
 
@@ -603,7 +616,7 @@ export default create({
       return false;
     };
     // 开始结束时间是否相等
-    const rangeTip = (day: Day, month: MonthInfo) => {
+    const rangeTip = () => {
       if (state.currDate.length >= 2) {
         return Utils.isEqual(state.currDate[0], state.currDate[1]);
       }
@@ -690,7 +703,7 @@ export default create({
             resetRender();
           }
         }
-      }
+      },
     );
 
     return {

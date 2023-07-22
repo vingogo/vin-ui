@@ -22,13 +22,19 @@ export const useShareAppMessage = (options?: Partial<ShareAppMessageOptions>) =>
       return {
         title: '基于 Vue 3 的轻量、快速的多平台开发 UI 组件库',
         path: currentPageFullpath,
-        success: (res: any) => {
+        success: () => {
           // 转发成功
-          console.log('转发成功', res);
+          uni.showToast({
+            title: '转发成功',
+            icon: 'none',
+          });
         },
-        fail: (error: any) => {
+        fail: () => {
           // 转发失败
-          console.log('转发失败', error);
+          uni.showToast({
+            title: '转发失败',
+            icon: 'none',
+          });
         },
         ...options,
       };

@@ -1,3 +1,6 @@
 {
-  "extends": "@vingogo/eslint-config-vue"
+  "extends": "@vingogo/eslint-config-vue",
+  "rules": {
+    "no-console": ["off"]
+  }
 }

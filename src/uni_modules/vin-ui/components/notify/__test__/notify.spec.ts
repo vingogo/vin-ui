@@ -38,7 +38,9 @@ describe('Notify', () => {
   });
 
   test('should be displayed after setting the color and class-name', () => {
-    const wrapper = mount(Notify, { props: { customClass: 'xxx' } });
+    const wrapper = mount(Notify, {
+      props: { customClass: 'xxx' },
+    });
     const rate = wrapper.findAll('.xxx');
     expect(rate.length).toBe(1);
   });

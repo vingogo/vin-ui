@@ -17,11 +17,13 @@ export default create({
   emits: ['click'],
   setup(props) {
     const { getMainClass, getMainStyle } = useVinContext(props);
-    const { parent } = useInject<{ activeKey: string }>(TAB_KEY);
+    const { parent } = useInject<{
+      activeKey: string;
+    }>(TAB_KEY);
     const mainClass = computed(() =>
       getMainClass({
         active: props.paneKey === parent?.activeKey,
-      })
+      }),
     );
     const mainStyle = computed(getMainStyle);
 

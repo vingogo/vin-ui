@@ -35,7 +35,9 @@ export default create({
     });
 
     const classes = computed(() => {
-      return getMainClass({ show: state.backTop });
+      return getMainClass({
+        show: state.backTop,
+      });
     });
 
     const style = computed(() => {

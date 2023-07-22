@@ -34,7 +34,7 @@
   </view>
 </template>
 <script lang="ts">
-import { computed, h, inject } from 'vue';
+import { computed, inject } from 'vue';
 import { createComponent } from '../common/create';
 import { radioProps } from './common';
 

@@ -99,11 +99,38 @@ const mockKeyConfigOptions = [
   },
 ];
 const mockConvertOptions = [
-  { value: '北京', text: '北京', nodeId: 1, nodePid: 0, sort: 2 },
-  { value: '朝阳区', text: '朝阳区', nodeId: 11, nodePid: 1 },
-  { value: '亦庄', text: '亦庄', nodeId: 111, nodePid: 11 },
-  { value: '广东省', text: '广东省', nodeId: 2, nodePid: 0, sort: 1 },
-  { value: '广州市', text: '广州市', nodeId: 21, nodePid: 2 },
+  {
+    value: '北京',
+    text: '北京',
+    nodeId: 1,
+    nodePid: 0,
+    sort: 2,
+  },
+  {
+    value: '朝阳区',
+    text: '朝阳区',
+    nodeId: 11,
+    nodePid: 1,
+  },
+  {
+    value: '亦庄',
+    text: '亦庄',
+    nodeId: 111,
+    nodePid: 11,
+  },
+  {
+    value: '广东省',
+    text: '广东省',
+    nodeId: 2,
+    nodePid: 0,
+    sort: 1,
+  },
+  {
+    value: '广州市',
+    text: '广州市',
+    nodeId: 21,
+    nodePid: 2,
+  },
 ];
 
 describe('helpers', () => {
@@ -150,7 +177,14 @@ describe('helpers', () => {
             nodeId: 11,
             text: '朝阳区',
             value: '朝阳区',
-            children: [{ nodePid: 11, nodeId: 111, text: '亦庄', value: '亦庄' }],
+            children: [
+              {
+                nodePid: 11,
+                nodeId: 111,
+                text: '亦庄',
+                value: '亦庄',
+              },
+            ],
           },
         ],
       },
@@ -454,8 +488,16 @@ describe('Cascader', () => {
               const value1 = `${text}${level + 1}1`;
               const value2 = `${text}${level + 1}2`;
               resolve([
-                { value: value1, text: value1, leaf: level >= 1 },
-                { value: value2, text: value2, leaf: level >= 1 },
+                {
+                  value: value1,
+                  text: value1,
+                  leaf: level >= 1,
+                },
+                {
+                  value: value2,
+                  text: value2,
+                  leaf: level >= 1,
+                },
               ]);
             }
           }, 50);
@@ -490,8 +532,16 @@ describe('Cascader', () => {
               const value1 = `${text}${level + 1}1`;
               const value2 = `${text}${level + 1}2`;
               resolve([
-                { value: value1, text: value1, leaf: level >= 1 },
-                { value: value2, text: value2, leaf: level >= 1 },
+                {
+                  value: value1,
+                  text: value1,
+                  leaf: level >= 1,
+                },
+                {
+                  value: value2,
+                  text: value2,
+                  leaf: level >= 1,
+                },
               ]);
             }
           }, 50);

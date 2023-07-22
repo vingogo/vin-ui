@@ -49,7 +49,7 @@
 </template>
 
 <script lang="ts">
-import { computed, onMounted, reactive, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { createComponent } from '@/utils/create';
 import { useTranslate } from '@/hooks/useTranslate';
 

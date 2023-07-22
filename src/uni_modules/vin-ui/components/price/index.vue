@@ -36,12 +36,12 @@ export default create({
     const mainClass = computed(() =>
       getMainClass({
         [`${componentName}--strike`]: props.strikeThrough,
-      })
+      }),
     );
     const mainStyle = computed(getMainStyle);
 
-    const replaceSpecialChar = (url: string) => {
-      url = url.replace(/&quot;/g, '"');
+    const replaceSpecialChar = (str: string) => {
+      let url = str.replace(/&quot;/g, '"');
       url = url.replace(/&amp;/g, '&');
       url = url.replace(/&lt;/g, '<');
       url = url.replace(/&gt;/g, '>');
@@ -57,7 +57,8 @@ export default create({
       return String(price).indexOf('.') > 0;
     };
 
-    const formatThousands = (num: any) => {
+    const formatThousands = (value: any) => {
+      let num = value;
       if (Number(num) === 0) {
         num = 0;
       }
@@ -72,7 +73,8 @@ export default create({
       }
       return num;
     };
-    const formatDecimal = (decimalNum: any) => {
+    const formatDecimal = (value: any) => {
+      let decimalNum = value;
       if (Number(decimalNum) === 0) {
         decimalNum = 0;
       }

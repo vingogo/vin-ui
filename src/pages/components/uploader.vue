@@ -132,27 +132,13 @@ export default createDemo({
         type: 'image',
       },
     ]);
-    const fileToDataURL = (file: Blob): Promise<any> => {
-      return new Promise((resolve) => {
-        const reader = new FileReader();
-        reader.onloadend = (e) => resolve((e.target as FileReader).result);
-        reader.readAsDataURL(file);
-      });
-    };
-    const dataURLToImage = (dataURL: string): Promise<HTMLImageElement> => {
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => resolve(img);
-        img.src = dataURL;
-      });
-    };
     const onOversize = (files: File[]) => {
       console.log('oversize 触发 文件大小不能超过 50kb', files);
     };
     const onDelete = (obj: any) => {
       console.log('delete 事件触发', obj);
     };
-    const onProgress = ({ event, options, percentage }: any) => {
+    const onProgress = ({ percentage }: any) => {
       progressPercentage.value = percentage;
       console.log('progress 事件触发', percentage);
     };

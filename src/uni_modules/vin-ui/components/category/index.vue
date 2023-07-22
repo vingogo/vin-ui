@@ -35,7 +35,7 @@ export type CategoryType = {
 export default create({
   props: categoryProps,
 
-  setup(props, { emit, slots }) {
+  setup(props, { emit }) {
     const checkIndex = ref(0);
     const categoryLeft = ref(false); // 是否显示slot
 

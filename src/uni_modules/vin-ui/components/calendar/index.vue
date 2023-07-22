@@ -132,7 +132,7 @@ export default create({
       () => props.visible,
       (value: boolean) => {
         show.value = value;
-      }
+      },
     );
 
     return {

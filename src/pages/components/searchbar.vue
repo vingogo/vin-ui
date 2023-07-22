@@ -61,11 +61,11 @@ export default createDemo({
       searchValue5: '',
     });
 
-    const search = function (e: any) {
+    const search = () => {
       uni.showToast({ title: '搜索触发' });
     };
 
-    const clickLeft = function () {
+    const clickLeft = () => {
       uni.showToast({ title: '点击回退按钮' });
     };
 

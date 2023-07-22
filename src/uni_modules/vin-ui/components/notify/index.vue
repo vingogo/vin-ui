@@ -28,13 +28,13 @@ export default create({
     let timer: NodeJS.Timeout | null | number | undefined = null;
 
     const mainClass = computed(() =>
-      getMainClass([`vin-popup-${props.position}`, `vin-notify--${props.type}`])
+      getMainClass([`vin-popup-${props.position}`, `vin-notify--${props.type}`]),
     );
     const mainStyle = computed(() =>
       getMainStyle({
         color: props.color,
         background: props.background,
-      })
+      }),
     );
 
     const onClick = () => {
@@ -66,7 +66,7 @@ export default create({
         if (value) {
           show();
         }
-      }
+      },
     );
 
     const onAfterLeave = () => {
@@ -76,7 +76,13 @@ export default create({
       }
     };
 
-    return { mainStyle, mainClass, hide, onAfterLeave, onClick };
+    return {
+      mainStyle,
+      mainClass,
+      hide,
+      onAfterLeave,
+      onClick,
+    };
   },
 });
 </script>

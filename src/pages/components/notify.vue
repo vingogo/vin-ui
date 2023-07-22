@@ -1,9 +1,15 @@
 <template>
   <app-page-layout title="消息通知">
     <vin-cell-group :title="translate('basic')">
-      <vin-cell is-link @click="changeNotifyOption({ msg: translate('basic') })">{{
-        translate('basic')
-      }}</vin-cell>
+      <vin-cell
+        is-link
+        @click="
+          changeNotifyOption({
+            msg: translate('basic'),
+          })
+        "
+        >{{ translate('basic') }}</vin-cell
+      >
     </vin-cell-group>
     <vin-cell-group :title="translate('t1')">
       <vin-cell
@@ -29,7 +35,12 @@
       >
       <vin-cell
         is-link
-        @click="changeNotifyOption({ msg: translate('errorNotify'), type: 'danger' })"
+        @click="
+          changeNotifyOption({
+            msg: translate('errorNotify'),
+            type: 'danger',
+          })
+        "
         >{{ translate('errorNotify') }}</vin-cell
       >
       <vin-cell
@@ -58,7 +69,15 @@
       </vin-cell>
     </vin-cell-group>
     <vin-cell-group :title="translate('t3')">
-      <vin-cell is-link @click="changeNotifyOption({ msg: translate('t3'), duration: 5000 })">
+      <vin-cell
+        is-link
+        @click="
+          changeNotifyOption({
+            msg: translate('t3'),
+            duration: 5000,
+          })
+        "
+      >
         {{ translate('t3') }} 5s
       </vin-cell>
       <vin-cell

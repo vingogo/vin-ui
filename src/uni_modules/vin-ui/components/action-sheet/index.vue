@@ -21,7 +21,9 @@
               'vin-action-sheet__item--disabled': item.disable,
               'vin-action-sheet__item--loading': item.loading,
             }"
-            :style="{ color: isHighlight(item) || item.color }"
+            :style="{
+              color: isHighlight(item) || item.color,
+            }"
             :key="index"
             @click="chooseItem(item, index)"
           >
@@ -72,7 +74,13 @@ export default create({
       emit('update:visible', false);
     };
 
-    const chooseItem = (item: { disable: boolean; loading: boolean }, index: any) => {
+    const chooseItem = (
+      item: {
+        disable: boolean;
+        loading: boolean;
+      },
+      index: any,
+    ) => {
       if (!item.disable && !item.loading) {
         emit('choose', item, index);
         emit('update:visible', false);

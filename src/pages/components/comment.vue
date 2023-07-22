@@ -97,13 +97,13 @@ export default createDemo({
       console.log('进行跳转', info);
     };
 
-    onMounted(() => {
-      getData();
-    });
-
     const getData = () => {
       cmt.value = comments.Comment;
     };
+
+    onMounted(() => {
+      getData();
+    });
 
     const clickImages = (imgs: any) => {
       console.log('进行图片展示', imgs);

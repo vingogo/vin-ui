@@ -46,7 +46,11 @@
       onMounted(() => {
         init();
       });
-      return { loadMore, hasMore, ...toRefs(data) };
+      return {
+        loadMore,
+        hasMore,
+        ...toRefs(data),
+      };
     },
   };
 </script>
@@ -127,7 +131,12 @@
       onMounted(() => {
         init();
       });
-      return { refreshLoadMore, refreshHasMore, refresh, ...toRefs(data) };
+      return {
+        refreshLoadMore,
+        refreshHasMore,
+        refresh,
+        ...toRefs(data),
+      };
     },
   };
 </script>
@@ -195,7 +204,11 @@
       onMounted(() => {
         init();
       });
-      return { customHasMore, customLoadMore, ...toRefs(data) };
+      return {
+        customHasMore,
+        customLoadMore,
+        ...toRefs(data),
+      };
     },
   };
 </script>

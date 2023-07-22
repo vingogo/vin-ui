@@ -25,13 +25,13 @@ export default create({
 
     watch(
       () => props.modelValue,
-      (value) => emit('change', value)
+      (value) => emit('change', value),
     );
 
     const mainClass = computed(() =>
       getMainClass({
         [`${componentName}--${props.direction}`]: true,
-      })
+      }),
     );
 
     const mainStyle = computed(getMainStyle);

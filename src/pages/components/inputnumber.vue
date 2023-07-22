@@ -36,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { reactive, getCurrentInstance } from 'vue';
+import { reactive } from 'vue';
 import { createComponent } from '@/utils/create';
 import { useTranslate } from '@/hooks/useTranslate';
 
@@ -71,8 +71,6 @@ useTranslate({
 export default createDemo({
   props: {},
   setup() {
-    const { proxy } = getCurrentInstance();
-
     const state = reactive({
       val1: 1,
       val2: 0,
@@ -86,18 +84,19 @@ export default createDemo({
     });
 
     const onChange = (value: number) => {
-      // proxy.$toast.loading(translate('content1'));
-      uni.showToast({ title: translate('content1') });
+      uni.showToast({
+        title: translate('content1'),
+      });
       setTimeout(() => {
         state.val8 = value;
-        // proxy.$toast.hide();
         uni.hideToast();
       }, 2000);
     };
 
     const overlimit = () => {
-      uni.showToast({ title: translate('content2') });
-      // proxy.$toast.warn(translate('content2'));
+      uni.showToast({
+        title: translate('content2'),
+      });
     };
 
     return {

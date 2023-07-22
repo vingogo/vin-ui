@@ -90,7 +90,7 @@ import type {
   GeneralCallbackResult,
 } from './utils';
 
-const { componentName, create, translate, useVinContext } = createComponent('uploader');
+const { create, translate, useVinContext } = createComponent('uploader');
 export default create({
   props: uploaderProps,
   emits: [
@@ -107,7 +107,9 @@ export default create({
   setup(props, { emit }) {
     const { getMainClass, getMainStyle } = useVinContext(props);
     const fileList: FileItem[] = reactive(props.fileList) as Array<FileItem>;
-    let uploadQueue: Promise<{ upload: () => void }>[] = [];
+    let uploadQueue: Promise<{
+      upload: () => void;
+    }>[] = [];
 
     const mainClass = computed(getMainClass);
     const mainStyle = computed(getMainStyle);
@@ -124,7 +126,8 @@ export default create({
       }
     };
 
-    const executeUpload = (fileItem: FileItem, index?: number) => {
+    const executeUpload = (item: FileItem, index?: number) => {
+      const fileItem = item;
       const { type, url, name, formData } = fileItem;
 
       const uploadOption: UploadOptions = {
@@ -150,7 +153,11 @@ export default create({
         fileItem.status = 'uploading';
         fileItem.message = translate('uploading');
         fileItem.percentage = event.progress;
-        emit('progress', { event, option, percentage: fileItem.percentage });
+        emit('progress', {
+          event,
+          option,
+          percentage: fileItem.percentage,
+        });
       };
 
       uploadOption.onSuccess = (result: UploadFileSuccessCallbackResult, option: UploadOptions) => {
@@ -179,9 +186,9 @@ export default create({
         task.upload();
       } else {
         uploadQueue.push(
-          new Promise((resolve, reject) => {
+          new Promise((resolve) => {
             resolve(task);
-          })
+          }),
         );
       }
     };
@@ -194,11 +201,6 @@ export default create({
 
     const readFile = (files: ChooseFile[]) => {
       files.forEach((file: ChooseFile, index: number) => {
-        // const formData = new FormData();
-        // for (const [key, value] of Object.entries(props.data)) {
-        //   formData.append(key, value);
-        // }
-
         const fileItem = reactive({} as FileItem);
 
         fileItem.uid = new Date().getTime().toString();
@@ -211,8 +213,6 @@ export default create({
 
         executeUpload(fileItem, index);
 
-        console.log('fileList', fileList);
-
         fileList.push(fileItem);
       });
     };
@@ -221,7 +221,7 @@ export default create({
       const maximum = (props.maximum as number) * 1;
       const maximize = (props.maximize as number) * 1;
       const oversizes = new Array<ChooseFile>();
-      files = files.filter((file: ChooseFile) => {
+      const filteredFiles = files.filter((file: ChooseFile) => {
         if (file.size > maximize) {
           oversizes.push(file);
           return false;
@@ -231,11 +231,11 @@ export default create({
       if (oversizes.length) {
         emit('oversize', oversizes);
       }
-      const currentFileLength = files.length + fileList.length;
+      const currentFileLength = filteredFiles.length + fileList.length;
       if (currentFileLength > maximum) {
-        files.splice(files.length - (currentFileLength - maximum));
+        filteredFiles.splice(filteredFiles.length - (currentFileLength - maximum));
       }
-      return files;
+      return filteredFiles;
     };
 
     const onDelete = (file: FileItem, index: number) => {
@@ -276,7 +276,7 @@ export default create({
           });
         } else {
           const filteredFiles: ChooseFile[] = filterFiles(
-            new Array<ChooseFile>().slice.call(files)
+            new Array<ChooseFile>().slice.call(files),
           );
           readFile(filteredFiles);
         }

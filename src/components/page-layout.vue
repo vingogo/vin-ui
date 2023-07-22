@@ -28,22 +28,28 @@ const entryPath = '/pages/index/index';
 export default {
   onShareAppMessage: () => {
     return {
-      title: 'AI智能私人小助理:AI助手，智能办公小程序，小红书、大众点评、日报、节日祝福等',
+      title: '京东风格的轻量级 Vue 组件库，支持移动端 H5 和 小程序开发',
       path: entryPath,
-      success: (res: any) => {
+      success: () => {
         // 转发成功
-        console.log('转发成功', res);
+        uni.showToast({
+          title: '转发成功',
+          icon: 'none',
+        });
       },
-      fail: (error: any) => {
+      fail: () => {
         // 转发失败
-        console.log('转发失败', error);
+        uni.showToast({
+          title: '转发失败',
+          icon: 'none',
+        });
       },
     };
   },
 
   onShareTimeline: () => {
     return {
-      title: 'AI智能私人小助理',
+      title: '京东风格的轻量级 Vue 组件库，支持移动端 H5 和 小程序开发',
       path: entryPath,
     };
   },
@@ -54,11 +60,15 @@ export default {
   },
 
   setup(props) {
-    useShareTimeline({ title: `VinUI: ${props.title}` });
-    useShareAppMessage({ title: `VinUI: ${props.title}` });
+    useShareTimeline({
+      title: `VinUI: ${props.title}`,
+    });
+    useShareAppMessage({
+      title: `VinUI: ${props.title}`,
+    });
 
     const paddingTop = computed(
-      () => `calc(${uni.getSystemInfoSync().statusBarHeight}px + var(--vin-navbar-height, 46px))`
+      () => `calc(${uni.getSystemInfoSync().statusBarHeight}px + var(--vin-navbar-height, 46px))`,
     );
 
     const goBack = () => {

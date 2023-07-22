@@ -119,13 +119,12 @@ export default create({
     'confirm',
   ],
 
-  setup(props, { emit, slots }) {
+  setup(props, { emit }) {
     const { getMainClass, getMainStyle } = useVinContext(props);
 
     const active = ref(false);
 
     const inputRef = ref<HTMLInputElement>();
-    const customValue = ref<() => unknown>();
     const getModelValue = () => String(props.modelValue ?? '');
 
     const state = reactive({
@@ -169,31 +168,22 @@ export default create({
       return type;
     };
 
-    const formValue = computed(() => {
-      if (customValue.value && slots.input) {
-        return customValue.value();
-      }
-      return props.modelValue;
-    });
-
-    const blur = () => inputRef.value?.blur();
-    const focus = () => inputRef.value?.focus();
-
     const updateValue = (value: string, trigger: InputFormatTrigger = 'onChange') => {
+      let finalValue = value;
       if (props.type === 'digit') {
-        value = formatNumber(value, false, false);
+        finalValue = formatNumber(finalValue, false, false);
       }
       if (props.type === 'number') {
-        value = formatNumber(value, true, true);
+        finalValue = formatNumber(finalValue, true, true);
       }
 
       if (props.formatter && trigger === props.formatTrigger) {
-        value = props.formatter(value);
+        finalValue = props.formatter(finalValue);
       }
 
       if (value !== props.modelValue) {
-        emit('update:modelValue', value);
-        emit('change', value);
+        emit('update:modelValue', finalValue);
+        emit('change', finalValue);
       }
     };
 

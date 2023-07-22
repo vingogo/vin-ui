@@ -73,7 +73,9 @@
     ></vin-action-sheet>
     <!-- 自定义面板-->
     <vin-action-sheet v-model:visible="state.isVisible5" :title="translate('title')">
-      <div class="custom-content">{{ translate('customContent') }}</div>
+      <div class="custom-content">
+        {{ translate('customContent') }}
+      </div>
     </vin-action-sheet>
   </app-page-layout>
 </template>

@@ -1,22 +1,12 @@
 {
-  "extends": [
-    "@vingogo/stylelint-config"
-  ],
-  "ignoreFiles": [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.tsx",
-    "**/*.ts",
-    "**/*.md"
-  ],
+  "extends": ["@vingogo/stylelint-config"],
+  "ignoreFiles": ["**/*.js", "**/*.jsx", "**/*.tsx", "**/*.ts", "**/*.md"],
   "defaultSeverity": "warning",
   "rules": {
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": [
-          "deep"
-        ]
+        "ignorePseudoClasses": ["deep"]
       }
     ]
   }

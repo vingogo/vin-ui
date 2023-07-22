@@ -311,7 +311,12 @@
         swiper.value.next();
       };
 
-      return { ...toRefs(state), swiper, handlePrev, handleNext };
+      return {
+        ...toRefs(state),
+        swiper,
+        handlePrev,
+        handleNext,
+      };
     },
   };
 </script>

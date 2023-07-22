@@ -39,7 +39,7 @@ export default create({
       () => props.visible,
       (value) => {
         parentData.modelValue = value;
-      }
+      },
     );
 
     const mainClass = computed(() => {

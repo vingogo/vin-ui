@@ -54,8 +54,6 @@ export default createDemo({
       categoryChild2: [{}],
     });
 
-    onMounted(() => getData());
-
     const getData = () => {
       const { categoryInfo, categoryChild, customCategory } = category;
       data.categoryInfo1 = categoryInfo;
@@ -65,6 +63,8 @@ export default createDemo({
       data.categoryInfo2 = categoryInfo;
       data.categoryChild2 = categoryChild;
     };
+
+    onMounted(() => getData());
 
     const change = (index: any) => {
       data.categoryChild1 = [].concat(data?.categoryInfo1?.category[index]?.children as any);

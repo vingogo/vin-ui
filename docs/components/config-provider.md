@@ -31,7 +31,11 @@
         theme.value = v ? 'dark' : '';
       };
 
-      return { switchChecked, switchChange, theme };
+      return {
+        switchChecked,
+        switchChange,
+        theme,
+      };
     },
   };
 </script>

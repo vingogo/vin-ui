@@ -84,7 +84,9 @@ export default create({
     });
 
     const popStyle = computed(() => {
-      return getMainStyle({ zIndex: state.zIndex });
+      return getMainStyle({
+        zIndex: state.zIndex,
+      });
     });
 
     const open = () => {
@@ -158,19 +160,19 @@ export default create({
         } else {
           close();
         }
-      }
+      },
     );
     watch(
       () => props.position,
       (value) => {
         state.transitionName = value === 'center' ? 'popup-fade' : `popup-slide-${value}`;
-      }
+      },
     );
     watch(
       () => props.closeable,
       (value) => {
         state.closed = value;
-      }
+      },
     );
     return {
       ...toRefs(state),

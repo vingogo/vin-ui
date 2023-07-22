@@ -26,13 +26,19 @@
     <vin-cell :title="translate('cell4')" is-link @click="state.showLeft = true"></vin-cell>
     <vin-popup
       position="left"
-      :custom-style="{ width: '20%', height: '100%' }"
+      :custom-style="{
+        width: '20%',
+        height: '100%',
+      }"
       v-model:visible="state.showLeft"
     ></vin-popup>
     <vin-cell :title="translate('cell5')" is-link @click="state.showRight = true"></vin-cell>
     <vin-popup
       position="right"
-      :custom-style="{ width: '20%', height: '100%' }"
+      :custom-style="{
+        width: '20%',
+        height: '100%',
+      }"
       v-model:visible="state.showRight"
     ></vin-popup>
     <view class="h2">{{ translate('close') }}</view>

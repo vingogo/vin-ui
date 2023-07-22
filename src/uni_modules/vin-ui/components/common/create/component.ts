@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import {
   App,
   defineComponent,
@@ -26,6 +27,7 @@ export function createComponent(name: string) {
         getPropByPath(languages, keyPath);
       return isFunction(text) ? text(...args) : text;
     },
+    // eslint-disable-next-line func-names
     create: function <
       PropsOptions extends Readonly<ComponentPropsOptions>,
       Props extends Readonly<ExtractPropTypes<PropsOptions>>,
@@ -59,7 +61,9 @@ export function createComponent(name: string) {
       return defineComponent(_component as any);
     } as typeof defineComponent,
     useVinContext: (props: any) => {
-      return useVinContext(props, { componentName });
+      return useVinContext(props, {
+        componentName,
+      });
     },
     createDemo<
       PropsOptions extends Readonly<ComponentPropsOptions>,

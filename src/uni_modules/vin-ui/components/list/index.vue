@@ -59,7 +59,11 @@ export default create({
     });
 
     const mainClass = computed(getMainClass);
-    const mainStyle = computed(() => getMainStyle({ height: `${props.containerHeight}px` }));
+    const mainStyle = computed(() =>
+      getMainStyle({
+        height: `${props.containerHeight}px`,
+      }),
+    );
 
     const listHeight = computed(() => {
       return state.list.length * props.height;
@@ -82,7 +86,7 @@ export default create({
       () => props.listData,
       () => {
         state.list = props.listData.slice();
-      }
+      },
     );
 
     return {

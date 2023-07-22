@@ -233,11 +233,11 @@ export default createDemo({
     const setChooseValue6 = (param: string) => {
       state.date6 = [...[param[0][3], param[1][3]]];
     };
-    const clickBtn = (param: string) => {
+    const clickBtn = () => {
       const date = [Utils.date2Str(new Date()), Utils.getDay(6)];
       state.date5 = date;
     };
-    const clickBtn1 = (param: string) => {
+    const clickBtn1 = () => {
       const date = new Date();
       const year = date.getFullYear();
       let month: any = date.getMonth() + 1;

@@ -32,10 +32,10 @@ export default create({
       if (primaryColor) {
         cssVars = {
           '--vin-tabs-horizontal-tab-line-color': `linear-gradient(90deg, ${primaryColor} 0%, rgba(${colorRgb(
-            primaryColor
+            primaryColor,
           )},0.15) 100%)`,
           '--vin-tabs-vertical-tab-line-color': `linear-gradient(180deg, ${primaryColor} 0%, rgba(${colorRgb(
-            primaryColor
+            primaryColor,
           )},0.15) 100%)`,
         };
       }

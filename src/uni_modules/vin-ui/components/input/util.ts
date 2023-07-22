@@ -13,18 +13,19 @@ function trimExtraChar(value: string, char: string, regExp: RegExp) {
 }
 
 export function formatNumber(value: string, allowDot = true, allowMinus = true) {
+  let result = value;
   if (allowDot) {
-    value = trimExtraChar(value, '.', /\./g);
+    result = trimExtraChar(value, '.', /\./g);
   } else {
-    value = value.split('.')[0];
+    result = value.split('.')[0];
   }
 
   if (allowMinus) {
-    value = trimExtraChar(value, '-', /-/g);
+    result = trimExtraChar(result, '-', /-/g);
   } else {
-    value = value.replace(/-/, '');
+    result = result.replace(/-/, '');
   }
   const regExp = allowDot ? /[^-0-9.]/g : /[^-0-9]/g;
 
-  return value.replace(regExp, '');
+  return result.replace(regExp, '');
 }

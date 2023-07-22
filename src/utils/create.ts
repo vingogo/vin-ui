@@ -1,5 +1,4 @@
 import {
-  defineComponent,
   ComponentPropsOptions,
   ExtractPropTypes,
   SetupContext,

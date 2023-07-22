@@ -3,5 +3,5 @@ locale
 font
 scripts
 build
-**/__tests__/*.ts
+**/__tests__/**.ts
 *.json

@@ -50,16 +50,28 @@
                 text: '杭州',
                 disabled: true,
                 children: [
-                  { value: '西湖区', text: '西湖区' },
-                  { value: '余杭区', text: '余杭区' },
+                  {
+                    value: '西湖区',
+                    text: '西湖区',
+                  },
+                  {
+                    value: '余杭区',
+                    text: '余杭区',
+                  },
                 ],
               },
               {
                 value: '温州',
                 text: '温州',
                 children: [
-                  { value: '鹿城区', text: '鹿城区' },
-                  { value: '瓯海区', text: '瓯海区' },
+                  {
+                    value: '鹿城区',
+                    text: '鹿城区',
+                  },
+                  {
+                    value: '瓯海区',
+                    text: '瓯海区',
+                  },
                 ],
               },
             ],
@@ -77,8 +89,14 @@
                 value: '福州',
                 text: '福州',
                 children: [
-                  { value: '鼓楼区', text: '鼓楼区' },
-                  { value: '台江区', text: '台江区' },
+                  {
+                    value: '鼓楼区',
+                    text: '鼓楼区',
+                  },
+                  {
+                    value: '台江区',
+                    text: '台江区',
+                  },
                 ],
               },
             ],
@@ -233,9 +251,21 @@
               const value2 = `${text}${level + 1}2`;
               const value3 = `${text}${level + 1}3`;
               resolve([
-                { value: value1, text: value1, leaf: level >= 6 },
-                { value: value2, text: value2, leaf: level >= 6 },
-                { value: value3, text: value3, leaf: level >= 6 },
+                {
+                  value: value1,
+                  text: value1,
+                  leaf: level >= 6,
+                },
+                {
+                  value: value2,
+                  text: value2,
+                  leaf: level >= 6,
+                },
+                {
+                  value: value3,
+                  text: value3,
+                  leaf: level >= 6,
+                },
               ]);
             }
           }, 300);
@@ -296,7 +326,11 @@
             value: 'B0',
             text: 'B0',
             children: [
-              { value: 'B11', text: 'B11', leaf: true },
+              {
+                value: 'B11',
+                text: 'B11',
+                leaf: true,
+              },
               { value: 'B12', text: 'B12' },
             ],
           },
@@ -309,8 +343,16 @@
             const value1 = `${text}${level + 1}1`;
             const value2 = `${text}${level + 1}2`;
             resolve([
-              { value: value1, text: value1, leaf: level >= 2 },
-              { value: value2, text: value2, leaf: level >= 1 },
+              {
+                value: value1,
+                text: value1,
+                leaf: level >= 2,
+              },
+              {
+                value: value2,
+                text: value2,
+                leaf: level >= 1,
+              },
             ]);
           }, 500);
         },
@@ -372,11 +414,36 @@
           sortKey: '',
         },
         options: [
-          { value: '北京', text: '北京', id: 1, pid: null },
-          { value: '朝阳区', text: '朝阳区', id: 11, pid: 1 },
-          { value: '亦庄', text: '亦庄', id: 111, pid: 11 },
-          { value: '广东省', text: '广东省', id: 2, pid: null },
-          { value: '广州市', text: '广州市', id: 21, pid: 2 },
+          {
+            value: '北京',
+            text: '北京',
+            id: 1,
+            pid: null,
+          },
+          {
+            value: '朝阳区',
+            text: '朝阳区',
+            id: 11,
+            pid: 1,
+          },
+          {
+            value: '亦庄',
+            text: '亦庄',
+            id: 111,
+            pid: 11,
+          },
+          {
+            value: '广东省',
+            text: '广东省',
+            id: 2,
+            pid: null,
+          },
+          {
+            value: '广州市',
+            text: '广州市',
+            id: 21,
+            pid: 2,
+          },
         ],
       });
       const events = {

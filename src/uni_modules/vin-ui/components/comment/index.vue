@@ -130,7 +130,13 @@ export default create({
       emit('clickImages', value);
     };
 
-    return { classes, conEllipsis, clickOperate, handleClick, clickImages };
+    return {
+      classes,
+      conEllipsis,
+      clickOperate,
+      handleClick,
+      clickImages,
+    };
   },
 });
 </script>

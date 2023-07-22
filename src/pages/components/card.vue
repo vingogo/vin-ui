@@ -65,7 +65,9 @@
       :shopName="state.shopName"
     >
       <template #footer>
-        <div class="customize">{{ translate('customContent') }}</div>
+        <div class="customize">
+          {{ translate('customContent') }}
+        </div>
       </template>
     </vin-card>
   </app-page-layout>

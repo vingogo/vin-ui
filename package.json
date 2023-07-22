@@ -12,9 +12,9 @@
     "url": "https://github.com/vingogo/vin-ui.git"
   },
   "scripts": {
-    "lint": "eslint --ext .ts,.js,.vue --fix .",
+    "lint": "eslint --ext .ts,.js,.vue --fix ./src",
     "stylelint": "stylelint --fix \"src/**/*.scss\"",
-    "format": "prettier --write --cache --parser typescript \"**/*.[tj]s?(x)\"",
+    "format": "prettier --write .",
     "prepare": "husky install",
     "dev": "vin dev",
     "dev:docs": "vuepress dev docs",

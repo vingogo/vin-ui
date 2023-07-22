@@ -20,6 +20,7 @@ class Tree {
     if (!parent) {
       this.nodes = formatTree(nodes, null, this.config);
     } else {
+      // eslint-disable-next-line no-param-reassign
       parent.children = formatTree(nodes, parent, this.config);
     }
   }

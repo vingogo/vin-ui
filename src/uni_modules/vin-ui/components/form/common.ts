@@ -25,7 +25,7 @@ export const Component = create({
       `${componentName}-item`,
     )({ props, formErrorTip });
 
-    const clearErrorTips = (value = props.modelValue) => {
+    const clearErrorTips = () => {
       Object.keys(formErrorTip.value).forEach((item) => {
         formErrorTip.value[item] = '';
       });
@@ -45,7 +45,7 @@ export const Component = create({
 
     const findFormItem = (vnodes: VNode[]) => {
       let task: FormRule[] = [];
-      vnodes.forEach((vnode: VNode, index: number) => {
+      vnodes.forEach((vnode: VNode) => {
         let { type } = vnode;
         type = (type as any).name || type;
         if (type === 'vin-form-item') {
@@ -58,6 +58,7 @@ export const Component = create({
         } else if (isObject(vnode.children) && Object.keys(vnode.children)) {
           // 异步节点获取
           if ((vnode.children as any)?.default) {
+            // eslint-disable-next-line no-param-reassign
             vnode.children = (vnode.children as any).default();
             task = task.concat(findFormItem(vnode.children as VNode[]));
           }
@@ -77,7 +78,7 @@ export const Component = create({
       const { rules, prop } = item;
 
       const errorPromise = (errorMsg: ErrorMessage): Promise<ErrorMessage> => {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
           tipMessage(errorMsg);
           resolve(errorMsg);
         });
@@ -106,13 +107,13 @@ export const Component = create({
         if (validator) {
           const result = validator(value);
           if (isPromise(result)) {
-            return new Promise((r, j) => {
+            return new Promise((resolve) => {
               result.then((res) => {
                 if (!res) {
                   tipMessage(errorMsg);
-                  r(errorMsg);
+                  resolve(errorMsg);
                 } else {
-                  r(true);
+                  resolve(true);
                 }
               });
             });
@@ -131,7 +132,7 @@ export const Component = create({
      * @returns
      */
     const validate = (customProp = '') => {
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         const task = findFormItem(internalChildren?.map((child) => child.vnode));
 
         const errors = task.map((item) => {
@@ -145,6 +146,7 @@ export const Component = create({
         });
 
         Promise.all(errors).then((errorRes) => {
+          // eslint-disable-next-line no-param-reassign
           errorRes = errorRes.filter((item) => item !== true);
           const res = { valid: true, errors: [] };
           if (errorRes.length) {
@@ -159,6 +161,11 @@ export const Component = create({
       validate();
       return false;
     };
-    return { validate, reset, onSubmit, formErrorTip };
+    return {
+      validate,
+      reset,
+      onSubmit,
+      formErrorTip,
+    };
   },
 });

@@ -56,7 +56,12 @@ const copyStyle = () => {
 };
 
 const genThemes = () => {
-  const themes = [{ file: 'default.scss', sourcePath: `@import '../variables.scss';` }];
+  const themes = [
+    {
+      file: 'default.scss',
+      sourcePath: `@import '../variables.scss';`,
+    },
+  ];
 
   const tasks = themes.map((item) => {
     return outputFileSync(

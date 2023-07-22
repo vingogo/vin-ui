@@ -123,7 +123,7 @@
 </template>
 
 <script lang="ts">
-import { onMounted, reactive, toRefs } from 'vue';
+import { reactive, toRefs } from 'vue';
 import { createComponent } from '@/utils/create';
 import { useTranslate } from '@/hooks/useTranslate';
 

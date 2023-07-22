@@ -1,4 +1,4 @@
-import { config, DOMWrapper, mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 import Tabbar from '../index.vue';
 import TabbarItem from '../../tabbar-item/index.vue';

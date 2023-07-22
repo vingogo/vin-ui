@@ -68,7 +68,13 @@ export default create({
       emit('handleClick');
     };
 
-    return { showPopver, operate, mergeOp, handleClick, translate };
+    return {
+      showPopver,
+      operate,
+      mergeOp,
+      handleClick,
+      translate,
+    };
   },
 });
 </script>

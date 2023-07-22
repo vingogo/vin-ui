@@ -38,7 +38,9 @@
       <view
         :class="[
           'vin-tabbar-item_icon-box_nav-word',
-          { 'vin-tabbar-item_icon-box_big-word': !icon && !activeImg },
+          {
+            'vin-tabbar-item_icon-box_big-word': !icon && !activeImg,
+          },
         ]"
       >
         <view v-if="tabTitle">{{ tabTitle }}</view>
@@ -90,7 +92,7 @@ export default create({
       }
       return null;
     });
-    watch(choosed, (value, oldValue) => {
+    watch(choosed, (value) => {
       state.active = value;
       setTimeout(() => {
         if (parent.children[value].href) {

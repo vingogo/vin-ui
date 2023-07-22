@@ -31,7 +31,7 @@ export default create({
       return getMainClass(
         isImage.value
           ? `${componentName}__img`
-          : `${props.fontClassName} ${componentName} ${props.classPrefix}-${props.name}`
+          : `${props.fontClassName} ${componentName} ${props.classPrefix}-${props.name}`,
       );
     });
 

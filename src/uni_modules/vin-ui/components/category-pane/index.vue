@@ -2,7 +2,9 @@
   <div class="vin-category-pane">
     <div v-if="type == 'classify'" class="vin-category-pane__cateListRight">
       <div v-for="(item, index) in categoryChild" :key="index">
-        <div class="vin-category-pane__childTitle">{{ item?.catName }}</div>
+        <div class="vin-category-pane__childTitle">
+          {{ item?.catName }}
+        </div>
 
         <div v-if="item?.catType == 1" class="vin-category-pane__childItemList">
           <div
@@ -12,7 +14,9 @@
             @click="onChange(sku)"
           >
             <img class="vin-category-pane__childImg" :src="sku.backImg" />
-            <div class="vin-category-pane__skuImg">{{ sku?.catName }}</div>
+            <div class="vin-category-pane__skuImg">
+              {{ sku?.catName }}
+            </div>
           </div>
         </div>
       </div>
@@ -21,7 +25,9 @@
     <!-- text -->
     <div v-if="type == 'text'" class="vin-category-pane__cateListRight">
       <div v-for="(item, index) in categoryChild" :key="index">
-        <div class="vin-category-pane__childTitle">{{ item?.catName }}</div>
+        <div class="vin-category-pane__childTitle">
+          {{ item?.catName }}
+        </div>
 
         <div v-if="item?.catType == 1" class="vin-category-pane__childItemList">
           <div
@@ -30,7 +36,9 @@
             :key="key"
             @click="onChange(sku)"
           >
-            <div class="vin-category-pane__skuName">{{ sku?.catName }}</div>
+            <div class="vin-category-pane__skuName">
+              {{ sku?.catName }}
+            </div>
           </div>
         </div>
       </div>

@@ -18,6 +18,7 @@
         <slot name="title"></slot>
       </view>
       <view class="vin-step-content" v-if="content || $slots.content">
+        <!-- eslint-disable-next-line -->
         <text v-if="!$slots.content" v-html="content"></text>
         <slot name="content"></slot>
       </view>

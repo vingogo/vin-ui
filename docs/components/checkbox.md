@@ -195,7 +195,12 @@
         (group.value as any).toggleAll(f);
       };
 
-      return { ...toRefs(state), group, changeBox4, toggleAll };
+      return {
+        ...toRefs(state),
+        group,
+        changeBox4,
+        toggleAll,
+      };
     },
   };
 </script>

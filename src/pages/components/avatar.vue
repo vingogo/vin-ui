@@ -74,10 +74,16 @@ const { createDemo } = createComponent('avatar');
 export default createDemo({
   setup() {
     const handleClick = () => {
-      console.log('触发点击头像');
+      uni.showToast({
+        title: '触发点击头像',
+        icon: 'none',
+      });
     };
     const onError = () => {
-      console.log('触发error头像');
+      uni.showToast({
+        title: '触发error头像',
+        icon: 'none',
+      });
     };
     return { handleClick, onError };
   },

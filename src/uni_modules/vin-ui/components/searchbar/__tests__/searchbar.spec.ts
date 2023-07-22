@@ -130,7 +130,9 @@ test('blur event test', async () => {
 });
 
 test('clear event test', async () => {
-  const wrapper = mount(SearchBar, { props: { modelValue: 3 } });
+  const wrapper = mount(SearchBar, {
+    props: { modelValue: 3 },
+  });
   const input = wrapper.find('input');
   const clear = wrapper.find('.vin-searchbar__input-clear');
   wrapper.find('input').trigger('input');

@@ -41,7 +41,11 @@ test('dashed props: classes should contain vin-divider-dashed', () => {
 test('customer style: element color should be rgb(25, 137, 250) etc', () => {
   const wrapper = mount(Divider, {
     props: {
-      style: { color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' },
+      style: {
+        color: '#1989fa',
+        borderColor: '#1989fa',
+        padding: '0 16px',
+      },
     },
   });
   const divider: any = wrapper.find('.vin-divider');

@@ -69,7 +69,7 @@ export default create({
         if (value !== innerValue.value) {
           innerValue.value = value as CascaderValue;
         }
-      }
+      },
     );
 
     return {

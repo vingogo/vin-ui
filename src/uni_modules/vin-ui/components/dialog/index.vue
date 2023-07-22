@@ -22,7 +22,9 @@
 
       <view
         class="vin-dialog__footer"
-        :class="{ [footerDirection]: footerDirection }"
+        :class="{
+          [footerDirection]: footerDirection,
+        }"
         v-if="!noFooter"
       >
         <slot v-if="$slots.footer" name="footer"></slot>
@@ -71,7 +73,7 @@ export default create({
       () => props.visible,
       (value) => {
         showPopup.value = value;
-      }
+      },
     );
 
     const mainClass = computed(getMainClass);

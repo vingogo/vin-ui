@@ -1,4 +1,4 @@
-import { CSSProperties, PropType } from 'vue';
+import { PropType } from 'vue';
 import { commonProps } from '../common';
 
 export type NameType =

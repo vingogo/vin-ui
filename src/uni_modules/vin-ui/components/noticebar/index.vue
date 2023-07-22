@@ -3,12 +3,22 @@
     <view
       v-show="showNoticeBar"
       class="vin-noticebar-page"
-      :class="{ withicon: closeMode, close: closeMode, wrapable: wrapable }"
+      :class="{
+        withicon: closeMode,
+        close: closeMode,
+        wrapable: wrapable,
+      }"
       :style="barStyle"
       @click="handleClick"
       v-if="direction == 'across'"
     >
-      <view class="left-icon" v-if="iconShow" :style="{ 'background-image': `url(${iconBg})` }">
+      <view
+        class="left-icon"
+        v-if="iconShow"
+        :style="{
+          'background-image': `url(${iconBg})`,
+        }"
+      >
         <slot name="left-icon"
           ><vin-icon name="notice" size="16" :color="color" v-if="!iconBg"></vin-icon
         ></slot>
@@ -170,10 +180,10 @@ export default create({
       () => props.list,
       (value) => {
         state.scrollList = [].concat(value as any);
-      }
+      },
     );
 
-    const initScrollWrap = (value: string) => {
+    const initScrollWrap = () => {
       if (state.showNoticeBar === false) {
         return;
       }
@@ -250,7 +260,7 @@ export default create({
       showhorseLamp();
       (state.timer as any) = setInterval(
         showhorseLamp,
-        ~~(props.height / props.speed / 4) * 1000 + props.standTime
+        ~~(props.height / props.speed / 4) * 1000 + props.standTime,
       );
     };
 
@@ -288,7 +298,7 @@ export default create({
       () => props.text,
       (value) => {
         initScrollWrap(value);
-      }
+      },
     );
 
     onMounted(() => {

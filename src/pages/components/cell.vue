@@ -100,11 +100,15 @@ useTranslate({
 });
 export default createDemo({
   setup() {
-    const testClick = (event: Event) => {
+    const testClick = () => {
       console.log('Click Test');
     };
     const switchChecked = ref(true);
-    return { testClick, switchChecked, translate };
+    return {
+      testClick,
+      switchChecked,
+      translate,
+    };
   },
 });
 </script>

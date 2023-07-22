@@ -1,5 +1,5 @@
 import { config, DOMWrapper, mount } from '@vue/test-utils';
-import { nextTick, toRefs, ref, reactive } from 'vue';
+import { nextTick, ref, reactive } from 'vue';
 import Form from '../index.vue';
 import VinCellGroup from '../../cell-group/index.vue';
 import FormItem from '../../form-item/index.vue';
@@ -130,11 +130,11 @@ describe('Form', () => {
           }),
           methods: {
             submit() {
-              dynamicRefForm.value.validate().then(({ valid, errors }: any) => {
+              dynamicRefForm.value.validate().then(({ valid }: any) => {
                 if (valid) {
-                  // console.log('success', dynamicForm);
+                  console.log('success', dynamicForm);
                 } else {
-                  // console.log('error submit!!', errors);
+                  console.log('error submit!!', errors);
                 }
               });
             },
@@ -145,7 +145,6 @@ describe('Form', () => {
               dynamicForm.state.tels.splice(dynamicForm.state.tels.length - 1, 1);
             },
             add() {
-              const newIndex = dynamicForm.state.tels.length;
               dynamicForm.state.tels.push({
                 key: Date.now(),
                 value: '',
@@ -221,7 +220,7 @@ describe('Form', () => {
         });
         const ruleForm = ref<any>(null);
         const submit = () => {
-          ruleForm.value.validate().then(({ valid, errors }: any) => {
+          ruleForm.value.validate().then(({ valid }: any) => {
             if (valid) {
               // console.log('success', formData);
             } else {

@@ -99,6 +99,7 @@ export const deepMerge = (target: any, newObj: any) => {
     if (isObject(targetValue) && isObject(newObjValue)) {
       deepMerge(targetValue, newObjValue);
     } else {
+      // eslint-disable-next-line no-param-reassign
       target[key] = newObjValue;
     }
   });
@@ -116,7 +117,10 @@ export const omit = (obj: Record<string, unknown>, keys: string[]) => {
 
   return Object.keys(obj).reduce((prev, key) => {
     if (!keys.includes(key)) {
-      prev[key] = obj[key];
+      return {
+        ...prev,
+        [key]: obj[key],
+      };
     }
     return prev;
   }, {} as Record<string, unknown>);

@@ -59,7 +59,7 @@ export default create({
       () => props.modelValue,
       (value) => {
         emit('change', value);
-      }
+      },
     );
 
     const mainClass = computed(getMainClass);

@@ -41,7 +41,7 @@ watch(
   {
     deep: true,
     immediate: true,
-  }
+  },
 );
 
 let observer;

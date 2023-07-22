@@ -37,7 +37,9 @@ export default create({
   emits: ['click'],
   setup(props, { emit }) {
     const { getMainClass, getMainStyle } = useVinContext(props);
-    const Parent = useInject<{ props: Required<GridProps> }>(GRID_KEY);
+    const Parent = useInject<{
+      props: Required<GridProps>;
+    }>(GRID_KEY);
 
     if (!Parent.parent) return {};
     const { index } = Parent;

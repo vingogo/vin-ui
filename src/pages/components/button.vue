@@ -68,7 +68,7 @@ import { createComponent } from '@/utils/create';
 const { createDemo } = createComponent('button');
 
 export default createDemo({
-  setup(props) {
+  setup() {
     const isLoading = ref(false);
     const changeLoading = () => {
       isLoading.value = true;

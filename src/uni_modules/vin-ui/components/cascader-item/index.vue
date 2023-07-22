@@ -100,7 +100,12 @@ export default create({
         });
       }
 
-      panes.value = [{ nodes: tree.value.nodes, selectedNode: null }];
+      panes.value = [
+        {
+          nodes: tree.value.nodes,
+          selectedNode: null,
+        },
+      ];
       // eslint-disable-next-line no-use-before-define
       syncValue();
     };
@@ -114,7 +119,12 @@ export default create({
 
       if (currentValue.length === 0) {
         tabsCursor.value = 0;
-        panes.value = [{ nodes: tree.value.nodes, selectedNode: null }];
+        panes.value = [
+          {
+            nodes: tree.value.nodes,
+            selectedNode: null,
+          },
+        ];
         return;
       }
 
@@ -168,6 +178,7 @@ export default create({
       }
 
       if (!configs.value.lazyLoad) {
+        // eslint-disable-next-line no-param-reassign
         node.leaf = true;
         return;
       }
@@ -176,6 +187,7 @@ export default create({
         return;
       }
 
+      // eslint-disable-next-line no-param-reassign
       node.loading = true;
 
       const parent = node.root ? null : node;
@@ -195,9 +207,11 @@ export default create({
         tree.value.updateChildren(nodes, parent);
       } else {
         // 如果加载完成后没有提供子节点，作为叶子节点处理
+        // eslint-disable-next-line no-param-reassign
         node.leaf = true;
       }
 
+      // eslint-disable-next-line no-param-reassign
       node.loading = false;
       lazyLoadMap.delete(node);
     };
@@ -220,6 +234,7 @@ export default create({
         }
 
         if (tree.value.isLeaf(node, isLazy.value)) {
+          // eslint-disable-next-line no-param-reassign
           node.leaf = true;
           panes.value[tabsCursor.value].selectedNode = node;
           panes.value = panes.value.slice(0, (node.level as number) + 1);
@@ -306,7 +321,12 @@ export default create({
       },
     );
 
-    return { panes, initLoading, tabsCursor, ...methods };
+    return {
+      panes,
+      initLoading,
+      tabsCursor,
+      ...methods,
+    };
   },
 });
 </script>

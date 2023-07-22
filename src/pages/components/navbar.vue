@@ -85,10 +85,14 @@ export default createDemo({
     const tab2value = ref(0);
     const methods = {
       back() {
-        uni.showToast({ title: 'header头部， 点击返回' });
+        uni.showToast({
+          title: 'header头部， 点击返回',
+        });
       },
       title() {
-        uni.showToast({ title: 'header头部， 点击title' });
+        uni.showToast({
+          title: 'header头部， 点击title',
+        });
       },
       icon() {
         uni.showToast({ title: 'icon' });

@@ -2,7 +2,11 @@
   <view :class="mainClass" :style="mainStyle">
     <view
       class="vin-tabs__titles"
-      :class="{ [type]: type, scrollable: titleScroll, [size]: size }"
+      :class="{
+        [type]: type,
+        scrollable: titleScroll,
+        [size]: size,
+      }"
       :style="tabsNavStyle"
     >
       <template v-if="$slots.titles">
@@ -80,8 +84,10 @@ export default create({
     const { getMainClass, getMainStyle } = useVinContext(props);
     const { internalChildren } = useProvide(
       TAB_KEY,
-      'vin-tabpane'
-    )({ activeKey: computed(() => props.modelValue) });
+      'vin-tabpane',
+    )({
+      activeKey: computed(() => props.modelValue),
+    });
     const titles: Ref<Title[]> = ref([]);
 
     const renderTitles = (vnodes: VNode[]) => {
@@ -122,17 +128,17 @@ export default create({
 
     watch(
       () => internalChildren.map((item) => item.props),
-      (vnodes: any[]) => {
+      () => {
         init(internalChildren.map((item) => item.vnode));
       },
-      { deep: true }
+      { deep: true },
     );
 
     watch(
       () => props.modelValue,
       (value: string | number) => {
         findTabsIndex(value);
-      }
+      },
     );
     onMounted(init);
     onActivated(init);

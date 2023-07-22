@@ -44,7 +44,11 @@ export default createDemo({
       state.count = state.count.map((item: number, index: number) => index + 1);
     });
 
-    return { ...toRefs(state), handleScroll, translate };
+    return {
+      ...toRefs(state),
+      handleScroll,
+      translate,
+    };
   },
 });
 </script>

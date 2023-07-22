@@ -148,7 +148,7 @@ useTranslate({
   },
 });
 export default createDemo({
-  setup(props, context) {
+  setup() {
     const group = ref(null);
     const data = reactive({
       checkbox1: true,
@@ -163,8 +163,14 @@ export default createDemo({
       checkboxgroup2: ['2'],
       checkboxgroup3: ['2'],
       checkboxsource: [
-        { label: '1', value: translate('combine') },
-        { label: '2', value: translate('combine') },
+        {
+          label: '1',
+          value: translate('combine'),
+        },
+        {
+          label: '2',
+          value: translate('combine'),
+        },
       ],
     });
     const changeBox1 = (state: boolean, label: string) => {

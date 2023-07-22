@@ -70,7 +70,7 @@ export default create({
       () => props.initPage,
       (val) => {
         current.value = Number(val);
-      }
+      },
     );
 
     const onChange = (event: any) => {

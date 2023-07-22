@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 import { commonProps } from '../common';
-import type { FileItem, SizeType, SourceType, AcceptType } from './type';
+import type { SizeType, SourceType, AcceptType } from './type';
 
 export const uploaderProps = {
   ...commonProps,
@@ -11,14 +11,29 @@ export const uploaderProps = {
   isPreview: { type: Boolean, default: true },
   listType: { type: String, default: 'picture' },
   isDeletable: { type: Boolean, default: true },
-  capture: { type: Array as PropType<SourceType[]>, default: ['album', 'camera'] },
-  maximize: { type: [Number, String], default: Number.MAX_VALUE },
+  capture: {
+    type: Array as PropType<SourceType[]>,
+    default: ['album', 'camera'],
+  },
+  maximize: {
+    type: [Number, String],
+    default: Number.MAX_VALUE,
+  },
   maximum: { type: [Number, String], default: 1 },
-  accept: { type: String as PropType<AcceptType>, default: 'image' },
+  accept: {
+    type: String as PropType<AcceptType>,
+    default: 'image',
+  },
   headers: { type: Object, default: {} },
   data: { type: Object, default: {} },
-  uploadIcon: { type: String, default: 'photograph' },
-  uploadIconSize: { type: [String, Number], default: '' },
+  uploadIcon: {
+    type: String,
+    default: 'photograph',
+  },
+  uploadIconSize: {
+    type: [String, Number],
+    default: '',
+  },
   xhrState: { type: Number, default: 200 },
   multiple: { type: Boolean, default: false },
   disabled: { type: Boolean, default: false },
@@ -29,7 +44,7 @@ export const uploaderProps = {
   },
   beforeDelete: {
     type: Function,
-    default: (file: FileItem, files: FileItem[]) => {
+    default: () => {
       return true;
     },
   },

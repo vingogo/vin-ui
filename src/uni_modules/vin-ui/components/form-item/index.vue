@@ -38,7 +38,9 @@ export default create({
 
   setup(props) {
     const { getMainClass, getMainStyle } = useVinContext(props);
-    const Parent = useInject<{ formErrorTip: Required<any> }>(FORM_KEY);
+    const Parent = useInject<{
+      formErrorTip: Required<any>;
+    }>(FORM_KEY);
 
     const formErrorTip = Parent.parent?.formErrorTip || {};
 
@@ -73,7 +75,14 @@ export default create({
 
     const mainStyle = computed(getMainStyle);
 
-    return { formErrorTip, labelStyle, bodyStyle, errorMessageStyle, mainClass, mainStyle };
+    return {
+      formErrorTip,
+      labelStyle,
+      bodyStyle,
+      errorMessageStyle,
+      mainClass,
+      mainStyle,
+    };
   },
 });
 </script>

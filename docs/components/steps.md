@@ -28,7 +28,10 @@
       const handleClickStep = (index: number) => {
         console.log(index);
       };
-      return { ...toRefs(state), handleClickStep };
+      return {
+        ...toRefs(state),
+        handleClickStep,
+      };
     },
   };
 </script>

@@ -64,7 +64,13 @@ export default create({
       });
     };
 
-    return { mainClass, mainStyle, updateValue, selected, translate };
+    return {
+      mainClass,
+      mainStyle,
+      updateValue,
+      selected,
+      translate,
+    };
   },
 });
 </script>

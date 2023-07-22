@@ -55,12 +55,16 @@ export default createDemo({
 
     const checkedStr = ref('开');
 
-    const change = (value: boolean, event: Event) => {
-      uni.showToast({ title: `触发了change事件，开关状态：${value}` });
+    const change = (value: boolean) => {
+      uni.showToast({
+        title: `触发了change事件，开关状态：${value}`,
+      });
     };
 
-    const changeAsync = (value: boolean, event: Event) => {
-      uni.showToast({ title: `2秒后异步触发 ${value}` });
+    const changeAsync = (value: boolean) => {
+      uni.showToast({
+        title: `2秒后异步触发 ${value}`,
+      });
       loadingAsync.value = true;
       setTimeout(() => {
         checkedAsync.value = value;

@@ -26,7 +26,9 @@ export type ChooseFile = {
   [k: string]: unknown;
 };
 
-type UniChooseVideoSuccess = UniNamespace.ChooseVideoSuccess & { thumbTempFilePath: string };
+type UniChooseVideoSuccess = UniNamespace.ChooseVideoSuccess & {
+  thumbTempFilePath: string;
+};
 
 const omitProps = <T>(obj: T, keys: string[]) => {
   if (!['[object Object]', '[object File]'].includes(Object.prototype.toString.call(obj))) {
@@ -61,7 +63,9 @@ const formatVideo = (res: UniChooseVideoSuccess): ChooseFile[] => {
 };
 
 const formatMedia = (
-  res: UniApp.ChooseMediaSuccessCallbackResult & { name?: string },
+  res: UniApp.ChooseMediaSuccessCallbackResult & {
+    name?: string;
+  },
 ): ChooseFile[] => {
   return res.tempFiles.map((item) => ({
     ...omitProps(item, ['fileType', 'thumbTempFilePath', 'tempFilePath']),

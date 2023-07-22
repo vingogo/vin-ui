@@ -1,5 +1,10 @@
 <template>
-  <view class="demo demo-home" :style="{ paddingTop: `calc(40px + ${statusBarHeight}px)` }">
+  <view
+    class="demo demo-home"
+    :style="{
+      paddingTop: `calc(40px + ${statusBarHeight}px)`,
+    }"
+  >
     <vin-searchbar v-model="searchValue">
       <template v-slot:leftin>
         <vin-icon size="14" name="search2"></vin-icon>
@@ -10,7 +15,12 @@
       <vin-tag
         v-for="(tag, index) in tags"
         type="primary"
-        :custom-class="['category-tag', { active: tag.category === activeCategory }]"
+        :custom-class="[
+          'category-tag',
+          {
+            active: tag.category === activeCategory,
+          },
+        ]"
         :key="index"
         @click="onClickCategory(tag.category)"
         >{{ tag.categoryName }}</vin-tag
@@ -157,7 +167,7 @@ $desc-text-color: #909ca4;
     width: 100%;
     padding: 5px 10px;
 
-    :deep .category-tag {
+    :deep(.category-tag) {
       padding: 4px 12px;
       border-radius: 14px;
       background: #fff;

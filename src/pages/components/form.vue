@@ -24,7 +24,12 @@
         label="姓名"
         prop="name"
         required
-        :rules="[{ required: true, message: '请填写姓名' }]"
+        :rules="[
+          {
+            required: true,
+            message: '请填写姓名',
+          },
+        ]"
       >
         <input
           class="vin-input-text"
@@ -37,7 +42,12 @@
         :label="'联系方式' + index"
         :prop="'tels.' + index + '.value'"
         required
-        :rules="[{ required: true, message: '请填写联系方式' + index }]"
+        :rules="[
+          {
+            required: true,
+            message: '请填写联系方式' + index,
+          },
+        ]"
         :key="item.key"
         v-for="(item, index) in dynamicForm.state.tels"
       >
@@ -71,7 +81,12 @@
         label="姓名"
         prop="name"
         required
-        :rules="[{ required: true, message: '请填写姓名' }]"
+        :rules="[
+          {
+            required: true,
+            message: '请填写姓名',
+          },
+        ]"
       >
         <input
           class="vin-input-text"
@@ -86,9 +101,18 @@
         prop="age"
         required
         :rules="[
-          { required: true, message: '请填写年龄' },
-          { validator: customValidator, message: '必须输入数字' },
-          { regex: /^(\d{1,2}|1\d{2}|200)$/, message: '必须输入0-200区间' },
+          {
+            required: true,
+            message: '请填写年龄',
+          },
+          {
+            validator: customValidator,
+            message: '必须输入数字',
+          },
+          {
+            regex: /^(\d{1,2}|1\d{2}|200)$/,
+            message: '必须输入0-200区间',
+          },
         ]"
       >
         <input
@@ -103,8 +127,14 @@
         prop="tel"
         required
         :rules="[
-          { required: true, message: '请填写联系电话' },
-          { validator: asyncValidator, message: '电话格式不正确' },
+          {
+            required: true,
+            message: '请填写联系电话',
+          },
+          {
+            validator: asyncValidator,
+            message: '电话格式不正确',
+          },
         ]"
       >
         <input
@@ -118,7 +148,12 @@
         label="地址"
         prop="address"
         required
-        :rules="[{ required: true, message: '请填写地址' }]"
+        :rules="[
+          {
+            required: true,
+            message: '请填写地址',
+          },
+        ]"
       >
         <input
           class="vin-input-text"
@@ -232,7 +267,6 @@ export default createDemo({
           dynamicForm.state.tels.splice(dynamicForm.state.tels.length - 1, 1);
         },
         add() {
-          const newIndex = dynamicForm.state.tels.length;
           dynamicForm.state.tels.push({
             key: Date.now(),
             value: '',
@@ -300,7 +334,7 @@ export default createDemo({
             formData2.address = '';
           }
         },
-        onChange({ custom, next, value }: any) {
+        onChange({ next, value }: any) {
           formData2.address += value.name;
           const name = addressModule.state[next];
           if (name.length < 1) {
@@ -339,7 +373,9 @@ export default createDemo({
     // Promise 异步校验
     const asyncValidator = (val: string) => {
       return new Promise((resolve) => {
-        uni.showToast({ title: '模拟异步验证中...' });
+        uni.showToast({
+          title: '模拟异步验证中...',
+        });
         setTimeout(() => {
           uni.hideToast();
           resolve(/^400(-?)[0-9]{7}$|^1\d{10}$|^0[0-9]{2,3}-[0-9]{7,8}$/.test(val));

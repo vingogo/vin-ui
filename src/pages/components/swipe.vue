@@ -135,13 +135,21 @@ export default createDemo({
         refSwipe.value?.close();
       }
     };
-    const open = (obj: any) => {
+    const open = () => {
       checked.value = true;
     };
     const close = () => {
       checked.value = false;
     };
-    return { checked, number, changSwitch, refSwipe, open, close, translate };
+    return {
+      checked,
+      number,
+      changSwitch,
+      refSwipe,
+      open,
+      close,
+      translate,
+    };
   },
 });
 </script>

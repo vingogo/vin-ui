@@ -81,7 +81,11 @@ test('infiniteloading base', async () => {
         init();
       });
 
-      return { ...toRefs(data), hasMore, loadMore };
+      return {
+        ...toRefs(data),
+        hasMore,
+        loadMore,
+      };
     },
   });
   const track = wrapper.find('.vin-infiniteloading');

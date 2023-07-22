@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 function getTouch(el: HTMLElement | Window, x: number, y: number) {
   return {
     identifier: Date.now(),

@@ -84,7 +84,13 @@
       const close = () => {
         checked.value = false;
       };
-      return { checked, changSwitch, refSwipe, open, close };
+      return {
+        checked,
+        changSwitch,
+        refSwipe,
+        open,
+        close,
+      };
     },
   };
 </script>

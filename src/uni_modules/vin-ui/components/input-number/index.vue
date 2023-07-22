@@ -3,7 +3,9 @@
     <vin-icon
       name="minus"
       class="vin-input-number__icon"
-      :class="{ 'vin-input-number__icon--disabled': !reduceAllow() }"
+      :class="{
+        'vin-input-number__icon--disabled': !reduceAllow(),
+      }"
       :size="buttonSize"
       @click="reduce"
     >
@@ -27,7 +29,9 @@
     <vin-icon
       name="plus"
       class="vin-input-number__icon"
-      :class="{ 'vin-input-number__icon--disabled': !addAllow() }"
+      :class="{
+        'vin-input-number__icon--disabled': !addAllow(),
+      }"
       :size="buttonSize"
       @click="add"
     >

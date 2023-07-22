@@ -51,6 +51,7 @@ export default create({
       (value) => {
         if (value[0].length > 0) {
           value[0].forEach((el: any) => {
+            // eslint-disable-next-line no-param-reassign
             el.type = 'video';
           });
         }
@@ -62,6 +63,7 @@ export default create({
     onMounted(() => {
       if (props.videos.length > 0) {
         props.videos.forEach((el: any) => {
+          // eslint-disable-next-line no-param-reassign
           el.type = 'video';
         });
       }
@@ -79,7 +81,12 @@ export default create({
       });
     };
 
-    return { isShowImage, initIndex, showImages, totalImages };
+    return {
+      isShowImage,
+      initIndex,
+      showImages,
+      totalImages,
+    };
   },
 });
 </script>

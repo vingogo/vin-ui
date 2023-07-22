@@ -50,7 +50,10 @@ export function trigger(
   return nextTick();
 }
 export async function mockScrollTop(value: number) {
-  Object.defineProperty(window, 'scrollTop', { value, writable: true });
+  Object.defineProperty(window, 'scrollTop', {
+    value,
+    writable: true,
+  });
   trigger(window, 'scroll');
   return nextTick();
 }

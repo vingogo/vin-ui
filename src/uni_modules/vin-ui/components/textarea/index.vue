@@ -56,11 +56,12 @@ export default create({
     });
 
     const emitChange = (value: string, event?: CustomEvent) => {
+      let finalValue = value;
       if (props.maxLength && value?.length > Number(props.maxLength)) {
-        value = value.substring(0, Number(props.maxLength));
+        finalValue = value.substring(0, Number(props.maxLength));
       }
-      emit('update:modelValue', value, event);
-      emit('change', value, event);
+      emit('update:modelValue', finalValue, event);
+      emit('change', finalValue, event);
     };
 
     onMounted(() => {

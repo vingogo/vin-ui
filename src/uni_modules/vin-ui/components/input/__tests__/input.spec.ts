@@ -13,7 +13,9 @@ afterAll(() => {
 });
 
 test('base', () => {
-  const wrapper = mount(Input, { props: { modelValue: 3 } });
+  const wrapper = mount(Input, {
+    props: { modelValue: 3 },
+  });
   const input = wrapper.find('input');
   expect(input.exists()).toBe(true);
   expect(input.element.value).toBe('3');
