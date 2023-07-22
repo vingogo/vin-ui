@@ -28,7 +28,7 @@
     "deploy:ui": "npm run build && node ./scripts/deploy.js --prefix=ui --dist=dist/build/h5",
     "deploy:docs": "npm run build:docs && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist",
     "ci:version": "changeset version",
-    "ci:publish": "pnpm run build:lib && cd dist/npm && changeset publish"
+    "ci:publish": "pnpm run build:lib && cd dist/npm && npm publish"
   },
   "lint-staged": {
     "*.md": "prettier --write",
