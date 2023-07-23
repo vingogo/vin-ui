@@ -25,8 +25,8 @@
     "build:docs": "vuepress build docs",
     "dts": "rimraf dts && vue-tsc --declaration --emitDeclarationOnly -p ./tsconfig.declaration.json",
     "type-check": "vue-tsc --noEmit",
-    "deploy:ui": "npm run build && node ./scripts/deploy.js --prefix=ui --dist=dist/build/h5",
-    "deploy:docs": "npm run build:docs && node ./scripts/deploy.js --prefix=docs --dist=docs/.vuepress/dist",
+    "deploy:ui": "npm run build && static-upload start --prefix=ui --directory=dist/build/h5",
+    "deploy:docs": "npm run build:docs && static-upload start --prefix=docs --directory=docs/.vuepress/dist",
     "ci:version": "changeset version",
     "ci:publish": "pnpm run build:lib && cd dist/npm && npm publish"
   },
@@ -73,6 +73,7 @@
     "@typescript-eslint/parser": "^5.22.0",
     "@vingogo/eslint-config-vue": "^0.2.0",
     "@vingogo/prettier-config": "^0.1.1",
+    "@vingogo/static-upload": "^0.3.0",
     "@vingogo/stylelint-config": "^0.1.0",
     "@vingogo/vin-cli": "^0.6.0",
     "@vitejs/plugin-vue": "^3.0.1",
