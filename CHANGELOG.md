@@ -1,5 +1,11 @@
 # vingogo
 
+## 0.7.1
+
+### Patch Changes
+
+- [`b46689a`](https://github.com/vingogo/vin-ui/commit/b46689a65d21fb5c45e34685d1c83f005cb3bcf8) Thanks [@Alvin-LM](https://github.com/Alvin-LM)! - docs: update docs
+
 ## 0.7.0
 
 ### Minor Changes
