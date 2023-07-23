@@ -17,7 +17,7 @@ export default defineUserConfig({
       (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?187d3bdd1c4384c46db97e5ede089a32";
-        var s = document.getElementsByTagName("script")[0]; 
+        var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();`,
     ],
@@ -37,6 +37,23 @@ export default defineUserConfig({
         text: '组件',
         link: '/components/icon',
         activeMatch: '/components/',
+      },
+      {
+        text: '更多',
+        children: [
+          {
+            text: 'vin-cli',
+            link: 'https://github.com/vingogo/vin-cli',
+          },
+          {
+            text: '基础开发',
+            link: 'https://github.com/vingogo/uni-app-starter',
+          },
+          {
+            text: 'VinUI vscode 插件',
+            link: 'https://github.com/vingogo/vinui-vscode-extension',
+          },
+        ],
       },
       {
         text: 'Github',

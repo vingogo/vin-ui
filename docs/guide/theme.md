@@ -68,3 +68,9 @@ module.exports = {
 ```
 
 注意：其中 `@/assets/custom_theme.scss` 对应自定义样式变量文件路径，需要替换成实际项目中文件路径。
+
+## FAQ
+
+1. 样式不生效？
+
+参考[默认主题 FAQ 部分的回答](./official-theme.html#faq)

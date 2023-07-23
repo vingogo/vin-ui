@@ -2,7 +2,7 @@
 
 使用 `Vin UI` 前，请确保你已经对小程序开发、`uniapp` 有一定了解。
 
-如果是新项目，推荐使用 [vin-cli](https://github.com/vingogo/vin-cli), `vin-cli`将为您提供`uniapp cli`开发方式的最佳实践。
+如果是新项目，推荐使用 [uni-app-starter](https://github.com/vingogo/uni-app-starter), `uni-app-starter` 致力于打造跟 web 开发一致的开发体验，提供了很多开箱即用的功能，如果你使用过 nuxt，你或许会很喜欢。
 
 ## 安装
 

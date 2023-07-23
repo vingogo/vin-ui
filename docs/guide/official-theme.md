@@ -19,6 +19,12 @@ npm i sass sass-loader -D
 
 ### 使用方式
 
+在项目入口文件 main.ts 或者 main.js 文件中添加如下代码：
+
+```
+import '@vingogo/uni-ui/lib/styles/themes/default.scss';
+```
+
 修改 vite 或者 webpack 配置文件。如下示例:
 
 > 注意不同安装方式 variables.scss 文件的路径可能会有不同，请注意修改，下面文件路径以 npm 包路径为例
@@ -74,3 +80,15 @@ module.exports = {
   },
 };
 ```
+
+## FAQ
+
+1. 样式不生效？
+
+注意不同的 sass-loader 版本中配置有区别：
+
+- V10 以上版本中，引入文件的键名为 `additionalData`
+- V8 以上版本 V10 以下版本中，引入文件的键名为 `prependData`
+- V8 以下版本中，引入文件的键名为 `data`
+
+如果上述配置正确，检查项目中 `@dcloudio/vite-plugin-uni` 版本是否为最新，在部分 `@dcloudio/vite-plugin-uni` 的旧版本中，样式引入会有问题
