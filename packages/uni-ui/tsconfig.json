@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "exclude": ["**/lib/**", "**/locale/**"],
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"],
+  "compilerOptions": {
+    "types": ["@dcloudio/types", "vitest/globals", "jest"],
+    "jsx": "preserve"
+  },
+  "vueCompilerOptions": {
+    "experimentalRuntimeMode": "runtime-uni-app",
+    "nativeTags": ["block", "component", "template", "slot"],
+    // TODO: 构建暂不支持处理 template 中的 ts 类型
+    "skipTemplateCodegen": true
+  }
+}

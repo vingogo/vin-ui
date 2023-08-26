@@ -26,9 +26,10 @@ yarn-error.log*
 *.sw*
 .hbuilderx
 **/*-sfc.ts
-docs/.vuepress/.cache
-docs/.vuepress/.temp
+.cache
+.temp
 
 unpackage/
 wxcomponents
+packages/uni-ui/uni_modules
 

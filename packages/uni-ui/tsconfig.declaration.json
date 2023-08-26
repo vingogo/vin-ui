@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "./dts/types",
+    "emitDeclarationOnly": true
+  },
+  "include": ["./src/**/*.d.ts", "./src/**/*.ts", "./src/**/*.vue"],
+  "exclude": [
+    "node_modules",
+    "**/__test__/**/*",
+    "**/__tests__/**/*",
+    "**/*/common.ts",
+    "vitest.config.ts"
+  ]
+}
