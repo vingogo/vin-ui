@@ -133,7 +133,7 @@ export default create({
       const uploadOption: UploadOptions = {
         url: props.url,
         filePath: url,
-        name,
+        name: props.name || name,
         fileType: type,
         header: props.headers,
         timeout: props?.timeout,
