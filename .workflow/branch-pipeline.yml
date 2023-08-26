@@ -1,51 +1,57 @@
 version: '1.0'
 name: branch-pipeline
 displayName: BranchPipeline
+triggers:
+  trigger: auto
+  push:
+    branches:
+      precise:
+        - main
 stages:
-  - stage: 
-    name: compile
+  - name: compile
     displayName: 编译
+    strategy: naturally
+    trigger: auto
     steps:
       - step: build@nodejs
         name: build_nodejs
         displayName: Nodejs 构建
-        # 支持8.16.2、10.17.0、12.16.1、14.16.0、15.12.0五个版本
         nodeVersion: 14.16.0
-        # 构建命令：安装依赖 -> 清除上次打包产物残留 -> 执行构建 【请根据项目实际产出进行填写】
         commands:
-          - npm install && rm -rf ./dist && npm run build
-        # 非必填字段，开启后表示将构建产物暂存，但不会上传到制品库中，7天后自动清除
+          - npm install -g pnpm@8.6.1
+          - pnpm install
+          - ''
+          - if [ -d "docs/.vuepress/dist" ]; then
+          - '  rm -rf docs/.vuepress/dist'
+          - fi
+          - ''
+          - echo '🚀 开始构建...'
+          - ''
+          - 'npm run build:docs # > /dev/null 2>&1'
+          - ''
+          - if [ $? -ne 0 ]; then
+          - '    echo "❌ 构建失败。请使用 npm run build:docs 命令构建以查看详情"'
+          - '    exit'
+          - fi
+          - ''
+          - echo '🎉 构建成功!'
+          - ''
+          - echo '开始将生成的静态网站推送至 gt-pages 分支'
+          - ''
+          - cd docs/.vuepress/dist && git init  && git checkout --orphan gt-pages  \
+          - '&& git add .  && git commit -m "pushed by deploy.sh"  \'
+          - '&& git remote add origin git@gitee.com:vingogo/vin-ui.git  \'
+          - '&& git push origin gt-pages --force  && rm -rf .git'
+          - ''
+          - if [ $? -ne 0 ]; then
+          - '    echo "❌ 抱歉，推送失败了"'
+          - '    exit'
+          - fi
+          - ''
+          - echo '🎉 推送成功!'
         artifacts:
-            # 构建产物名字，作为产物的唯一标识可向下传递，支持自定义，默认为BUILD_ARTIFACT。在下游可以通过${BUILD_ARTIFACT}方式引用来获取构建物地址
           - name: BUILD_ARTIFACT
-            # 构建产物获取路径，是指代码编译完毕之后构建物的所在路径
             path:
-              - ./dist
-      - step: publish@general_artifacts
-        name: publish_general_artifacts
-        displayName: 上传制品
-        # 上游构建任务定义的产物名，默认BUILD_ARTIFACT
-        dependArtifact: BUILD_ARTIFACT
-        # 上传到制品库时的制品命名，默认output
-        artifactName: output
-        dependsOn: build_nodejs
-  - stage: 
-    name: release
-    displayName: 发布
-    steps:
-      - step: publish@release_artifacts
-        name: publish_release_artifacts
-        displayName: '发布'
-        # 上游上传制品任务的产出
-        dependArtifact: output
-        # 发布制品版本号
-        version: '1.0.0.0'
-        # 是否开启版本号自增，默认开启
-        autoIncrement: true
-triggers:
-  push:
-    branches:
-      exclude:
-        - master
-      include:
-        - .*
+              - ./docs/.vuepress/dist
+        caches: []
+        strategy: {}
