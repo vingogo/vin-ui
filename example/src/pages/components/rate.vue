@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { reactive, getCurrentInstance } from 'vue';
+import { reactive } from 'vue';
 
 import { createComponent } from '@/utils/create';
 import { useTranslate } from '@/hooks/useTranslate';
@@ -62,8 +62,6 @@ useTranslate({
 });
 export default createDemo({
   setup() {
-    const { proxy } = getCurrentInstance();
-
     const state = reactive({
       val: 3,
       val1: 3.5,
@@ -76,7 +74,7 @@ export default createDemo({
       val8: 3,
     });
     const onChange = (val) => {
-      proxy.$toast.text(val);
+      uni.showToast({ title: val, icon: 'none' });
     };
     return {
       state,
