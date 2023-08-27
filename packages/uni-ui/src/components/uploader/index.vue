@@ -27,7 +27,7 @@
           custom-class="close"
           name="failure"
         ></vin-icon>
-        <img
+        <image
           class="vin-uploader__preview-img__c"
           @click="() => fileItemClick(item)"
           v-if="item?.type?.includes('image') && item.url"

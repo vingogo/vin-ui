@@ -23,9 +23,9 @@
     >
       <template #prolist>
         <div class="search_prolist_attr">
-          <span class="word">{{ translate('customPro1') }}</span>
-          <span class="word">{{ translate('customPro2') }}</span>
-          <span class="word">{{ translate('customPro3') }}</span>
+          <text class="word">{{ translate('customPro1') }}</text>
+          <text class="word">{{ translate('customPro2') }}</text>
+          <text class="word">{{ translate('customPro3') }}</text>
         </div>
       </template>
     </vin-card>
@@ -43,7 +43,7 @@
         <div>{{ translate('customShop') }}</div>
       </template>
       <template #price>
-        <span>{{ translate('question') }}</span>
+        <text>{{ translate('question') }}</text>
       </template>
       <template #origin>
         <image
@@ -139,7 +139,7 @@ export default createDemo({
   margin: 3px 0 1px;
   height: 15px;
   overflow: hidden;
-  > span {
+  > text {
     float: left;
     padding: 0 5px;
     border-radius: 1px;

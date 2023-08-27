@@ -13,7 +13,7 @@
             :key="key"
             @click="onChange(sku)"
           >
-            <img class="vin-category-pane__childImg" :src="sku.backImg" />
+            <image class="vin-category-pane__childImg" :src="sku.backImg" />
             <div class="vin-category-pane__skuImg">
               {{ sku?.catName }}
             </div>

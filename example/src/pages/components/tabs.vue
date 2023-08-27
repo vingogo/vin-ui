@@ -79,8 +79,8 @@
             v-for="item in state.list6"
           >
             <vin-icon v-if="item.icon" :name="item.icon" />
-            <span class="vin-tabs__titles-item__text">{{ item.title }}</span>
-            <span class="vin-tabs__titles-item__line"></span>
+            <text class="vin-tabs__titles-item__text">{{ item.title }}</text>
+            <text class="vin-tabs__titles-item__line"></text>
           </view>
         </view>
       </template>

@@ -24,7 +24,7 @@
     <view class="show">
       <vin-empty description="无优惠券">
         <template #image>
-          <img
+          <image
             style="width: 100%"
             src="https://static-ftcms.jd.com/p/files/61a9e3313985005b3958672e.png"
           />

@@ -32,7 +32,7 @@
     <vin-cell-group :title="translate('customLeftIcon')">
       <vin-cell :title="translate('image')">
         <template v-slot:icon>
-          <img
+          <image
             class="vin-icon"
             style="width: 30px; height: 30px"
             src="https://cdn.vingogo.cn/logo.png"

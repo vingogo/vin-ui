@@ -1,5 +1,5 @@
 <template>
-  <img v-if="isImage" :src="name" :style="mainStyle" :class="mainClass" @click="handleClick" />
+  <image v-if="isImage" :src="name" :style="mainStyle" :class="mainClass" @click="handleClick" />
 
   <text v-else :style="mainStyle" :class="mainClass" @click="handleClick">
     <slot />

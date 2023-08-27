@@ -9,7 +9,7 @@
           @click="selected(item, $event)"
           :key="item.id || index"
         >
-          <img :src="item.icon" />
+          <image :src="item.icon" />
           <view class="span">{{ item.text }}</view>
           <view class="b" v-if="item.num">{{ item.num }}</view>
         </view>

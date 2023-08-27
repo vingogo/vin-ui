@@ -6,7 +6,7 @@
         <slot name="image"></slot>
       </template>
       <template v-else>
-        <img v-if="imageUrl" class="img" :src="imageUrl" />
+        <image v-if="imageUrl" class="img" :src="imageUrl" />
       </template>
     </view>
 

@@ -2,28 +2,28 @@
   <app-page-layout title="头像">
     <view class="h2">{{ translate('basic') }}</view>
     <vin-cell :show-icon="true" :isLink="true" @click="switchActionSheet('isVisible1')">
-      <span
-        ><label>{{ translate('basic') }}</label></span
+      <text
+        ><label>{{ translate('basic') }}</label></text
       >
       <div v-html="state.val1"></div>
     </vin-cell>
     <vin-cell :showIcon="true" :isLink="true" @click="switchActionSheet('isVisible2')">
-      <span
-        ><label>{{ translate('showCancelButton') }}</label></span
+      <text
+        ><label>{{ translate('showCancelButton') }}</label></text
       >
       <div v-html="state.val2"></div>
     </vin-cell>
     <vin-cell :isLink="true" @click="switchActionSheet('isVisible3')">
-      <span
-        ><label>{{ translate('showDescription') }}</label></span
+      <text
+        ><label>{{ translate('showDescription') }}</label></text
       >
       <div v-html="state.val3"></div>
     </vin-cell>
     <view class="h2">{{ translate('optionStatus') }}</view>
 
     <vin-cell :isLink="true" @click="switchActionSheet('isVisible4')">
-      <span
-        ><label>{{ translate('optionStatus') }}</label></span
+      <text
+        ><label>{{ translate('optionStatus') }}</label></text
       >
       <div v-html="state.val4"></div>
     </vin-cell>
@@ -31,8 +31,8 @@
     <view class="h2">{{ translate('customContent') }}</view>
 
     <vin-cell :isLink="true" @click="switchActionSheet('isVisible5')">
-      <span
-        ><label>{{ translate('customContent') }}</label></span
+      <text
+        ><label>{{ translate('customContent') }}</label></text
       >
       <div></div>
     </vin-cell>

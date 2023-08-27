@@ -202,7 +202,6 @@ export default createDemo({
 .demo-box {
   position: relative;
 
-  img,
   image {
     width: 100%;
     height: 150px;

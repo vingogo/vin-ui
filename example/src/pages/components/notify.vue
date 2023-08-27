@@ -94,7 +94,7 @@
     </vin-cell-group>
 
     <vin-notify v-model:visible="show" v-bind="notify.props">
-      <span>Content</span>
+      <text>Content</text>
     </vin-notify>
   </app-page-layout>
 </template>

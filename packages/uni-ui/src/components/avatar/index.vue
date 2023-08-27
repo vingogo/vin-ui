@@ -8,7 +8,7 @@
   >
     <template v-if="!parent?.props?.maxCount || index <= Number(parent?.props?.maxCount)">
       <template v-if="url">
-        <img :src="url" :alt="alt" @error="onError" />
+        <image :src="url" :alt="alt" @error="onError" />
       </template>
       <template v-else-if="icon">
         <vin-icon custom-class="icon" :name="iconStyles"></vin-icon>

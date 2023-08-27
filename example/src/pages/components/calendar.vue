@@ -99,12 +99,12 @@
       >
         <template v-slot:btn>
           <view class="wrapper">
-            <view class="d_div"> <span class="d_btn" @click="clickBtn">最近七天</span></view>
-            <view class="d_div"> <span class="d_btn" @click="clickBtn1">当月</span></view>
+            <view class="d_div"> <text class="d_btn" @click="clickBtn">最近七天</text></view>
+            <view class="d_div"> <text class="d_btn" @click="clickBtn1">当月</text></view>
           </view>
         </template>
         <template v-slot:day="date">
-          <span>{{ date.date.day }}</span>
+          <text>{{ date.date.day }}</text>
         </template>
       </vin-calendar>
     </view>
@@ -130,12 +130,12 @@
         title="日期选择"
       >
         <template v-slot:day="date">
-          <span>{{ date.date.day <= 9 ? '0' + date.date.day : date.date.day }}</span>
+          <text>{{ date.date.day <= 9 ? '0' + date.date.day : date.date.day }}</text>
         </template>
         <template v-slot:bottomInfo="date">
-          <span class="info">{{
+          <text class="info">{{
             date.date ? (date.date.day <= 10 ? '上旬' : date.date.day <= 20 ? '中旬' : '下旬') : ''
-          }}</span>
+          }}</text>
         </template>
       </vin-calendar>
     </view>
