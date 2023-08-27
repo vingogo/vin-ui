@@ -9,7 +9,7 @@ const { SRC_DIR, LIB_DIR, PACK_DIR } = require('./const');
 const copyFiles = [
   'styles',
   {
-    src: resolve(PACK_DIR, 'package.json'),
+    src: resolve(PACK_DIR, '_package.json'),
     dest: resolve(LIB_DIR, 'package.json'),
   },
   {

@@ -214,8 +214,6 @@ importers:
 
   packages/uni-ui/packs/npm: {}
 
-  packages/uni-ui/packs/uni_modules: {}
-
 packages:
 
   /@ampproject/remapping@2.2.0:

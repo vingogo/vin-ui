@@ -3,11 +3,9 @@ const { resolve } = require('path');
 const { readFile, remove, lstatSync, outputFileSync, readdirSync } = require('fs-extra');
 const { extname, basename } = require('path');
 const { build } = require('vite');
-const { SRC_DIR, LIB_DIR, PACK_DIR } = require('./const');
+const { SRC_DIR, LIB_DIR } = require('./const');
 
-const package = require(resolve(PACK_DIR, 'package.json'));
-
-const version = require(resolve(SRC_DIR, '../package.json')).version;
+const package = require(resolve(SRC_DIR, '../package.json'));
 
 const input = {};
 
@@ -15,7 +13,7 @@ const input = {};
 const excludeComponents = [];
 
 const banner = `/*!
-* ${package.name} v${version} ${new Date()}
+* ${package.name} v${package.version} ${new Date()}
 * (c) 2023 @vingogo.
 * Released under the MIT License.
 */`;
@@ -149,7 +147,7 @@ const genEntryFile = () => {
 
   let fileStrBuild = `${importStr}
 ${installFunction}
-const version = '${version}';
+const version = '${package.version}';
 export { install, version, Locale };
 
 export default { install, version, Locale };`;

@@ -1,8 +1,8 @@
 const { copy, lstatSync, readFileSync, outputFileSync, readdirSync } = require('fs-extra');
 const { extname, basename, resolve } = require('path');
-const { LIB_DIR, PACK_DIR, TYPES_DIR } = require('./const');
+const { LIB_DIR, TYPES_DIR, SRC_DIR } = require('./const');
 
-const package = require(resolve(PACK_DIR, 'package.json'));
+const package = require(resolve(SRC_DIR, '../package.json'));
 
 const excludeComponents = [];
 
