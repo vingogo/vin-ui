@@ -217,6 +217,8 @@ export default createDemo({
 </script>
 
 <style lang="scss" scoped>
+@import '@vingogo/uni-ui/lib/styles/extends/index.scss';
+
 .card-box {
   display: flex;
   flex-wrap: wrap;

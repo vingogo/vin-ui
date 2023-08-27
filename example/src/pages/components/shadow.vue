@@ -53,6 +53,8 @@ export default createDemo({});
 </script>
 
 <style lang="scss" scoped>
+@import '@vingogo/uni-ui/lib/styles/extends/index.scss';
+
 .cols-2 {
   display: flex;
   flex-wrap: wrap;

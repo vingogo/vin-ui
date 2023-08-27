@@ -1,5 +1,5 @@
 <template>
-  <app-page-layout title="布局">
+  <app-page-layout title="布局" custom-class="full">
     <view class="h2">基础布局</view>
     <view class="box-item">
       <vin-row>

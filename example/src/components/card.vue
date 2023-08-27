@@ -58,6 +58,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@vingogo/uni-ui/lib/styles/extends/index.scss';
+
 .doc-card {
   position: relative;
   .doc-card-navigator {

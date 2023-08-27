@@ -177,6 +177,7 @@ export default createDemo({
 </script>
 
 <style lang="scss" scoped>
+@import '@vingogo/uni-ui/lib/styles/extends/index.scss';
 .demo-box {
   padding: 10px;
 

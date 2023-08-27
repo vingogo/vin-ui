@@ -25,9 +25,21 @@
     background: #f6f7f9;
     border-radius: $radio-button-border-radius;
     &--active {
+      position: relative;
+      overflow: hidden;
       color: $radio-label-font-active-color;
-      background: $radio-label-button-background;
+      background: transparent;
       border: 1px solid $radio-label-button-border-color;
+
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $radio-label-button-background;
+        opacity: 0.05;
+        content: '';
+        inset: 0;
+      }
     }
     &--disabled {
       color: $radio-label-disable-color;

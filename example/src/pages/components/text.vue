@@ -133,6 +133,8 @@ export default createDemo({
 </script>
 
 <style lang="scss">
+@import '@vingogo/uni-ui/lib/styles/extends/index.scss';
+
 .text-box {
   padding: 10px;
   margin: 15px 0;
