@@ -39,5 +39,6 @@
   "peerDependencies": {
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"
-  }
+  },
+  "version": null
 }
