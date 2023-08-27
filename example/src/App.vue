@@ -6,5 +6,7 @@ onLaunch(() => {});
 </script>
 
 <style lang="scss">
+@import '@vingogo/uni-ui/lib/style.css';
+@import '@vingogo/uni-ui/lib/styles/extends/index.scss';
 @import './styles/demo.scss';
 </style>
