@@ -1,0 +1,64 @@
+{
+  "name": "@vingogo/uni-ui",
+  "version": "0.7.1",
+  "private": false,
+  "license": "MIT",
+  "author": "Alvin Liu <alvin.lm.liu@gmail.com>",
+  "description": "基于 Vue 3 的轻量、快速的多平台开发 UI 组件库",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "style": "lib/style.css",
+  "typings": "lib/types/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": [
+    "lib/components/**/style.mjs",
+    "*.scss",
+    "*.css"
+  ],
+  "scripts": {
+    "build:lib": "npm run dts && cross-env MODE=LIB node ./scripts/build/index.js",
+    "build:uni": "npm run dts && cross-env MODE=UNI node ./scripts/build/uni.js",
+    "dts": "rimraf dts && vue-tsc --declaration --emitDeclarationOnly -p ./tsconfig.declaration.json",
+    "type-check": "vue-tsc --noEmit",
+    "deploy": "npm run build:lib && static-upload start --prefix=ui --directory=dist/build/h5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vingogo/vin-ui.git",
+    "directory": "src/vingogo/uni-ui"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "nutui",
+    "uniapp",
+    "vin-ui",
+    "vue3 component"
+  ],
+  "files": [
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/vingogo/vin-ui/issues"
+  },
+  "homepage": "https://github.com/vingogo/vin-ui/tree/main/packages/uni-ui",
+  "devDependencies": {
+    "@dcloudio/uni-automator": "^3.0.0-3080420230531001",
+    "@vue/test-utils": "^2.0.2",
+    "@vue/vue3-jest": "^28.0.1",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "jest": "^26.6.3",
+    "rimraf": "^4.4.1",
+    "vitest": "^0.10.2",
+    "vue-jest": "^5.0.0-alpha.7",
+    "vue-tsc": "^1.2.0",
+    "vue3-jest": "^27.0.0-alpha.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.45",
+    "vue-i18n": "^9.1.9"
+  }
+}

@@ -5,3 +5,5 @@ scripts
 build
 **/__tests__/**.ts
 *.json
+lib
+dts

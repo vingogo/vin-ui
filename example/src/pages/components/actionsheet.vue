@@ -1,0 +1,242 @@
+<template>
+  <app-page-layout title="头像">
+    <view class="h2">{{ translate('basic') }}</view>
+    <vin-cell :show-icon="true" :isLink="true" @click="switchActionSheet('isVisible1')">
+      <text
+        ><label>{{ translate('basic') }}</label></text
+      >
+      <div v-html="state.val1"></div>
+    </vin-cell>
+    <vin-cell :showIcon="true" :isLink="true" @click="switchActionSheet('isVisible2')">
+      <text
+        ><label>{{ translate('showCancelButton') }}</label></text
+      >
+      <div v-html="state.val2"></div>
+    </vin-cell>
+    <vin-cell :isLink="true" @click="switchActionSheet('isVisible3')">
+      <text
+        ><label>{{ translate('showDescription') }}</label></text
+      >
+      <div v-html="state.val3"></div>
+    </vin-cell>
+    <view class="h2">{{ translate('optionStatus') }}</view>
+
+    <vin-cell :isLink="true" @click="switchActionSheet('isVisible4')">
+      <text
+        ><label>{{ translate('optionStatus') }}</label></text
+      >
+      <div v-html="state.val4"></div>
+    </vin-cell>
+
+    <view class="h2">{{ translate('customContent') }}</view>
+
+    <vin-cell :isLink="true" @click="switchActionSheet('isVisible5')">
+      <text
+        ><label>{{ translate('customContent') }}</label></text
+      >
+      <div></div>
+    </vin-cell>
+
+    <!-- demo 基础用法 -->
+    <vin-action-sheet
+      :safe-area-inset-bottom="true"
+      v-model:visible="state.isVisible1"
+      :menu-items="menuItemsOne"
+      @choose="chooseItem"
+    >
+    </vin-action-sheet>
+    <!-- demo(带取消按钮） -->
+    <vin-action-sheet
+      v-model:visible="state.isVisible2"
+      :cancel-txt="translate('cancelTxt')"
+      :menu-items="menuItemsOne"
+      @choose="chooseItemTwo"
+    >
+    </vin-action-sheet>
+    <!-- 展示描述信息 -->
+    <vin-action-sheet
+      v-model:visible="state.isVisible3"
+      :title="translate('title')"
+      :description="desc"
+      :menu-items="menuItemsTwo"
+      @choose="chooseItemThree"
+      :cancel-txt="translate('cancelTxt')"
+    >
+    </vin-action-sheet>
+    <!-- demo 选项状态-->
+    <vin-action-sheet
+      v-model:visible="state.isVisible4"
+      :cancel-txt="translate('cancelTxt')"
+      :menu-items="menuItemsThree"
+      @choose="chooseItemFour"
+      :choose-tag-value="chooseTagValue"
+    ></vin-action-sheet>
+    <!-- 自定义面板-->
+    <vin-action-sheet v-model:visible="state.isVisible5" :title="translate('title')">
+      <div class="custom-content">
+        {{ translate('customContent') }}
+      </div>
+    </vin-action-sheet>
+  </app-page-layout>
+</template>
+
+<script lang="ts">
+import { computed, reactive } from 'vue';
+import { createComponent } from '@/utils/create';
+import { useTranslate } from '@/hooks/useTranslate';
+
+const { createDemo, translate } = createComponent('action-sheet');
+
+const initTranslate = () =>
+  useTranslate({
+    'zh-CN': {
+      basic: '基础用法',
+      showCancelButton: '展示取消按钮',
+      showDescription: '展示描述信息',
+      optionStatus: '选项状态',
+      customContent: '自定义内容',
+      cancelTxt: '取消',
+      title: '标题',
+      optionOne: '选项一',
+      optionTwo: '选项二',
+      optionThree: '选项三',
+      showDesc: '这是一段描述信息',
+      checkOption: '选中选项',
+      desc: '描述信息',
+      disableOption: '禁用选项',
+      loadOptions: '加载选项',
+    },
+    'en-US': {
+      basic: 'Basic Usage',
+      showCancelButton: 'Show Cancel Button',
+      showDescription: 'Show Description',
+      optionStatus: 'Option Status',
+      customContent: 'Custom Content',
+      cancelTxt: 'cancle',
+      title: 'title',
+      optionOne: 'option one',
+      optionTwo: 'option two',
+      optionThree: 'option three',
+      showDesc: 'This is a description',
+      checkOption: 'Check option',
+      desc: 'Description',
+      disableOption: 'Disable option',
+      loadOptions: 'Load options',
+    },
+  });
+interface Item {
+  name: string;
+  subname?: string;
+  color?: string;
+  disable?: boolean;
+  loading?: boolean;
+}
+export default createDemo({
+  props: {},
+  setup() {
+    initTranslate();
+    const state = reactive({
+      isVisible1: false,
+      isVisible2: false,
+      isVisible3: false,
+      isVisible4: false,
+      isVisible5: false,
+      val1: '',
+      val2: '',
+      val3: '',
+      val4: '',
+    });
+    const chooseTagValue = computed(() => translate('checkOption'));
+    const desc = computed(() => translate('showDesc'));
+    const menuItemsOne = computed(() => [
+      {
+        name: translate('optionOne'),
+      },
+      {
+        name: translate('optionTwo'),
+      },
+      {
+        name: translate('optionThree'),
+      },
+    ]);
+    const menuItemsTwo = computed(() => [
+      {
+        name: translate('optionOne'),
+      },
+      {
+        name: translate('optionTwo'),
+      },
+      {
+        name: translate('optionThree'),
+        color: 'red',
+        subname: translate('desc'),
+      },
+    ]);
+    const menuItemsThree = computed(() => [
+      {
+        name: translate('checkOption'),
+      },
+      {
+        name: translate('disableOption'),
+        disable: true,
+      },
+      {
+        name: translate('loadOptions'),
+        loading: true,
+      },
+    ]);
+    const switchActionSheet = (
+      param: 'isVisible1' | 'isVisible2' | 'isVisible3' | 'isVisible4',
+    ) => {
+      state[param] = !state[param];
+    };
+
+    const chooseItem = (itemParams: any) => {
+      state.val1 = itemParams.name;
+    };
+
+    function chooseItemTwo(itemParams: Item) {
+      state.val2 = itemParams.name;
+    }
+    function chooseItemThree(itemParams: Item) {
+      state.val3 = itemParams.name;
+    }
+    function chooseItemFour(itemParams: Item) {
+      state.val4 = itemParams.name;
+    }
+
+    return {
+      state,
+      menuItemsOne,
+      menuItemsTwo,
+      menuItemsThree,
+      chooseTagValue,
+      desc,
+      translate,
+      chooseItem,
+      chooseItemTwo,
+      chooseItemThree,
+      chooseItemFour,
+      switchActionSheet,
+    };
+  },
+});
+</script>
+
+<style lang="scss" scoped>
+.custom-wrap {
+  padding: 110px 0;
+  text-align: center;
+}
+.vin-cell {
+  justify-content: space-between;
+}
+.custom-content {
+  padding: 10px 10px 160px;
+}
+.vin-theme-dark {
+  .custom-content {
+    color: white;
+  }
+}
+</style>
